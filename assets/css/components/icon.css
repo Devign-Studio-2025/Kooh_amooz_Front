@@ -1,0 +1,19 @@
+.icon.icon--xs {
+  width: var(--IconSize-xs);
+  aspect-ratio: 1 / 1;
+}
+
+.icon.icon--sm {
+  width: var(--IconSize-sm);
+  aspect-ratio: 1 / 1;
+}
+
+.icon.icon--md {
+  width: var(--IconSize-md);
+  aspect-ratio: 1 / 1;
+}
+
+.icon.icon--lg {
+  width: var(--IconSize-lg);
+  aspect-ratio: 1 / 1;
+}

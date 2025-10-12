@@ -1,0 +1,19 @@
+.skeleton-img {
+  background: linear-gradient(
+    90deg,
+    var(--Color-Surface-disabled) 0%,
+    var(--Color-Surface-subtle-neutral) 50%,
+    var(--Color-Surface-disabled) 100%
+  );
+  animation: skeleton 2s linear infinite both;
+  background-size: 300% 100%;
+}
+
+@keyframes skeleton {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}

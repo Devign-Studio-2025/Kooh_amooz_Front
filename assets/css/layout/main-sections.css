@@ -1,0 +1,23 @@
+main.main-website {
+  max-width: 1440px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-main);
+  margin-top: var(--Spacing-2xl);
+  padding-inline: var(--Spacing-sm);
+}
+
+.section-website {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-xl);
+}
+.section-website__title h4 {
+  font: var(--Font-Title-bold-style);
+  margin: 0;
+  padding-bottom: var(--Spacing-sm);
+  border-bottom: var(--Border-Style-primary);
+  border-width: 0.125rem;
+  width: fit-content;
+}
