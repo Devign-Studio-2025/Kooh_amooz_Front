@@ -223,7 +223,7 @@
   justify-content: space-between;
   width: calc(100% / 3 - var(--Spacing-2xl));
   min-width: 15.625rem;
-  max-width: 20rem;
+  max-width: 70vw;
   flex-grow: 1;
   margin-inline: auto;
 }
