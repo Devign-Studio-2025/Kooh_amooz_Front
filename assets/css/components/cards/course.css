@@ -48,6 +48,7 @@
   border: var(--Border-Style-white);
   position: relative;
   cursor: pointer;
+  transition: unset;
 }
 
 .course-card__head-button input {
@@ -63,7 +64,7 @@
 }
 
 .course-card__head-button .icon {
-  transition: var(--Transition-base);
+  transition: scale var(--Transition-base);
 }
 
 .course-card__head-button .icon-filled {

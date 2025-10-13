@@ -1,3 +1,5 @@
+/* ****** Header-main ****** */
+
 .header-main .header-main__banner img {
   width: 100%;
 }
@@ -150,3 +152,97 @@
     width: 100%;
   }
 }
+
+/* ****** Header-main ****** */
+
+/* ****** Category-card ****** */
+
+.category-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--Spacing-xl);
+}
+
+.category-card {
+  min-width: 9.375rem;
+  width: calc(100% / 5 - var(--Spacing-xl));
+  max-width: calc(100% / 5 - var(--Spacing-xl));
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-md);
+  border: var(--Border-Style-default);
+  padding: var(--Spacing-md);
+  margin-top: calc(4rem - var(--Spacing-md));
+  border-radius: var(--Radius-md);
+  color: var(--Color-Text-icon-title);
+}
+
+.category-card__image {
+  margin-top: -4rem;
+  transition: inherit;
+  overflow: hidden;
+  border-radius: var(--Radius-md);
+  transition: var(--Transition-base);
+}
+
+.category-card__image img {
+  width: 100%;
+}
+
+.category-card__title {
+  font: var(--Font-Body-bold-style);
+  /* text-wrap: nowrap; */
+  text-align: center;
+}
+
+.category-card:hover .category-card__image {
+  translate: 0 -0.5rem;
+  box-shadow: var(--Shadow-Md-Neutral-style);
+}
+
+.category-card:hover {
+  color: var(--Color-Text-icon-action);
+  border-color: var(--Border-Color-primary);
+}
+
+/* ****** Category-card ****** */
+
+/* ****** Testimonials ****** */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--Spacing-2xl);
+  justify-content: space-between;
+}
+
+.testimonial-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% / 3 - var(--Spacing-2xl));
+  min-width: 15.625rem;
+  max-width: 20rem;
+  flex-grow: 1;
+  margin-inline: auto;
+}
+
+.testimonial-item__image img {
+  width: 100%;
+}
+
+.testimonial-item__image {
+  width: clamp(4rem, 10vw, 5rem);
+  min-width: 4rem;
+}
+
+.testimonial-item__text {
+  color: var(--Color-Text-icon-action);
+  padding-right: var(--Spacing-md);
+  border-right: var(--Border-Style-primary);
+  border-width: 0.125rem;
+  font: var(--Font-Body-bold-style);
+  line-height: normal;
+}
+/* ****** Testimonials ****** */

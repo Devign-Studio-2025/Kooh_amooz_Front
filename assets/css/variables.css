@@ -329,16 +329,18 @@
   /* * Border */
 
   /* * Transition */
-  --Transition-base: 0.2s ease-in-out;
-  --Transition-medium: 0.3s ease-in-out;
-  --Transition-slow: 0.5s ease-in-out;
+  --Transition-base: 0.2s linear;
+  --Transition-medium: 0.3s linear;
+  --Transition-slow: 0.5s linear;
   /* * Transition */
 
   /* ! ============ Semantic End ============ */
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 550px) {
   :root {
+    --Typography-LineHeight: var(--NumScale-x6);
+
     --Typography-FontSize-caption: var(--NumScale-x3);
     --Typography-FontSize-body: var(--NumScale-x3);
     --Typography-FontSize-title: var(--NumScale-x4);

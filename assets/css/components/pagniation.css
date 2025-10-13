@@ -9,3 +9,8 @@
   color: var(--Color-Text-icon-body);
   border-radius: var(--Radius-md);
 }
+
+.pagination:hover {
+  background-color: var(--Color-Surface-hover-primary);
+  color: var(--Color-Text-icon-on-primary);
+}

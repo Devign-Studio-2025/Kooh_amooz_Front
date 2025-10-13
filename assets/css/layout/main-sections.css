@@ -13,11 +13,103 @@ main.main-website {
   flex-direction: column;
   gap: var(--Spacing-xl);
 }
-.section-website__title h4 {
+.section-website__head-title {
   font: var(--Font-Title-bold-style);
   margin: 0;
   padding-bottom: var(--Spacing-sm);
   border-bottom: var(--Border-Style-primary);
   border-width: 0.125rem;
   width: fit-content;
+  text-wrap: nowrap;
+}
+
+.section-website__head-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Spacing-sm);
+}
+
+.section-website__head--lines .section-website__head-title {
+  border: unset;
+  padding: 0;
+}
+
+.section-website__head--lines {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--Spacing-md);
+}
+
+.section-website__head--lines hr {
+  width: 100%;
+  border-color: var(--Border-Color-default);
+}
+
+.section-website__head-caption {
+  font: var(--Font-Body-light-style);
+}
+
+.section-website--twocol {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: var(--Spacing-3xl);
+}
+
+.section-website__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-2xl);
+}
+
+.section-website__texts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-lg);
+}
+
+.section-website__title {
+  font: var(--Font-H2-bold-style);
+  color: var(--Color-Text-icon-action);
+  width: fit-content;
+}
+
+.section-website__text {
+  font: var(--Font-Title-regular-style);
+}
+
+.section-website__buttons {
+  display: flex;
+  gap: var(--Spacing-md);
+}
+
+.section-website__buttons .button {
+  width: 100%;
+  max-width: calc(50% - var(--Spacing-md));
+}
+
+.section-website__visual img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .section-website--twocol {
+    flex-direction: column;
+  }
+  .section-website__buttons {
+    justify-content: center;
+  }
+  .section-website__texts {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .section-website__buttons {
+    flex-direction: column;
+  }
+  .section-website__buttons .button {
+    max-width: unset;
+  }
 }

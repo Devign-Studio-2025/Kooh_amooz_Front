@@ -56,13 +56,16 @@ nav.nav-main {
 
 .nav-main__link-items {
   padding: 0;
+  height: 100%;
   display: flex;
+  align-items: center;
   gap: var(--Spacing-lg);
   align-items: center;
   margin: 0;
 }
 
 .nav-main__link-item {
+  height: 100%;
   list-style: none;
 }
 
@@ -70,9 +73,11 @@ nav.nav-main {
   font: var(--Font-Body-regular-style);
   color: var(--Color-Text-icon-body);
   display: flex;
+  align-items: center;
+  height: 100%;
   gap: var(--Spacing-sm);
-  transform: var(--Transition-base);
   position: relative;
+  transition: var(--Transition-base);
 }
 
 .nav-main__link:hover {
@@ -83,7 +88,7 @@ nav.nav-main {
   content: "";
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0.5rem;
   height: 0.0625rem;
   width: 0;
   background-color: var(--Color-Surface-primary);
@@ -117,7 +122,7 @@ nav.nav-main {
   visibility: hidden;
   transition: var(--Transition-base);
   opacity: 0;
-  top: 189%;
+  top: calc(100% + var(--Spacing-md));
   display: flex;
   flex-direction: column;
   gap: var(--Spacing-md) 0;
@@ -137,6 +142,7 @@ nav.nav-main {
 .nav-main__link-item--has-menu:hover .nav-main__link::before {
   width: 100%;
 }
+
 .nav-main__link-item--has-menu:hover .nav-main__link {
   color: var(--Color-Text-icon-action);
 }
@@ -150,7 +156,6 @@ nav.nav-main {
   justify-content: space-between;
   border: var(--Border-Style-default);
   border-radius: var(--Radius-md);
-  transition: var(--Transition-base);
 }
 
 .nav-main__submenu-item:hover {

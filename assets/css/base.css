@@ -17,4 +17,20 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--Color-Text-icon-action);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+hr{
+  opacity: 1;
+  margin: 0;
 }

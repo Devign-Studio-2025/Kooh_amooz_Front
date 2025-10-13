@@ -1,4 +1,5 @@
 @import url(../libs/bootstrap/bootstrap.min.css);
+@import url(../libs/toastr/toastr.min.css);
 
 @import "variables.css";
 @import "utilities.css";
@@ -7,13 +8,13 @@
 @import "layout/navbar.css";
 @import "layout/footer.css";
 @import "layout/main-sections.css";
+@import "layout/sidemenu.css";
 
-@import "components/sidemenu.css";
+@import "components/toast.css";
 @import "components/label.css";
 @import "components/skeleton.css";
 @import "components/pagniation.css";
 @import "components/icon.css";
 @import "components/button.css";
 @import "components/input.css";
-@import "components/cards/category.css";
 @import "components/cards/course.css";

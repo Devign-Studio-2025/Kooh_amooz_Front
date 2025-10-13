@@ -33,7 +33,8 @@
 
 .button-close {
   position: absolute !important;
-  left: -3rem;
+  right: 100%;
+  width: fit-content;
   top: 3rem;
   background-color: var(--Color-Surface-error);
   color: var(--Color-Text-icon-on-state);

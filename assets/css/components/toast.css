@@ -1,0 +1,114 @@
+.toast {
+  background-color: var(--Color-Surface-page);
+  border-radius: var(--Radius-md) !important;
+  border: none;
+  opacity: 1 !important;
+}
+
+.toast-info {
+  box-shadow: var(--Shadow-Md-Primary-style) !important;
+}
+
+.toast-success {
+  box-shadow: var(--Shadow-Md-Success-style) !important;
+}
+
+.toast-error {
+  box-shadow: var(--Shadow-Md-Error-style) !important;
+}
+
+.toast-warning {
+  box-shadow: var(--Shadow-Md-Warning-style) !important;
+}
+
+.toast-title {
+  font: var(--Font-Body-bold-style);
+}
+
+#toast-container > .toast {
+  background-image: unset !important;
+  position: relative;
+}
+
+#toast-container > .toast::before {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  top: 12%;
+  width: var(--IconSize-lg);
+  height: var(--IconSize-lg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+#toast-container > .toast-success::before {
+  background-color: var(--Color-Text-icon-on-subtle-success);
+  mask-image: url("../../icons/tick-circle.svg");
+}
+
+#toast-container > .toast-warning::before {
+  background-color: var(--Color-Text-icon-on-subtle-warning);
+  mask-image: url("../../icons/warning.svg");
+}
+
+#toast-container > .toast-error::before {
+  background-color: var(--Color-Text-icon-on-subtle-error);
+  mask-image: url("../../icons/cloud-remove.svg");
+}
+
+#toast-container > .toast-info::before {
+  background-color: var(--Color-Text-icon-action);
+  mask-image: url("../../icons/info-circle.svg");
+}
+
+.toast-success .toast-title {
+  color: var(--Color-Text-icon-on-subtle-success);
+}
+
+.toast-warning .toast-title {
+  color: var(--Color-Text-icon-on-subtle-warning);
+}
+
+.toast-error .toast-title {
+  color: var(--Color-Text-icon-on-subtle-error);
+}
+
+.toast-info .toast-title {
+  color: var(--Color-Text-icon-action);
+}
+
+.toast-message {
+  font: var(--Font-Body-regualr-style);
+  color: var(--Color-Text-icon-body);
+}
+
+.toast-progress {
+  opacity: 1 !important;
+}
+
+.toast-success .toast-progress {
+  background-color: var(--Color-Text-icon-on-subtle-success) !important;
+}
+
+.toast-error .toast-progress {
+  background-color: var(--Color-Text-icon-on-subtle-error) !important;
+}
+
+.toast-warning .toast-progress {
+  background-color: var(--Color-Text-icon-on-subtle-warning) !important;
+}
+
+.toast-info .toast-progress {
+  background-color: var(--Color-Text-icon-action) !important;
+}
+
+/* .toast-bottom-right {
+} */
+
+@media (min-width: 241px) and (max-width: 480px) {
+  #toast-container > div {
+    padding: 8px 8px 8px 50px;
+    width: unset;
+  }
+}
