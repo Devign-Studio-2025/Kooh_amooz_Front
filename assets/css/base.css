@@ -13,6 +13,8 @@ body {
   background-color: var(--Color-Surface-page);
   max-width: 1800px;
   margin: auto;
+  color: var(--Color-Text-icon-body);
+  font: var(--Font-Body-regular-style);
 }
 
 a {
