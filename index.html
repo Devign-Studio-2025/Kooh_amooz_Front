@@ -72,6 +72,8 @@
                   <span class="nav-main__submenu-item-text">کوهپیمایی</span>
                   <div class="nav-main__submenu-item-image">
                     <img
+                      loading="lazy"
+                      class="skeleton"
                       src="assets/imgs/categories/cat-mountaineering.png"
                       alt="کوهپیمایی"
                     />
@@ -81,6 +83,8 @@
                   <span class="nav-main__submenu-item-text">طبیعت گردی</span>
                   <div class="nav-main__submenu-item-image">
                     <img
+                      loading="lazy"
+                      class="skeleton"
                       src="assets/imgs/categories/cat-nature.png"
                       alt="طبیعت گردی"
                     />
@@ -92,6 +96,8 @@
                   <span class="nav-main__submenu-item-text">کوهنوردی</span>
                   <div class="nav-main__submenu-item-image">
                     <img
+                      loading="lazy"
+                      class="skeleton"
                       src="assets/imgs/categories/cat-mountain.png"
                       alt="کوهنوردی"
                     />
@@ -101,6 +107,8 @@
                   <span class="nav-main__submenu-item-text">نجات کوهستان</span>
                   <div class="nav-main__submenu-item-image">
                     <img
+                      loading="lazy"
+                      class="skeleton"
                       src="assets/imgs/categories/cat-rescue.png"
                       alt="نجات کوهستان"
                     />
@@ -114,6 +122,8 @@
                   >
                   <div class="nav-main__submenu-item-image">
                     <img
+                      loading="lazy"
+                      class="skeleton"
                       src="assets/imgs/categories/cat-rock-climbing.png"
                       alt="سنگنوردی"
                     />
@@ -125,6 +135,8 @@
                   >
                   <div class="nav-main__submenu-item-image">
                     <img
+                      loading="lazy"
+                      class="skeleton"
                       src="assets/imgs/categories/cat-skyrunner.png"
                       alt="علوم تکمیلی کوهستان"
                     />
@@ -187,23 +199,28 @@
       <div class="nav-main__left">
         <div class="nav-main__left-buttons">
           <!-- ? Logged in Mode -->
-          <a
-            class="button button--sm button--primary-outline nonable-below-1000"
-            href="#"
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            data-bs-title="پیام‌های مدیریت"
+          <span
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sidemenu-admin-messages"
+            aria-controls="sidemenu-admin-messages"
           >
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use
-                  href="/assets/icons/sprites.svg#vuesax/twotone/notification-bing"
-                ></use>
-              </svg>
-            </span>
-            <span class="button__badge"> +9 </span>
-          </a>
-
+            <a
+              class="button button--sm button--primary-outline nonable-below-1000"
+              href="#"
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="پیام‌های مدیریت"
+            >
+              <span class="button__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use
+                    href="/assets/icons/sprites.svg#vuesax/twotone/notification-bing"
+                  ></use>
+                </svg>
+              </span>
+              <span class="button__badge"> +9 </span>
+            </a>
+          </span>
           <a
             class="button button--sm button--primary-outline nonable-below-1000"
             href="#"
@@ -341,7 +358,7 @@
           </span>
         </button>
       </div>
-      <div class="offcanvas-body p-0">
+      <div class="offcanvas-body">
         <div class="d-flex flex-column gap-sm">
           <!-- Logged in Mode -->
           <a class="button button--sm button--navlink" href="#">
@@ -358,8 +375,8 @@
             class="button button--sm button--navlink"
             type="button"
             data-bs-toggle="offcanvas"
-            data-bs-target="#sidemenu-categories"
-            aria-controls="sidemenu-categories"
+            data-bs-target="#sidemenu-admin-messages"
+            aria-controls="sidemenu-admin-messages"
           >
             <div class="button__text-with-badge">
               <span class="button__text">پیام‌های مدیریت</span>
@@ -466,7 +483,7 @@
           </span>
         </button>
       </div>
-      <div class="offcanvas-body p-0">
+      <div class="offcanvas-body">
         <div class="d-flex flex-column gap-sm">
           <a
             class="button button--sm button--navlink"
@@ -591,7 +608,8 @@
 
     <!-- * Header Start -->
     <header class="header-main">
-      <div class="swiper swiper--header">
+      <div class="skeleton skeleton-header skeleton-before"></div>
+      <div class="swiper swiper--header skeleton-after">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="header-main__banner">
@@ -601,7 +619,7 @@
                   srcset="assets/imgs/banners/banner-1-desk.jpg"
                 />
                 <img
-                  class="skeleton-img"
+                  class="skeleton"
                   loading="eager"
                   src="assets/imgs/banners/banner-1-mob.jpg"
                   alt="banner"
@@ -617,7 +635,7 @@
                   srcset="assets/imgs/banners/banner-1-desk.jpg"
                 />
                 <img
-                  class="skeleton-img"
+                  class="skeleton"
                   loading="eager"
                   src="assets/imgs/banners/banner-1-mob.jpg"
                   alt="banner"
@@ -633,7 +651,7 @@
                   srcset="assets/imgs/banners/banner-1-desk.jpg"
                 />
                 <img
-                  class="skeleton-img"
+                  class="skeleton"
                   loading="eager"
                   src="assets/imgs/banners/banner-1-mob.jpg"
                   alt="banner"
@@ -703,13 +721,63 @@
           <h4 class="section-website__head-title">جدیدترین دوره‌ها</h4>
         </div>
         <div class="section-website__body">
-          <div class="swiper swiper--courses">
+          <div class="skeleton-cards skeleton-before">
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+          </div>
+          <div class="swiper swiper--courses skeleton-after">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-1.jpg"
                       alt=""
@@ -814,7 +882,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -869,7 +937,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-2.jpg"
                       alt=""
@@ -974,7 +1042,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -1029,7 +1097,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-3.jpg"
                       alt=""
@@ -1134,7 +1202,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -1189,7 +1257,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-4.jpg"
                       alt=""
@@ -1294,7 +1362,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -1349,7 +1417,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-5.jpg"
                       alt=""
@@ -1454,7 +1522,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -1509,7 +1577,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-6.jpg"
                       alt=""
@@ -1614,7 +1682,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -1704,6 +1772,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-mountaineering.png"
                   alt="کوه‌پیمایی"
                 />
@@ -1713,6 +1783,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-mountain.png"
                   alt="کوهنوردی"
                 />
@@ -1722,6 +1794,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-rock-climbing.png"
                   alt="سنگنوردی و دیواره‌نوردی"
                 />
@@ -1731,6 +1805,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-icefall.png"
                   alt="یخ و برف"
                 />
@@ -1739,13 +1815,20 @@
             </a>
             <a href="#" class="category-card">
               <div class="category-card__image">
-                <img src="assets/imgs/categories/cat-gym.png" alt="یخ و برف" />
+                <img
+                  loading="lazy"
+                  class="skeleton"
+                  src="assets/imgs/categories/cat-gym.png"
+                  alt="یخ و برف"
+                />
               </div>
               <div class="category-card__title">صعودهای ورزشی</div>
             </a>
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-nature.png"
                   alt="طبیعت گردی"
                 />
@@ -1755,6 +1838,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-rescue.png"
                   alt="نجات کوهستان"
                 />
@@ -1764,6 +1849,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-skyrunner.png"
                   alt="علوم تکمیلی کوهستان"
                 />
@@ -1773,6 +1860,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-canyoning.png"
                   alt="دره‌نوردی"
                 />
@@ -1782,6 +1871,8 @@
             <a href="#" class="category-card">
               <div class="category-card__image">
                 <img
+                  loading="lazy"
+                  class="skeleton"
                   src="assets/imgs/categories/cat-learning.jpg"
                   alt="آموزشگاه جهانی"
                 />
@@ -1799,13 +1890,63 @@
           <h4 class="section-website__head-title">محبوب‌ترین دوره‌ها</h4>
         </div>
         <div class="section-website__body">
-          <div class="swiper swiper--courses">
+          <div class="skeleton-cards skeleton-before">
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+          </div>
+          <div class="swiper swiper--courses skeleton-after">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-1.jpg"
                       alt=""
@@ -1910,7 +2051,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -1965,7 +2106,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-2.jpg"
                       alt=""
@@ -2070,7 +2211,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -2125,7 +2266,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-3.jpg"
                       alt=""
@@ -2230,7 +2371,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -2285,7 +2426,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-4.jpg"
                       alt=""
@@ -2390,7 +2531,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -2445,7 +2586,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-5.jpg"
                       alt=""
@@ -2550,7 +2691,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -2605,7 +2746,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-6.jpg"
                       alt=""
@@ -2710,7 +2851,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -2832,13 +2973,63 @@
           <h4 class="section-website__head-title">برترین دوره‌ها</h4>
         </div>
         <div class="section-website__body">
-          <div class="swiper swiper--courses">
+          <div class="skeleton-cards skeleton-before">
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div
+                  class="skeleton skeleton-card__text skeleton-card__text--half"
+                ></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+          </div>
+          <div class="swiper swiper--courses skeleton-after">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-1.jpg"
                       alt=""
@@ -2943,7 +3134,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -2998,7 +3189,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-2.jpg"
                       alt=""
@@ -3103,7 +3294,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -3158,7 +3349,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-3.jpg"
                       alt=""
@@ -3263,7 +3454,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -3318,7 +3509,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-4.jpg"
                       alt=""
@@ -3423,7 +3614,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -3478,7 +3669,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-5.jpg"
                       alt=""
@@ -3583,7 +3774,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -3638,7 +3829,7 @@
                 <a href="#" class="course-card">
                   <div class="course-card__head">
                     <img
-                      class="skeleton-img"
+                      class="skeleton"
                       loading="lazy"
                       src="assets/imgs/courses/course-6.jpg"
                       alt=""
@@ -3743,7 +3934,7 @@
                       <div class="course-card__body-info">
                         <span class="course-card__body-info-icon">
                           <img
-                            class="skeleton-img"
+                            class="skeleton"
                             loading="lazy"
                             src="assets/imgs/mentors/mentor-1.jpg"
                             alt=""
@@ -3838,7 +4029,11 @@
                 <span>بهترین اساتید ایران</span>
               </div>
               <div class="testimonial-item__image">
-                <img src="assets/imgs/others/certificate.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="assets/imgs/others/certificate.png"
+                  alt="بهترین اساتید ایران"
+                />
               </div>
             </div>
             <div class="testimonial-item">
@@ -3846,7 +4041,11 @@
                 <span>گواهینامه رسمی</span>
               </div>
               <div class="testimonial-item__image">
-                <img src="assets/imgs/others/gold-certificate.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="assets/imgs/others/gold-certificate.png"
+                  alt="گواهینامه رسمی"
+                />
               </div>
             </div>
             <div class="testimonial-item">
@@ -3854,7 +4053,11 @@
                 <span>بالاترین کیفیت آموزش</span>
               </div>
               <div class="testimonial-item__image">
-                <img src="assets/imgs/others/check.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="assets/imgs/others/check.png"
+                  alt="بالاترین کیفیت آموزش"
+                />
               </div>
             </div>
             <div class="testimonial-item">
@@ -3862,7 +4065,11 @@
                 <span>دسترسی آنی و همیشگی</span>
               </div>
               <div class="testimonial-item__image">
-                <img src="assets/imgs/others/time.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="assets/imgs/others/time.png"
+                  alt="دسترسی آنی و همیشگی"
+                />
               </div>
             </div>
             <div class="testimonial-item">
@@ -3870,7 +4077,11 @@
                 <span>جدیدترین عناوین آموزشی</span>
               </div>
               <div class="testimonial-item__image">
-                <img src="assets/imgs/others/books.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="assets/imgs/others/books.png"
+                  alt="جدیدترین عناوین آموزشی"
+                />
               </div>
             </div>
             <div class="testimonial-item">
@@ -3878,7 +4089,11 @@
                 <span>بهترین اساتید ایران</span>
               </div>
               <div class="testimonial-item__image">
-                <img src="assets/imgs/others/certificate.png" alt="" />
+                <img
+                  loading="lazy"
+                  src="assets/imgs/others/certificate.png"
+                  alt="بهترین اساتید ایران"
+                />
               </div>
             </div>
           </div>
@@ -3894,6 +4109,7 @@
           <div class="footer__brand">
             <img
               class="footer__brand-logo"
+              loading="lazy"
               src="assets/imgs/logoes/logo.png"
               alt="Logo"
             />
@@ -4003,7 +4219,12 @@
             class="border-default raduis-md padding-md align-self-center"
             style="height: fit-content; width: fit-content"
           >
-            <img src="assets/imgs/others/enamad.png" width="92" alt="" />
+            <img
+              src="assets/imgs/others/enamad.png"
+              loading="lazy"
+              width="92"
+              alt=""
+            />
           </div>
         </div>
       </div>

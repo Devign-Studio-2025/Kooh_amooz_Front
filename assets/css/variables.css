@@ -337,7 +337,7 @@
   /* ! ============ Semantic End ============ */
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1024px) {
   :root {
     --Typography-LineHeight: var(--NumScale-x6);
 
