@@ -1,5 +1,5 @@
 // Initialize skeleton loading
-export function initSkeleton() {
+function initSkeleton() {
   const skeletons = document.querySelectorAll(".skeleton-before");
   const mainElements = document.querySelectorAll(".skeleton-after");
 
@@ -11,3 +11,7 @@ export function initSkeleton() {
     el.classList.remove("skeleton-after");
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  initSkeleton();
+});

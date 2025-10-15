@@ -132,6 +132,26 @@ nav.nav-main {
   z-index: 999;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--Transition-medium);
+}
+
+body:has(
+    .nav-main__link-item--has-menu:hover .nav-main__submenu,
+    .nav-main__submenu:hover
+  )::before {
+  visibility: visible;
+  opacity: 0.5;
+}
+
 .nav-main__link-item--has-menu:hover .nav-main__submenu,
 .nav-main__submenu:hover {
   translate: 0px 0px;

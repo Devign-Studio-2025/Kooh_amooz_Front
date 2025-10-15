@@ -3,7 +3,7 @@ import "../libs/bootstrap/bootstrap.bundle.min.js";
 import "../libs/jquery/jquery-3.7.1.min.js";
 import "../libs/toastr/toastr.min.js";
 
-import { initSkeleton } from "../js/components/skeleton.js";
+import "../js/components/skeleton.js";
 
 // Tooltip for nav buttons
 const tooltipTriggerList = document.querySelectorAll(
@@ -87,5 +87,3 @@ heartCheckBoxes.forEach((chechBox) => {
     addToFav(chechBox.value);
   };
 });
-
-initSkeleton();
