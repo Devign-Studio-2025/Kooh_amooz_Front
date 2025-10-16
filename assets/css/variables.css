@@ -337,7 +337,7 @@
   /* ! ============ Semantic End ============ */
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 1024px) {
   :root {
     --Typography-LineHeight: var(--NumScale-x6);
 
@@ -352,7 +352,6 @@
     --Spacing-xl: var(--NumScale-x7);
     --Spacing-2xl: var(--NumScale-x8);
     --Spacing-3xl: var(--NumScale-x9);
-    --Spacing-main: 5rem;
 
     --IconSize-xs: var(--NumScale-x3);
     --IconSize-sm: var(--NumScale-x3\5);

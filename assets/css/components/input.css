@@ -35,6 +35,11 @@
   transition: var(--Transition-base);
 }
 
+.input__label {
+  margin-bottom: var(--Spacing-sm);
+  font: var(--Font-Body-bold-style);
+}
+
 .input__field:placeholder-shown + .input__placeholder {
   opacity: 1;
 }
@@ -42,6 +47,7 @@
 .input__field::placeholder {
   font: var(--Font-Body-regular-style);
   color: var(--Color-Text-icon-placeholder);
+  text-align: right;
 }
 
 .input__field:not(:placeholder-shown),

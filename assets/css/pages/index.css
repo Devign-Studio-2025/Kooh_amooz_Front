@@ -114,6 +114,7 @@
     margin-top: unset;
     padding-inline: unset;
   }
+
   .compliments-box {
     border: unset;
     box-shadow: unset;
@@ -145,9 +146,11 @@
   .compliments-box-wrapper {
     width: 100%;
   }
+
   .compliments-box {
     flex-direction: column;
   }
+
   .compliments-box__item {
     width: 100%;
   }
@@ -245,4 +248,17 @@
   font: var(--Font-Body-bold-style);
   line-height: normal;
 }
+
 /* ****** Testimonials ****** */
+
+/* ****** responsive ****** */
+@media screen and (max-width: 1000px) {
+  .section-website__buttons {
+    justify-content: center;
+  }
+
+  .section-website__texts {
+    align-items: center;
+  }
+}
+/* ****** responsive ****** */
