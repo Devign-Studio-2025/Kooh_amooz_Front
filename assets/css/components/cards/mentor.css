@@ -32,11 +32,7 @@
   right: var(--NumScale-x6);
   width: 6.25rem;
   height: 6.25rem;
-  background-image: url("/assets/imgs/mentors/mentor-1.jpg");
-  background-color: #cccccc;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: cover;
   border-radius: var(--Radius-md);
   border: var(--NumScale-x1) solid var(--Border-Color-primary);
 }
