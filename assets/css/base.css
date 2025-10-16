@@ -22,6 +22,15 @@ a {
   color: var(--Color-Text-icon-action);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--Color-Text-icon-title);
+}
+
 p,
 h1,
 h2,
@@ -32,7 +41,7 @@ h6 {
   margin: 0;
 }
 
-hr{
+hr {
   opacity: 1;
   margin: 0;
 }

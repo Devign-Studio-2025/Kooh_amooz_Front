@@ -1,0 +1,103 @@
+main.main-website {
+  flex-direction: row-reverse;
+  gap: var(--Spacing-lg);
+}
+
+.courses-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-lg);
+}
+
+.courses-section__head {
+  display: flex;
+  gap: var(--Spacing-md);
+  width: calc(100% - var(--Spacing-lg));
+  align-items: center;
+  border-bottom: var(--Border-Style-default);
+}
+
+.courses-section__head-title,
+.sidebar-section__head-title {
+  color: var(--Color-Text-icon-title);
+  font: var(--Font-Title-bold-style);
+  display: flex;
+  align-items: center;
+}
+
+.courses-section__head-tabs {
+  display: flex;
+  gap: var(--Spacing-sm);
+}
+
+.courses-section__head-tab-item {
+  cursor: pointer;
+  padding: var(--Spacing-sm);
+  border-bottom: 0.125rem solid transparent;
+}
+
+.courses-section__head-tab-item input {
+  display: none;
+}
+
+.courses-section__head-tab-item:has(input:checked) {
+  font-weight: var(--Typography-FontWeight-bold);
+  border-color: var(--Border-Color-primary);
+  color: var(--Color-Text-icon-title);
+}
+
+.courses-section__head-result {
+  font: var(--Font-Body-bold-style);
+  color: var(--Color-Text-icon-title);
+  margin-right: auto;
+}
+
+.courses-section__body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--Spacing-lg);
+}
+
+.course-card {
+  height: auto;
+  width: 100%;
+  max-width: calc(100% / 3 - var(--Spacing-lg));
+}
+
+.sidebar-section__head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar-section {
+  min-width: 18rem;
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: calc(5.4375rem + var(--Spacing-md));
+  height: fit-content;
+  background-color: var(--Color-Surface-subtle-neutral);
+  border: var(--Border-Style-default);
+  border-radius: var(--Radius-lg);
+  padding: var(--Spacing-md);
+  gap: var(--Spacing-lg);
+}
+
+.sidebar-section__head-remove-filter {
+  font: var(--Font-Caption-bold-style);
+  border: unset;
+  background-color: unset;
+  color: var(--Color-Text-icon-action);
+  border-radius: var(--Radius-md);
+}
+
+.sidebar-section__head-remove-filter:hover {
+  background-color: var(--Color-Surface-subtle-primary);
+}
+
+.sidebar-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-lg);
+}
