@@ -20,6 +20,7 @@ main.main-website {
 
 .section-website__head-title {
   font: var(--Font-Title-bold-style);
+  color: var(--Color-Text-icon-title);
   margin: 0;
   padding-bottom: var(--Spacing-sm);
   border-bottom: var(--Border-Style-primary);

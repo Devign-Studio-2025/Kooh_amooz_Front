@@ -9,16 +9,19 @@
   width: fit-content;
   transition: var(--Transition-base);
   height: 100%;
+  width: 17.5rem;
+  min-width: 17.5rem;
 }
 
 .course-card:hover {
-  box-shadow: var(--Shadow-Md-Neutral-style);
+  box-shadow: var(--Shadow-Md-Primary-style);
 }
 
 /* ****** Head ****** */
 
 .course-card__head {
-  width: 15.625rem;
+  /* width: 15.625rem; */
+  width: 100%;
   height: 9.375rem;
   background-color: var(--Color-Text-icon-title);
   border-radius: var(--Radius-md);
@@ -190,22 +193,19 @@
 /* ****** Foot ****** */
 
 .course-card__foot {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
   flex-grow: 1;
 }
 
-.course-card__foot-infos {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.course-card__foot-info-prices {
+.course-card__foot-prices {
   direction: ltr;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
-.course-card__foot-price-info-before {
+.course-card__foot-price-before {
   text-decoration: line-through;
   color: var(--Color-Text-icon-disabled);
   font: var(--Font-Caption-regular-style);
@@ -215,11 +215,11 @@
   font: var(--Font-Caption-regular-style);
 }
 
-.course-card__foot-price-info-after {
+.course-card__foot-price-after {
   color: var(--Color-Text-icon-action);
 }
 
-.course-card__foot-price-info-after-value {
+.course-card__foot-price-after-value {
   font: var(--Font-Title-bold-style);
 }
 

@@ -1,6 +1,9 @@
+// Librarys
 import "../libs/bootstrap/bootstrap.bundle.min.js";
 import "../libs/jquery/jquery-3.7.1.min.js";
 import "../libs/toastr/toastr.min.js";
+
+import "../js/components/skeleton.js";
 
 // Tooltip for nav buttons
 const tooltipTriggerList = document.querySelectorAll(
@@ -9,6 +12,16 @@ const tooltipTriggerList = document.querySelectorAll(
 const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
+
+// Update cart count
+const cartBadge = document.querySelector("#cart .button__badge");
+
+function updateCartCount() {
+  const checkedItems = document.querySelectorAll(
+    ".course-card__head-button--cart input:checked"
+  );
+  cartBadge.textContent = checkedItems.length;
+}
 
 // Toast
 toastr.options = {
@@ -35,6 +48,9 @@ function addToCart(id) {
   // 2. Toast show (based on response)
   toastr.success("این دوره به سبد خریدتان اضافه شد.", "به سبد خرید اضافه شد.");
   toastr.warning("این دوره از سبد خریدتان حذف شد.", "از سبد خرید حذف شد.");
+
+  // 3. Update ui
+  updateCartCount();
 }
 
 // Ajax for add to fav
@@ -52,6 +68,7 @@ function addToFav(id) {
   );
 }
 
+// Add functions to cart buttons
 const cartCheckBoxes = document.querySelectorAll(
   ".course-card__head-button--cart input"
 );

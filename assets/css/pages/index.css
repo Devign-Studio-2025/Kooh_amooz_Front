@@ -65,7 +65,7 @@
 }
 
 .compliments-box__item-text-bold {
-  font: var(--Font-H3-bold-style);
+  font: var(--Font-Title-bold-style);
   direction: ltr;
 }
 
