@@ -1,0 +1,121 @@
+.mentor-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--Spacing-md);
+    width: 100%;
+    max-width: 56.25rem;
+}
+
+.mentor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Color-Surface-subtle-primary);
+    border-radius: var(--bs-border-radius-lg);
+    padding: var(--Spacing-md) var(--Spacing-lg);
+    width: 100%;
+    gap: var(--Spacing-xl);
+    position: relative;
+}
+
+.mentor-card__profile {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.mentor-card__profile-img {
+    position: absolute;
+    top: calc(-1 * var(--NumScale-x5));
+    right: var(--NumScale-x6);
+    width: 6.25rem;
+    height: 6.25rem;
+    background-image: url("/assets/imgs/mentors/mentor-1.jpg");
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--Radius-md);
+    border: var(--NumScale-x1) solid var(--Border-Color-primary);
+}
+
+.mentor-card__profile-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing-sm);
+    padding-right: 7.5rem;
+}
+
+.mentor-card__name {
+    font: var(--Font-H3-bold-style);
+    color: var(--Color-Text-icon-action);
+}
+
+.mentor-card__info {
+    font: var(--Font-Caption-regular-style);
+    color: var(--Color-Text-icon-body);
+}
+
+.mentor-card__profile-left {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: var(--Spacing-sm);
+}
+
+.mentor-card__icon {
+    display: flex;
+    background-color: var(--Color-Surface-subtle-neutral);
+    color: var(--Color-Text-icon-action);
+    padding: var(--Spacing-sm);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+}
+
+.mentor-card__about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Spacing-md);
+}
+
+.mentor-card__about-title {
+    font: var(--Font-Title-bold-style);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--Spacing-sm);
+    color: var(--Color-Text-icon-action);
+}
+
+.mentor-card__aboutdescription {
+    font: var(--Font-Body-regular-style);
+    color: var(--Color-Text-icon-body);
+}
+
+@media screen and (max-width: 500px) {
+    .mentor-card {
+        margin-top: var(--NumScale-x5);
+    }
+    .mentor-card__profile-right {
+        padding-right: 0;
+        padding-top: 5rem;
+    }
+
+    .mentor-card__profile-img {
+        right: unset;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    .mentor-card__profile {
+        flex-direction: column;
+    }
+    .mentor-card__profile {
+        align-items: flex-start;
+        gap: var(--Spacing-md);
+    }
+}

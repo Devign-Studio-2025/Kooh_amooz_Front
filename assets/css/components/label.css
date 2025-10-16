@@ -1,0 +1,53 @@
+.label {
+  font: var(--Font-Caption-bold-style);
+  border-radius: var(--Radius-md);
+  display: flex;
+  align-items: center;
+  gap: var(--Spacing-sm);
+  width: fit-content;
+}
+
+.label__icon {
+  display: flex;
+}
+
+.label.label--success {
+  color: var(--Color-Text-icon-on-subtle-success);
+  background-color: var(--Color-Surface-subtle-success);
+}
+
+.label.label--warning {
+  color: var(--Color-Text-icon-on-subtle-warning);
+  background-color: var(--Color-Surface-subtle-warning);
+}
+
+.label.label--error {
+  color: var(--Color-Text-icon-on-subtle-error);
+  background-color: var(--Color-Surface-subtle-error);
+}
+
+.label.label--neutral {
+  color: var(--Color-Text-icon-body);
+  background-color: var(--Color-Surface-subtle-neutral);
+}
+
+.label.label--primary {
+  color: var(--Color-Text-icon-action);
+  background-color: var(--Color-Surface-subtle-primary);
+}
+
+.label.label--xs {
+  padding-inline: var(--Spacing-sm);
+}
+
+.label.label--sm {
+  padding: var(--Spacing-sm);
+}
+
+.label.label--md {
+  padding: var(--Spacing-sm) var(--Spacing-md);
+}
+
+.label.label--lg {
+  padding: var(--Spacing-md);
+}

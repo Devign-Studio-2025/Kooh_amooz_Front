@@ -1,0 +1,147 @@
+.button {
+  display: flex;
+  gap: var(--Spacing-sm);
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--Radius-md);
+  font: var(--Font-Body-bold-style);
+  line-height: var(--Typography-lineHeight-normal);
+  text-wrap: nowrap;
+  position: relative;
+  border: none;
+}
+
+.button__badge {
+  direction: ltr;
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: var(--Font-Caption-bold-style);
+  padding: var(--Spacing-sm);
+  border-radius: 50%;
+  top: -10%;
+  right: -10%;
+}
+
+.button__badge--navlink {
+  right: unset;
+  top: 50%;
+  left: -2rem;
+  transform: translateY(-50%);
+  background-color: var(--Color-Surface-primary);
+  color: var(--Color-Text-icon-on-primary);
+}
+
+.button__text-with-badge {
+  width: fit-content;
+  position: relative;
+}
+
+.button .button__icon {
+  display: flex;
+}
+
+.button.button--xs {
+  padding: var(--Spacing-sm) var(--Spacing-sm);
+}
+
+.button.button--sm {
+  padding: var(--Spacing-md) var(--Spacing-md);
+}
+
+.button.button--md {
+  padding: var(--Spacing-md) var(--Spacing-xl);
+}
+
+.button.button--lg {
+  padding: var(--Spacing-md) var(--Spacing-3xl);
+}
+
+.button.button--primary,
+.button.button--primary-outline:hover {
+  background-color: var(--Color-Surface-primary);
+  border: var(--Border-Style-primary);
+  color: var(--Color-Text-icon-on-primary);
+}
+
+.button.button--primary {
+  border-color: transparent;
+}
+
+.button.button--primary .button__badge {
+  background-color: var(--Color-Surface-primary);
+  color: var(--Color-Text-icon-on-primary);
+}
+
+.button.button--primary:hover {
+  background-color: var(--Color-Surface-hover-primary);
+  color: var(--Color-Text-icon-on-primary);
+}
+
+.button.button--primary:hover .button__badge {
+  background-color: var(--Color-Surface-page);
+  color: var(--Color-Text-icon-action);
+  border: var(--Border-Style-white);
+}
+
+.button.button--primary-outline {
+  background-color: var(--Color-Surface-page);
+  border: var(--Border-Style-primary);
+  color: var(--Color-Text-icon-action);
+}
+
+.button.button--primary-outline .button__badge {
+  background-color: var(--Color-Surface-primary);
+  color: var(--Color-Text-icon-on-primary);
+  border: var(--Border-Style-primary);
+}
+
+.button.button--primary-outline:hover .button__badge {
+  background-color: var(--Color-Surface-page);
+  color: var(--Color-Text-icon-action);
+  border: var(--Border-Style-primary);
+}
+
+.button.button--error,
+.button.button--error-outline:hover {
+  background-color: var(--Color-Surface-error);
+  border: var(--Border-Style-error);
+  color: var(--Color-Text-icon-on-state);
+}
+
+.button.button--error {
+  border-color: transparent;
+}
+
+.button.button--error:hover {
+  background-color: var(--Color-Surface-page);
+  color: var(--Color-Text-icon-on-subtle-error);
+}
+
+.button.button--error-outline {
+  background-color: var(--Color-Surface-page);
+  border: var(--Border-Style-error);
+  color: var(--Color-Text-icon-on-subtle-error);
+}
+
+.button.button--disabled {
+  background-color: var(--Color-Surface-disabled);
+  color: var(--Color-Text-icon-disabled);
+}
+
+.button--navlink {
+  color: var(--Color-Text-icon-title);
+  justify-content: space-between;
+}
+
+.button--navlink:hover {
+  background-color: var(--Color-Surface-subtle-primary);
+}
+
+.button--navlink-active {
+  color: var(--Color-Text-icon-on-primary);
+  background-color: var(--Color-Surface-primary);
+}

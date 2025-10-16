@@ -1,0 +1,64 @@
+.accordions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--Spacing-md);
+    width: 100%;
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    border: unset;
+    width: 100%;
+}
+
+.accordion-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--Radius-md) !important;
+    border: var(--Border-Style-default);
+    padding: var(--Spacing-md) !important;
+    background-color: var(--Color-Surface-page);
+    color: var(--Color-Text-icon-title);
+    font: var(--Font-Body-bold-style);
+    text-align: right;
+}
+
+.accordion-body {
+    margin-top: var(--Spacing-md);
+    border-radius: var(--Radius-md);
+    border: var(--Border-Style-primary);
+    padding: var(--Spacing-lg);
+    background-color: var(--Color-Surface-page);
+    color: var(--Color-Text-icon-body);
+    font: var(--Font-Body-regular-style);
+}
+
+.accordion-button .icon {
+    transition: var(--Transition-base);
+    transform: rotate(0deg);
+}
+
+.accordion-button:not(.collapsed) .icon {
+    transform: rotate(180deg);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    margin-left: unset;
+    margin-right: auto;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--Color-Surface-primary);
+    color: var(--Color-Text-icon-on-primary);
+}
+
+.accordion-button::after {
+    display: none;
+}

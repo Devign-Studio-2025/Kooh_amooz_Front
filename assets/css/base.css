@@ -3,12 +3,45 @@
    Normalize basic elements
    ================================ */
 
-@import url();
+@import url(../fonts/fontiran.css);
 
 * {
-  font-family: primary-font;
+  font-family: IRANSansX;
 }
 
 body {
-  padding-inline: var(--spacing-md);
+  background-color: var(--Color-Surface-page);
+  max-width: 1800px;
+  margin: auto;
+  color: var(--Color-Text-icon-body);
+  font: var(--Font-Body-regular-style);
+}
+
+a {
+  text-decoration: none;
+  color: var(--Color-Text-icon-action);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--Color-Text-icon-title);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+hr {
+  opacity: 1;
+  margin: 0;
 }
