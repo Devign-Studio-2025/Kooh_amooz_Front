@@ -3,7 +3,7 @@
    Normalize basic elements
    ================================ */
 
-@import url(../fonts/fontiran.css);
+@import url(../fonts/css/fontiran.css);
 
 * {
   font-family: IRANSansX;
