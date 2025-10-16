@@ -1,3 +1,7 @@
+.section-website__body{
+    display: flex;
+}
+
 @media screen and (max-width: 1000px) {
     .section-website:nth-of-type(2n) .section-website--twocol {
         flex-direction: column-reverse;

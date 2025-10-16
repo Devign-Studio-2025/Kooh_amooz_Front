@@ -14,9 +14,9 @@ main.main-website {
   gap: var(--Spacing-2xl);
 }
 
-.section-website__body {
+/* .section-website__body {
   display: flex;
-}
+} */
 
 .section-website__head-title {
   font: var(--Font-Title-bold-style);

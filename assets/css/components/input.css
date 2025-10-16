@@ -11,7 +11,7 @@
   background-color: var(--Color-Surface-page);
   border: var(--Border-Style-default);
   outline: none;
-  transition: var(--Transition-base);
+  transition: border-color var(--Transition-base);
   width: 100%;
 }
 

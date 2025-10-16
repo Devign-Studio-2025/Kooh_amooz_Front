@@ -6,6 +6,7 @@ footer {
   padding-top: var(--Spacing-3xl);
   padding-inline: var(--Spacing-2xl);
   border-top: var(--Border-Style-default);
+  margin-bottom: var(--Spacing-md);
 }
 
 .footer__body {
@@ -150,6 +151,30 @@ footer {
 
 .footer__column-link:hover::before {
   scale: 1;
+}
+
+.footer__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--Spacing-sm);
+}
+
+.footer__address {
+  display: flex;
+  gap: var(--Spacing-sm);
+}
+
+.footer__address-label {
+  font: var(--Font-Body-bold-style);
+}
+
+.footer__cc {
+  display: flex;
+  gap: 0.25rem;
+  color: var(--Color-Text-icon-disabled);
+  font: var(--Font-Caption-light-style);
 }
 
 @media screen and (max-width: 1300px) {
