@@ -34,7 +34,7 @@
         <div class="nav-main__search-input">
           <form class="input">
             <input
-              class="input__field"
+              class="input__field input__field--have-icon"
               placeholder=""
               autocomplete="off"
               type="text"
@@ -983,7 +983,7 @@
                   <label for="topic" class="input__label">موضوع</label>
                   <input
                     class="input__field"
-                    placeholder="انتخاب کنید"
+                    placeholder="وارد کنید..."
                     autocomplete="off"
                     type="text"
                     name="topic"
@@ -1002,12 +1002,9 @@
                 ></textarea>
               </div>
               <div class="section-website__buttons">
-                <a
-                  href="#"
-                  class="button button--lg button--primary fit-content"
-                >
+                <button class="button button--lg button--primary fit-content">
                   <span class="button__text">ثبت و ارسال فرم</span>
-                </a>
+                </button>
               </div>
             </form>
             <div class="section-website__visual max-width-500 flex-grow-1">
@@ -1018,14 +1015,20 @@
               <div class="section-website__visual-info">
                 <div class="section-website__visual-info-group">
                   <span class="section-website__visual-info-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <svg
+                      class="icon icon--md"
+                      style="rotate: -90deg"
+                      viewBox="0 0 24 24"
+                    >
                       <use
                         href="assets/icons/sprites.svg#solar:phone-bold-duotone"
                       ></use>
                     </svg>
                   </span>
-                  <span class="section-website__visual-info-text"
-                    >09135716484</span
+                  <a
+                    href="tel:09135716484"
+                    class="section-website__visual-info-text"
+                    >09135716484</a
                   >
                 </div>
                 <div class="section-website__visual-info-group">
@@ -1036,12 +1039,16 @@
                       ></use>
                     </svg>
                   </span>
-                  <span class="section-website__visual-info-text"
-                    >info@koohamooz.ir</span
+                  <a
+                    href="mailto:info@koohamooz.ir"
+                    class="section-website__visual-info-text"
+                    >info@koohamooz.ir</a
                   >
                 </div>
                 <div class="section-website__visual-info-group">
-                  <span class="section-website__visual-info-icon">
+                  <span
+                    class="section-website__visual-info-icon align-self-start"
+                  >
                     <svg class="icon icon--md" viewBox="0 0 24 24">
                       <use
                         href="assets/icons/sprites.svg#vuesax/bulk/location"

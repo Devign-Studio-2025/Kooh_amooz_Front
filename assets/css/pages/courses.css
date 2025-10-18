@@ -3,6 +3,10 @@ main.main-website {
   gap: var(--Spacing-lg);
 }
 
+.skeleton-card {
+  width: calc(100% / 3 - var(--Spacing-md));
+}
+
 .courses-section {
   display: flex;
   flex-direction: column;
@@ -11,8 +15,9 @@ main.main-website {
 
 .courses-section__head {
   display: flex;
+  background-color: var(--Color-Surface-page);
   gap: var(--Spacing-md);
-  width: calc(100% - var(--Spacing-lg));
+  width: calc(100% - var(--Spacing-md));
   align-items: center;
   border-bottom: var(--Border-Style-default);
 }
@@ -55,13 +60,13 @@ main.main-website {
 .courses-section__body {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--Spacing-lg);
+  gap: var(--Spacing-md);
 }
 
 .course-card {
   height: auto;
   width: 100%;
-  max-width: calc(100% / 3 - var(--Spacing-lg));
+  max-width: calc(100% / 3 - var(--Spacing-md));
 }
 
 .sidebar-section__head {
@@ -70,8 +75,10 @@ main.main-website {
 }
 
 .sidebar-section {
-  min-width: 18rem;
-  max-width: 18rem;
+  min-width: 20rem;
+  width: 20rem;
+  max-height: 90vh;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -82,6 +89,31 @@ main.main-website {
   border-radius: var(--Radius-lg);
   padding: var(--Spacing-md);
   gap: var(--Spacing-lg);
+
+  --sb-track-color: var(--Color-Surface-subtle-primary);
+  --sb-thumb-color: var(--Color-Text-icon-action);
+  --sb-size: 0.25rem;
+}
+
+.sidebar-section::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.sidebar-section::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: var(--Radius-sm);
+  margin-block: 0.625rem;
+}
+
+.sidebar-section::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: var(--Radius-sm);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .sidebar-section {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 .sidebar-section__head-remove-filter {
@@ -100,4 +132,134 @@ main.main-website {
   display: flex;
   flex-direction: column;
   gap: var(--Spacing-lg);
+}
+
+.sidebar-section__search {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-md);
+}
+
+/* ****** Accordion overwrite ****** */
+
+.accordion-button {
+  padding: var(--Spacing-sm) 0 !important;
+  border: none;
+  background-color: unset;
+  border-radius: 0 !important;
+  border-bottom: var(--Border-Style-default);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: unset;
+  color: var(--Color-Text-icon-title);
+}
+
+.accordion-body {
+  background-color: unset;
+  border: none;
+  border-radius: 0;
+  margin-top: var(--Spacing-lg);
+  padding: 0;
+}
+
+/* ****** Accordion overwrite ****** */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--Spacing-sm);
+}
+
+.sidebar-section__filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-md);
+}
+
+.checkbox-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-block: var(--Spacing-sm);
+}
+
+.checkbox-item input {
+  width: var(--IconSize-sm);
+  aspect-ratio: 1 / 1;
+  accent-color: var(--Color-Text-icon-action);
+}
+
+.checkbox-item__right {
+  display: flex;
+  align-items: center;
+  gap: var(--Spacing-sm);
+}
+
+.checkbox-item__right svg {
+  color: #ffab17;
+}
+
+.price-filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-sm);
+}
+
+.price-filters .input__field {
+  padding-left: calc(var(--Spacing-md) + var(--Spacing-xl));
+}
+
+.price-filters .input__icon {
+  font: var(--Font-Caption-bold-style);
+}
+
+.price-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--Spacing-sm);
+}
+
+.price-filter__input{
+  flex-grow: 1;
+}
+
+.price-filter__label {
+  font: var(--Font-Body-bold-style);
+  text-wrap: nowrap;
+}
+
+.price-buttons {
+  margin-top: var(--Spacing-md);
+  display: flex;
+  gap: var(--Spacing-sm);
+}
+
+.price-buttons .button:first-child {
+  flex-grow: 1;
+}
+
+.price-buttons .button:last-child {
+  flex-grow: 0.2;
+}
+
+.courses-section__head-filter-toggles .button {
+  border-radius: 999999px;
+}
+
+.courses-section__head-filter-toggles {
+  display: flex;
+  gap: var(--Spacing-sm);
+  padding-bottom: var(--Spacing-sm);
+}
+
+@media screen and (max-width: 1000px) {
+  .courses-section__head {
+    width: 100%;
+  }
+  .courses-section__body,
+  .skeleton-cards {
+    justify-content: center;
+  }
 }

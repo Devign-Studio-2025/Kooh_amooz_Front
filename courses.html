@@ -34,7 +34,7 @@
         <div class="nav-main__search-input">
           <form class="input">
             <input
-              class="input__field"
+              class="input__field input__field--have-icon"
               placeholder=""
               autocomplete="off"
               type="text"
@@ -567,32 +567,90 @@
       <!-- * [Courses list] Start -->
       <section class="courses-section">
         <div class="courses-section__head">
-          <div class="courses-section__head-title">مرتب‌سازی:</div>
-          <div class="courses-section__head-tabs">
+          <div class="courses-section__head-title nonable-below-1000">
+            مرتب‌سازی:
+          </div>
+          <div class="courses-section__head-tabs nonable-below-1000">
             <label class="courses-section__head-tab-item" for="newest">
               جدیدترین
-              <input checked type="radio" name="sort-type" id="newest" />
+              <input checked type="radio" name="sort_type" id="newest" />
             </label>
             <label class="courses-section__head-tab-item" for="best">
               برترین
-              <input type="radio" name="sort-type" id="best" />
+              <input type="radio" name="sort_type" id="best" />
             </label>
             <label class="courses-section__head-tab-item" for="most-popular">
               محبوب‌ترین
-              <input type="radio" name="sort-type" id="most-popular" />
+              <input type="radio" name="sort_type" id="most-popular" />
             </label>
             <label class="courses-section__head-tab-item" for="cheapest">
               ارزانترین
-              <input type="radio" name="sort-type" id="cheapest" />
+              <input type="radio" name="sort_type" id="cheapest" />
             </label>
             <label class="courses-section__head-tab-item" for="most-expensive">
               گرانترین
-              <input type="radio" name="sort-type" id="most-expensive" />
+              <input type="radio" name="sort_type" id="most-expensive" />
             </label>
+          </div>
+          <div class="courses-section__head-filter-toggles nonable-above-1000">
+            <button
+              class="button button--primary-outline button--xs"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sort-menu"
+              aria-controls="sort-menu"
+            >
+              <span class="button__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use
+                    href="assets/icons/sprites.svg#Edit / Sort_Descending"
+                  ></use>
+                </svg>
+              </span>
+              <span class="button__text">مرتب‌سازی</span>
+            </button>
+            <button
+              class="button button--primary-outline button--xs"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#filter-menu"
+              aria-controls="filter-menu"
+            >
+              <span class="button__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use
+                    href="assets/icons/sprites.svg#vuesax/bulk/filter-search"
+                  ></use>
+                </svg>
+              </span>
+              <span class="button__text">فیلترها <span>(0)</span></span>
+            </button>
           </div>
           <div class="courses-section__head-result">49 نتیجه</div>
         </div>
-        <div class="skeleton-cards skeleton-before">
+        <div class="skeleton-cards skeleton-before flex-wrap">
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div
+                class="skeleton skeleton-card__text skeleton-card__text--half"
+              ></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div
+                class="skeleton skeleton-card__text skeleton-card__text--half"
+              ></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
           <div class="skeleton-card">
             <div class="skeleton skeleton-card__image"></div>
             <div class="skeleton-card__texts">
@@ -1486,10 +1544,29 @@
             </div>
           </a>
         </div>
+        <div class="paginations">
+          <div class="pagination">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use
+                href="assets/icons/sprites.svg#humbleicons:arrow-right"
+              ></use>
+            </svg>
+          </div>
+          <div class="pagination">1</div>
+          <div class="pagination">2</div>
+          <div class="pagination">...</div>
+          <div class="pagination pagination--active">10</div>
+          <div class="pagination">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#humbleicons:arrow-left"></use>
+            </svg>
+          </div>
+        </div>
       </section>
       <!-- * [Courses list] End -->
 
-      <aside class="sidebar-section">
+      <!-- * [Sidebar] Start -->
+      <aside class="sidebar-section nonable-below-1000">
         <div class="sidebar-section__head">
           <div class="sidebar-section__head-title">
             <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
@@ -1497,108 +1574,752 @@
                 href="assets/icons/sprites.svg#vuesax/bulk/filter-search"
               ></use>
             </svg>
-            <span>فیلترها</span>
-            <span id="filter-count">(4)</span>
+            <span>فیلترها <span>(4)</span></span>
           </div>
           <button class="sidebar-section__head-remove-filter">
             حذف فیلترها
           </button>
         </div>
         <div class="sidebar-section__body">
-          <div class="sidebar-section__item"></div>
-          <div class="sidebar-section__item">
-            <h2 class="sidebar-section__item-header">
-              <button
-                class="sidebar-section__item-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne"
-                aria-expanded="true"
-                aria-controls="panelsStayOpen-collapseOne"
-              >
-                Accordion Item #1
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse show"
-            >
-              <div class="accordion-body">
-                <strong>This is the first item’s accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classes that we use to style each element. These classes control
-                the overall appearance, as well as the showing and hiding via
-                CSS transitions. You can modify any of this with custom CSS or
-                overriding our default variables. It’s also worth noting that
-                just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+          <form class="sidebar-section__search">
+            <div class="input">
+              <input
+                class="input__field input__field--have-icon"
+                placeholder="نام دوره..."
+                autocomplete="off"
+                type="text"
+                name="course_name"
+              />
+              <span class="input__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use
+                    href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"
+                  ></use>
+                </svg>
+              </span>
+            </div>
+            <button class="button button--xs button--primary w-100">
+              <span class="button__text">جستجو</span>
+            </button>
+          </form>
+          <div class="sidebar-section__filters">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse1"
+                  aria-expanded="false"
+                  aria-controls="collapse1"
+                >
+                  دسته‌بندی
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="tags">
+                    <label for="cat1" class="tag">
+                      <input type="checkbox" name="category" id="cat1" />
+                      همه دسته‌ها
+                    </label>
+                    <label for="cat2" class="tag">
+                      <input type="checkbox" name="category" id="cat2" />
+                      کوهپیمایی
+                    </label>
+                    <label for="cat3" class="tag">
+                      <input type="checkbox" name="category" id="cat3" />
+                      کوهنوردی
+                    </label>
+                    <label for="cat4" class="tag">
+                      <input type="checkbox" name="category" id="cat4" />
+                      سنگنوردی و دیواره نوردی
+                    </label>
+                    <label for="cat5" class="tag">
+                      <input type="checkbox" name="category" id="cat5" />
+                      یخ و برف
+                    </label>
+                    <label for="cat6" class="tag">
+                      <input type="checkbox" name="category" id="cat6" />
+                      صعودهای ورزشی
+                    </label>
+                    <label for="cat7" class="tag">
+                      <input type="checkbox" name="category" id="cat7" />
+                      طبیعت‌گردی
+                    </label>
+                    <label for="cat8" class="tag">
+                      <input type="checkbox" name="category" id="cat8" />
+                      نجات کوهستان
+                    </label>
+                    <label for="cat9" class="tag">
+                      <input type="checkbox" name="category" id="cat9" />
+                      دره‌نوردی
+                    </label>
+                    <label for="cat10" class="tag">
+                      <input type="checkbox" name="category" id="cat10" />
+                      علوم تکمیلی کوهستان
+                    </label>
+                    <label for="cat11" class="tag">
+                      <input type="checkbox" name="category" id="cat11" />
+                      آموزشگاه جهانی
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="sidebar-section__item">
-            <h2 class="sidebar-section__item-header">
-              <button
-                class="sidebar-section__item-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseTwo"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseTwo"
-              >
-                Accordion Item #2
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseTwo"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <strong>This is the second item’s accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It’s also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse2"
+                  aria-expanded="false"
+                  aria-controls="collapse2"
+                >
+                  مدرس دوره
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="check-boxes">
+                    <label class="checkbox-item" for="m1">
+                      علیرضا رمضان‌زاده
+                      <input type="checkbox" id="m1" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="m2">
+                      حامد جباری
+                      <input type="checkbox" id="m2" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="m3">
+                      امیر کمیلی
+                      <input type="checkbox" id="m3" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="m4">
+                      احسان فلاح
+                      <input type="checkbox" id="m4" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="m5">
+                      حسین رضاوند
+                      <input type="checkbox" id="m5" name="mentor" />
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="sidebar-section__item">
-            <h2 class="sidebar-section__item-header">
-              <button
-                class="sidebar-section__item-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseThree"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseThree"
-              >
-                Accordion Item #3
-              </button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseThree"
-              class="accordion-collapse collapse"
-            >
-              <div class="accordion-body">
-                <strong>This is the third item’s accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It’s also worth
-                noting that just about any HTML can go within the
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse3"
+                  aria-expanded="false"
+                  aria-controls="collapse3"
+                >
+                  امتیاز
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="check-boxes">
+                    <label class="checkbox-item" for="s1">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        4.5 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="s1" name="rating" />
+                      </div>
+                    </label>
+                    <label class="checkbox-item" for="s2">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        4.0 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="s2" name="rating" />
+                      </div>
+                    </label>
+                    <label class="checkbox-item" for="s3">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        3.5 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="s3" name="rating" />
+                      </div>
+                    </label>
+                    <label class="checkbox-item" for="s4">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        3.0 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="s4" name="rating" />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse4"
+                  aria-expanded="false"
+                  aria-controls="collapse4"
+                >
+                  بازه قیمتی
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <form action="">
+                    <div class="price-filters">
+                      <div class="price-filter">
+                        <div class="price-filter__label">از قیمت:</div>
+                        <div class="price-filter__input">
+                          <div class="input">
+                            <input
+                              class="input__field input__field--have-icon"
+                              placeholder=""
+                              autocomplete="off"
+                              type="text"
+                              name="price_from"
+                            />
+                            <span class="input__icon"> تومان </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price-filter">
+                        <div class="price-filter__label">تا قیمت:</div>
+                        <div class="price-filter__input">
+                          <div class="input">
+                            <input
+                              class="input__field input__field--have-icon"
+                              placeholder=""
+                              autocomplete="off"
+                              type="text"
+                              name="price_to"
+                            />
+                            <span class="input__icon"> تومان </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="price-buttons">
+                      <button class="button button--primary button--xs">
+                        اعمال قیمت
+                      </button>
+                      <button
+                        type="button"
+                        class="button button--primary-outline button--xs"
+                      >
+                        حذف
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse5"
+                  aria-expanded="false"
+                  aria-controls="collapse5"
+                >
+                  موارد بیشتر
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="check-boxes">
+                    <label class="checkbox-item" for="o1">
+                      دارای تخفیف
+                      <input type="checkbox" id="o1" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="o2">
+                      دوره ویژه
+                      <input type="checkbox" id="o2" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="o3">
+                      دارای گواهینامه رسمی
+                      <input type="checkbox" id="o3" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="o4">
+                      ترجمه شده
+                      <input type="checkbox" id="o4" name="mentor" />
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </aside>
+      <!-- * [Sidebar] End -->
     </main>
+
+    <!-- Sort offcanvas Start -->
+    <div
+      class="offcanvas offcanvas-bottom"
+      tabindex="-1"
+      id="sort-menu"
+      aria-labelledby="sortMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="sortMenuLabel">مرتب‌سازی بر اساس</h5>
+        <button
+          type="button"
+          class="button button--xs button-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <span class="button__icon">
+            <svg class="icon icon--lg" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#mdi:remove"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="tags">
+          <label for="moblie-newest" class="tag">
+            <input checked type="radio" name="sort" id="moblie-newest" />
+            جدیدترین
+          </label>
+          <label for="moblie-best" class="tag">
+            <input type="radio" name="sort" id="moblie-best" />
+            برترین
+          </label>
+          <label for="moblie-most-popular" class="tag">
+            <input type="radio" name="sort" id="moblie-most-popular" />
+            محبوب‌ترین
+          </label>
+          <label for="moblie-cheapest" class="tag">
+            <input type="radio" name="sort" id="moblie-cheapest" />
+            ارزانترین
+          </label>
+          <label for="moblie-most-expensive" class="tag">
+            <input type="radio" name="sort" id="moblie-most-expensive" />
+            گرانترین
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- Sort offcanvas End -->
+
+    <!-- Filter offcanvas Start -->
+    <div
+      class="offcanvas offcanvas-bottom"
+      tabindex="-1"
+      id="filter-menu"
+      aria-labelledby="filterMenuLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="filterMenuLabel">فیلتر نتایج</h5>
+        <button class="sidebar-section__head-remove-filter me-auto">
+          حذف فیلترها
+        </button>
+        <button
+          type="button"
+          class="button button--xs button-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <span class="button__icon">
+            <svg class="icon icon--lg" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#mdi:remove"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="sidebar-section__body">
+          <form class="sidebar-section__search">
+            <div class="input">
+              <input
+                class="input__field input__field--have-icon"
+                placeholder="نام دوره..."
+                autocomplete="off"
+                type="text"
+                name="course_name"
+              />
+              <span class="input__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use
+                    href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"
+                  ></use>
+                </svg>
+              </span>
+            </div>
+            <button class="button button--xs button--primary w-100">
+              <span class="button__text">جستجو</span>
+            </button>
+          </form>
+          <div class="sidebar-section__filters">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse1"
+                  aria-expanded="false"
+                  aria-controls="collapse1"
+                >
+                  دسته‌بندی
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="tags">
+                    <label for="mobile-cat1" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat1" />
+                      همه دسته‌ها
+                    </label>
+                    <label for="mobile-cat2" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat2" />
+                      کوهپیمایی
+                    </label>
+                    <label for="mobile-cat3" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat3" />
+                      کوهنوردی
+                    </label>
+                    <label for="mobile-cat4" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat4" />
+                      سنگنوردی و دیواره نوردی
+                    </label>
+                    <label for="mobile-cat5" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat5" />
+                      یخ و برف
+                    </label>
+                    <label for="mobile-cat6" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat6" />
+                      صعودهای ورزشی
+                    </label>
+                    <label for="mobile-cat7" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat7" />
+                      طبیعت‌گردی
+                    </label>
+                    <label for="mobile-cat8" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat8" />
+                      نجات کوهستان
+                    </label>
+                    <label for="mobile-cat9" class="tag">
+                      <input type="checkbox" name="category" id="mobile-cat9" />
+                      دره‌نوردی
+                    </label>
+                    <label for="mobile-cat10" class="tag">
+                      <input
+                        type="checkbox"
+                        name="category"
+                        id="mobile-cat10"
+                      />
+                      علوم تکمیلی کوهستان
+                    </label>
+                    <label for="mobile-cat11" class="tag">
+                      <input
+                        type="checkbox"
+                        name="category"
+                        id="mobile-cat11"
+                      />
+                      آموزشگاه جهانی
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse2"
+                  aria-expanded="false"
+                  aria-controls="collapse2"
+                >
+                  مدرس دوره
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="check-boxes">
+                    <label class="checkbox-item" for="mobile-m1">
+                      علیرضا رمضان‌زاده
+                      <input type="checkbox" id="mobile-m1" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="mobile-m2">
+                      حامد جباری
+                      <input type="checkbox" id="mobile-m2" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="mobile-m3">
+                      امیر کمیلی
+                      <input type="checkbox" id="mobile-m3" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="mobile-m4">
+                      احسان فلاح
+                      <input type="checkbox" id="mobile-m4" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="mobile-m5">
+                      حسین رضاوند
+                      <input type="checkbox" id="mobile-m5" name="mentor" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse3"
+                  aria-expanded="false"
+                  aria-controls="collapse3"
+                >
+                  امتیاز
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="check-boxes">
+                    <label class="checkbox-item" for="mobile-s1">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        4.5 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="mobile-s1" name="rating" />
+                      </div>
+                    </label>
+                    <label class="checkbox-item" for="mobile-s2">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        4.0 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="mobile-s2" name="rating" />
+                      </div>
+                    </label>
+                    <label class="checkbox-item" for="mobile-s3">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        3.5 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="mobile-s3" name="rating" />
+                      </div>
+                    </label>
+                    <label class="checkbox-item" for="mobile-s4">
+                      <div class="checkbox-item__right">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                          <use
+                            href="assets/icons/sprites.svg#iconoir:star-solid"
+                          ></use>
+                        </svg>
+                        3.0 به بالا
+                      </div>
+                      <div class="checkbox-item__left">
+                        <input type="checkbox" id="mobile-s4" name="rating" />
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse4"
+                  aria-expanded="false"
+                  aria-controls="collapse4"
+                >
+                  بازه قیمتی
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <form action="">
+                    <div class="price-filters">
+                      <div class="price-filter">
+                        <div class="price-filter__label">از قیمت:</div>
+                        <div class="price-filter__input">
+                          <div class="input">
+                            <input
+                              class="input__field input__field--have-icon"
+                              placeholder=""
+                              autocomplete="off"
+                              type="text"
+                              name="price_from"
+                            />
+                            <span class="input__icon"> تومان </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="price-filter">
+                        <div class="price-filter__label">تا قیمت:</div>
+                        <div class="price-filter__input">
+                          <div class="input">
+                            <input
+                              class="input__field input__field--have-icon"
+                              placeholder=""
+                              autocomplete="off"
+                              type="text"
+                              name="price_to"
+                            />
+                            <span class="input__icon"> تومان </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="price-buttons">
+                      <button class="button button--primary button--xs">
+                        اعمال قیمت
+                      </button>
+                      <button
+                        type="button"
+                        class="button button--primary-outline button--xs"
+                      >
+                        حذف
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapse5"
+                  aria-expanded="false"
+                  aria-controls="collapse5"
+                >
+                  موارد بیشتر
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use
+                      href="assets/icons/sprites.svg#Arrow / Chevron_Down"
+                    ></use>
+                  </svg>
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div class="check-boxes">
+                    <label class="checkbox-item" for="mobile-o1">
+                      دارای تخفیف
+                      <input type="checkbox" id="mobile-o1" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="mobile-o2">
+                      دوره ویژه
+                      <input type="checkbox" id="mobile-o2" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="mobile-o3">
+                      دارای گواهینامه رسمی
+                      <input type="checkbox" id="mobile-o3" name="mentor" />
+                    </label>
+                    <label class="checkbox-item" for="mobile-o4">
+                      ترجمه شده
+                      <input type="checkbox" id="mobile-o4" name="mentor" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Filter offcanvas End -->
 
     <!-- * Footer Start -->
     <footer>

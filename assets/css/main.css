@@ -8,9 +8,10 @@
 @import "layout/navbar.css";
 @import "layout/footer.css";
 @import "layout/main-sections.css";
-@import "layout/sidemenu.css";
+@import "layout/offcanvas.css";
 
 @import "components/accordion.css";
+@import "components/tag.css";
 @import "components/toast.css";
 @import "components/label.css";
 @import "components/skeleton.css";
@@ -20,4 +21,3 @@
 @import "components/input.css";
 @import "components/cards/course.css";
 @import "components/cards/mentor.css";
-
