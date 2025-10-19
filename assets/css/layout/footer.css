@@ -22,9 +22,7 @@ footer {
   flex-grow: 1;
   flex-direction: column;
   align-self: flex-start;
-  /* margin-inline: auto; */
   gap: var(--Spacing-lg);
-  /* min-width: calc(100% / 5 - var(--Spacing-xl)); */
 }
 
 .footer__column--brand {

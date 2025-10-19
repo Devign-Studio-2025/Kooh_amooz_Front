@@ -1,0 +1,20 @@
+.tag {
+  width: fit-content;
+  padding: var(--Spacing-sm) var(--Spacing-md);
+  color: var(--Color-Text-icon-disabled);
+  background-color: var(--Color-Surface-page);
+  border: var(--Border-Style-default);
+  border-radius: var(--Radius-md);
+  font: var(--Font-Caption-bold-style);
+  cursor: pointer;
+}
+
+.tag input {
+  display: none;
+}
+
+.tag:has(input:checked) {
+  background-color: var(--Color-Surface-subtle-primary);
+  color: var(--Color-Text-icon-action);
+  border-color: var(--Border-Color-primary);
+}

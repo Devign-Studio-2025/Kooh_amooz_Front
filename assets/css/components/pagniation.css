@@ -14,3 +14,20 @@
   background-color: var(--Color-Surface-hover-primary);
   color: var(--Color-Text-icon-on-primary);
 }
+
+.pagination--active {
+  background-color: var(--Color-Surface-primary);
+  color: var(--Color-Text-icon-on-primary);
+}
+
+.paginations {
+  display: flex;
+  justify-content: center;
+  gap: var(--Spacing-sm);
+}
+
+@media screen and (max-width: 1000px) {
+  .pagination {
+    width: 2.5rem;
+  }
+}

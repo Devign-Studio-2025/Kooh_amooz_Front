@@ -56,6 +56,11 @@
   border-color: var(--Border-Color-primary);
 }
 
-.input__field:focus ~ .input__icon {
+.input__field:focus ~ .input__icon,
+.input__field:not(:placeholder-shown) ~ .input__icon {
   color: var(--Color-Text-icon-action);
+}
+
+.input__field--have-icon {
+  padding-left: calc(var(--Spacing-md) + var(--Spacing-lg));
 }

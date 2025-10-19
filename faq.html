@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>سوالات متداول - کوه‌آموز</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/imgs/logoes/just-logo.png"
+    />
     <!-- ! Core Styles -->
     <link rel="stylesheet" href="assets/css/main.css" />
 
@@ -29,7 +34,7 @@
         <div class="nav-main__search-input">
           <form class="input">
             <input
-              class="input__field"
+              class="input__field input__field--have-icon"
               placeholder=""
               autocomplete="off"
               type="text"
@@ -571,15 +576,15 @@
           <hr />
         </div>
         <div class="section-website__body">
-          <div class="accordions max-width-800" id="accordionExample">
+          <div class="accordions max-width-800" id="faq-accordions">
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button
-                  class="accordion-button"
+                  class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapse1"
-                  aria-expanded="true"
+                  aria-expanded="false"
                   aria-controls="collapse1"
                 >
                   1. «کوه‌آموز» دقیقاً چیست و چه دوره‌هایی ارائه می‌دهد؟
@@ -592,8 +597,8 @@
               </h2>
               <div
                 id="collapse1"
-                class="accordion-collapse collapse show"
-                data-bs-parent="#accordionExample"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   کوه‌آموز «آموزشگاه آنلاین کوهنوردی ایران» است؛ دوره‌های
@@ -626,7 +631,7 @@
               <div
                 id="collapse2"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   بله؛ در تمامی دوره ها، جزء به جزء سرفصل‌های مطرح شده در جزوه
@@ -656,7 +661,7 @@
               <div
                 id="collapse3"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   ما در کوه آموز به این نتیجه رسیدیم که مباحث مطرح شده در بسیاری
@@ -689,7 +694,7 @@
               <div
                 id="collapse4"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   منتخب دوره‌های معتبر بین‌المللی پس از ترجمه و بومی‌سازی ارائه
@@ -719,7 +724,7 @@
               <div
                 id="collapse5"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   کوه آموز مناسب افراد علاقمند به آموزش در دنیای کوهستان در تمام
@@ -751,7 +756,7 @@
               <div
                 id="collapse6"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   بله؛ در اپلیکیشن امکان دانلود آفلاین برای مشاهده بدون اینترنت
@@ -781,7 +786,7 @@
               <div
                 id="collapse7"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   در بخش پروفایل کاربری، امکان پرسش از طریق بخش «ارتباط با ما» و
@@ -811,7 +816,7 @@
               <div
                 id="collapse8"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   برای برخی دوره‌ها پیش‌نیاز مهارتی/تئوریک تعریف شده و در صفحه
@@ -841,7 +846,7 @@
               <div
                 id="collapse9"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   بله؛ آموزش تئوریک جایگزین تجربه میدانی نیست. هدف اصلی کوه
@@ -872,7 +877,7 @@
               <div
                 id="collapse10"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   بله؛ آموزش تئوریک جایگزین تجربه میدانی نیست. هدف اصلی کوه
@@ -902,7 +907,7 @@
               <div
                 id="collapse11"
                 class="accordion-collapse collapse"
-                data-bs-parent="#accordionExample"
+                data-bs-parent="#faq-accordions"
               >
                 <div class="accordion-body">
                   این امکان به زودی فراهم می گردد.
@@ -978,7 +983,7 @@
                   <label for="topic" class="input__label">موضوع</label>
                   <input
                     class="input__field"
-                    placeholder="انتخاب کنید"
+                    placeholder="وارد کنید..."
                     autocomplete="off"
                     type="text"
                     name="topic"
@@ -997,12 +1002,9 @@
                 ></textarea>
               </div>
               <div class="section-website__buttons">
-                <a
-                  href="#"
-                  class="button button--lg button--primary fit-content"
-                >
+                <button class="button button--lg button--primary fit-content">
                   <span class="button__text">ثبت و ارسال فرم</span>
-                </a>
+                </button>
               </div>
             </form>
             <div class="section-website__visual max-width-500 flex-grow-1">
@@ -1013,14 +1015,20 @@
               <div class="section-website__visual-info">
                 <div class="section-website__visual-info-group">
                   <span class="section-website__visual-info-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <svg
+                      class="icon icon--md"
+                      style="rotate: -90deg"
+                      viewBox="0 0 24 24"
+                    >
                       <use
                         href="assets/icons/sprites.svg#solar:phone-bold-duotone"
                       ></use>
                     </svg>
                   </span>
-                  <span class="section-website__visual-info-text"
-                    >09135716484</span
+                  <a
+                    href="tel:09135716484"
+                    class="section-website__visual-info-text"
+                    >09135716484</a
                   >
                 </div>
                 <div class="section-website__visual-info-group">
@@ -1031,12 +1039,16 @@
                       ></use>
                     </svg>
                   </span>
-                  <span class="section-website__visual-info-text"
-                    >info@koohamooz.ir</span
+                  <a
+                    href="mailto:info@koohamooz.ir"
+                    class="section-website__visual-info-text"
+                    >info@koohamooz.ir</a
                   >
                 </div>
                 <div class="section-website__visual-info-group">
-                  <span class="section-website__visual-info-icon">
+                  <span
+                    class="section-website__visual-info-icon align-self-start"
+                  >
                     <svg class="icon icon--md" viewBox="0 0 24 24">
                       <use
                         href="assets/icons/sprites.svg#vuesax/bulk/location"

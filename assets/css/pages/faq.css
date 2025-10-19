@@ -14,7 +14,7 @@
 
 .section-website__visual-info-group {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     color: var(--Color-Text-icon-body);
     gap: var(--Spacing-sm);
 }
