@@ -118,6 +118,7 @@ main.main-website {
 
 .sidebar-section__head-remove-filter {
   font: var(--Font-Caption-bold-style);
+  padding: var(--Spacing-sm);
   border: unset;
   background-color: unset;
   color: var(--Color-Text-icon-action);
@@ -221,7 +222,7 @@ main.main-website {
   gap: var(--Spacing-sm);
 }
 
-.price-filter__input{
+.price-filter__input {
   flex-grow: 1;
 }
 
@@ -255,6 +256,10 @@ main.main-website {
 }
 
 @media screen and (max-width: 1000px) {
+  main.main-website {
+    margin-top: var(--Spacing-sm);
+  }
+
   .courses-section__head {
     width: 100%;
   }

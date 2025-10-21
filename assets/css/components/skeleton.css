@@ -9,8 +9,16 @@
   background-size: 300% 100%;
 }
 
+.skeleton-before--hide{
+  display: none;
+}
+
 .skeleton-after {
   display: none !important;
+}
+
+.skeleton-after--show{
+  display: block !important;
 }
 
 .skeleton-cards {
