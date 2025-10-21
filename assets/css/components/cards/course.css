@@ -4,7 +4,7 @@
   gap: var(--Spacing-md);
   padding: var(--Spacing-md);
   border-radius: var(--Radius-md);
-  border: var(--Border-Style-primary);
+  border: var(--Border-Style-default);
   background-color: var(--Color-Surface-page);
   width: fit-content;
   transition: var(--Transition-base);
@@ -14,7 +14,7 @@
 }
 
 .course-card:hover {
-  box-shadow: var(--Shadow-Md-Primary-style);
+  box-shadow: var(--Shadow-Sm-Primary-style);
 }
 
 /* ****** Head ****** */
@@ -124,7 +124,7 @@
 
 .course-card__body-category-title {
   color: var(--Color-Text-icon-action);
-  font: var(--Font-Body-bold-style);
+  font: var(--Font-Caption-bold-style);
   margin: 0;
 }
 
