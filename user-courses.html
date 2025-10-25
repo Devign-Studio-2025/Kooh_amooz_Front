@@ -1,179 +1,182 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>پنل کاربر - دوره‌های من</title>
-    <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
 
-    <!-- ! Core Styles -->
-    <link rel="stylesheet" href="assets/css/main.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پنل کاربر - دوره‌های من</title>
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
 
-    <!-- ! Page Styles -->
-    <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
-    <link rel="stylesheet" href="assets/css/pages/user.css" />
-  </head>
-  <body>
-    <!-- * Navbar Start -->
-    <nav class="nav-main">
-      <div class="nav-main__right">
-        <a href="/" class="nav-main__logo-wrapper nonable-below-1000">
-          <div class="nav-main__logo">
-            <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
-          </div>
-          <div class="nav-main__logo-text">
-            <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
-          </div>
-        </a>
-        <div class="nav-main__search-input">
-          <form class="input">
-            <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text" name="search" />
-            <span class="input__placeholder">
-              جستجو در
-              <strong class="fw-normal" style="color: var(--Color-Text-icon-action)">کوه‌آموز</strong>...
-            </span>
-            <span class="input__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
-              </svg>
-            </span>
-          </form>
+  <!-- ! Core Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- ! Page Styles -->
+  <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
+  <link rel="stylesheet" href="assets/css/pages/user.css" />
+</head>
+
+<body>
+  <!-- * Navbar Start -->
+  <nav class="nav-main">
+    <div class="nav-main__right">
+      <a href="/" class="nav-main__logo-wrapper nonable-below-1000">
+        <div class="nav-main__logo">
+          <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
         </div>
-        <ul class="nav-main__link-items nonable-below-1000">
-          <li class="nav-main__link-item nav-main__link-item--has-menu">
-            <a type="button" class="nav-main__link"
-              >دسته‌بندی‌ها
-              <svg class="icon icon--sm" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/linear/arrow-down"></use>
-              </svg>
-            </a>
-            <div class="nav-main__submenu">
-              <div class="d-flex gap-md-y justify-content-between">
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">کوهپیمایی</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountaineering.png" alt="کوهپیمایی" />
-                  </div>
-                </a>
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">طبیعت گردی</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-nature.png" alt="طبیعت گردی" />
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex gap-md-y justify-content-between">
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">کوهنوردی</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountain.png" alt="کوهنوردی" />
-                  </div>
-                </a>
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">نجات کوهستان</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rescue.png" alt="نجات کوهستان" />
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex gap-md-y justify-content-between">
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">سنگنوردی و دیواره‌نوردی</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rock-climbing.png" alt="سنگنوردی" />
-                  </div>
-                </a>
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">علوم تکمیلی کوهستان</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-skyrunner.png" alt="علوم تکمیلی کوهستان" />
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex gap-md-y justify-content-between">
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">یخ و برف</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img src="assets/imgs/categories/cat-icefall.png" alt="یخ و برف" />
-                  </div>
-                </a>
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">دره‌نوردی</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img src="assets/imgs/categories/cat-canyoning.png" alt="دره‌نوردی" />
-                  </div>
-                </a>
-              </div>
-              <div class="d-flex gap-md-y justify-content-between">
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">صعودهای ورزشی</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img src="assets/imgs/categories/cat-gym.png" alt="صعودهای ورزشی" />
-                  </div>
-                </a>
-                <a href="courses.html" class="nav-main__submenu-item">
-                  <span class="nav-main__submenu-item-text">آموزشگاه جهانی</span>
-                  <div class="nav-main__submenu-item-image">
-                    <img src="assets/imgs/categories/cat-learning.jpg" alt="آموزشگاه جهانی" />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-main__link-item">
-            <a href="about-us.html" class="nav-main__link">درباره ما</a>
-          </li>
-          <li class="nav-main__link-item">
-            <a href="faq.html" class="nav-main__link">سوالات متداول</a>
-          </li>
-        </ul>
+        <div class="nav-main__logo-text">
+          <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
+        </div>
+      </a>
+      <div class="nav-main__search-input">
+        <form class="input">
+          <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text"
+            name="search" />
+          <span class="input__placeholder">
+            جستجو در
+            <strong class="fw-normal" style="color: var(--Color-Text-icon-action)">کوه‌آموز</strong>...
+          </span>
+          <span class="input__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+            </svg>
+          </span>
+        </form>
       </div>
-
-      <div class="nav-main__left">
-        <div class="nav-main__left-buttons">
-          <!-- ? Logged in Mode -->
-          <a class="button button--sm button--primary-outline nonable-below-1000" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت">
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
-              </svg>
-            </span>
-            <span class="button__badge"> +9 </span>
+      <ul class="nav-main__link-items nonable-below-1000">
+        <li class="nav-main__link-item nav-main__link-item--has-menu">
+          <a type="button" class="nav-main__link">دسته‌بندی‌ها
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/linear/arrow-down"></use>
+            </svg>
           </a>
-          <a class="button button--sm button--primary-outline nonable-below-1000" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="دوره‌های من">
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/twotone/book"></use>
-              </svg>
-            </span>
-          </a>
+          <div class="nav-main__submenu">
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">کوهپیمایی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountaineering.png"
+                    alt="کوهپیمایی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">طبیعت گردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-nature.png" alt="طبیعت گردی" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">کوهنوردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountain.png" alt="کوهنوردی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">نجات کوهستان</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rescue.png" alt="نجات کوهستان" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">سنگنوردی و دیواره‌نوردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rock-climbing.png"
+                    alt="سنگنوردی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">علوم تکمیلی کوهستان</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-skyrunner.png"
+                    alt="علوم تکمیلی کوهستان" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">یخ و برف</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-icefall.png" alt="یخ و برف" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">دره‌نوردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-canyoning.png" alt="دره‌نوردی" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">صعودهای ورزشی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-gym.png" alt="صعودهای ورزشی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">آموزشگاه جهانی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-learning.jpg" alt="آموزشگاه جهانی" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-main__link-item">
+          <a href="about-us.html" class="nav-main__link">درباره ما</a>
+        </li>
+        <li class="nav-main__link-item">
+          <a href="faq.html" class="nav-main__link">سوالات متداول</a>
+        </li>
+      </ul>
+    </div>
 
-          <a class="button button--sm button--primary-outline" id="cart" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سبد خرید">
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-              </svg>
-            </span>
-            <span class="button__badge"> 3 </span>
-          </a>
+    <div class="nav-main__left">
+      <div class="nav-main__left-buttons">
+        <!-- ? Logged in Mode -->
+        <a class="button button--sm button--primary-outline nonable-below-1000" href="#" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت">
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
+            </svg>
+          </span>
+          <span class="button__badge"> +9 </span>
+        </a>
+        <a class="button button--sm button--primary-outline nonable-below-1000" href="#" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-title="دوره‌های من">
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/twotone/book"></use>
+            </svg>
+          </span>
+        </a>
 
-          <a
-            class="button button--sm button--primary nonable-below-1000"
-            href="user-courses.html"
-            data-bs-toggle="tooltip"
-            data-bs-placement="bottom"
-            data-bs-title="پروفایل کاربری"
-          >
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/bold/user"></use>
-              </svg>
-            </span>
-          </a>
-          <!-- ? Logged in Mode -->
+        <a class="button button--sm button--primary-outline" id="cart" href="#" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-title="سبد خرید">
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+            </svg>
+          </span>
+          <span class="button__badge"> 3 </span>
+        </a>
 
-          <!-- ? Guest Mode -->
-          <!-- <a class="button button--sm button--primary h-100" href="#">
+        <a class="button button--sm button--primary nonable-below-1000" href="user-courses.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/bold/user"></use>
+            </svg>
+          </span>
+        </a>
+        <!-- ? Logged in Mode -->
+
+        <!-- ? Guest Mode -->
+        <!-- <a class="button button--sm button--primary h-100" href="#">
             <span class="button__text nonable-below-1000">ورود | ثبت نام</span>
             <span class="button__icon nonable-above-1000">
               <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -209,389 +212,399 @@
               </svg>
             </span>
           </a> -->
-          <!-- ? Guest Mode -->
-        </div>
+        <!-- ? Guest Mode -->
+      </div>
 
-        <a
-          class="button button--sm button--primary-outline nonable-above-1000"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#sidemenu-main"
-          aria-controls="sidemenu-main"
-        >
+      <a class="button button--sm button--primary-outline nonable-above-1000" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
+        <span class="button__icon">
+          <svg class="icon icon--md" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#Menu / Hamburger_MD"></use>
+          </svg>
+        </span>
+      </a>
+
+      <div class="nav-main__logo-center">
+        <a href="/">
+          <img height="54" src="assets/imgs/logoes/just-logo.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main sidemenu Start -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-main" aria-labelledby="sidemenu-main-title">
+    <div class="offcanvas-header">
+      <a href="/" class="d-flex gap-md ms-auto" style="height: 3rem">
+        <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
+        <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
+      </a>
+      <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="button__icon">
+          <svg class="icon icon--lg" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#mdi:remove"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column gap-sm">
+        <!-- Logged in Mode -->
+        <a class="button button--sm button--navlink" href="#">
+          <span class="button__text">دوره‌های من</span>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#Menu / Hamburger_MD"></use>
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
             </svg>
           </span>
         </a>
-
-        <div class="nav-main__logo-center">
-          <a href="/">
-            <img height="54" src="assets/imgs/logoes/just-logo.png" alt="" />
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Main sidemenu Start -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-main" aria-labelledby="sidemenu-main-title">
-      <div class="offcanvas-header">
-        <a href="/" class="d-flex gap-md ms-auto" style="height: 3rem">
-          <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
-          <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
-        </a>
-        <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <a class="button button--sm button--navlink" href="#">
+          <div class="button__text-with-badge">
+            <span class="button__text">پیام‌های مدیریت</span>
+            <span class="button__badge button__badge--navlink"> +9 </span>
+          </div>
           <span class="button__icon">
-            <svg class="icon icon--lg" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#mdi:remove"></use>
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
             </svg>
           </span>
-        </button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="d-flex flex-column gap-sm">
-          <!-- Logged in Mode -->
-          <a class="button button--sm button--navlink" href="#">
-            <span class="button__text">دوره‌های من</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="#">
-            <div class="button__text-with-badge">
-              <span class="button__text">پیام‌های مدیریت</span>
-              <span class="button__badge button__badge--navlink"> +9 </span>
-            </div>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <!-- Logged in Mode -->
-          <a class="button button--sm button--navlink" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidemenu-categories" aria-controls="sidemenu-categories">
-            <span class="button__text">دسته‌بندی‌ها</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="faq.html">
-            <span class="button__text">سوالات متدوال</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="about-us.html">
-            <span class="button__text">درباره ما</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-        </div>
-      </div>
-      <div class="offcanvas-footer">
-        <!-- ? Logged in Mode -->
-        <a href="user-courses.html" class="button button--md button--primary w-100">
-          <span class="button__text">پروفایل کاربری</span>
         </a>
-        <!-- ? Logged in Mode -->
+        <!-- Logged in Mode -->
+        <a class="button button--sm button--navlink" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#sidemenu-categories" aria-controls="sidemenu-categories">
+          <span class="button__text">دسته‌بندی‌ها</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="faq.html">
+          <span class="button__text">سوالات متدوال</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="about-us.html">
+          <span class="button__text">درباره ما</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <!-- ? Logged in Mode -->
+      <a href="user-courses.html" class="button button--md button--primary w-100">
+        <span class="button__text">پروفایل کاربری</span>
+      </a>
+      <!-- ? Logged in Mode -->
 
-        <!-- ? Guest Mode -->
-        <!-- <a href="#" class="button button--primary w-100">
+      <!-- ? Guest Mode -->
+      <!-- <a href="#" class="button button--primary w-100">
           <span class="button__text">ورود | ثبت نام</span>
         </a> -->
-        <!-- ? Guest Mode -->
-      </div>
+      <!-- ? Guest Mode -->
     </div>
-    <!-- Main sidemenu End -->
+  </div>
+  <!-- Main sidemenu End -->
 
-    <!-- Categories sidemenu Start -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-categories" aria-labelledby="sidemenu-categories-title">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title w-100" id="sidemenu-categories-title">دسته‌بندی‌ها</h5>
-        <button type="button" class="button button--sm w-100 justify-content-start" data-bs-toggle="offcanvas" data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
+  <!-- Categories sidemenu Start -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-categories"
+    aria-labelledby="sidemenu-categories-title">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title w-100" id="sidemenu-categories-title">
+        دسته‌بندی‌ها
+      </h5>
+      <button type="button" class="button button--sm w-100 justify-content-start" data-bs-toggle="offcanvas"
+        data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
+        <span class="button__icon">
+          <svg class="icon icon--md" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#Arrow / Chevron_Right"></use>
+          </svg>
+        </span>
+        <span class="button__text">بازگشت به منو</span>
+      </button>
+      <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="button__icon">
+          <svg class="icon icon--lg" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#mdi:remove"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column gap-sm">
+        <a class="button button--sm button--navlink" href="courses.html" data-bs-toggle="offcanvas"
+          data-bs-target="#sidemenu-categories" aria-controls="sidemenu-categories">
+          <span class="button__text">کوهپیمایی</span>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#Arrow / Chevron_Right"></use>
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
             </svg>
           </span>
-          <span class="button__text">بازگشت به منو</span>
-        </button>
-        <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">طبیعت گردی</span>
           <span class="button__icon">
-            <svg class="icon icon--lg" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#mdi:remove"></use>
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
             </svg>
           </span>
-        </button>
-      </div>
-      <div class="offcanvas-body">
-        <div class="d-flex flex-column gap-sm">
-          <a class="button button--sm button--navlink" href="courses.html" data-bs-toggle="offcanvas" data-bs-target="#sidemenu-categories" aria-controls="sidemenu-categories">
-            <span class="button__text">کوهپیمایی</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">طبیعت گردی</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">کوهنوردی</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">نجات کوهستان</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">سنگنوردی</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">علوم تکمیلی کوهستان</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">یخ و برف</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">یخ و برف</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">دره نوردی</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">صعودهای ورزشی</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-          <a class="button button--sm button--navlink" href="courses.html">
-            <span class="button__text">آموزشگاه جهانی</span>
-            <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
-              </svg>
-            </span>
-          </a>
-        </div>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">کوهنوردی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">نجات کوهستان</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">سنگنوردی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">علوم تکمیلی کوهستان</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">یخ و برف</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">یخ و برف</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">دره نوردی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">صعودهای ورزشی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">آموزشگاه جهانی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
-    <!-- Categories sidemenu End -->
+  </div>
+  <!-- Categories sidemenu End -->
 
-    <main class="main-website">
-      <!-- * [Courses list] Start -->
-      <section class="courses-section">
-        <div class="courses-section__head">
-          <div class="courses-section__head-title ms-auto">دوره‌های من (27)</div>
-          <div class="courses-section__head-actions">
-            <div class="courses-section__head-search ms-auto">
-              <div class="input">
-                <input class="input__field input__field--have-icon" placeholder="جستجو در دوره‌های من..." autocomplete="off" type="text" name="search" />
-                <span class="input__icon">
+  <main class="main-website">
+    <!-- * [Courses list] Start -->
+    <section class="courses-section">
+      <div class="courses-section__head">
+        <div class="courses-section__head-title ms-auto">
+          دوره‌های من (27)
+        </div>
+        <div class="courses-section__head-actions">
+          <div class="courses-section__head-search ms-auto">
+            <div class="input">
+              <input class="input__field input__field--have-icon" placeholder="جستجو در دوره‌های من..."
+                autocomplete="off" type="text" name="search" />
+              <span class="input__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="courses-section__head-select">
+            <div class="input input--select">
+              <button class="input__field input__field--select">
+                دسته‌بندی
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton-before">
+        <div class="skeleton-cards flex-wrap">
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
+          <div class="skeleton-card">
+            <div class="skeleton skeleton-card__image"></div>
+            <div class="skeleton-card__texts">
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text"></div>
+              <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+            </div>
+            <div class="skeleton skeleton-card__text"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton-after">
+        <div class="courses-section__body">
+          <a href="course-details.html" class="course-card">
+            <div class="course-card__head">
+              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-1.jpg" alt="" />
+              <div class="course-card__head-buttons">
+                <label class="course-card__head-button button button--sm course-card__head-button--heart"
+                  for="best-heart-1">
+                  <input type="checkbox" id="best-heart-1" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                  </svg>
+                </label>
+                <label class="course-card__head-button button button--sm course-card__head-button--cart"
+                  bestfor="latest-cart-1">
+                  <input type="checkbox" id="best-cart-1" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div class="course-card__body">
+              <div class="course-card__body-category">
+                <span class="course-card__body-category-icon">
                   <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
                   </svg>
                 </span>
-              </div>
-            </div>
-            <div class="courses-section__head-select">
-              <div class="input input--select">
-                <button class="input__field input__field--select">دسته‌بندی</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="skeleton-before">
-          <div class="skeleton-cards flex-wrap">
-            <div class="skeleton-card">
-              <div class="skeleton skeleton-card__image"></div>
-              <div class="skeleton-card__texts">
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
-              </div>
-              <div class="skeleton skeleton-card__text"></div>
-            </div>
-            <div class="skeleton-card">
-              <div class="skeleton skeleton-card__image"></div>
-              <div class="skeleton-card__texts">
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
-              </div>
-              <div class="skeleton skeleton-card__text"></div>
-            </div>
-            <div class="skeleton-card">
-              <div class="skeleton skeleton-card__image"></div>
-              <div class="skeleton-card__texts">
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
-              </div>
-              <div class="skeleton skeleton-card__text"></div>
-            </div>
-            <div class="skeleton-card">
-              <div class="skeleton skeleton-card__image"></div>
-              <div class="skeleton-card__texts">
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
-              </div>
-              <div class="skeleton skeleton-card__text"></div>
-            </div>
-            <div class="skeleton-card">
-              <div class="skeleton skeleton-card__image"></div>
-              <div class="skeleton-card__texts">
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
-              </div>
-              <div class="skeleton skeleton-card__text"></div>
-            </div>
-            <div class="skeleton-card">
-              <div class="skeleton skeleton-card__image"></div>
-              <div class="skeleton-card__texts">
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text"></div>
-                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
-              </div>
-              <div class="skeleton skeleton-card__text"></div>
-            </div>
-          </div>
-        </div>
-        <div class="skeleton-after">
-          <div class="courses-section__body">
-            <a href="course-details.html" class="course-card">
-              <div class="course-card__head">
-                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-1.jpg" alt="" />
-                <div class="course-card__head-buttons">
-                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="best-heart-1">
-                    <input type="checkbox" id="best-heart-1" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                    </svg>
-                  </label>
-                  <label class="course-card__head-button button button--sm course-card__head-button--cart" bestfor="latest-cart-1">
-                    <input type="checkbox" id="best-cart-1" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                    </svg>
-                  </label>
-                </div>
-              </div>
-              <div class="course-card__body">
-                <div class="course-card__body-category">
-                  <span class="course-card__body-category-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
+                <h4 class="course-card__body-category-title">سنگنوردی</h4>
+                <div class="label label--warning label--sm">
+                  <span class="label__icon">
+                    <svg class="icon icon--xs" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
                     </svg>
                   </span>
-                  <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                  <div class="label label--warning label--sm">
-                    <span class="label__icon">
-                      <svg class="icon icon--xs" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                      </svg>
-                    </span>
-                    <span class="label__text">4.5</span>
-                  </div>
-                </div>
-                <h3 class="course-card__body-title">دوره حرفه ای سنگنوردی کودکان</h3>
-                <div class="course-card__body-infos">
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">زمان دوره:</p>
-                    <p class="course-card__body-info-value">30 ساعت</p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">علاقمندان:</p>
-                    <p class="course-card__body-info-value">
-                      40
-                      <span class="course-card__body-info-value-unit">نفر</span>
-                    </p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
-                    </span>
-                    <p class="course-card__body-info-text">مدرس:</p>
-                    <p class="course-card__body-info-value">علی جباری</p>
-                  </div>
+                  <span class="label__text">4.5</span>
                 </div>
               </div>
-              <div class="course-card__foot">
-                <!-- Purchased -->
-                <!-- <div
+              <h3 class="course-card__body-title">
+                دوره حرفه ای سنگنوردی کودکان
+              </h3>
+              <div class="course-card__body-infos">
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">زمان دوره:</p>
+                  <p class="course-card__body-info-value">30 ساعت</p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">علاقمندان:</p>
+                  <p class="course-card__body-info-value">
+                    40
+                    <span class="course-card__body-info-value-unit">نفر</span>
+                  </p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
+                  </span>
+                  <p class="course-card__body-info-text">مدرس:</p>
+                  <p class="course-card__body-info-value">علی جباری</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card__foot">
+              <!-- Purchased -->
+              <!-- <div
                         class="label label--primary label--md justify-content-center w-100"
                       >
                         <span class="label__icon">
@@ -603,31 +616,32 @@
                         </span>
                         <span class="label__text">خریداری شده</span>
                       </div> -->
-                <!-- Purchased -->
-                <!-- Not Purchased -->
-                <div class="course-card__foot-prices text-center">
-                  <div class="course-card__foot-price-after">
-                    <span class="course-card__foot-price-after-value">4/950/000</span>
-                    <span class="course-card__foot-price-unit">تومان</span>
-                  </div>
+              <!-- Purchased -->
+              <!-- Not Purchased -->
+              <div class="course-card__foot-prices text-center">
+                <div class="course-card__foot-price-after">
+                  <span class="course-card__foot-price-after-value">4/950/000</span>
+                  <span class="course-card__foot-price-unit">تومان</span>
                 </div>
-                <!-- Not Purchased -->
               </div>
-            </a>
-            <a href="course-details.html" class="course-card">
-              <div class="course-card__head">
-                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-2.jpg" alt="" />
-                <div class="course-card__head-buttons">
-                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-2">
-                    <input type="checkbox" id="latest-heart-2" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                    </svg>
-                  </label>
-                  <!-- <label
+              <!-- Not Purchased -->
+            </div>
+          </a>
+          <a href="course-details.html" class="course-card">
+            <div class="course-card__head">
+              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-2.jpg" alt="" />
+              <div class="course-card__head-buttons">
+                <label class="course-card__head-button button button--sm course-card__head-button--heart"
+                  for="latest-heart-2">
+                  <input type="checkbox" id="latest-heart-2" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                  </svg>
+                </label>
+                <!-- <label
                           class="course-card__head-button button button--sm course-card__head-button--cart"
                           for="latest-cart-2"
                         >
@@ -649,68 +663,70 @@
                             ></use>
                           </svg>
                         </label> -->
-                </div>
               </div>
-              <div class="course-card__body">
-                <div class="course-card__body-category">
-                  <span class="course-card__body-category-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                    </svg>
-                  </span>
-                  <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                  <div class="label label--warning label--sm">
-                    <span class="label__icon">
-                      <svg class="icon icon--xs" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                      </svg>
-                    </span>
-                    <span class="label__text">4.5</span>
-                  </div>
-                </div>
-                <h3 class="course-card__body-title">دوره حرفه ای سنگنوردی کودکان</h3>
-                <div class="course-card__body-infos">
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">زمان دوره:</p>
-                    <p class="course-card__body-info-value">30 ساعت</p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">علاقمندان:</p>
-                    <p class="course-card__body-info-value">
-                      40
-                      <span class="course-card__body-info-value-unit">نفر</span>
-                    </p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
-                    </span>
-                    <p class="course-card__body-info-text">مدرس:</p>
-                    <p class="course-card__body-info-value">علی جباری</p>
-                  </div>
-                </div>
-              </div>
-              <div class="course-card__foot">
-                <!-- Purchased -->
-                <div class="label label--primary label--md justify-content-center w-100">
+            </div>
+            <div class="course-card__body">
+              <div class="course-card__body-category">
+                <span class="course-card__body-category-icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
+                  </svg>
+                </span>
+                <h4 class="course-card__body-category-title">سنگنوردی</h4>
+                <div class="label label--warning label--sm">
                   <span class="label__icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#Warning / Circle_Check"></use>
+                    <svg class="icon icon--xs" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
                     </svg>
                   </span>
-                  <span class="label__text">خریداری شده</span>
+                  <span class="label__text">4.5</span>
                 </div>
-                <!-- Purchased -->
-                <!-- Not Purchased -->
-                <!-- <div class="course-card__foot-infos">
+              </div>
+              <h3 class="course-card__body-title">
+                دوره حرفه ای سنگنوردی کودکان
+              </h3>
+              <div class="course-card__body-infos">
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">زمان دوره:</p>
+                  <p class="course-card__body-info-value">30 ساعت</p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">علاقمندان:</p>
+                  <p class="course-card__body-info-value">
+                    40
+                    <span class="course-card__body-info-value-unit">نفر</span>
+                  </p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
+                  </span>
+                  <p class="course-card__body-info-text">مدرس:</p>
+                  <p class="course-card__body-info-value">علی جباری</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card__foot">
+              <!-- Purchased -->
+              <div class="label label--primary label--md justify-content-center w-100">
+                <span class="label__icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#Warning / Circle_Check"></use>
+                  </svg>
+                </span>
+                <span class="label__text">خریداری شده</span>
+              </div>
+              <!-- Purchased -->
+              <!-- Not Purchased -->
+              <!-- <div class="course-card__foot-infos">
                         <div class="course-card__foot-prices">
                           <div class="course-card__foot-price-before">
                             5/500/000 تومان
@@ -730,704 +746,743 @@
                           </div>
                         </div>
                       </div> -->
-                <!-- Not Purchased -->
-              </div>
-            </a>
-            <a href="course-details.html" class="course-card">
-              <div class="course-card__head">
-                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-3.jpg" alt="" />
-                <div class="course-card__head-buttons">
-                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-3">
-                    <input type="checkbox" id="latest-heart-3" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                    </svg>
-                  </label>
-                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-3">
-                    <input checked type="checkbox" id="latest-cart-3" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                    </svg>
-                  </label>
-                </div>
-              </div>
-              <div class="course-card__body">
-                <div class="course-card__body-category">
-                  <span class="course-card__body-category-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                    </svg>
-                  </span>
-                  <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                  <div class="label label--warning label--sm">
-                    <span class="label__icon">
-                      <svg class="icon icon--xs" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                      </svg>
-                    </span>
-                    <span class="label__text">4.5</span>
-                  </div>
-                </div>
-                <h3 class="course-card__body-title">دوره حرفه ای سنگنوردی کودکان</h3>
-                <div class="course-card__body-infos">
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">زمان دوره:</p>
-                    <p class="course-card__body-info-value">30 ساعت</p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">علاقمندان:</p>
-                    <p class="course-card__body-info-value">
-                      40
-                      <span class="course-card__body-info-value-unit">نفر</span>
-                    </p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
-                    </span>
-                    <p class="course-card__body-info-text">مدرس:</p>
-                    <p class="course-card__body-info-value">علی جباری</p>
-                  </div>
-                </div>
-              </div>
-              <div class="course-card__foot">
-                <!-- Purchased -->
-                <!-- <div
-                        class="label label--primary label--md justify-content-center w-100"
-                      >
-                        <span class="label__icon">
-                          <svg class="icon icon--md" viewBox="0 0 24 24">
-                            <use
-                              href="assets/icons/sprites.svg#Warning / Circle_Check"
-                            ></use>
-                          </svg>
-                        </span>
-                        <span class="label__text">خریداری شده</span>
-                      </div> -->
-                <!-- Purchased -->
-                <!-- Not Purchased -->
-                <div class="course-card__foot-prices">
-                  <div class="course-card__foot-price-before">5/500/000 تومان</div>
-                  <div class="course-card__foot-price-after">
-                    <span class="course-card__foot-price-after-value">4/950/000</span>
-                    <span class="course-card__foot-price-unit">تومان</span>
-                  </div>
-                </div>
-                <div class="course-card__foot-info-discount">
-                  <div class="label label--sm label--success">
-                    <span class="label__text">10% تخفیف</span>
-                  </div>
-                </div>
-                <!-- Not Purchased -->
-              </div>
-            </a>
-            <a href="course-details.html" class="course-card">
-              <div class="course-card__head">
-                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-4.jpg" alt="" />
-                <div class="course-card__head-buttons">
-                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-4">
-                    <input type="checkbox" id="latest-heart-4" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                    </svg>
-                  </label>
-                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-4">
-                    <input type="checkbox" id="latest-cart-4" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                    </svg>
-                  </label>
-                </div>
-              </div>
-              <div class="course-card__body">
-                <div class="course-card__body-category">
-                  <span class="course-card__body-category-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                    </svg>
-                  </span>
-                  <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                  <div class="label label--warning label--sm">
-                    <span class="label__icon">
-                      <svg class="icon icon--xs" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                      </svg>
-                    </span>
-                    <span class="label__text">4.5</span>
-                  </div>
-                </div>
-                <h3 class="course-card__body-title">دوره حرفه ای سنگنوردی کودکان</h3>
-                <div class="course-card__body-infos">
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">زمان دوره:</p>
-                    <p class="course-card__body-info-value">30 ساعت</p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">علاقمندان:</p>
-                    <p class="course-card__body-info-value">
-                      40
-                      <span class="course-card__body-info-value-unit">نفر</span>
-                    </p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
-                    </span>
-                    <p class="course-card__body-info-text">مدرس:</p>
-                    <p class="course-card__body-info-value">علی جباری</p>
-                  </div>
-                </div>
-              </div>
-              <div class="course-card__foot">
-                <!-- Purchased -->
-                <!-- <div
-                        class="label label--primary label--md justify-content-center w-100"
-                      >
-                        <span class="label__icon">
-                          <svg class="icon icon--md" viewBox="0 0 24 24">
-                            <use
-                              href="assets/icons/sprites.svg#Warning / Circle_Check"
-                            ></use>
-                          </svg>
-                        </span>
-                        <span class="label__text">خریداری شده</span>
-                      </div> -->
-                <!-- Purchased -->
-                <!-- Not Purchased -->
-                <div class="course-card__foot-prices">
-                  <div class="course-card__foot-price-before">5/500/000 تومان</div>
-                  <div class="course-card__foot-price-after">
-                    <span class="course-card__foot-price-after-value">4/950/000</span>
-                    <span class="course-card__foot-price-unit">تومان</span>
-                  </div>
-                </div>
-                <div class="course-card__foot-info-discount">
-                  <div class="label label--sm label--success">
-                    <span class="label__text">10% تخفیف</span>
-                  </div>
-                </div>
-                <!-- Not Purchased -->
-              </div>
-            </a>
-            <a href="course-details.html" class="course-card">
-              <div class="course-card__head">
-                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-5.jpg" alt="" />
-                <div class="course-card__head-buttons">
-                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-5">
-                    <input checked type="checkbox" id="latest-heart-5" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                    </svg>
-                  </label>
-                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-5">
-                    <input type="checkbox" id="latest-cart-5" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                    </svg>
-                  </label>
-                </div>
-              </div>
-              <div class="course-card__body">
-                <div class="course-card__body-category">
-                  <span class="course-card__body-category-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                    </svg>
-                  </span>
-                  <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                  <div class="label label--warning label--sm">
-                    <span class="label__icon">
-                      <svg class="icon icon--xs" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                      </svg>
-                    </span>
-                    <span class="label__text">4.5</span>
-                  </div>
-                </div>
-                <h3 class="course-card__body-title">دوره حرفه ای سنگنوردی کودکان</h3>
-                <div class="course-card__body-infos">
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">زمان دوره:</p>
-                    <p class="course-card__body-info-value">30 ساعت</p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">علاقمندان:</p>
-                    <p class="course-card__body-info-value">
-                      40
-                      <span class="course-card__body-info-value-unit">نفر</span>
-                    </p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
-                    </span>
-                    <p class="course-card__body-info-text">مدرس:</p>
-                    <p class="course-card__body-info-value">علی جباری</p>
-                  </div>
-                </div>
-              </div>
-              <div class="course-card__foot">
-                <!-- Purchased -->
-                <!-- <div
-                        class="label label--primary label--md justify-content-center w-100"
-                      >
-                        <span class="label__icon">
-                          <svg class="icon icon--md" viewBox="0 0 24 24">
-                            <use
-                              href="assets/icons/sprites.svg#Warning / Circle_Check"
-                            ></use>
-                          </svg>
-                        </span>
-                        <span class="label__text">خریداری شده</span>
-                      </div> -->
-                <!-- Purchased -->
-                <!-- Not Purchased -->
-                <div class="course-card__foot-prices">
-                  <div class="course-card__foot-price-before">5/500/000 تومان</div>
-                  <div class="course-card__foot-price-after">
-                    <span class="course-card__foot-price-after-value">4/950/000</span>
-                    <span class="course-card__foot-price-unit">تومان</span>
-                  </div>
-                </div>
-                <div class="course-card__foot-info-discount">
-                  <div class="label label--sm label--success">
-                    <span class="label__text">10% تخفیف</span>
-                  </div>
-                </div>
-                <!-- Not Purchased -->
-              </div>
-            </a>
-            <a href="course-details.html" class="course-card">
-              <div class="course-card__head">
-                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-6.jpg" alt="" />
-                <div class="course-card__head-buttons">
-                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-6">
-                    <input type="checkbox" id="latest-heart-6" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                    </svg>
-                  </label>
-                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-6">
-                    <input type="checkbox" id="latest-cart-6" />
-                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                    </svg>
-                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                    </svg>
-                  </label>
-                </div>
-              </div>
-              <div class="course-card__body">
-                <div class="course-card__body-category">
-                  <span class="course-card__body-category-icon">
-                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                    </svg>
-                  </span>
-                  <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                  <div class="label label--warning label--sm">
-                    <span class="label__icon">
-                      <svg class="icon icon--xs" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                      </svg>
-                    </span>
-                    <span class="label__text">4.5</span>
-                  </div>
-                </div>
-                <h3 class="course-card__body-title">دوره حرفه ای سنگنوردی کودکان</h3>
-                <div class="course-card__body-infos">
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">زمان دوره:</p>
-                    <p class="course-card__body-info-value">30 ساعت</p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <svg class="icon icon--md" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use></svg
-                    ></span>
-                    <p class="course-card__body-info-text">علاقمندان:</p>
-                    <p class="course-card__body-info-value">
-                      40
-                      <span class="course-card__body-info-value-unit">نفر</span>
-                    </p>
-                  </div>
-                  <div class="course-card__body-info">
-                    <span class="course-card__body-info-icon">
-                      <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
-                    </span>
-                    <p class="course-card__body-info-text">مدرس:</p>
-                    <p class="course-card__body-info-value">علی جباری</p>
-                  </div>
-                </div>
-              </div>
-              <div class="course-card__foot">
-                <!-- Purchased -->
-                <!-- <div
-                        class="label label--primary label--md justify-content-center w-100"
-                      >
-                        <span class="label__icon">
-                          <svg class="icon icon--md" viewBox="0 0 24 24">
-                            <use
-                              href="assets/icons/sprites.svg#Warning / Circle_Check"
-                            ></use>
-                          </svg>
-                        </span>
-                        <span class="label__text">خریداری شده</span>
-                      </div> -->
-                <!-- Purchased -->
-                <!-- Not Purchased -->
-                <div class="course-card__foot-prices">
-                  <div class="course-card__foot-price-before">5/500/000 تومان</div>
-                  <div class="course-card__foot-price-after">
-                    <span class="course-card__foot-price-after-value">4/950/000</span>
-                    <span class="course-card__foot-price-unit">تومان</span>
-                  </div>
-                </div>
-                <div class="course-card__foot-info-discount">
-                  <div class="label label--sm label--success">
-                    <span class="label__text">10% تخفیف</span>
-                  </div>
-                </div>
-                <!-- Not Purchased -->
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="skeleton-after">
-          <div class="paginations">
-            <div class="pagination">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#humbleicons:arrow-right"></use>
-              </svg>
+              <!-- Not Purchased -->
             </div>
-            <div class="pagination">1</div>
-            <div class="pagination">2</div>
-            <div class="pagination">...</div>
-            <div class="pagination pagination--active">10</div>
-            <div class="pagination">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#humbleicons:arrow-left"></use>
-              </svg>
+          </a>
+          <a href="course-details.html" class="course-card">
+            <div class="course-card__head">
+              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-3.jpg" alt="" />
+              <div class="course-card__head-buttons">
+                <label class="course-card__head-button button button--sm course-card__head-button--heart"
+                  for="latest-heart-3">
+                  <input type="checkbox" id="latest-heart-3" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                  </svg>
+                </label>
+                <label class="course-card__head-button button button--sm course-card__head-button--cart"
+                  for="latest-cart-3">
+                  <input checked type="checkbox" id="latest-cart-3" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
+                  </svg>
+                </label>
+              </div>
             </div>
-          </div>
+            <div class="course-card__body">
+              <div class="course-card__body-category">
+                <span class="course-card__body-category-icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
+                  </svg>
+                </span>
+                <h4 class="course-card__body-category-title">سنگنوردی</h4>
+                <div class="label label--warning label--sm">
+                  <span class="label__icon">
+                    <svg class="icon icon--xs" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                    </svg>
+                  </span>
+                  <span class="label__text">4.5</span>
+                </div>
+              </div>
+              <h3 class="course-card__body-title">
+                دوره حرفه ای سنگنوردی کودکان
+              </h3>
+              <div class="course-card__body-infos">
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">زمان دوره:</p>
+                  <p class="course-card__body-info-value">30 ساعت</p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">علاقمندان:</p>
+                  <p class="course-card__body-info-value">
+                    40
+                    <span class="course-card__body-info-value-unit">نفر</span>
+                  </p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
+                  </span>
+                  <p class="course-card__body-info-text">مدرس:</p>
+                  <p class="course-card__body-info-value">علی جباری</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card__foot">
+              <!-- Purchased -->
+              <!-- <div
+                        class="label label--primary label--md justify-content-center w-100"
+                      >
+                        <span class="label__icon">
+                          <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use
+                              href="assets/icons/sprites.svg#Warning / Circle_Check"
+                            ></use>
+                          </svg>
+                        </span>
+                        <span class="label__text">خریداری شده</span>
+                      </div> -->
+              <!-- Purchased -->
+              <!-- Not Purchased -->
+              <div class="course-card__foot-prices">
+                <div class="course-card__foot-price-before">
+                  5/500/000 تومان
+                </div>
+                <div class="course-card__foot-price-after">
+                  <span class="course-card__foot-price-after-value">4/950/000</span>
+                  <span class="course-card__foot-price-unit">تومان</span>
+                </div>
+              </div>
+              <div class="course-card__foot-info-discount">
+                <div class="label label--sm label--success">
+                  <span class="label__text">10% تخفیف</span>
+                </div>
+              </div>
+              <!-- Not Purchased -->
+            </div>
+          </a>
+          <a href="course-details.html" class="course-card">
+            <div class="course-card__head">
+              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-4.jpg" alt="" />
+              <div class="course-card__head-buttons">
+                <label class="course-card__head-button button button--sm course-card__head-button--heart"
+                  for="latest-heart-4">
+                  <input type="checkbox" id="latest-heart-4" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                  </svg>
+                </label>
+                <label class="course-card__head-button button button--sm course-card__head-button--cart"
+                  for="latest-cart-4">
+                  <input type="checkbox" id="latest-cart-4" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div class="course-card__body">
+              <div class="course-card__body-category">
+                <span class="course-card__body-category-icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
+                  </svg>
+                </span>
+                <h4 class="course-card__body-category-title">سنگنوردی</h4>
+                <div class="label label--warning label--sm">
+                  <span class="label__icon">
+                    <svg class="icon icon--xs" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                    </svg>
+                  </span>
+                  <span class="label__text">4.5</span>
+                </div>
+              </div>
+              <h3 class="course-card__body-title">
+                دوره حرفه ای سنگنوردی کودکان
+              </h3>
+              <div class="course-card__body-infos">
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">زمان دوره:</p>
+                  <p class="course-card__body-info-value">30 ساعت</p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">علاقمندان:</p>
+                  <p class="course-card__body-info-value">
+                    40
+                    <span class="course-card__body-info-value-unit">نفر</span>
+                  </p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
+                  </span>
+                  <p class="course-card__body-info-text">مدرس:</p>
+                  <p class="course-card__body-info-value">علی جباری</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card__foot">
+              <!-- Purchased -->
+              <!-- <div
+                        class="label label--primary label--md justify-content-center w-100"
+                      >
+                        <span class="label__icon">
+                          <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use
+                              href="assets/icons/sprites.svg#Warning / Circle_Check"
+                            ></use>
+                          </svg>
+                        </span>
+                        <span class="label__text">خریداری شده</span>
+                      </div> -->
+              <!-- Purchased -->
+              <!-- Not Purchased -->
+              <div class="course-card__foot-prices">
+                <div class="course-card__foot-price-before">
+                  5/500/000 تومان
+                </div>
+                <div class="course-card__foot-price-after">
+                  <span class="course-card__foot-price-after-value">4/950/000</span>
+                  <span class="course-card__foot-price-unit">تومان</span>
+                </div>
+              </div>
+              <div class="course-card__foot-info-discount">
+                <div class="label label--sm label--success">
+                  <span class="label__text">10% تخفیف</span>
+                </div>
+              </div>
+              <!-- Not Purchased -->
+            </div>
+          </a>
+          <a href="course-details.html" class="course-card">
+            <div class="course-card__head">
+              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-5.jpg" alt="" />
+              <div class="course-card__head-buttons">
+                <label class="course-card__head-button button button--sm course-card__head-button--heart"
+                  for="latest-heart-5">
+                  <input checked type="checkbox" id="latest-heart-5" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                  </svg>
+                </label>
+                <label class="course-card__head-button button button--sm course-card__head-button--cart"
+                  for="latest-cart-5">
+                  <input type="checkbox" id="latest-cart-5" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div class="course-card__body">
+              <div class="course-card__body-category">
+                <span class="course-card__body-category-icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
+                  </svg>
+                </span>
+                <h4 class="course-card__body-category-title">سنگنوردی</h4>
+                <div class="label label--warning label--sm">
+                  <span class="label__icon">
+                    <svg class="icon icon--xs" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                    </svg>
+                  </span>
+                  <span class="label__text">4.5</span>
+                </div>
+              </div>
+              <h3 class="course-card__body-title">
+                دوره حرفه ای سنگنوردی کودکان
+              </h3>
+              <div class="course-card__body-infos">
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">زمان دوره:</p>
+                  <p class="course-card__body-info-value">30 ساعت</p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">علاقمندان:</p>
+                  <p class="course-card__body-info-value">
+                    40
+                    <span class="course-card__body-info-value-unit">نفر</span>
+                  </p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
+                  </span>
+                  <p class="course-card__body-info-text">مدرس:</p>
+                  <p class="course-card__body-info-value">علی جباری</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card__foot">
+              <!-- Purchased -->
+              <!-- <div
+                        class="label label--primary label--md justify-content-center w-100"
+                      >
+                        <span class="label__icon">
+                          <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use
+                              href="assets/icons/sprites.svg#Warning / Circle_Check"
+                            ></use>
+                          </svg>
+                        </span>
+                        <span class="label__text">خریداری شده</span>
+                      </div> -->
+              <!-- Purchased -->
+              <!-- Not Purchased -->
+              <div class="course-card__foot-prices">
+                <div class="course-card__foot-price-before">
+                  5/500/000 تومان
+                </div>
+                <div class="course-card__foot-price-after">
+                  <span class="course-card__foot-price-after-value">4/950/000</span>
+                  <span class="course-card__foot-price-unit">تومان</span>
+                </div>
+              </div>
+              <div class="course-card__foot-info-discount">
+                <div class="label label--sm label--success">
+                  <span class="label__text">10% تخفیف</span>
+                </div>
+              </div>
+              <!-- Not Purchased -->
+            </div>
+          </a>
+          <a href="course-details.html" class="course-card">
+            <div class="course-card__head">
+              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-6.jpg" alt="" />
+              <div class="course-card__head-buttons">
+                <label class="course-card__head-button button button--sm course-card__head-button--heart"
+                  for="latest-heart-6">
+                  <input type="checkbox" id="latest-heart-6" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                  </svg>
+                </label>
+                <label class="course-card__head-button button button--sm course-card__head-button--cart"
+                  for="latest-cart-6">
+                  <input type="checkbox" id="latest-cart-6" />
+                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                  </svg>
+                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
+                  </svg>
+                </label>
+              </div>
+            </div>
+            <div class="course-card__body">
+              <div class="course-card__body-category">
+                <span class="course-card__body-category-icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
+                  </svg>
+                </span>
+                <h4 class="course-card__body-category-title">سنگنوردی</h4>
+                <div class="label label--warning label--sm">
+                  <span class="label__icon">
+                    <svg class="icon icon--xs" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                    </svg>
+                  </span>
+                  <span class="label__text">4.5</span>
+                </div>
+              </div>
+              <h3 class="course-card__body-title">
+                دوره حرفه ای سنگنوردی کودکان
+              </h3>
+              <div class="course-card__body-infos">
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">زمان دوره:</p>
+                  <p class="course-card__body-info-value">30 ساعت</p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg></span>
+                  <p class="course-card__body-info-text">علاقمندان:</p>
+                  <p class="course-card__body-info-value">
+                    40
+                    <span class="course-card__body-info-value-unit">نفر</span>
+                  </p>
+                </div>
+                <div class="course-card__body-info">
+                  <span class="course-card__body-info-icon">
+                    <img class="skeleton" loading="lazy" src="assets/imgs/mentors/mentor-1.jpg" alt="" />
+                  </span>
+                  <p class="course-card__body-info-text">مدرس:</p>
+                  <p class="course-card__body-info-value">علی جباری</p>
+                </div>
+              </div>
+            </div>
+            <div class="course-card__foot">
+              <!-- Purchased -->
+              <!-- <div
+                        class="label label--primary label--md justify-content-center w-100"
+                      >
+                        <span class="label__icon">
+                          <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use
+                              href="assets/icons/sprites.svg#Warning / Circle_Check"
+                            ></use>
+                          </svg>
+                        </span>
+                        <span class="label__text">خریداری شده</span>
+                      </div> -->
+              <!-- Purchased -->
+              <!-- Not Purchased -->
+              <div class="course-card__foot-prices">
+                <div class="course-card__foot-price-before">
+                  5/500/000 تومان
+                </div>
+                <div class="course-card__foot-price-after">
+                  <span class="course-card__foot-price-after-value">4/950/000</span>
+                  <span class="course-card__foot-price-unit">تومان</span>
+                </div>
+              </div>
+              <div class="course-card__foot-info-discount">
+                <div class="label label--sm label--success">
+                  <span class="label__text">10% تخفیف</span>
+                </div>
+              </div>
+              <!-- Not Purchased -->
+            </div>
+          </a>
         </div>
-      </section>
-      <!-- * [Courses list] End -->
-
-      <!-- * [Sidebar] Start -->
-      <aside class="sidebar-section nonable-below-1000">
-        <div class="sidebar-section__head">
-          <div class="sidebar-section__head-title">
-            <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/bulk/filter-search"></use>
+      </div>
+      <div class="skeleton-after">
+        <div class="paginations">
+          <div class="pagination">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#humbleicons:arrow-right"></use>
             </svg>
-            <span>فیلترها <span class="filter-count">(0)</span></span>
           </div>
-          <button class="sidebar-section__head-remove-filter">حذف فیلترها</button>
+          <div class="pagination">1</div>
+          <div class="pagination">2</div>
+          <div class="pagination">...</div>
+          <div class="pagination pagination--active">10</div>
+          <div class="pagination">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#humbleicons:arrow-left"></use>
+            </svg>
+          </div>
         </div>
-        <div class="sidebar-section__body">
-          <form class="sidebar-section__search">
-            <div class="input">
-              <input class="input__field input__field--have-icon" placeholder="نام دوره..." autocomplete="off" type="text" name="course_name" />
-              <span class="input__icon">
+      </div>
+    </section>
+    <!-- * [Courses list] End -->
+
+    <!-- * [Sidebar] Start -->
+    <aside class="sidebar-section nonable-below-1000">
+      <div class="sidebar-section__head">
+        <div class="sidebar-section__head-title">
+          <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#vuesax/bulk/filter-search"></use>
+          </svg>
+          <span>فیلترها <span class="filter-count">(0)</span></span>
+        </div>
+        <button class="sidebar-section__head-remove-filter">
+          حذف فیلترها
+        </button>
+      </div>
+      <div class="sidebar-section__body">
+        <form class="sidebar-section__search">
+          <div class="input">
+            <input class="input__field input__field--have-icon" placeholder="نام دوره..." autocomplete="off" type="text"
+              name="course_name" />
+            <span class="input__icon">
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+              </svg>
+            </span>
+          </div>
+          <button class="button button--xs button--primary w-100">
+            <span class="button__text">جستجو</span>
+          </button>
+        </form>
+        <div class="sidebar-section__filters">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                دسته‌بندی
                 <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
                 </svg>
-              </span>
-            </div>
-            <button class="button button--xs button--primary w-100">
-              <span class="button__text">جستجو</span>
-            </button>
-          </form>
-          <div class="sidebar-section__filters">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                  دسته‌بندی
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                  </svg>
-                </button>
-              </h2>
-              <div id="collapse1" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <div class="tags">
-                    <label for="cat1" class="tag">
-                      <input type="checkbox" name="category" id="cat1" />
-                      همه دسته‌ها
-                    </label>
-                    <label for="cat2" class="tag">
-                      <input type="checkbox" name="category" id="cat2" />
-                      کوهپیمایی
-                    </label>
-                    <label for="cat3" class="tag">
-                      <input type="checkbox" name="category" id="cat3" />
-                      کوهنوردی
-                    </label>
-                    <label for="cat4" class="tag">
-                      <input type="checkbox" name="category" id="cat4" />
-                      سنگنوردی و دیواره نوردی
-                    </label>
-                    <label for="cat5" class="tag">
-                      <input type="checkbox" name="category" id="cat5" />
-                      یخ و برف
-                    </label>
-                    <label for="cat6" class="tag">
-                      <input type="checkbox" name="category" id="cat6" />
-                      صعودهای ورزشی
-                    </label>
-                    <label for="cat7" class="tag">
-                      <input type="checkbox" name="category" id="cat7" />
-                      طبیعت‌گردی
-                    </label>
-                    <label for="cat8" class="tag">
-                      <input type="checkbox" name="category" id="cat8" />
-                      نجات کوهستان
-                    </label>
-                    <label for="cat9" class="tag">
-                      <input type="checkbox" name="category" id="cat9" />
-                      دره‌نوردی
-                    </label>
-                    <label for="cat10" class="tag">
-                      <input type="checkbox" name="category" id="cat10" />
-                      علوم تکمیلی کوهستان
-                    </label>
-                    <label for="cat11" class="tag">
-                      <input type="checkbox" name="category" id="cat11" />
-                      آموزشگاه جهانی
-                    </label>
-                  </div>
+              </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="tags">
+                  <label for="cat1" class="tag">
+                    <input type="checkbox" name="category" id="cat1" />
+                    همه دسته‌ها
+                  </label>
+                  <label for="cat2" class="tag">
+                    <input type="checkbox" name="category" id="cat2" />
+                    کوهپیمایی
+                  </label>
+                  <label for="cat3" class="tag">
+                    <input type="checkbox" name="category" id="cat3" />
+                    کوهنوردی
+                  </label>
+                  <label for="cat4" class="tag">
+                    <input type="checkbox" name="category" id="cat4" />
+                    سنگنوردی و دیواره نوردی
+                  </label>
+                  <label for="cat5" class="tag">
+                    <input type="checkbox" name="category" id="cat5" />
+                    یخ و برف
+                  </label>
+                  <label for="cat6" class="tag">
+                    <input type="checkbox" name="category" id="cat6" />
+                    صعودهای ورزشی
+                  </label>
+                  <label for="cat7" class="tag">
+                    <input type="checkbox" name="category" id="cat7" />
+                    طبیعت‌گردی
+                  </label>
+                  <label for="cat8" class="tag">
+                    <input type="checkbox" name="category" id="cat8" />
+                    نجات کوهستان
+                  </label>
+                  <label for="cat9" class="tag">
+                    <input type="checkbox" name="category" id="cat9" />
+                    دره‌نوردی
+                  </label>
+                  <label for="cat10" class="tag">
+                    <input type="checkbox" name="category" id="cat10" />
+                    علوم تکمیلی کوهستان
+                  </label>
+                  <label for="cat11" class="tag">
+                    <input type="checkbox" name="category" id="cat11" />
+                    آموزشگاه جهانی
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  مدرس دوره
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                  </svg>
-                </button>
-              </h2>
-              <div id="collapse2" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <div class="check-boxes">
-                    <label class="checkbox-item" for="m1">
-                      علیرضا رمضان‌زاده
-                      <input type="checkbox" id="m1" name="mentor" />
-                    </label>
-                    <label class="checkbox-item" for="m2">
-                      حامد جباری
-                      <input type="checkbox" id="m2" name="mentor" />
-                    </label>
-                    <label class="checkbox-item" for="m3">
-                      امیر کمیلی
-                      <input type="checkbox" id="m3" name="mentor" />
-                    </label>
-                    <label class="checkbox-item" for="m4">
-                      احسان فلاح
-                      <input type="checkbox" id="m4" name="mentor" />
-                    </label>
-                    <label class="checkbox-item" for="m5">
-                      حسین رضاوند
-                      <input type="checkbox" id="m5" name="mentor" />
-                    </label>
-                  </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                مدرس دوره
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                </svg>
+              </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="check-boxes">
+                  <label class="checkbox-item" for="m1">
+                    علیرضا رمضان‌زاده
+                    <input type="checkbox" id="m1" name="mentor" />
+                  </label>
+                  <label class="checkbox-item" for="m2">
+                    حامد جباری
+                    <input type="checkbox" id="m2" name="mentor" />
+                  </label>
+                  <label class="checkbox-item" for="m3">
+                    امیر کمیلی
+                    <input type="checkbox" id="m3" name="mentor" />
+                  </label>
+                  <label class="checkbox-item" for="m4">
+                    احسان فلاح
+                    <input type="checkbox" id="m4" name="mentor" />
+                  </label>
+                  <label class="checkbox-item" for="m5">
+                    حسین رضاوند
+                    <input type="checkbox" id="m5" name="mentor" />
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                  امتیاز
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                  </svg>
-                </button>
-              </h2>
-              <div id="collapse3" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <div class="check-boxes">
-                    <label class="checkbox-item" for="s1">
-                      <div class="checkbox-item__right">
-                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                          <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                        </svg>
-                        4.5 به بالا
-                      </div>
-                      <div class="checkbox-item__left">
-                        <input type="checkbox" id="s1" name="rating" />
-                      </div>
-                    </label>
-                    <label class="checkbox-item" for="s2">
-                      <div class="checkbox-item__right">
-                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                          <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                        </svg>
-                        4.0 به بالا
-                      </div>
-                      <div class="checkbox-item__left">
-                        <input type="checkbox" id="s2" name="rating" />
-                      </div>
-                    </label>
-                    <label class="checkbox-item" for="s3">
-                      <div class="checkbox-item__right">
-                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                          <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                        </svg>
-                        3.5 به بالا
-                      </div>
-                      <div class="checkbox-item__left">
-                        <input type="checkbox" id="s3" name="rating" />
-                      </div>
-                    </label>
-                    <label class="checkbox-item" for="s4">
-                      <div class="checkbox-item__right">
-                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                          <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
-                        </svg>
-                        3.0 به بالا
-                      </div>
-                      <div class="checkbox-item__left">
-                        <input type="checkbox" id="s4" name="rating" />
-                      </div>
-                    </label>
-                  </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                امتیاز
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                </svg>
+              </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="check-boxes">
+                  <label class="checkbox-item" for="s1">
+                    <div class="checkbox-item__right">
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                      </svg>
+                      4.5 به بالا
+                    </div>
+                    <div class="checkbox-item__left">
+                      <input type="checkbox" id="s1" name="rating" />
+                    </div>
+                  </label>
+                  <label class="checkbox-item" for="s2">
+                    <div class="checkbox-item__right">
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                      </svg>
+                      4.0 به بالا
+                    </div>
+                    <div class="checkbox-item__left">
+                      <input type="checkbox" id="s2" name="rating" />
+                    </div>
+                  </label>
+                  <label class="checkbox-item" for="s3">
+                    <div class="checkbox-item__right">
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                      </svg>
+                      3.5 به بالا
+                    </div>
+                    <div class="checkbox-item__left">
+                      <input type="checkbox" id="s3" name="rating" />
+                    </div>
+                  </label>
+                  <label class="checkbox-item" for="s4">
+                    <div class="checkbox-item__right">
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+                      </svg>
+                      3.0 به بالا
+                    </div>
+                    <div class="checkbox-item__left">
+                      <input type="checkbox" id="s4" name="rating" />
+                    </div>
+                  </label>
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                  بازه قیمتی
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                  </svg>
-                </button>
-              </h2>
-              <div id="collapse4" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <form action="">
-                    <div class="price-filters">
-                      <div class="price-filter">
-                        <div class="price-filter__label">از قیمت:</div>
-                        <div class="price-filter__input">
-                          <div class="input">
-                            <input class="input__field input__field--have-icon format-num" placeholder="مثال: 1,000,000" autocomplete="off" type="text" name="price_from" />
-                            <span class="input__icon"> تومان </span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="price-filter">
-                        <div class="price-filter__label">تا قیمت:</div>
-                        <div class="price-filter__input">
-                          <div class="input">
-                            <input class="input__field input__field--have-icon format-num" placeholder="مثال: 3,000,000" autocomplete="off" type="text" name="price_to" />
-                            <span class="input__icon"> تومان </span>
-                          </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                بازه قیمتی
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                </svg>
+              </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <form action="">
+                  <div class="price-filters">
+                    <div class="price-filter">
+                      <div class="price-filter__label">از قیمت:</div>
+                      <div class="price-filter__input">
+                        <div class="input">
+                          <input class="input__field input__field--have-icon format-num" placeholder="مثال: 1,000,000"
+                            autocomplete="off" type="text" name="price_from" />
+                          <span class="input__icon"> تومان </span>
                         </div>
                       </div>
                     </div>
-                    <div class="price-buttons">
-                      <button class="button button--primary button--xs">اعمال قیمت</button>
-                      <button type="button" class="button button--primary-outline button--xs price-remove">حذف</button>
+                    <div class="price-filter">
+                      <div class="price-filter__label">تا قیمت:</div>
+                      <div class="price-filter__input">
+                        <div class="input">
+                          <input class="input__field input__field--have-icon format-num" placeholder="مثال: 3,000,000"
+                            autocomplete="off" type="text" name="price_to" />
+                          <span class="input__icon"> تومان </span>
+                        </div>
+                      </div>
                     </div>
-                  </form>
-                </div>
+                  </div>
+                  <div class="price-buttons">
+                    <button class="button button--primary button--xs">
+                      اعمال قیمت
+                    </button>
+                    <button type="button" class="button button--primary-outline button--xs price-remove">
+                      حذف
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                  موارد بیشتر
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                  </svg>
-                </button>
-              </h2>
-              <div id="collapse5" class="accordion-collapse collapse">
-                <div class="accordion-body">
-                  <div class="check-boxes">
-                    <label class="checkbox-item" for="o1">
-                      دارای تخفیف
-                      <input type="checkbox" id="o1" name="other" />
-                    </label>
-                    <label class="checkbox-item" for="o2">
-                      دوره ویژه
-                      <input type="checkbox" id="o2" name="other" />
-                    </label>
-                    <label class="checkbox-item" for="o3">
-                      دارای گواهینامه رسمی
-                      <input type="checkbox" id="o3" name="other" />
-                    </label>
-                    <label class="checkbox-item" for="o4">
-                      ترجمه شده
-                      <input type="checkbox" id="o4" name="other" />
-                    </label>
-                  </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                موارد بیشتر
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                </svg>
+              </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <div class="check-boxes">
+                  <label class="checkbox-item" for="o1">
+                    دارای تخفیف
+                    <input type="checkbox" id="o1" name="other" />
+                  </label>
+                  <label class="checkbox-item" for="o2">
+                    دوره ویژه
+                    <input type="checkbox" id="o2" name="other" />
+                  </label>
+                  <label class="checkbox-item" for="o3">
+                    دارای گواهینامه رسمی
+                    <input type="checkbox" id="o3" name="other" />
+                  </label>
+                  <label class="checkbox-item" for="o4">
+                    ترجمه شده
+                    <input type="checkbox" id="o4" name="other" />
+                  </label>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </aside>
-      <!-- * [Sidebar] End -->
-    </main>
+      </div>
+    </aside>
+    <!-- * [Sidebar] End -->
+  </main>
 
-    <!-- ! Core Scripts -->
-    <script type="module" src="assets/js/main.js"></script>
+  <!-- ! Core Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
 
-    <!-- ! Page Scripts -->
-    <script src="assets/js/components/select.js"></script>
-  </body>
+  <!-- ! Page Scripts -->
+  <script src="assets/js/components/select.js"></script>
+</body>
+
 </html>
