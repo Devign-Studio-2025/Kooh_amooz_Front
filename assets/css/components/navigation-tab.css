@@ -1,0 +1,32 @@
+.navigation-tabs {
+  display: flex;
+  gap: var(--Spacing-sm);
+  border-bottom: var(--Border-Style-default);
+}
+
+.navigation-tab-item {
+  color: var(--Color-Text-icon-title);
+  cursor: pointer;
+  padding: var(--Spacing-sm);
+  border-bottom: 0.125rem solid transparent;
+}
+
+.navigation-tab-item input {
+  display: none;
+}
+
+.navigation-tab-item:has(input:checked) {
+  font-weight: var(--Typography-FontWeight-bold);
+  border-color: var(--Border-Color-primary);
+  color: var(--Color-Text-icon-title);
+}
+
+[data-linked-to] {
+  scroll-margin-top: 11rem;
+}
+
+@media screen and (max-width: 1000px) {
+  [data-linked-to] {
+    scroll-margin-top: 15rem;
+  }
+}

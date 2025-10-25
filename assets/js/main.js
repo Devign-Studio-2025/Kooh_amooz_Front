@@ -5,6 +5,7 @@ import "../libs/toastr/toastr.min.js";
 import "../libs/cleave-zen/cleave-zen.umd.js";
 
 import "../js/components/skeleton.js";
+import "../js/components/courseCard.js";
 
 // Tooltip for nav buttons
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
@@ -28,9 +29,8 @@ toastr.options = {
   hideMethod: "slideUp",
 };
 
-const cleaveZen = window.cleaveZen;
-const { formatNumeral, formatCreditCard, getCreditCardType, registerCursorTracker, DefaultCreditCardDelimiter, unformatCreditCard } = cleaveZen;
-
+// Formating numbers with seperator
+const { formatNumeral } = window.cleaveZen;
 const inputNums = document.querySelectorAll(".format-num");
 
 inputNums.forEach((input) => {
