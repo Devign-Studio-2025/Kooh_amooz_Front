@@ -30,27 +30,6 @@ main.main-website {
   align-items: center;
 }
 
-.courses-section__head-tabs {
-  display: flex;
-  gap: var(--Spacing-sm);
-}
-
-.courses-section__head-tab-item {
-  cursor: pointer;
-  padding: var(--Spacing-sm);
-  border-bottom: 0.125rem solid transparent;
-}
-
-.courses-section__head-tab-item input {
-  display: none;
-}
-
-.courses-section__head-tab-item:has(input:checked) {
-  font-weight: var(--Typography-FontWeight-bold);
-  border-color: var(--Border-Color-primary);
-  color: var(--Color-Text-icon-title);
-}
-
 .courses-section__head-result {
   font: var(--Font-Body-bold-style);
   color: var(--Color-Text-icon-title);
@@ -199,7 +178,7 @@ main.main-website {
 }
 
 .checkbox-item__right svg {
-  color: #ffab17;
+  color: var(--Color-star);
 }
 
 .price-filters {

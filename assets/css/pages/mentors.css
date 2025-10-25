@@ -5,6 +5,54 @@
   width: 100%;
 }
 
+/* ****** Accordion ****** */
+
+.accordion-button {
+  background-color: var(--Color-Surface-subtle-neutral);
+  border: var(--Border-Style-default);
+  border-radius: var(--Radius-lg);
+}
+
+.accordion-item:not(:last-child) .accordion-button {
+  border-bottom: var(--Border-Style-default);
+}
+
+/* .accordion-button:not(.collapsed){
+  background-color: var(--Color-Surface-subtle-neutral);
+  color: var(--Color-Text-icon-title);
+} */
+
+.accordion-body {
+  padding: 0;
+  padding-block: var(--Spacing-md);
+  border: none;
+}
+
+.episode {
+  display: flex;
+  justify-content: space-between;
+  color: var(--Color-Text-icon-body);
+  padding: var(--Spacing-sm) var(--Spacing-lg);
+}
+
+.episode--active .episode__icon {
+  color: var(--Color-Text-icon-action);
+}
+
+.episode:hover {
+  background-color: var(--Color-Surface-subtle-primary);
+}
+
+.episode__info {
+  display: flex;
+  gap: var(--Spacing-sm);
+}
+
+.episode__icon {
+  color: var(--Color-Text-icon-disabled);
+}
+
+/* ****** Accordion ****** */
 /* =================== mentor cards start =================== */
 .mentor-cards {
   display: flex;
