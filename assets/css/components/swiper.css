@@ -1,0 +1,28 @@
+.swiper--courses .swiper-slide {
+  width: fit-content !important;
+}
+
+.swiper-slide {
+  height: unset !important;
+}
+
+.slider-buttons,
+.slider-buttons__right {
+  display: flex;
+  align-items: center;
+}
+
+.slider-buttons {
+  justify-content: space-between;
+  margin-top: var(--Spacing-md);
+}
+
+.slider-buttons__right {
+  gap: var(--Spacing-sm);
+}
+
+.slider-buttons__left a {
+  color: var(--Color-Text-icon-body);
+  font: var(--Font-Body-bold-style);
+  text-decoration: underline;
+}

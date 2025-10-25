@@ -479,17 +479,53 @@
         </div>
         <div class="courses-section__head-result">49 نتیجه</div>
       </div>
-      <div class="skeleton-before">
-        <div class="skeleton-cards flex-wrap">
-          <div class="skeleton-card">
-            <div class="skeleton skeleton-card__image"></div>
-            <div class="skeleton-card__texts">
-              <div class="skeleton skeleton-card__text"></div>
-              <div class="skeleton skeleton-card__text"></div>
-              <div class="skeleton skeleton-card__text"></div>
-              <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
-            </div>
-            <div class="skeleton skeleton-card__text"></div>
+    </div>
+    <!-- Categories sidemenu End -->
+
+    <main class="main-website">
+      <!-- * [Courses list] Start -->
+      <section class="courses-section">
+        <div class="courses-section__head">
+          <div class="courses-section__head-title nonable-below-1000">مرتب‌سازی:</div>
+          <div class="navigation-tabs nonable-below-1000 border-0">
+            <label class="navigation-tab-item" for="newest">
+              <input checked type="radio" name="sort_type" id="newest" />
+              <span>جدیدترین</span>
+            </label>
+            <label class="navigation-tab-item" for="best">
+              <input type="radio" name="sort_type" id="best" />
+              <span>برترین</span>
+            </label>
+            <label class="navigation-tab-item" for="most-popular">
+              <input type="radio" name="sort_type" id="most-popular" />
+              <span>محبوب‌ترین</span>
+            </label>
+            <label class="navigation-tab-item" for="cheapest">
+              <input type="radio" name="sort_type" id="cheapest" />
+              <span>ارزانترین</span>
+            </label>
+            <label class="navigation-tab-item" for="most-expensive">
+              <input type="radio" name="sort_type" id="most-expensive" />
+              <span>گرانترین</span>
+            </label>
+          </div>
+          <div class="courses-section__head-filter-toggles nonable-above-1000">
+            <button class="button button--primary-outline button--xs" data-bs-toggle="offcanvas" data-bs-target="#sort-menu" aria-controls="sort-menu">
+              <span class="button__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#Edit / Sort_Descending"></use>
+                </svg>
+              </span>
+              <span class="button__text">جدیدترین</span>
+            </button>
+            <button class="button button--primary-outline button--xs" data-bs-toggle="offcanvas" data-bs-target="#filter-menu" aria-controls="filter-menu">
+              <span class="button__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#vuesax/bulk/filter-search"></use>
+                </svg>
+              </span>
+              <span class="button__text">فیلترها <span class="filter-count">(0)</span></span>
+            </button>
           </div>
           <div class="skeleton-card">
             <div class="skeleton skeleton-card__image"></div>
@@ -542,47 +578,28 @@
             <div class="skeleton skeleton-card__text"></div>
           </div>
         </div>
-      </div>
-      <div class="skeleton-after">
-        <div class="courses-section__body">
-          <a href="#" class="course-card">
-            <div class="course-card__head">
-              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-1.jpg" alt="" />
-              <div class="course-card__head-buttons">
-                <label class="course-card__head-button button button--sm course-card__head-button--heart"
-                  for="best-heart-1">
-                  <input type="checkbox" id="best-heart-1" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                  </svg>
-                </label>
-                <label class="course-card__head-button button button--sm course-card__head-button--cart"
-                  bestfor="latest-cart-1">
-                  <input type="checkbox" id="best-cart-1" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="course-card__body">
-              <div class="course-card__body-category">
-                <span class="course-card__body-category-icon">
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                  </svg>
-                </span>
-                <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                <div class="label label--warning label--sm">
-                  <span class="label__icon">
-                    <svg class="icon icon--xs" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+        <div class="skeleton-after">
+          <div class="courses-section__body">
+            <a href="course-details.html" class="course-card">
+              <div class="course-card__head">
+                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-1.jpg" alt="" />
+                <div class="course-card__head-buttons">
+                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="best-heart-1">
+                    <input type="checkbox" id="best-heart-1" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                    </svg>
+                  </label>
+                  <label class="course-card__head-button button button--sm course-card__head-button--cart" bestfor="latest-cart-1">
+                    <input type="checkbox" id="best-cart-1" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
                     </svg>
                   </span>
                   <span class="label__text">4.5</span>
@@ -640,24 +657,21 @@
                   <span class="course-card__foot-price-unit">تومان</span>
                 </div>
               </div>
-              <!-- Not Purchased -->
-            </div>
-          </a>
-          <a href="#" class="course-card">
-            <div class="course-card__head">
-              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-2.jpg" alt="" />
-              <div class="course-card__head-buttons">
-                <label class="course-card__head-button button button--sm course-card__head-button--heart"
-                  for="latest-heart-2">
-                  <input type="checkbox" id="latest-heart-2" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                  </svg>
-                </label>
-                <!-- <label
+            </a>
+            <a href="course-details.html" class="course-card">
+              <div class="course-card__head">
+                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-2.jpg" alt="" />
+                <div class="course-card__head-buttons">
+                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-2">
+                    <input type="checkbox" id="latest-heart-2" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                    </svg>
+                  </label>
+                  <!-- <label
                           class="course-card__head-button button button--sm course-card__head-button--cart"
                           for="latest-cart-2"
                         >
@@ -788,19 +802,27 @@
                   </svg>
                 </label>
               </div>
-            </div>
-            <div class="course-card__body">
-              <div class="course-card__body-category">
-                <span class="course-card__body-category-icon">
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                  </svg>
-                </span>
-                <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                <div class="label label--warning label--sm">
-                  <span class="label__icon">
-                    <svg class="icon icon--xs" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+            </a>
+            <a href="course-details.html" class="course-card">
+              <div class="course-card__head">
+                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-3.jpg" alt="" />
+                <div class="course-card__head-buttons">
+                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-3">
+                    <input type="checkbox" id="latest-heart-3" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                    </svg>
+                  </label>
+                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-3">
+                    <input checked type="checkbox" id="latest-cart-3" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
                     </svg>
                   </span>
                   <span class="label__text">4.5</span>
@@ -864,47 +886,27 @@
                   <span class="label__text">10% تخفیف</span>
                 </div>
               </div>
-              <!-- Not Purchased -->
-            </div>
-          </a>
-          <a href="#" class="course-card">
-            <div class="course-card__head">
-              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-4.jpg" alt="" />
-              <div class="course-card__head-buttons">
-                <label class="course-card__head-button button button--sm course-card__head-button--heart"
-                  for="latest-heart-4">
-                  <input type="checkbox" id="latest-heart-4" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                  </svg>
-                </label>
-                <label class="course-card__head-button button button--sm course-card__head-button--cart"
-                  for="latest-cart-4">
-                  <input type="checkbox" id="latest-cart-4" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="course-card__body">
-              <div class="course-card__body-category">
-                <span class="course-card__body-category-icon">
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                  </svg>
-                </span>
-                <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                <div class="label label--warning label--sm">
-                  <span class="label__icon">
-                    <svg class="icon icon--xs" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+            </a>
+            <a href="course-details.html" class="course-card">
+              <div class="course-card__head">
+                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-4.jpg" alt="" />
+                <div class="course-card__head-buttons">
+                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-4">
+                    <input type="checkbox" id="latest-heart-4" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                    </svg>
+                  </label>
+                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-4">
+                    <input type="checkbox" id="latest-cart-4" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
                     </svg>
                   </span>
                   <span class="label__text">4.5</span>
@@ -968,47 +970,27 @@
                   <span class="label__text">10% تخفیف</span>
                 </div>
               </div>
-              <!-- Not Purchased -->
-            </div>
-          </a>
-          <a href="#" class="course-card">
-            <div class="course-card__head">
-              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-5.jpg" alt="" />
-              <div class="course-card__head-buttons">
-                <label class="course-card__head-button button button--sm course-card__head-button--heart"
-                  for="latest-heart-5">
-                  <input checked type="checkbox" id="latest-heart-5" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                  </svg>
-                </label>
-                <label class="course-card__head-button button button--sm course-card__head-button--cart"
-                  for="latest-cart-5">
-                  <input type="checkbox" id="latest-cart-5" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="course-card__body">
-              <div class="course-card__body-category">
-                <span class="course-card__body-category-icon">
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                  </svg>
-                </span>
-                <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                <div class="label label--warning label--sm">
-                  <span class="label__icon">
-                    <svg class="icon icon--xs" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+            </a>
+            <a href="course-details.html" class="course-card">
+              <div class="course-card__head">
+                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-5.jpg" alt="" />
+                <div class="course-card__head-buttons">
+                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-5">
+                    <input checked type="checkbox" id="latest-heart-5" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                    </svg>
+                  </label>
+                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-5">
+                    <input type="checkbox" id="latest-cart-5" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
                     </svg>
                   </span>
                   <span class="label__text">4.5</span>
@@ -1072,47 +1054,27 @@
                   <span class="label__text">10% تخفیف</span>
                 </div>
               </div>
-              <!-- Not Purchased -->
-            </div>
-          </a>
-          <a href="#" class="course-card">
-            <div class="course-card__head">
-              <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-6.jpg" alt="" />
-              <div class="course-card__head-buttons">
-                <label class="course-card__head-button button button--sm course-card__head-button--heart"
-                  for="latest-heart-6">
-                  <input type="checkbox" id="latest-heart-6" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
-                  </svg>
-                </label>
-                <label class="course-card__head-button button button--sm course-card__head-button--cart"
-                  for="latest-cart-6">
-                  <input type="checkbox" id="latest-cart-6" />
-                  <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                  </svg>
-                  <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
-                  </svg>
-                </label>
-              </div>
-            </div>
-            <div class="course-card__body">
-              <div class="course-card__body-category">
-                <span class="course-card__body-category-icon">
-                  <svg class="icon icon--md" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#vuesax/linear/layer"></use>
-                  </svg>
-                </span>
-                <h4 class="course-card__body-category-title">سنگنوردی</h4>
-                <div class="label label--warning label--sm">
-                  <span class="label__icon">
-                    <svg class="icon icon--xs" viewBox="0 0 24 24">
-                      <use href="assets/icons/sprites.svg#iconoir:star-solid"></use>
+            </a>
+            <a href="course-details.html" class="course-card">
+              <div class="course-card__head">
+                <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-6.jpg" alt="" />
+                <div class="course-card__head-buttons">
+                  <label class="course-card__head-button button button--sm course-card__head-button--heart" for="latest-heart-6">
+                    <input type="checkbox" id="latest-heart-6" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#vuesax/bold/heart"></use>
+                    </svg>
+                  </label>
+                  <label class="course-card__head-button button button--sm course-card__head-button--cart" for="latest-cart-6">
+                    <input type="checkbox" id="latest-cart-6" />
+                    <svg class="icon icon--md icon-linear" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                    </svg>
+                    <svg class="icon icon--md icon-filled" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#fluent:cart-24-filled"></use>
                     </svg>
                   </span>
                   <span class="label__text">4.5</span>

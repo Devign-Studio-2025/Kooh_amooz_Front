@@ -1,5 +1,3 @@
-import "../components/courseCard.js";
-
 const swiper = new Swiper(".swiper--header", {
   direction: "horizontal",
   loop: true,
