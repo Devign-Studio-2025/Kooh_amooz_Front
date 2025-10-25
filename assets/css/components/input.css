@@ -4,6 +4,14 @@
   width: 100%;
 }
 
+input[type="tel"] {
+  direction: rtl;
+}
+
+.input__icon--clickable {
+  cursor: pointer;
+}
+
 .input__field {
   padding: var(--Spacing-sm) var(--Spacing-md);
   font: var(--Font-Body-regular-style);
@@ -65,11 +73,4 @@
   padding-left: calc(var(--Spacing-md) + var(--Spacing-lg));
 }
 
-/* ****** Select ****** */
 
-.input--select:focus {
-  color: var(--Color-Text-icon-action);
-  border-color: var(--Border-Color-primary);
-}
-
-/* ****** Select ****** */

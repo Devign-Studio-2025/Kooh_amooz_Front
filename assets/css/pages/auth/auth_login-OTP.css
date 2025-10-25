@@ -1,0 +1,78 @@
+.auth__form-subtitle {
+    font: var(--Font-Body-regular-style);
+    color: var(--Color-Text-icon-body);
+}
+
+.auth_otp-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: ltr;
+}
+
+.auth_otp-input {
+    width: 21% !important;
+    padding: var(--Spacing-sm);
+    aspect-ratio: 1 / 1;
+    text-align: center;
+}
+
+.auth__form {
+    max-width: 19rem !important;
+    gap: var(--Spacing-xl);
+    height: fit-content;
+}
+
+/* =============== otp timer start =============== */
+.otp-timer-container {
+    margin: var(--Spacing-lg) 0;
+    text-align: center;
+}
+
+.otp-timer {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--Spacing-sm);
+    padding: var(--Spacing-sm) var(--Spacing-md);
+    border-radius: var(--Radius-md);
+    background: var(--Color-Surface-subtle-primary);
+    color: var(--Color-Text-icon-body);
+    font: var(--Font-Body-regular-style);
+    transition: all var(--Transition-base);
+}
+
+.timer-digits {
+    font: var(--Font-Body-bold-style);
+    color: var(--Color-Primary-6);
+    direction: ltr;
+    min-width: 3rem;
+}
+
+.auth_otp-input::placeholder {
+    text-align: center;
+}
+
+.otp-timer.warning {
+    animation: pulse 1s infinite;
+    background: var(--Color-Surface-subtle-warning);
+}
+
+.otp-timer.warning .timer-digits {
+    color: var(--Color-Warning-7);
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
