@@ -64,3 +64,12 @@
 .input__field--have-icon {
   padding-left: calc(var(--Spacing-md) + var(--Spacing-lg));
 }
+
+/* ****** Select ****** */
+
+.input--select:focus {
+  color: var(--Color-Text-icon-action);
+  border-color: var(--Border-Color-primary);
+}
+
+/* ****** Select ****** */
