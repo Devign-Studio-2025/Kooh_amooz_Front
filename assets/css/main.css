@@ -9,6 +9,8 @@
 @import "layout/footer.css";
 @import "layout/main-sections.css";
 @import "layout/offcanvas.css";
+@import "layout/offcanvas.css";
+
 
 @import "components/navigation-tab.css";
 @import "components/swiper.css";
@@ -21,6 +23,6 @@
 @import "components/icon.css";
 @import "components/button.css";
 @import "components/input.css";
+@import "components/select2.css";
 @import "components/cards/comment.css";
 @import "components/cards/course.css";
-@import "components/cards/mentor.css";

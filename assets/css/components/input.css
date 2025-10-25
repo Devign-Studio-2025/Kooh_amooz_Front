@@ -4,6 +4,14 @@
   width: 100%;
 }
 
+input[type="tel"] {
+  direction: rtl;
+}
+
+.input__icon--clickable {
+  cursor: pointer;
+}
+
 .input__field {
   padding: var(--Spacing-sm) var(--Spacing-md);
   font: var(--Font-Body-regular-style);
@@ -64,3 +72,5 @@
 .input__field--have-icon {
   padding-left: calc(var(--Spacing-md) + var(--Spacing-lg));
 }
+
+
