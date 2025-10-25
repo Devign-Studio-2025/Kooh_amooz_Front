@@ -10,8 +10,6 @@
 @import "layout/main-sections.css";
 @import "layout/offcanvas.css";
 
-@import "components/navigation-tab.css";
-@import "components/swiper.css";
 @import "components/accordion.css";
 @import "components/tag.css";
 @import "components/toast.css";
@@ -21,6 +19,5 @@
 @import "components/icon.css";
 @import "components/button.css";
 @import "components/input.css";
-@import "components/cards/comment.css";
 @import "components/cards/course.css";
 @import "components/cards/mentor.css";

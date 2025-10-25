@@ -36,11 +36,6 @@
   background-color: var(--Color-Surface-subtle-primary);
 }
 
-a.label--primary:hover {
-  background-color: var(--Color-Surface-hover-primary);
-  color: var(--Color-Text-icon-on-primary);
-}
-
 .label.label--xs {
   padding-inline: var(--Spacing-sm);
 }
