@@ -4,14 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const navTabTop = document.querySelector("#navigation-top");
   const tabs = document.querySelectorAll(".navigation-tab-item");
 
-  const observer = new IntersectionObserver(
+  const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.target.id == "navigation-page" && !entry.isIntersecting) {
-          navTabTop.classList.remove("d-none");
-        } else if (entry.target.id == "navigation-page" && entry.isIntersecting) {
-          navTabTop.classList.add("d-none");
-        }
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute("data-linked-to");
           const radio = document.getElementById(id);
@@ -25,8 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   );
 
-  sections.forEach((section) => observer.observe(section));
-  observer.observe(navTab);
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.target.id == "navigation-page" && !entry.isIntersecting) {
+          navTabTop.classList.remove("d-none");
+        } else if (entry.target.id == "navigation-page" && entry.isIntersecting) {
+          navTabTop.classList.add("d-none");
+        }
+      });
+    },
+    {
+      rootMargin: "-100px",
+      threshold: 0,
+    }
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+  navObserver.observe(navTab);
 
   tabs.forEach((label) => {
     label.addEventListener("click", () => {
