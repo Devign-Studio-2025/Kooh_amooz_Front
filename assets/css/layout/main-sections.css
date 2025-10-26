@@ -12,6 +12,7 @@ main.main-website {
   display: flex;
   flex-direction: column;
   gap: var(--Spacing-2xl);
+  scroll-margin-top: 7.5rem;
 }
 
 .section-website__head-title {
@@ -121,6 +122,10 @@ main.main-website {
 
   .section-website__buttons .button {
     width: auto;
+  }
+
+  .section-website {
+    scroll-margin-top: 12rem;
   }
 }
 

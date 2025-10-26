@@ -3,6 +3,17 @@
   border-bottom-left-radius: var(--Radius-lg);
 }
 
+.offcanvas-end hr {
+  margin-inline: var(--Spacing-md);
+  color: var(--Border-Color-default);
+  margin-block: var(--Spacing-sm);
+}
+
+.offcanvas-end .offcanvas-footer {
+  display: flex;
+  gap: var(--Spacing-sm);
+}
+
 .offcanvas.offcanvas-start {
   border-top-right-radius: var(--Radius-lg);
   border-bottom-right-radius: var(--Radius-lg);

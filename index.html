@@ -144,7 +144,7 @@
               <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
             </svg>
           </span>
-          <span class="button__badge"> +9 </span>
+          <span class="notif__badge"> +9 </span>
         </a>
         <a class="button button--sm button--primary-outline nonable-below-1000" href="#" data-bs-toggle="tooltip"
           data-bs-placement="bottom" data-bs-title="دوره‌های من">
@@ -162,7 +162,7 @@
               <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
             </svg>
           </span>
-          <span class="button__badge"> 3 </span>
+          <span class="notif__badge"> 3 </span>
         </a>
 
         <a class="button button--sm button--primary nonable-below-1000" href="user_courses.html"
@@ -250,8 +250,35 @@
     <div class="offcanvas-body">
       <div class="d-flex flex-column gap-sm">
         <!-- Logged in Mode -->
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="user_courses.html">
           <span class="button__text">دوره‌های من</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="#">
+          <span class="button__text">علاقمندی‌ها</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="#">
+          <div class="button__text-with-badge">
+            <span class="button__text">سبد خرید</span>
+            <span class="notif__badge notif__badge--navlink"> 2 </span>
+          </div>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="#">
+          <span class="button__text">پرداخت‌های من</span>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
@@ -261,7 +288,7 @@
         <a class="button button--sm button--navlink" href="#">
           <div class="button__text-with-badge">
             <span class="button__text">پیام‌های مدیریت</span>
-            <span class="button__badge button__badge--navlink"> +9 </span>
+            <span class="notif__badge notif__badge--navlink"> +9 </span>
           </div>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -269,6 +296,15 @@
             </svg>
           </span>
         </a>
+        <a class="button button--sm button--navlink" href="#">
+          <span class="button__text">پشتیبانی و تیکت</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <hr>
         <!-- Logged in Mode -->
         <a class="button button--sm button--navlink" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#sidemenu-categories" aria-controls="sidemenu-categories">
@@ -287,6 +323,14 @@
             </svg>
           </span>
         </a>
+        <a class="button button--sm button--navlink" href="faq.html#contact-us">
+          <span class="button__text">تماس با ما</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
         <a class="button button--sm button--navlink" href="about-us.html">
           <span class="button__text">درباره ما</span>
           <span class="button__icon">
@@ -299,8 +343,16 @@
     </div>
     <div class="offcanvas-footer">
       <!-- ? Logged in Mode -->
-      <a href="user_courses.html" class="button button--md button--primary w-100">
-        <span class="button__text">پروفایل کاربری</span>
+      <a href="#" class="button button--md button--primary flex-grow-1">
+        <span class="button__text">اطلاعات حساب</span>
+      </a>
+      <a href="#" class="button button--sm button--error-outline">
+        <span class="button__text">خروج</span>
+        <span class="button__icon">
+          <svg class="icon icon--md" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#vuesax/bulk/logout"></use>
+          </svg>
+        </span>
       </a>
       <!-- ? Logged in Mode -->
 
