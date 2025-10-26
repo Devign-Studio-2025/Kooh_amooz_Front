@@ -11,7 +11,7 @@
   border: none;
 }
 
-.button__badge {
+.notif__badge {
   direction: ltr;
   position: absolute;
   height: 1.5rem;
@@ -26,7 +26,7 @@
   right: -10%;
 }
 
-.button__badge--navlink {
+.notif__badge--navlink {
   right: unset;
   top: 50%;
   left: -2rem;
@@ -71,7 +71,7 @@
   border-color: transparent;
 }
 
-.button.button--primary .button__badge {
+.button.button--primary .notif__badge {
   background-color: var(--Color-Surface-primary);
   color: var(--Color-Text-icon-on-primary);
 }
@@ -81,7 +81,7 @@
   color: var(--Color-Text-icon-on-primary);
 }
 
-.button.button--primary:hover .button__badge {
+.button.button--primary:hover .notif__badge {
   background-color: var(--Color-Surface-page);
   color: var(--Color-Text-icon-action);
   border: var(--Border-Style-white);
@@ -93,13 +93,13 @@
   color: var(--Color-Text-icon-action);
 }
 
-.button.button--primary-outline .button__badge {
+.button.button--primary-outline .notif__badge {
   background-color: var(--Color-Surface-primary);
   color: var(--Color-Text-icon-on-primary);
   border: var(--Border-Style-primary);
 }
 
-.button.button--primary-outline:hover .button__badge {
+.button.button--primary-outline:hover .notif__badge {
   background-color: var(--Color-Surface-page);
   color: var(--Color-Text-icon-action);
   border: var(--Border-Style-primary);

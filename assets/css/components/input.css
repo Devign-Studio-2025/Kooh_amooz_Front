@@ -1,7 +1,14 @@
 .input {
   height: fit-content;
   position: relative;
+}
+
+.input:not(:has(.form-select)) {
   width: 100%;
+}
+
+.input:has(.form-select) .input__icon {
+  pointer-events: none;
 }
 
 input[type="tel"] {
@@ -72,5 +79,3 @@ input[type="tel"] {
 .input__field--have-icon {
   padding-left: calc(var(--Spacing-md) + var(--Spacing-lg));
 }
-
-
