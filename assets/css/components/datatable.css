@@ -1,0 +1,42 @@
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.table-custom {
+  border: var(--Border-Style-default);
+  border-radius: var(--Radius-lg);
+}
+
+.table-custom th {
+  font: var(--Font-Body-bold-style);
+  color: var(--Color-Text-icon-action);
+  text-align: center !important;
+  border-left: var(--Border-Style-default);
+  border-bottom: var(--Border-Style-default);
+}
+
+.table-custom th:last-child {
+  border-left: 0;
+}
+
+.table-custom th {
+  outline: none !important;
+}
+
+.table-custom :where(th, td) {
+  padding: var(--Spacing-md);
+  text-align: center !important;
+}
+
+.table-custom td:not(:last-child) {
+  border-left: var(--Border-Style-default);
+}
+
+.table-custom tbody tr:nth-child(2n + 1) {
+  background-color: var(--Color-Surface-subtle-neutral);
+}
+
+div.dt-container div.dt-paging ul.pagination {
+  flex-wrap: nowrap !important;
+}

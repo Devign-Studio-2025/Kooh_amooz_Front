@@ -1,0 +1,3 @@
+.content-section__head {
+  width: calc(100% - var(--Spacing-md));
+}

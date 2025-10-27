@@ -10,6 +10,7 @@
 @import "layout/main-sections.css";
 @import "layout/offcanvas.css";
 
+@import "components/datatable.css";
 @import "components/navigation-tab.css";
 @import "components/swiper.css";
 @import "components/accordion.css";

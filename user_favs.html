@@ -14,7 +14,8 @@
   <!-- ! Page Styles -->
   <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
   <link rel="stylesheet" href="assets/css/pages/user-panel/user.css" />
-  <link rel="stylesheet" href="assets/css/pages/user-panel/user_favs_courses.css">
+  <link rel="stylesheet" href="assets/css/pages/user-panel/user_courses_favs.css" />
+
 </head>
 
 <body>
@@ -489,13 +490,13 @@
 
   <main class="main-website">
     <!-- * [Courses list] Start -->
-    <section class="courses-section">
-      <div class="courses-section__head">
-        <h1 class="courses-section__head-title ms-auto">
+    <section class="content-section">
+      <div class="content-section__head">
+        <h1 class="content-section__head-title ms-auto">
           علاقمندی‌ها <span class="result-count me-2">(27)</span>
         </h1>
-        <div class="courses-section__head-actions">
-          <div class="courses-section__head-search ms-auto">
+        <div class="content-section__head-actions">
+          <div class="content-section__head-search ms-auto">
             <form class="input">
               <input class="input__field input__field--have-icon" placeholder="جستجو در دوره‌های من..."
                 autocomplete="off" type="text" name="search" />
@@ -506,8 +507,8 @@
               </span>
             </form>
           </div>
-          <div class="courses-section__head-selects">
-            <div class="courses-section__head-filter-toggles nonable-above-1000">
+          <div class="content-section__head-selects">
+            <div class="content-section__head-filter-toggles nonable-above-1000">
               <button class="button button--primary-outline button--xs" data-bs-toggle="offcanvas"
                 data-bs-target="#sort-menu" aria-controls="sort-menu">
                 <span class="button__icon">
@@ -631,7 +632,7 @@
         </div>
       </div>
       <div class="skeleton-after">
-        <div class="courses-section__body">
+        <div class="content-section__body">
           <a href="course-details.html" class="course-card">
             <div class="course-card__head">
               <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-1.jpg" alt="" />
