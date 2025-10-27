@@ -90,13 +90,15 @@ main.main-website {
   gap: var(--Spacing-md);
 }
 
-.sidebar__nav-title {
+.sidebar__nav-icon {
   position: relative;
 }
 
 .notif__badge--navlink {
   background-color: var(--Color-Surface-subtle-primary);
   color: var(--Color-Text-icon-action);
+  left: unset;
+  right: -2rem;
 }
 
 .sidebar__nav-item {

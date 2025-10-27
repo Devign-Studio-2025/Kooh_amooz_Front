@@ -72,6 +72,7 @@ div.dt-container div.dt-paging ul.pagination {
 .active > .page-link,
 .page-link {
   width: 3rem;
+  aspect-ratio: 1 / 1;
   border-radius: var(--Radius-md);
 }
 
