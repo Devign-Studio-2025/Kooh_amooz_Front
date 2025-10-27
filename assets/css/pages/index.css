@@ -13,17 +13,17 @@
   bottom: calc(0rem + var(--swiper-navigation-size));
 }
 
-.header-main .swiper-pagination {
-  --swiper-pagination-color: var(--Color-Text-icon-on-primary);
+.header-main .swiper-custom-pagination {
+  --swiper-custom-pagination-color: var(--Color-Text-icon-on-primary);
 }
 
-.swiper-pagination-bullet {
+.swiper-custom-pagination-bullet {
   transition: width var(--Transition-medium);
 }
 
-.header-main .swiper-pagination-bullet-active {
-  --swiper-pagination-bullet-width: var(--IconSize-lg);
-  --swiper-pagination-bullet-border-radius: var(--Radius-sm);
+.header-main .swiper-custom-pagination-bullet-active {
+  --swiper-custom-pagination-bullet-width: var(--IconSize-lg);
+  --swiper-custom-pagination-bullet-border-radius: var(--Radius-sm);
 }
 
 .header-main :where(.swiper-button-prev, .swiper-button-next)::before {

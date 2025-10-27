@@ -22,3 +22,10 @@ $("#row-length-select").on("select2:select", function (e) {
 
   table.page.len(data).draw();
 });
+
+const tags = document.querySelectorAll("#row-length-menu input");
+tags.forEach((tag) => {
+  tag.onchange = () => {
+    table.page.len(tag.value).draw();
+  };
+});
