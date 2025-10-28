@@ -15,7 +15,7 @@ table {
 .table-custom {
   border: var(--Border-Style-default);
   border-radius: var(--Radius-lg);
-  min-width: 900px;
+  min-width: 43.75rem;
 }
 
 .table-custom th {
@@ -45,6 +45,10 @@ table {
 
 .table-custom tbody tr:nth-child(2n + 1) {
   background-color: var(--Color-Surface-subtle-neutral);
+}
+
+.table-custom tbody td > * {
+  margin: auto;
 }
 
 div.dt-container div.dt-paging ul.pagination {
@@ -78,19 +82,10 @@ div.dt-container div.dt-paging ul.pagination {
 
 .disabled > .page-link,
 .page-link.disabled {
-  /* color: var(--Color-Text-icon-disabled); */
-  /* background-color: var(--Color-Surface-disabled); */
   opacity: 0.5;
 }
 
-/* .page-item:first-child .page-link {
-  border-radius: 0;
-  border-top-right-radius: var(--bs-pagination-border-radius);
-  border-bottom-right-radius: var(--bs-pagination-border-radius);
+.table.dataTable th.dt-empty,
+table.dataTable td.dt-empty {
+  padding: var(--Spacing-xl);
 }
-
-.page-item:last-child .page-link {
-  border-radius: 0;
-  border-top-left-radius: var(--bs-pagination-border-radius);
-  border-bottom-left-radius: var(--bs-pagination-border-radius);
-} */

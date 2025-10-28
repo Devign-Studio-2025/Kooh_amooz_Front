@@ -1,0 +1,36 @@
+.modal .button-close {
+  margin-right: auto;
+  background-color: unset;
+}
+
+.modal-dialog {
+  --bs-modal-width: unset;
+}
+
+.modal .button-close:hover {
+  background-color: var(--Color-Surface-subtle-neutral);
+}
+
+.modal-title {
+  font: var(--Font-Title-bold-style);
+}
+
+.modal-content {
+  padding: var(--Spacing-xl);
+  border: 0;
+  border-radius: var(--Radius-lg);
+}
+
+.modal-content > * {
+  padding: 0;
+}
+
+.modal-header {
+  padding-bottom: var(--Spacing-md);
+  margin-bottom: var(--Spacing-xl);
+}
+
+.modal-footer {
+  border: 0;
+  margin-top: var(--Spacing-xl);
+}

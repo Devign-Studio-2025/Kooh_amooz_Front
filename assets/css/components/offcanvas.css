@@ -56,7 +56,7 @@
   opacity: 0;
 }
 
-.button-close {
+.offcanvas .button-close {
   position: absolute !important;
   width: fit-content;
   top: 3rem;
