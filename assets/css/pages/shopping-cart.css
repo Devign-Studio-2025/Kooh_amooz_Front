@@ -1,0 +1,192 @@
+.cart-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Spacing-lg);
+}
+
+.cart-section__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+.cart-section__head-title {
+    color: var(--Color-Text-icon-title);
+    font: var(--Font-Title-bold-style);
+    display: flex;
+    align-items: center;
+}
+
+.cart-section__back-button {
+    color: var(--Color-Text-icon-title);
+    font: var(--Font-Title-bold-style);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--Spacing-sm);
+}
+
+.cart-section__body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--Spacing-lg);
+    width: 100%;
+    height: fit-content;
+}
+
+/* ================== cart-section__course-cards start ================== */
+
+.cart-section__course-cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--Spacing-md);
+    width: 100%;
+    height: fit-content;
+}
+
+.cart-section__course-card {
+    width: 100%;
+    height: fit-content;
+    border-radius: var(--Radius-lg);
+    border: var(--Border-Style-default);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--Spacing-md);
+    opacity: 1;
+}
+
+.course-card__right-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--Spacing-md);
+}
+
+.course-card__img {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: var(--Radius-md);
+}
+
+.course-card__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--Spacing-md);
+}
+
+.course-card__info span {
+    font: var(--Font-Title-bold-style);
+    color: var(--Color-Text-icon-title);
+}
+
+.course-card__info p {
+    font: var(--Font-Body-light-style);
+    color: var(--Color-Text-icon-title);
+}
+
+.course-card__left-div,
+.course-card__price {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-card__left-div {
+    gap: var(--Spacing-lg);
+}
+
+.course-card__price {
+    gap: var(--Spacing-sm);
+}
+
+.course-card__close-button {
+    color: var(--Color-Text-icon-on-subtle-error);
+    background-color: var(--Color-Surface-subtle-error);
+    cursor: pointer;
+}
+
+.course-card__close-button input {
+    display: none;
+}
+
+.course-card__close-button:hover {
+    background-color: var(--Color-Surface-error);
+    color: var(--Color-Text-icon-on-state);
+    border-color: var(--Border-Color-primary);
+}
+
+.course-card__payable {
+    font: var(--Font-Title-bold-style);
+    color: var(--Color-Text-icon-title);
+}
+
+.course-card__discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--Spacing-sm);
+}
+
+.course-card__price-before {
+    text-decoration: line-through;
+    color: var(--Color-Text-icon-disabled);
+    font: var(--Font-Caption-regular-style);
+}
+
+/* ================== cart-section__course-cards end ================== */
+
+/* ================== price-box customization start ================== */
+.cart-section__total-price span,
+.cart-section__total-price p,
+.cart-section__savings p,
+.cart-section__payable span,
+.cart-section__payable p {
+    color: var(--Color-Text-icon-title);
+}
+
+.cart-section__total-price span {
+    font: var(--Font-Title-regular-style);
+}
+
+.cart-section__total-price p {
+    font: var(--Font-Body-regular-style);
+}
+
+.cart-section__savings span {
+    color: var(--Color-Text-icon-on-subtle-success);
+    font: var(--Font-Title-bold-style);
+}
+
+.cart-section__payable span {
+    font: var(--Font-Title-bold-style);
+
+}
+
+.cart-section__savings p,
+.cart-section__payable p {
+    font: var(--Font-Body-bold-style);
+}
+
+@media screen and (max-width: 1000px) {
+    .cart-section__body {
+        flex-direction: column;
+        gap: var(--Spacing-3xl);
+        align-items: center;
+    }
+
+    .price-box {
+        max-width: unset;
+    }
+}
+
+/* ================== price-box customization end ================== */
