@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>درباره ما - کوه‌آموز</title>
+  <title>پنل کاربر - پیام‌های مدیریت</title>
   <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
+
   <!-- ! Core Styles -->
+  <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <!-- ! Page Styles -->
-  <link rel="stylesheet" href="assets/css/pages/about-us.css" />
+  <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
+  <link rel="stylesheet" href="assets/css/pages/user-panel/user.css" />
+  <link rel="stylesheet" href="assets/css/pages/user-panel/user_admin-messages.css">
+  <link rel="stylesheet" href="assets/libs/datatable/dataTables.bootstrap5.css">
 </head>
 
 <body>
@@ -485,274 +490,358 @@
   <!-- Categories sidemenu End -->
 
   <main class="main-website">
-    <!-- ==================== info section start ====================== -->
-
-    <!-- * -------------section 1 start------------------>
-    <section class="section-website">
-      <div class="section-website__head section-website__head--lines">
-        <hr />
-        <div class="section-website__head-texts">
-          <h1 class="section-website__head-title">درباره کوه کوه‌آموز</h1>
-          <h4 class="section-website__head-caption">
-            درباره ما بیشتر بدانید
-          </h4>
+    <!-- * [Admin messages] Start -->
+    <section class="content-section">
+      <div class="content-section__head">
+        <h1 class="content-section__head-title ms-auto">
+          پیام‌های مدیریت <span class="result-count me-2">(11)</span>
+        </h1>
+        <div class="content-section__head-actions">
+          <div class="content-section__head-search ms-auto">
+            <div class="input">
+              <input class="input__field input__field--have-icon" placeholder="جستجو در پیام‌ها..." autocomplete="off"
+                type="text" name="search" />
+              <span class="input__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div class="content-section__head-selects">
+            <div class="content-section__head-filter-toggles nonable-above-1000">
+              <button class="button button--primary-outline button--xs" data-bs-toggle="offcanvas"
+                data-bs-target="#row-length-menu" aria-controls="row-length-menu">
+                <span class="button__icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#Edit / Sort_Descending"></use>
+                  </svg>
+                </span>
+                <span class="button__text">تعداد سطرها</span>
+              </button>
+            </div>
+            <div class="input nonable-below-1000">
+              <select class="form-select" id="row-length-select">
+                <option></option>
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              <span class="input__icon">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                </svg>
+              </span>
+            </div>
+            <button class="button button--primary-outline button--xs" id="read-all">
+              <div class="button__icon nonable-above-1000">
+                <svg class="icon icon--md" viewBox="0 0 24 24">
+                  <use href="assets/icons/sprites.svg#vuesax/linear/sms-star"></use>
+                </svg>
+              </div>
+              <div class="button__text">خواندن همه</div>
+            </button>
+          </div>
         </div>
-        <hr />
       </div>
-      <div class="section-website__body section-website--twocol">
-        <div class="section-website__content">
-          <div class="section-website__texts">
-            <h5 class="section-website__title">ما که هستیم؟</h5>
-            <p class="section-website__description">
-              کوه‌آموز با شعار
-              <strong> «آموزشگاه آنلاین کوهنوردی ایران» </strong> پلتفرمی
-              تخصصی برای یادگیری ایمن، اصولی و استاندارد در تمام رده‌های
-              مهارتی—از مبتدی تا حرفه‌ای—در حوزه‌ی کوهستان است. <br />
-              <br />
-              ما محتوای آموزشی خود را هم‌راستا با سرفصل‌های رسمی فدراسیون
-              کوهنوردی ایران و بر پایه‌ی استانداردهای به‌روز جهانی همچون
-              <span class="font-bold">UIAA</span> و
-              <span class="font-bold">IFSC</span> طراحی و به‌روزرسانی می‌کنیم
-              تا هنرجویان بتوانند با اطمینان، مسیر رشد مهارتی خود را طی کنند.
-            </p>
-          </div>
-          <div class="section-website__buttons">
-            <a href="#" class="button button--lg button--primary fit-content">
-              <span class="button__text">مشاهده دوره های آموزشی</span>
-            </a>
-          </div>
-        </div>
-        <div class="section-website__visual max-width-500">
-          <img src="assets/imgs/others/undraw_hiking_9zta.svg" alt="دانلود اپلیکیشن کوه‌آموز" />
+      <div class="content-section__body">
+        <div class="table-wrapper">
+          <table id="messages-table" class="table-custom">
+            <thead>
+              <tr>
+                <th>ردیف</th>
+                <th>موضوع</th>
+                <th>تاریخ ارسال</th>
+                <th>متن پیام</th>
+                <th>خوانده شده</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>تخفیفات ویژه</td>
+                <td>1400/12/02</td>
+                <td>
+                  <button class="button message-show-button button--primary button--xs" data-db-id="1">
+                    <div class="button__text">مشاهده</div>
+                  </button>
+                </td>
+                <td>
+                  <button class="button read-button button--primary-outline button--xs" data-db-id="1">
+                    <div class="button__icon">
+                      <svg class="icon icon--sm" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Interface / Check_Big"></use>
+                      </svg>
+                    </div>
+                    <div class="button__text">خواندم</div>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>جشنواره تخفیف نوروزی</td>
+                <td>1400/11/02</td>
+                <td>
+                  <button class="button message-show-button button--primary button--xs" data-db-id="2">
+                    <div class="button__text">مشاهده</div>
+                  </button>
+                </td>
+                <td>
+                  <div class="is-read">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#Interface / Check_All_Big"></use>
+                    </svg>
+                    خوانده شد
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>فرصت همکاری</td>
+                <td>1400/10/10</td>
+                <td>
+                  <button class="button message-show-button button--primary button--xs" data-db-id="3">
+                    <div class="button__text">مشاهده</div>
+                  </button>
+                </td>
+                <td>
+                  <button class="button read-button button--primary-outline button--xs" data-db-id="3">
+                    <div class="button__icon">
+                      <svg class="icon icon--sm" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Interface / Check_Big"></use>
+                      </svg>
+                    </div>
+                    <div class="button__text">خواندم</div>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>اطلاعیه خرید</td>
+                <td>1400/05/02</td>
+                <td>
+                  <button class="button message-show-button button--primary button--xs" data-db-id="4">
+                    <div class="button__text">مشاهده</div>
+                  </button>
+                </td>
+                <td>
+                  <div class="is-read">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#Interface / Check_All_Big"></use>
+                    </svg>
+                    خوانده شد
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>همکاری</td>
+                <td>1400/01/02</td>
+                <td>
+                  <button class="button message-show-button button--primary button--xs" data-db-id="5">
+                    <div class="button__text">مشاهده</div>
+                  </button>
+                </td>
+                <td>
+                  <button class="button read-button button--primary-outline button--xs" data-db-id="5">
+                    <div class="button__icon">
+                      <svg class="icon icon--sm" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Interface / Check_Big"></use>
+                      </svg>
+                    </div>
+                    <div class="button__text">خواندم</div>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
-    <!-- * -------------section 1 end------------------>
+    <!-- * [Admin messages] End -->
 
-    <!-- * -------------section 2 start------------------>
-    <section class="section-website">
-      <div class="section-website__body section-website--twocol">
-        <div class="section-website__visual max-width-500">
-          <img src="assets/imgs/others/undraw_camping_1hz9.svg" alt="دانلود اپلیکیشن کوه‌آموز" />
-        </div>
-        <div class="section-website__content">
-          <div class="section-website__texts">
-            <h5 class="section-website__title">اساتید کوه‌آموز</h5>
-            <p class="section-website__description">
-              اساتید کوه‌آموز از مربیان و چهره‌های شناخته‌شده‌ی کشور در
-              رشته‌های
-              <span class="font-bold">کوهپیمایی، کوهنوردی، طبیعت‌گردی، یخ و برف، سنگنوردی،
-                دیواره‌نوردی، صعودهای ورزشی و دره‌نوردی</span>
-              هستند. <br />
-              <br />
-              تجربه‌ی میدانی، سابقه‌ی تدریس و پایبندی آن‌ها به اصول ایمنی،
-              پشتوانه‌ی کیفیت دوره‌های ماست.
-            </p>
+    <!-- * [Sidebar] Start -->
+    <aside class="sidebar-section nonable-below-1000">
+      <div class="sidebar-section__head">
+        <div class="sidebar-section__profile">
+          <div class="sidebar-section__user-image">
+            <img class="skeleton" src="assets/imgs/mentors/mentor-1.jpg" alt="">
           </div>
-
-          <div class="section-website__buttons">
-            <a href="mentors.html" class="button button--lg button--primary fit-content">
-              <span class="button__text">مشاهده اساتید</span>
-            </a>
+          <div class="sidebar-section__user-info">
+            <div class="sidebar-section__head-title">
+              علیرضا رمضان زاده
+            </div>
+            <div class="d-flex justify-content-between">
+              <div class="sidebar-section__head-role">
+                کاربر سایت
+              </div>
+              <button class="button button--primary button--xs">
+                <span class="button__icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/bold/edit-2"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- * -------------section 2 end------------------>
-
-    <!-- * -------------section 3 start------------------>
-    <section class="section-website">
-      <div class="section-website__body section-website--twocol">
-        <div class="section-website__content">
-          <div class="section-website__texts">
-            <h5 class="section-website__title">آنچه دریافت می‌کنید</h5>
-            <p class="section-website__description">
-              - <strong>دوره‌های ویدیویی</strong> ضبط‌شده‌ی ساختارمند بر اساس
-              مسیرهای یادگیری مرحله‌به‌مرحله
-              <br />
-              - <span class="font-bold">ارزیابی‌های تعاملی</span> برای سنجش
-              یادگیری و تثبیت مباحث <br />
-              - <span class="font-bold">امکان پرسش از اساتید</span> برای رفع
-              ابهام‌های فنی و آموزشی <br />
-              - <span class="font-bold">دانلود آفلاین </span> برای دسترسی بدون
-              اینترنت در برنامه‌های میدانی <br />
-              - <span class="font-bold">گواهی دیجیتال </span> پایان‌دوره
-              به‌عنوان تأیید رسمی گذراندن سرفصل‌ها <br />
-              <br />
-              در بخش <span class="font-bold">«آموزشگاه جهانی»</span>، گزیده‌ای
-              از دوره‌های معتبر بین‌المللی را با دقت ترجمه و بومی‌سازی می‌کنیم
-              تا هم‌سطح با منابع مرجع دنیا بیاموزید.
-            </p>
-          </div>
-
-          <div class="section-website__buttons">
-            <a href="#" class="button button--lg button--primary fit-content">
-              <span class="button__text">ورود به پنل کاربری</span>
-            </a>
-          </div>
+      <div class="sidebar-section__stats">
+        <div class="stat-item">
+          <div class="stat__label">تاریخ ثبت‌نام:</div>
+          <div class="stat__value">1404/10/12</div>
         </div>
-        <div class="section-website__visual max-width-500">
-          <img src="assets/imgs/others/undraw_before-dawn_8wuh.svg" alt="دانلود اپلیکیشن کوه‌آموز" />
+        <div class="stat-item">
+          <div class="stat__label">تعداد دوره‌ها:</div>
+          <div class="stat__value">131</div>
         </div>
       </div>
-    </section>
-    <!-- * -------------section 3 end------------------>
-    <!-- ==================== info section end ====================== -->
-
-    <!-- ==================== kooh amooz description start ====================== -->
-    <section class="section-website gap-2xl">
-      <div class="section-website__head section-website__head--lines">
-        <hr />
-        <div class="section-website__head-texts">
-          <h2 class="section-website__title">اهداف کوه‌آموز</h2>
-        </div>
-        <hr />
+      <div class="sidebar-section__body">
+        <nav class="sidebar__navs">
+          <a class="sidebar__nav-item" href="user_courses.html">
+            <div class="sidebar__nav-title">دوره‌های من</div>
+            <div class="sidebar__nav-icon">
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="sidebar__nav-item" href="user_favs.html">
+            <div class="sidebar__nav-title">علاقمندی‌ها</div>
+            <div class="sidebar__nav-icon">
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="sidebar__nav-item" href="#">
+            <div class="sidebar__nav-title">سبد خرید </div>
+            <div class="sidebar__nav-icon">
+              <span class="notif__badge notif__badge--navlink"> 2 </span>
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="sidebar__nav-item" href="user_payments.html">
+            <div class="sidebar__nav-title">پرداخت‌های من</div>
+            <div class="sidebar__nav-icon">
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/linear/card"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="sidebar__nav-item sidebar__nav-item--active" href="user_admin-messages.html">
+            <div class="sidebar__nav-title">
+              پیام‌های مدیریت
+            </div>
+            <div class="sidebar__nav-icon">
+              <span class="notif__badge notif__badge--navlink badge-admin-messages"> +9 </span>
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/linear/notification"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="sidebar__nav-item" href="user_support-ticket.html">
+            <div class="sidebar__nav-title">پشتیبانی و تیکت</div>
+            <div class="sidebar__nav-icon">
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/linear/messages-4"></use>
+              </svg>
+            </div>
+          </a>
+          <a class="sidebar__nav-item" href="#">
+            <div class="sidebar__nav-title">خروج</div>
+            <div class="sidebar__nav-icon">
+              <svg class="icon icon--md" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/bulk/logout"></use>
+              </svg>
+            </div>
+          </a>
+        </nav>
       </div>
-      <div class="d-flex align-items-center justify-content-center">
-        <p class="section-website__description align-items-center">
-          در <span class="font-bold">«کوه‌آموز»</span>، رسالت ما فراهم‌کردن
-          زیرساختی مطمئن و به‌روز برای رشد جامعه‌ی کوه‌نوردی ایران است. <br />
-          جایی که مسیر یادگیری شما روشن، سنجش‌پذیر و مطابق با استانداردهای روز
-          و معیارهای جهانی پیش می‌رود.
-        </p>
-      </div>
-    </section>
-    <!-- ==================== kooh amooz description start ====================== -->
+    </aside>
+    <!-- * [Sidebar] End -->
   </main>
 
-  <!-- * Footer Start -->
-  <footer>
-    <div class="footer__body">
-      <div class="footer__column footer__column--brand">
-        <div class="footer__brand">
-          <img class="footer__brand-logo" loading="lazy" src="assets/imgs/logoes/logo.png" alt="Logo" />
-          <div class="footer__brand-texts">
-            <h5 class="footer__brand-title">آموزشگاه آنلاین کوهنوردی</h5>
-            <p class="footer__brand-caption">با ما در ارتباط باشید!</p>
-          </div>
-        </div>
-        <div class="footer__contacts">
-          <div class="footer__contact-item">
-            <span class="footer__contact-label">شماره تماس:</span>
-            <a class="footer__contact-text" href="tel:09135716484">09135716484</a>
-          </div>
-          <div class="footer__contact-item">
-            <span class="footer__contact-label">ایمیل:</span>
-            <a class="footer__contact-text" href="mailto:info@koohamooz.ir">info@koohamooz.ir</a>
-          </div>
-        </div>
-        <div class="footer_socials">
-          <a href="#" class="footer__social-icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#simple-icons:aparat"></use>
-            </svg>
-          </a>
+  <!-- Row length offcanvas Start -->
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="row-length-menu" aria-labelledby="rowLengthMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="rowLengthMenuLabel">تعداد سطرها</h5>
+      <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="button__icon">
+          <svg class="icon icon--lg" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#mdi:remove"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="tags">
+        <label for="10" class="tag">
+          <input checked type="radio" value="10" name="row_length" id="10" />
+          <span>10</span>
+        </label>
+        <label for="25" class="tag">
+          <input type="radio" value="25" name="row_length" id="25" />
+          <span>25</span>
+        </label>
+        <label for="50" class="tag">
+          <input type="radio" value="50" name="row_length" id="50" />
+          <span>50</span>
+        </label>
+        <label for="100" class="tag">
+          <input type="radio" value="100" name="row_length" id="100" />
+          <span>100</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- Row length offcanvas End -->
 
-          <a href="#" class="footer__social-icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/bulk/youtube"></use>
-            </svg>
-          </a>
-          <a href="#" class="footer__social-icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/bulk/instagram"></use>
-            </svg>
-          </a>
-          <a href="#" class="footer__social-icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#uim:telegram-alt"></use>
-            </svg>
-          </a>
+  <!-- Message modal Start -->
+  <div class="modal fade" id="modal-message" tabindex="-1" role="dialog" aria-labelledby="modalTitleMessage"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleMessage">
+            موضوع:
+          </h5>
+          <div class="message-title">تخفیفات ویژه</div>
         </div>
-      </div>
-      <div class="footer__column">
-        <span class="footer__column-title">کوه‌آموز</span>
-        <div class="footer__column-links">
-          <a class="footer__column-link" href="about-us.html">درباره کوه‌آموز</a>
-          <a class="footer__column-link" href="faq.html">سوالات متداول</a>
-          <a class="footer__column-link" href="#">ارتباط با پشتیبانی</a>
-          <a class="footer__column-link" href="faq.html#contact-us">تماس با ما</a>
-          <a class="footer__column-link" href="#">فرصت همکاری</a>
+        <div class="modal-body">
+          <div class="message">
+            <div class="message__label">
+              متن پیام:
+            </div>
+            <textarea class="input__field" readonly rows="5" placeholder="متن پیام"></textarea>
+            <div class="message__footer">
+              <div class="message__footer-label">ارسال شده:</div>
+              <div class="message__footer-value">1400/12/02</div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="footer__column">
-        <span class="footer__column-title">لینک‌های سریع</span>
-        <div class="footer__column-links">
-          <a class="footer__column-link" href="courses.html">جدیدترین دوره‌ها</a>
-          <a class="footer__column-link" href="courses.html">محبوب‌ترین دوره‌ها</a>
-          <a class="footer__column-link" href="courses.html">برترین دوره‌ها</a>
-          <a class="footer__column-link" href="#">وبلاگ کوه آموز</a>
-        </div>
-      </div>
-      <div class="footer__column">
-        <span class="footer__column-title">دانلود اپلیکیشن</span>
-        <a href="#" class="button button--md button--primary-outline">
-          <span class="button__icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#uil:android"></use>
-            </svg>
-          </span>
-          <span class="button__text">نسخه اندروید</span>
-        </a>
-        <a href="#" class="button button--md button--primary-outline">
-          <span class="button__icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#bx:globe"></use>
-            </svg>
-          </span>
-          <span class="button__text">نسخه وب</span>
-        </a>
-      </div>
-      <div class="footer__column my-auto">
-        <!-- <a
-              referrerpolicy="origin"
-              target="_blank"
-              href="https://trustseal.enamad.ir/?id=636119&Code=yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
-              ><img
-                referrerpolicy="origin"
-                src="https://trustseal.enamad.ir/logo.aspx?id=636119&Code=yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
-                alt=""
-                style="cursor: pointer"
-                code="yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
-            /></a> -->
-        <div class="border-default raduis-md padding-md align-self-center"
-          style="height: fit-content; width: fit-content">
-          <img src="assets/imgs/others/enamad.png" loading="lazy" width="92" alt="" />
+        <div class="modal-footer">
+          <button type="button" class="button button--primary button--xs px-4 w-100" data-bs-dismiss="modal">
+            بستن
+          </button>
         </div>
       </div>
     </div>
-    <div class="footer__foot">
-      <div class="footer__right">
-        <div class="footer__address">
-          <span class="footer__address-label">آدرس:</span>
-          <p class="footer__address-location">
-            ایران، کاشان، چهارراه شاهد، خیابان جانبازان، فروشگاه کوهباد، دفتر
-            باشگاه کوهنوردی و صعودهای ورزشی آلپینا
-          </p>
-        </div>
-      </div>
-      <div class="footer__left">
-        <div class="footer__cc">
-          <div class="footer__cc-icon">
-            <svg class="icon icon--sm" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/bulk/copyright"></use>
-            </svg>
-          </div>
-          <div class="footer__cc-text">
-            کلیه حقوق این پلتفرم متعلق به کوه‌آموز می‌باشد.
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- * Footer End -->
+  </div>
+  <!-- Message modal End -->
+
 
   <!-- ! Core Scripts -->
   <script type="module" src="assets/js/main.js"></script>
 
   <!-- ! Page Scripts -->
-  <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/pages/index.js"></script>
+  <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
+  <script src="assets/libs/datatable/dataTables.js"></script>
+  <script src="assets/libs/datatable/dataTables.bootstrap5.js"></script>
+  <script type="module" src="assets/js/pages/user-panel/user_admin-messages.js"></script>
 </body>
 
 </html>

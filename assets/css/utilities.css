@@ -274,15 +274,15 @@
 
 /* * ============ Borders ============ */
 .border-default {
-  border: var(--Border-Style-default);
+  border: var(--Border-Style-default) !important;
 }
 
 .border-primary {
-  border: var(--Border-Style-primary);
+  border: var(--Border-Style-primary) !important;
 }
 
 .border-error {
-  border: var(--Border-Style-error);
+  border: var(--Border-Style-error) !important;
 }
 
 /* * ============ Borders ============ */

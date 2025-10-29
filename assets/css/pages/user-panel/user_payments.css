@@ -1,0 +1,102 @@
+.transaction-date {
+  margin-right: auto;
+  font-weight: var(--Typography-FontWeight-bold);
+  direction: ltr;
+  color: var(--Color-Text-icon-title);
+}
+
+.transaction__courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-sm);
+  list-style: none;
+  padding: 0;
+  color: var(--Color-Text-icon-title);
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-xl);
+}
+
+.transaction__course {
+  display: flex;
+  gap: var(--Spacing-sm);
+}
+
+.transaction__course-number {
+  font-weight: var(--Typography-FontWeight-bold);
+}
+
+.transaction__course-price {
+  margin-right: auto;
+  font-weight: var(--Typography-FontWeight-bold);
+}
+
+.transaction__section-tite {
+  color: var(--Color-Text-icon-title);
+  font-weight: var(--Typography-FontWeight-bold);
+}
+
+.transaction__courses {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-md);
+}
+
+.transaction__price-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-md);
+}
+
+.transaction__price-box {
+  color: var(--Color-Text-icon-title);
+  font-weight: var(--Typography-FontWeight-bold);
+  background-color: var(--Color-Surface-subtle-neutral);
+  padding: var(--Spacing-md);
+  border-radius: var(--Radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--Spacing-md);
+}
+
+.transaction__price-box--discount {
+  color: var(--Color-Text-icon-on-subtle-success);
+  background-color: var(--Color-Surface-subtle-success);
+}
+
+.transaction__price-box-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.print-footer {
+  margin: auto;
+  color: var(--Color-Text-icon-title);
+  font-weight: var(--Typography-FontWeight-bold);
+  display: none;
+}
+
+@media print {
+  body > * {
+    display: none !important;
+  }
+
+  .print-footer {
+    display: block;
+  }
+
+  .modal {
+    display: block !important;
+  }
+
+  .modal-footer .button {
+    display: none;
+  }
+
+  .modal-dialog-scrollable .modal-body {
+    overflow: visible;
+  }
+}

@@ -2,33 +2,31 @@ body {
   padding-bottom: var(--Spacing-3xl);
 }
 
-.courses-section__head {
-  border: none;
-}
-
 main.main-website {
   margin-top: var(--Spacing-2xl);
 }
 
-.courses-section__head {
+.content-section__head {
+  width: 100%;
+  border: none;
   flex-direction: column;
 }
 
-.courses-section__head-search {
+.content-section__head-search {
   min-width: 12rem;
   max-width: 28rem;
   /* width: 100%; */
   flex-grow: 1;
 }
 
-.courses-section__head-actions {
+.content-section__head-actions {
   display: flex;
   gap: var(--Spacing-md) var(--Spacing-xl);
   flex-wrap: wrap;
   width: 100%;
 }
 
-.courses-section__head-selects {
+.content-section__head-selects {
   display: flex;
   gap: var(--Spacing-md);
 }
@@ -92,13 +90,15 @@ main.main-website {
   gap: var(--Spacing-md);
 }
 
-.sidebar__nav-title {
+.sidebar__nav-icon {
   position: relative;
 }
 
-.notif__badge--navlink {
+.sidebar-section .notif__badge--navlink {
   background-color: var(--Color-Surface-subtle-primary);
   color: var(--Color-Text-icon-action);
+  left: unset;
+  right: -2rem;
 }
 
 .sidebar__nav-item {
@@ -137,3 +137,12 @@ main.main-website {
 }
 
 /* ****** Sidemenu ****** */
+
+/* ****** Select2 ****** */
+
+.select2-container--default .select2-results > .select2-results__options {
+  overflow: visible;
+  max-height: unset;
+}
+
+/* ****** Select2 ****** */

@@ -3,7 +3,7 @@ import "../../../libs/select2/select2.min.js";
 
 // Update result Count
 function updateResults(count) {
-  const result = document.querySelector(".courses-section__head .result-count");
+  const result = document.querySelector(".content-section__head .result-count");
   result.textContent = `(${count})`;
 }
 
@@ -74,7 +74,7 @@ const sortChecks = document.querySelectorAll("#sort-menu input[type='radio']");
 const categoryChecks = document.querySelectorAll(
   "#category-menu input[type='radio']"
 );
-const cardsContainer = document.querySelector(".courses-section__body");
+const cardsContainer = document.querySelector(".content-section__body");
 
 sortChecks.forEach((check) => {
   check.addEventListener("change", () => {

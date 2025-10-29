@@ -14,7 +14,7 @@
   <!-- ! Page Styles -->
   <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
   <link rel="stylesheet" href="assets/css/pages/user-panel/user.css" />
-  <link rel="stylesheet" href="assets/css/pages/user-panel/user_favs_courses.css">
+  <link rel="stylesheet" href="assets/css/pages/user-panel/user_courses_favs.css" />
 </head>
 
 <body>
@@ -139,14 +139,15 @@
     <div class="nav-main__left">
       <div class="nav-main__left-buttons">
         <!-- ? Logged in Mode -->
-        <a class="button button--sm button--primary-outline nonable-below-1000" href="#" data-bs-toggle="tooltip"
-          data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت">
+        <a class="button button--sm button--primary-outline nonable-below-1000" href="user_admin-messages.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت"
+          data-messages-notif-count='11'>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
             </svg>
           </span>
-          <span class="notif__badge"> +9 </span>
+          <span class="notif__badge badge-admin-messages"> +9 </span>
         </a>
         <a class="button button--sm button--primary-outline nonable-below-1000" href="user_courses.html"
           data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="دوره‌های من">
@@ -279,7 +280,7 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="user_payments.html">
           <span class="button__text">پرداخت‌های من</span>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -287,10 +288,10 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="user_admin-messages.html">
           <div class="button__text-with-badge">
             <span class="button__text">پیام‌های مدیریت</span>
-            <span class="notif__badge notif__badge--navlink"> +9 </span>
+            <span class="notif__badge notif__badge--navlink badge-admin-messages"> +9 </span>
           </div>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -298,7 +299,7 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="user_support-ticket.html">
           <span class="button__text">پشتیبانی و تیکت</span>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -489,13 +490,13 @@
 
   <main class="main-website">
     <!-- * [Courses list] Start -->
-    <section class="courses-section">
-      <div class="courses-section__head">
-        <h1 class="courses-section__head-title ms-auto">
+    <section class="content-section">
+      <div class="content-section__head">
+        <h1 class="content-section__head-title ms-auto">
           دوره‌های من <span class="result-count me-2">(27)</span>
         </h1>
-        <div class="courses-section__head-actions">
-          <div class="courses-section__head-search ms-auto">
+        <div class="content-section__head-actions">
+          <div class="content-section__head-search ms-auto">
             <form class="input">
               <input class="input__field input__field--have-icon" placeholder="جستجو در دوره‌های من..."
                 autocomplete="off" type="text" name="search" />
@@ -506,8 +507,8 @@
               </span>
             </form>
           </div>
-          <div class="courses-section__head-selects">
-            <div class="courses-section__head-filter-toggles nonable-above-1000">
+          <div class="content-section__head-selects">
+            <div class="content-section__head-filter-toggles nonable-above-1000">
               <button class="button button--primary-outline button--xs" data-bs-toggle="offcanvas"
                 data-bs-target="#sort-menu" aria-controls="sort-menu">
                 <span class="button__icon">
@@ -631,7 +632,7 @@
         </div>
       </div>
       <div class="skeleton-after">
-        <div class="courses-section__body">
+        <div class="content-section__body">
           <a href="course-details.html" class="course-card">
             <div class="course-card__head">
               <img class="skeleton" loading="lazy" src="assets/imgs/courses/course-1.jpg" alt="" />
@@ -1104,17 +1105,17 @@
         </div>
       </div>
       <div class="skeleton-after">
-        <div class="paginations">
-          <div class="pagination">
+        <div class="custom-paginations">
+          <div class="custom-pagination">
             <svg class="icon icon--md" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#humbleicons:arrow-right"></use>
             </svg>
           </div>
-          <div class="pagination">1</div>
-          <div class="pagination">2</div>
-          <div class="pagination">...</div>
-          <div class="pagination pagination--active">10</div>
-          <div class="pagination">
+          <div class="custom-pagination">1</div>
+          <div class="custom-pagination">2</div>
+          <div class="custom-pagination">...</div>
+          <div class="custom-pagination custom-pagination--active">10</div>
+          <div class="custom-pagination">
             <svg class="icon icon--md" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#humbleicons:arrow-left"></use>
             </svg>
@@ -1166,7 +1167,7 @@
             <div class="sidebar__nav-title">دوره‌های من</div>
             <div class="sidebar__nav-icon">
               <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/linear/book"></use>
+                <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
               </svg>
             </div>
           </a>
@@ -1174,22 +1175,20 @@
             <div class="sidebar__nav-title">علاقمندی‌ها</div>
             <div class="sidebar__nav-icon">
               <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/linear/save-add"></use>
+                <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
               </svg>
             </div>
           </a>
           <a class="sidebar__nav-item" href="#">
-            <div class="sidebar__nav-title">
-              <span class="notif__badge notif__badge--navlink"> 2 </span>
-              <span>سبد خرید</span>
-            </div>
+            <div class="sidebar__nav-title">سبد خرید </div>
             <div class="sidebar__nav-icon">
+              <span class="notif__badge notif__badge--navlink"> 2 </span>
               <svg class="icon icon--md" viewBox="0 0 24 24">
                 <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
               </svg>
             </div>
           </a>
-          <a class="sidebar__nav-item" href="#">
+          <a class="sidebar__nav-item" href="user_payments.html">
             <div class="sidebar__nav-title">پرداخت‌های من</div>
             <div class="sidebar__nav-icon">
               <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -1197,22 +1196,22 @@
               </svg>
             </div>
           </a>
-          <a class="sidebar__nav-item" href="#">
+          <a class="sidebar__nav-item" href="user_admin-messages.html">
             <div class="sidebar__nav-title">
-              <span class="notif__badge notif__badge--navlink"> +9 </span>
-              <span>پیام‌های مدیریت</span>
+              پیام‌های مدیریت
             </div>
             <div class="sidebar__nav-icon">
+              <span class="notif__badge notif__badge--navlink badge-admin-messages"> +9 </span>
               <svg class="icon icon--md" viewBox="0 0 24 24">
                 <use href="assets/icons/sprites.svg#vuesax/linear/notification"></use>
               </svg>
             </div>
           </a>
-          <a class="sidebar__nav-item" href="#">
+          <a class="sidebar__nav-item" href="user_support-ticket.html">
             <div class="sidebar__nav-title">پشتیبانی و تیکت</div>
             <div class="sidebar__nav-icon">
               <svg class="icon icon--md" viewBox="0 0 24 24">
-                <use href="assets/icons/sprites.svg#vuesax/linear/messages"></use>
+                <use href="assets/icons/sprites.svg#vuesax/linear/messages-4"></use>
               </svg>
             </div>
           </a>

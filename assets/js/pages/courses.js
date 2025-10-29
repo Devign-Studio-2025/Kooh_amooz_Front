@@ -67,7 +67,7 @@ function updateFiltersCount() {
   );
   const offcanvasCount = document.querySelector("#filter-menu .filter-count");
   const headCount = document.querySelector(
-    ".courses-section__head .filter-count"
+    ".content-section__head .filter-count"
   );
 
   const sideMenuChecks = document.querySelectorAll(
@@ -84,7 +84,7 @@ function updateFiltersCount() {
 
 // Update result Count
 function updateResults(count) {
-  const result = document.querySelector(".courses-section__head-result");
+  const result = document.querySelector(".content-section__head-result");
   result.textContent = `${count} نتیجه`;
 }
 
@@ -105,9 +105,9 @@ const filterChecks = document.querySelectorAll(
   ':where(.sidebar-section, #filter-menu) input[type="checkbox"]'
 );
 const sortChecks = document.querySelectorAll(
-  ":where(.courses-section__head, #sort-menu) input"
+  ":where(.content-section__head, #sort-menu) input"
 );
-const cardsContainer = document.querySelector(".courses-section__body");
+const cardsContainer = document.querySelector(".content-section__body");
 
 filterChecks.forEach((check) => {
   check.addEventListener("change", () => {

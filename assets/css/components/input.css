@@ -11,6 +11,10 @@
   pointer-events: none;
 }
 
+.input__field:read-only {
+  background-color: var(--Color-Surface-subtle-neutral);
+}
+
 input[type="tel"] {
   direction: rtl;
 }
