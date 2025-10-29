@@ -22,7 +22,11 @@ function notifBadgeUpdate() {
   const count = parseInt(countElement.dataset.messagesNotifCount);
   const notifBadges = document.querySelectorAll(".badge-admin-messages");
   notifBadges.forEach((badge) => {
-    badge.textContent = count - 1;
+    if (count - 1 < 10) {
+      badge.textContent = count - 1;
+    } else {
+      badge.textContent = "+9";
+    }
   });
 
   countElement.dataset.messagesNotifCount = count - 1;
@@ -80,6 +84,8 @@ showButtons.forEach((button) => {
     // ---
 
     // 2. Place in DOM
+    // ---
+
     const messageModal = new bootstrap.Modal(
       document.getElementById("modal-message")
     );
