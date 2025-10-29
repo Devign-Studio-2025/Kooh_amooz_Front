@@ -83,29 +83,12 @@
   gap: var(--Spacing-sm);
 }
 
-.overview-section__price-box {
-  display: flex;
-  flex-direction: column;
-  gap: var(--Spacing-xl);
-  background-color: var(--Color-Surface-subtle-neutral);
-  border: var(--Border-Style-default);
-  border-radius: var(--Radius-lg);
-  padding: var(--Spacing-md);
-  color: var(--Color-Text-icon-title);
-  width: clamp(25rem, 40vw, 30rem);
-  max-height: fit-content;
-}
-
-.overview-section__mentor {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
+/* ------price-box component customization start------ */
 .overview-section__mentor-info {
   display: flex;
-  gap: var(--Spacing-md);
   align-items: center;
+  justify-content: center;
+  gap: var(--Spacing-md);
 }
 
 .overview-section__mentor-info img {
@@ -124,28 +107,6 @@
   font: var(--Font-Title-bold-style);
 }
 
-.overview-section__price {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding: var(--Spacing-md);
-  background-color: var(--Color-Surface-page);
-  border-radius: var(--Radius-md);
-}
-
-.overview-section__price-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--Spacing-sm);
-}
-
-.overview-section__price-before {
-  display: flex;
-  gap: var(--Spacing-sm);
-  align-items: center;
-  justify-content: end;
-}
-
 .overview-section__price-before-value {
   color: var(--Color-Text-icon-disabled);
   text-decoration: line-through;
@@ -156,19 +117,43 @@
   font: var(--Font-Title-bold-style);
 }
 
-.overview-section__actions {
+.price-box__actions {
   display: flex;
+  flex-direction: row;
   gap: var(--Spacing-sm);
+  width: 100%;
 }
 
-.overview-section__actions .button--primary {
-  flex-grow: 1;
-}
-
-.overview-section__actions .button--primary-outline {
+.price-box__actions .button--primary-outline {
   height: 100%;
   aspect-ratio: 1 / 1;
 }
+
+.overview-section__actions {
+  align-items: stretch;
+}
+
+@media screen and (max-width: 1000px) {
+  .overview-section__header {
+    flex-direction: column;
+    gap: var(--Spacing-main);
+  }
+
+  .course-card__head-button--heart {
+    height: unset !important;
+  }
+
+  .overview-section__image::before {
+    bottom: -2.5rem;
+  }
+
+  .overview-section__price-box {
+    width: 100%;
+    max-width: unset;
+  }
+}
+
+/* --------price-box component customization end------ */
 
 /* ****** Overview ****** */
 
