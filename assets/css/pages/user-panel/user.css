@@ -94,7 +94,7 @@ main.main-website {
   position: relative;
 }
 
-.notif__badge--navlink {
+.sidebar-section .notif__badge--navlink {
   background-color: var(--Color-Surface-subtle-primary);
   color: var(--Color-Text-icon-action);
   left: unset;

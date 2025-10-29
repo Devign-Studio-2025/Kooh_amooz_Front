@@ -33,4 +33,7 @@
 .modal-footer {
   border: 0;
   margin-top: var(--Spacing-xl);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }

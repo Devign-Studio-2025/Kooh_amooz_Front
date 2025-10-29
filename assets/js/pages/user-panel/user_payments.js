@@ -1,6 +1,7 @@
 import "../../../libs/select2/select2.min.js";
 import "../../../libs/bootstrap/bootstrap.bundle.min.js";
 
+// Datatable
 const table = new DataTable("#payments-table", {
   language: {
     url: "assets/libs/datatable/fa.json",
@@ -48,6 +49,7 @@ const showButtons = document.querySelectorAll("#payments-table .button");
 showButtons.forEach((button) => {
   button.onclick = () => {
     // 1. Ajax
+    // const id = button.dataset.dbId;
     // ---
 
     // 2. Place in DOM
@@ -61,6 +63,9 @@ showButtons.forEach((button) => {
     //   "label label--success w-100 label--lg justify-content-center";
 
     // container.append(label);
+
+    // const label = document.querySelector(".transaction-date");
+    // label.textContent = "";
 
     // [2] Courses ----------
 
