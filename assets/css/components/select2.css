@@ -17,14 +17,11 @@
   border-color: var(--Border-Color-primary);
 }
 
-.select2-container--default.select2-container--focus
-  .select2-selection--single {
+.select2-container--default.select2-container--focus .select2-selection--single {
   border-color: var(--Border-Color-primary);
 }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__rendered {
+.select2-container--default .select2-selection--single .select2-selection__rendered {
   color: var(--Color-Text-icon-action);
   line-height: normal;
   padding: 0;
@@ -32,44 +29,31 @@
   text-align: right;
 }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__placeholder {
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: var(--Color-Text-icon-placeholder);
   font: var(--Font-Body-regular-style) !important;
 }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__arrow {
+.select2-container--default .select2-selection--single .select2-selection__arrow {
   height: 100%;
   width: auto;
   left: var(--Spacing-md);
   right: auto;
 }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__arrow
-  b {
-  border-color: var(--Color-Text-icon-placeholder) transparent transparent
-    transparent;
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: var(--Color-Text-icon-placeholder) transparent transparent transparent;
   border-width: var(--NumScale-x1) var(--NumScale-x1) 0 var(--NumScale-x1);
   margin-top: 0;
   transform: translateY(-50%);
   transition: var(--Transition-base);
 }
 
-.select2-container--default.select2-container--open
-  .select2-selection--single
-  .select2-selection__arrow
-  b {
-  border-color: transparent transparent var(--Color-Text-icon-action)
-    transparent;
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: transparent transparent var(--Color-Text-icon-action) transparent;
   border-width: 0 var(--NumScale-x1) var(--NumScale-x1) var(--NumScale-x1);
 }
 
-/* Dropdown styles */
 .select2-container--default .select2-dropdown {
   border: var(--Border-Style-default);
   border-radius: var(--Radius-md);
@@ -87,8 +71,7 @@
   transition: background-color var(--Transition-base);
 }
 
-.select2-container--default
-  .select2-results__option--highlighted[aria-selected] {
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
   background-color: var(--Color-Surface-subtle-primary);
   color: var(--Color-Text-icon-action);
 }
@@ -106,14 +89,11 @@
   margin-bottom: var(--Spacing-sm);
 }
 
-.select2-container--default
-  .select2-search--dropdown
-  .select2-search__field:focus {
+.select2-container--default .select2-search--dropdown .select2-search__field:focus {
   border-color: var(--Border-Color-primary);
   outline: none;
 }
 
-/* Custom placeholder styling */
 .select2-placeholder-wrapper {
   position: absolute;
   right: calc(0px + var(--Spacing-md));
@@ -127,15 +107,11 @@
   z-index: 5;
 }
 
-.select2-container--default
-  .select2-selection--single.select2-selection--placeholder
-  + .select2-placeholder-wrapper {
+.select2-container--default .select2-selection--single.select2-selection--placeholder+.select2-placeholder-wrapper {
   opacity: 1;
 }
 
-.select2-container--default
-  .select2-selection--single
-  .select2-selection__arrow {
+.select2-container--default .select2-selection--single .select2-selection__arrow {
   display: none !important;
 }
 
@@ -149,20 +125,15 @@
     padding: var(--Spacing-sm) var(--Spacing-md);
   }
 
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__rendered {
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
     padding-left: calc(var(--Spacing-md) + var(--Spacing-md)) !important;
   }
 
-  .select2-container--default
-    .select2-selection--single
-    .select2-selection__arrow {
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
     left: var(--Spacing-md);
   }
 }
 
-/* Animation for dropdown */
 .select2-container--open .select2-dropdown {
   animation: fadeIn 0.2s ease-out;
 }
