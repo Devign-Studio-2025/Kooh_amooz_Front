@@ -31,7 +31,7 @@ main.main-website {
   gap: var(--Spacing-md);
 }
 
-/* ****** Sidemenu ****** */
+/* ****** SideBar ****** */
 
 .sidebar-section {
   gap: var(--Spacing-xl);
@@ -136,7 +136,7 @@ main.main-website {
   background-color: var(--Color-Surface-primary);
 }
 
-/* ****** Sidemenu ****** */
+/* ****** SideBar ****** */
 
 /* ****** Select2 ****** */
 
@@ -146,3 +146,12 @@ main.main-website {
 }
 
 /* ****** Select2 ****** */
+
+.back-button {
+  color: var(--Color-Text-icon-title);
+  font: var(--Font-Title-bold-style);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--Spacing-sm);
+}
