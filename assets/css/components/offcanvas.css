@@ -1,3 +1,7 @@
+.offcanvas-header img {
+  height: 100%;
+}
+
 .offcanvas.offcanvas-end {
   border-top-left-radius: var(--Radius-lg);
   border-bottom-left-radius: var(--Radius-lg);

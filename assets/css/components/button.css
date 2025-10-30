@@ -61,7 +61,7 @@
 }
 
 .button.button--primary,
-.button.button--primary-outline:hover {
+.button.button--primary-outline:not(.disabled, :disabled):hover {
   background-color: var(--Color-Surface-primary);
   border: var(--Border-Style-primary);
   color: var(--Color-Text-icon-on-primary);
@@ -76,12 +76,12 @@
   color: var(--Color-Text-icon-on-primary);
 }
 
-.button.button--primary:hover {
+.button.button--primary:not(.disabled, :disabled):hover {
   background-color: var(--Color-Surface-hover-primary);
   color: var(--Color-Text-icon-on-primary);
 }
 
-.button.button--primary:hover .notif__badge {
+.button.button--primary:not(.disabled, :disabled):hover .notif__badge {
   background-color: var(--Color-Surface-page);
   color: var(--Color-Text-icon-action);
   border: var(--Border-Style-white);
@@ -99,26 +99,28 @@
   border: var(--Border-Style-primary);
 }
 
-.button.button--primary-outline:hover .notif__badge {
+.button.button--primary-outline:not(.disabled, :disabled):hover .notif__badge {
   background-color: var(--Color-Surface-page);
   color: var(--Color-Text-icon-action);
   border: var(--Border-Style-primary);
 }
 
-.button.button--error,
-.button.button--error-outline:hover {
+.button.button--error-outline:not(.disabled, :disabled):hover {
   background-color: var(--Color-Surface-error);
   border: var(--Border-Style-error);
   color: var(--Color-Text-icon-on-state);
 }
 
 .button.button--error {
+  border: var(--Border-Style-error);
   border-color: transparent;
+  background-color: var(--Color-Surface-subtle-error);
+  color: var(--Color-Text-icon-on-subtle-error);
 }
 
-.button.button--error:hover {
-  background-color: var(--Color-Surface-page);
-  color: var(--Color-Text-icon-on-subtle-error);
+.button.button--error:not(.disabled, :disabled):hover {
+  background-color: var(--Color-Surface-error);
+  color: var(--Color-Text-icon-on-state);
 }
 
 .button.button--error-outline {
@@ -137,11 +139,17 @@
   justify-content: space-between;
 }
 
-.button--navlink:hover {
+.button--navlink:not(.disabled, :disabled):hover {
   background-color: var(--Color-Surface-subtle-primary);
 }
 
 .button--navlink-active {
   color: var(--Color-Text-icon-on-primary);
   background-color: var(--Color-Surface-primary);
+}
+
+.button:disabled,
+.button.disabled {
+  color: var(--Color-Text-icon-disabled);
+  background-color: var(--Color-Surface-disabled);
 }
