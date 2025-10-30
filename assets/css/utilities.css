@@ -314,7 +314,14 @@
 .circle-primary {
   width: var(--NumScale-x2);
   height: var(--NumScale-x2);
-  background-color: var(--Color-Surface-primary);
+  background-color: var(--Color-Text-icon-action);
+  border-radius: 50%;
+}
+
+.circle-title {
+  width: var(--NumScale-x2);
+  height: var(--NumScale-x2);
+  background-color: var(--Color-Text-icon-title);
   border-radius: 50%;
 }
 
