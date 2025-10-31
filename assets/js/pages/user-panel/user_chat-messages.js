@@ -60,14 +60,19 @@ form.onsubmit = (e) => {
   // ----
   sendMessage(input.value).scrollIntoView({
     behavior: "smooth",
+    block: "end",
   });
   input.value = "";
+  input.style.height = "auto";
   input.focus();
   sendButton.disabled = true;
 };
 
 // Control send button accessibility
 input.oninput = () => {
+  input.style.height = "auto";
+  input.style.height = Math.min(input.scrollHeight, 250) + "px";
+
   if (input.value.trim() !== "") {
     sendButton.disabled = false;
     return;

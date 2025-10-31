@@ -121,6 +121,7 @@ main.main-website {
 }
 
 .chat-section__footer {
+  height: fit-content;
   background-color: var(--Color-Surface-subtle-neutral);
   padding: var(--Spacing-sm);
   display: flex;
@@ -130,16 +131,21 @@ main.main-website {
   bottom: 0rem;
 }
 
-.input__field {
+.chat-section__footer .input {
+  display: contents;
+}
+
+.chat-section__footer .input__field {
   resize: none;
-  field-sizing: content;
+  min-height: 100%;
+  max-height: 20vh;
 }
 
 .chat-section__footer .button {
   aspect-ratio: 1 / 1;
-  max-width: 3.875rem;
+  max-width: 3.25rem;
   height: 100%;
-  max-height: 3.875rem;
+  max-height: 3.25rem;
 }
 
 .closed-message {
