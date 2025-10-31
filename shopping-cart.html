@@ -636,8 +636,10 @@
 
     function updateCartCount() {
       const countElement = document.querySelector('[data-cart-count]');
+      const countElementNav = document.querySelector('[data-cart-count-nav]');
       const currentCount = document.querySelectorAll('.cart-section__course-card:not(.removing):not(.removed)').length;
       countElement.textContent = `(${currentCount})`;
+      countElementNav.textContent = `${currentCount}`;
     }
 
     function removeCourseCard(courseId) {
