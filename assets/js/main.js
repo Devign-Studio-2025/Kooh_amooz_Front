@@ -4,12 +4,17 @@ import "../libs/jquery/jquery-3.7.1.min.js";
 import "../libs/toastr/toastr.min.js";
 import "../libs/cleave-zen/cleave-zen.umd.js";
 
+import "../js/shared-utils.js";
 import "../js/components/skeleton.js";
 import "../js/components/courseCard.js";
 
 // Tooltip for nav buttons
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-[...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]'
+);
+[...tooltipTriggerList].map(
+  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+);
 
 // Toast
 toastr.options = {

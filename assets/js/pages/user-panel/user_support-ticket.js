@@ -1,6 +1,11 @@
 import "../../../libs/select2/select2.min.js";
 import "../../../libs/bootstrap/bootstrap.bundle.min.js";
 
+import { initCharLimit } from "../../shared-utils.js";
+
+const ticketTextarea = document.querySelector("textarea");
+initCharLimit(ticketTextarea, 1000, 1000);
+
 // Datatable
 const table = new DataTable("#tickets-table", {
   language: {
@@ -83,6 +88,11 @@ validator
         rule: "minLength",
         value: 10,
         errorMessage: "حداقل 10 کاراکتر وارد کنید.",
+      },
+      {
+        rule: "maxLength",
+        value: 1000,
+        errorMessage: "حداکثر 1000 کاراکتر مجاز است",
       },
     ],
     {

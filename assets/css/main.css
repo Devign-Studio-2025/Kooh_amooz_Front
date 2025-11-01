@@ -4,6 +4,7 @@
 @import "variables.css";
 @import "utilities.css";
 @import "base.css";
+@import "shared-utils.css";
 
 @import "layout/navbar.css";
 @import "layout/footer.css";
@@ -26,4 +27,3 @@
 @import "components/select2.css";
 @import "components/cards/course.css";
 @import "components/price-box.css";
-

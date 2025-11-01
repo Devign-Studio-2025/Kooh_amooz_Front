@@ -1,0 +1,8 @@
+/* ****** Char limit ****** */
+
+.char-limit {
+  display: flex;
+  gap: var(--Spacing-sm);
+}
+
+/* ****** Char limit ****** */
