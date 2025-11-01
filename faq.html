@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <!-- ! Page Styles -->
+  <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/pages/faq.css" />
 </head>
 
@@ -497,209 +498,306 @@
         <hr />
       </div>
       <div class="section-website__body">
-        <div class="accordions max-width-800" id="faq-accordions">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                1. «کوه‌آموز» دقیقاً چیست و چه دوره‌هایی ارائه می‌دهد؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                کوه‌آموز «آموزشگاه آنلاین کوهنوردی ایران» است؛ دوره‌های
-                ویدیوییِ ساختارمند از مبتدی تا حرفه‌ای در کوهپیمایی، کوهنوردی،
-                طبیعت‌گردی، برف و یخ، سنگنوردی، دیواره‌نوردی، صعودهای ورزشی،
-                دره‌نوردی و «آموزشگاه جهانی» (دوره‌های ترجمه‌شده) ارائه
-                می‌دهد.
+        <div class="swiper padding-sm-y swiper--faq-questions max-width-800">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="faq-categories">
+                <button class="faq-category" data-slide-to="1">
+                  <span class="faq-category__text">حساب کاربری</span>
+                  <div class="faq-category__icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+                    </svg>
+                  </div>
+                </button>
+                <button class="faq-category" data-slide-to="2">
+                  <span class="faq-category__text">تخفیفات</span>
+                  <div class="faq-category__icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+                    </svg>
+                  </div>
+                </button>
+                <button class="faq-category" data-slide-to="3">
+                  <span class="faq-category__text">دسته‌دیگر</span>
+                  <div class="faq-category__icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+                    </svg>
+                  </div>
+                </button>
+                <button class="faq-category" data-slide-to="4">
+                  <span class="faq-category__text">دسته‌دیگر</span>
+                  <div class="faq-category__icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+                    </svg>
+                  </div>
+                </button>
+                <button class="faq-category" data-slide-to="5">
+                  <span class="faq-category__text">دسته‌دیگر</span>
+                  <div class="faq-category__icon">
+                    <svg class="icon icon--md" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+                    </svg>
+                  </div>
+                </button>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                2. آیا دوره‌ها با دوره های رسمی فدراسیون کوهنوردی هم‌راستا
-                هستند؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                بله؛ در تمامی دوره ها، جزء به جزء سرفصل‌های مطرح شده در جزوه
-                های فدراسیون کوهنوردی ایران آموزش داده شده و کاملا هم‌راستا با
-                مباحثی هستند که در دوره های عملی فدراسیون کوهنوردی ایران آموزش
-                داده می شوند.
+            <div class="swiper-slide">
+              <div class="accordions" id="faq-accordions">
+                <div class="swiper-actions">
+                  <a type="button" class="back-button">
+                    <span class="back-button__icon">
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#humbleicons:arrow-right"></use>
+                      </svg>
+                    </span>
+                    برگشت
+                  </a>
+                  <div class="swiper-category__title">
+                    حساب کاربری
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                      1. «کوه‌آموز» دقیقاً چیست و چه دوره‌هایی ارائه می‌دهد؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      کوه‌آموز «آموزشگاه آنلاین کوهنوردی ایران» است؛ دوره‌های
+                      ویدیوییِ ساختارمند از مبتدی تا حرفه‌ای در کوهپیمایی، کوهنوردی،
+                      طبیعت‌گردی، برف و یخ، سنگنوردی، دیواره‌نوردی، صعودهای ورزشی،
+                      دره‌نوردی و «آموزشگاه جهانی» (دوره‌های ترجمه‌شده) ارائه
+                      می‌دهد.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                      2. آیا دوره‌ها با دوره های رسمی فدراسیون کوهنوردی هم‌راستا
+                      هستند؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      بله؛ در تمامی دوره ها، جزء به جزء سرفصل‌های مطرح شده در جزوه
+                      های فدراسیون کوهنوردی ایران آموزش داده شده و کاملا هم‌راستا با
+                      مباحثی هستند که در دوره های عملی فدراسیون کوهنوردی ایران آموزش
+                      داده می شوند.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                      3. منظور از «دوره های تاییدشده کوه آموز» چیست؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      ما در کوه آموز به این نتیجه رسیدیم که مباحث مطرح شده در بسیاری
+                      از دوره های فدراسیون کوهنوردی ایران، تمامی نیازهای کوهنوردان
+                      را رفع نمی کند و بسیاری از مباحث جدید که همگام با کوهنوردی روز
+                      جهان هستند، باید در ساختار دوره های جدید آموزش داده شوند. لذا
+                      دوره هایی تکمیلی و تاییدشده توسط بهترین اساتید ایران، بر پایه
+                      استانداردهای به روز جهانی آماده کرده ایم.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                      4. «آموزشگاه جهانی» یعنی چه؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      منتخب دوره‌های معتبر بین‌المللی پس از ترجمه و بومی‌سازی ارائه
+                      می‌شوند تا همسو با استانداردهای جهانی و شرایط کوهستان ایران
+                      بیاموزید.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                3. منظور از «دوره های تاییدشده کوه آموز» چیست؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                ما در کوه آموز به این نتیجه رسیدیم که مباحث مطرح شده در بسیاری
-                از دوره های فدراسیون کوهنوردی ایران، تمامی نیازهای کوهنوردان
-                را رفع نمی کند و بسیاری از مباحث جدید که همگام با کوهنوردی روز
-                جهان هستند، باید در ساختار دوره های جدید آموزش داده شوند. لذا
-                دوره هایی تکمیلی و تاییدشده توسط بهترین اساتید ایران، بر پایه
-                استانداردهای به روز جهانی آماده کرده ایم.
+            <div class="swiper-slide">
+              <div class="accordions" id="faq-accordions">
+                <div class="swiper-actions">
+                  <a type="button" class="back-button">
+                    <span class="back-button__icon">
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#humbleicons:arrow-right"></use>
+                      </svg>
+                    </span>
+                    برگشت
+                  </a>
+                  <div class="swiper-category__title">
+                    تخفیفات
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                      8. آیا پیش‌نیاز برای دوره‌های فنی وجود دارد؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      برای برخی دوره‌ها پیش‌نیاز مهارتی/تئوریک تعریف شده و در صفحه
+                      دوره ذکر می‌شود. پیشنهاد می‌کنیم ترتیب مسیرهای یادگیری را
+                      رعایت کنید.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                      9. آیا تمرین عملی لازم است؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      بله؛ آموزش تئوریک جایگزین تجربه میدانی نیست. هدف اصلی کوه
+                      آموز، فراهم آوردن آموزش های دقیق جهت تمرین و اجرا در میدان های
+                      عملی است. دقت کنید که اجرای مباحث فنی باید زیر نظر مربی واجد
+                      صلاحیت و با تجهیزات استاندارد انجام شود.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                      10. کوه آموز روی چه پلتفرم‌هایی در دسترس است؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      وب، اندروید و IOS. همچنین همگام‌سازی پیشرفت بین دستگاه‌ها فعال
+                      است.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                      11. امکان همکاری با کوه آموز برای مربیان و اساتید فراهم است؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      این امکان به زودی فراهم می گردد.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                4. «آموزشگاه جهانی» یعنی چه؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                منتخب دوره‌های معتبر بین‌المللی پس از ترجمه و بومی‌سازی ارائه
-                می‌شوند تا همسو با استانداردهای جهانی و شرایط کوهستان ایران
-                بیاموزید.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                5. کوه آموز مناسب چه کسانی است؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                کوه آموز مناسب افراد علاقمند به آموزش در دنیای کوهستان در تمام
-                رده های مهارتی - از مبتدی تا حرفه ای - است. هم چنین، دوره های
-                کوه آموز بستری مناسب برای یادآوری به ورزشکارانی است که دوره
-                های عملی فدراسیون کوهنوردی را طی کرده و نیاز به بازآموزی مجدد
-                مباحث دارند.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                6. آیا می‌توانم ویدیوها را آفلاین دانلود کنم؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                بله؛ در اپلیکیشن امکان دانلود آفلاین برای مشاهده بدون اینترنت
-                فراهم است.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                7. چطور می‌توانم در مورد مباحث آموزشی دوره ها سؤال بپرسم و چه
-                زمانی پاسخ می‌گیرم؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                در بخش پروفایل کاربری، امکان پرسش از طریق بخش «ارتباط با ما» و
-                تیک «سوال در مورد مباحث دوره ها» فعال است؛ زمان پاسخ‌گویی
-                معمولاً تا ۴۸ ساعت است.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                8. آیا پیش‌نیاز برای دوره‌های فنی وجود دارد؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                برای برخی دوره‌ها پیش‌نیاز مهارتی/تئوریک تعریف شده و در صفحه
-                دوره ذکر می‌شود. پیشنهاد می‌کنیم ترتیب مسیرهای یادگیری را
-                رعایت کنید.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                9. آیا تمرین عملی لازم است؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                بله؛ آموزش تئوریک جایگزین تجربه میدانی نیست. هدف اصلی کوه
-                آموز، فراهم آوردن آموزش های دقیق جهت تمرین و اجرا در میدان های
-                عملی است. دقت کنید که اجرای مباحث فنی باید زیر نظر مربی واجد
-                صلاحیت و با تجهیزات استاندارد انجام شود.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                10. کوه آموز روی چه پلتفرم‌هایی در دسترس است؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                وب، اندروید و IOS. همچنین همگام‌سازی پیشرفت بین دستگاه‌ها فعال
-                است.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                11. امکان همکاری با کوه آموز برای مربیان و اساتید فراهم است؟
-                <svg class="icon icon--md" viewBox="0 0 24 24">
-                  <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                </svg>
-              </button>
-            </h2>
-            <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
-              <div class="accordion-body">
-                این امکان به زودی فراهم می گردد.
+            <div class="swiper-slide">
+              <div class="accordions" id="faq-accordions">
+                <div class="swiper-actions">
+                  <a type="button" class="back-button">
+                    <span class="back-button__icon">
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#humbleicons:arrow-right"></use>
+                      </svg>
+                    </span>
+                    برگشت
+                  </a>
+                  <div class="swiper-category__title">
+                    دسته دیگر
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                      5. کوه آموز مناسب چه کسانی است؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      کوه آموز مناسب افراد علاقمند به آموزش در دنیای کوهستان در تمام
+                      رده های مهارتی - از مبتدی تا حرفه ای - است. هم چنین، دوره های
+                      کوه آموز بستری مناسب برای یادآوری به ورزشکارانی است که دوره
+                      های عملی فدراسیون کوهنوردی را طی کرده و نیاز به بازآموزی مجدد
+                      مباحث دارند.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                      6. آیا می‌توانم ویدیوها را آفلاین دانلود کنم؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      بله؛ در اپلیکیشن امکان دانلود آفلاین برای مشاهده بدون اینترنت
+                      فراهم است.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                      7. چطور می‌توانم در مورد مباحث آموزشی دوره ها سؤال بپرسم و چه
+                      زمانی پاسخ می‌گیرم؟
+                      <svg class="icon icon--md" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
+                      </svg>
+                    </button>
+                  </h2>
+                  <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faq-accordions">
+                    <div class="accordion-body">
+                      در بخش پروفایل کاربری، امکان پرسش از طریق بخش «ارتباط با ما» و
+                      تیک «سوال در مورد مباحث دوره ها» فعال است؛ زمان پاسخ‌گویی
+                      معمولاً تا ۴۸ ساعت است.
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -943,7 +1041,7 @@
 
   <!-- ! Page Scripts -->
   <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/pages/index.js"></script>
+  <script type="module" src="assets/js/pages/faq.js"></script>
 </body>
 
 </html>
