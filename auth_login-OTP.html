@@ -161,7 +161,7 @@
                 this.init();
             }
 
-            
+
             // Initialize form validation and state management
             init() {
                 this.initializeValidation();
@@ -169,11 +169,11 @@
                 this.updateButtonState(); // Set initial button state
             }
 
-            
+
             // Initialize JustValidate with custom rules and configuration
             initializeValidation() {
                 const validateOptions = {
-                    errorFieldCssClass: "is-invalid",
+                    errorFieldCssClass: "border-error",
                     errorLabelStyle: {
                         color: "var(--Color-Text-icon-on-subtle-error)",
                         font: "var(--Font-Caption-bold-style)",

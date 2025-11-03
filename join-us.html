@@ -4,22 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>پنل کاربر - پیام‌های مدیریت</title>
+    <title>سوالات متداول - کوه‌آموز</title>
     <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
-
     <!-- ! Core Styles -->
-    <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- ! Page Styles -->
-    <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
-    <link rel="stylesheet" href="assets/css/pages/user-panel/user.css" />
-    <link rel="stylesheet" href="assets/css/pages/user-panel/user_support-ticket.css" />
-    <link rel="stylesheet" href="assets/libs/datatable/dataTables.bootstrap5.css">
 </head>
 
 <body>
-
     <!-- * Navbar Start -->
     <nav class="nav-main">
         <div class="nav-main__right">
@@ -494,317 +487,163 @@
     <!-- Categories sidemenu End -->
 
     <main class="main-website">
-        <!-- * [Ticket] Start -->
-        <section class="content-section">
-            <div class="content-section__head">
-                <h1 class="content-section__head-title ms-auto">
-                    پشتیبانی و تیکت
-                </h1>
-            </div>
-            <div class="content-section__body">
-                <div class="ticket-section">
-                    <form class="form-section" action="">
-                        <div class="form-sction__title">ایجاد تیکت</div>
-                        <div class="form-section__content">
-                            <div class="input__with-error-wrapper">
-                                <div class="input">
-                                    <select class="form-select" id="form-select">
-                                        <option></option>
-                                        <option value="1">مشکل در پرداخت</option>
-                                        <option value="2">مشکل در پنل کاربری</option>
-                                        <option value="3">مشکل در دانلود دوره</option>
-                                        <option value="4">سوال در مورد مباحث دوره ها</option>
-                                        <option value="5">سایر موضوعات</option>
-                                    </select>
-                                    <span class="input__icon">
-                                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                                            <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="input__with-error-wrapper">
-                                <textarea class="input__field" rows="5" id="message"
-                                    placeholder="توضیحات خود را وارد کنید..."></textarea>
-                                <div class="char-limit">
-                                    <span class='char-limit__label'>تعداد کاراکترها:</span>
-                                    <small class='char-limit__count'></small>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="button button--md button--primary mx-auto">
-                            <span class="button__text">ثبت و ارسال</span>
-                        </button>
-                    </form>
-                    <div class="info-section">
-                        <div class="info__visual">
-                            <img src="assets/imgs/others/virtual-assistant.svg" alt="">
-                        </div>
-                        <div class="info__title">پشتیبانی</div>
-                        <div class="info__text">
-                            ما در بخش پشتیبانی آماده‌ کمک به شما هستیم. <br> در بخش <a href="faq.html">سوالات
-                                متداول</a> به
-                            بسیاری از سوالات شما
-                            پاسخ داده شده است. <br>
-                            اگر جواب سوال خود را در این بخش پیدا نکردید می‌توانید از طریق این فرم با ما در ارتباط
-                            باشید.
-                        </div>
-                    </div>
+        <section class="join-us-section">
+            <div class="section-website__head section-website__head--lines">
+                <hr />
+                <div class="section-website__head-texts">
+                    <h1 class="section-website__head-title">همکاری با ما</h1>
+                    <h4 class="section-website__head-caption">
+                        به مدرسان مجموعه ما بپیونید
+                    </h4>
                 </div>
-                <div class="table-section">
-                    <div class="content-section__head-actions">
-                        <div class="content-section__head-search ms-auto">
-                            <div class="input">
-                                <input class="input__field input__field--have-icon" placeholder="جستجو در تیکت‌ها..."
-                                    autocomplete="off" type="text" id="search" />
-                                <span class="input__icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="content-section__head-selects">
-                            <div class="content-section__head-filter-toggles nonable-above-1000">
-                                <button class="button button--primary-outline button--xs" data-bs-toggle="offcanvas"
-                                    data-bs-target="#row-length-menu" aria-controls="row-length-menu">
-                                    <span class="button__icon">
-                                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                                            <use href="assets/icons/sprites.svg#Edit / Sort_Descending"></use>
-                                        </svg>
-                                    </span>
-                                    <span class="button__text">تعداد سطرها</span>
-                                </button>
-                            </div>
-                            <div class="input nonable-below-1000">
-                                <select class="form-select" id="row-length-select">
-                                    <option></option>
-                                    <option value="10">10</option>
-                                    <option value="25">25</option>
-                                    <option value="50">50</option>
-                                    <option value="100">100</option>
-                                </select>
-                                <span class="input__icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="table-wrapper">
-                        <table id="tickets-table" class="table-custom">
-                            <thead>
-                                <tr>
-                                    <th>ردیف</th>
-                                    <th>موضوع</th>
-                                    <th>تاریخ ثبت</th>
-                                    <th>پیام و پاسخ</th>
-                                    <th>وضعیت</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>مشکل در پرداخت</td>
-                                    <td>1400/12/02 23:00</td>
-                                    <td>
-                                        <a href="user_chat-messages.html" class="button button--primary button--xs">
-                                            <div class="button__text">صفحه گفتگو</div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <div class="label label--sm label--success">
-                                            بسته شد
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>مشکل در پنل کاربری</td>
-                                    <td>1400/12/02 23:00</td>
-                                    <td>
-                                        <a href="user_chat-messages.html" class="button button--primary button--xs">
-                                            <div class="button__text">صفحه گفتگو</div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <div class="label label--sm label--warning">
-                                            درانتظار پاسخ
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>مشکل در دانلود دوره</td>
-                                    <td>1400/12/02 23:00</td>
-                                    <td>
-                                        <a href="user_chat-messages.html" class="button button--primary button--xs">
-                                            <div class="button__text">صفحه گفتگو</div>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <div class="label label--sm label--success">
-                                            بسته شد
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <hr />
+            </div>
+            <div class="section-website__body d-flex justify-content-center align-items-center"
+                style="min-height: 30vh">
+                <style>
+                    .soon {
+                        font: var(--Font-H2-bold-style);
+                        color: var(--Color-Text-icon-action);
+                    }
+                </style>
+                <div class="soon">
+                    این امکان بزودی فراهم می‌شود...
                 </div>
             </div>
         </section>
-        <!-- * [Ticket] End -->
-
-        <!-- * [Sidebar] Start -->
-        <aside class="sidebar-section nonable-below-1000">
-            <div class="sidebar-section__head">
-                <div class="sidebar-section__profile">
-                    <div class="sidebar-section__user-image">
-                        <img class="skeleton" src="assets/imgs/mentors/mentor-1.jpg" alt="">
-                    </div>
-                    <div class="sidebar-section__user-info">
-                        <div class="sidebar-section__head-title">
-                            علیرضا رمضان زاده
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <div class="sidebar-section__head-role">
-                                کاربر سایت
-                            </div>
-                            <a href="user-info.html" class="button button--primary button--xs">
-                                <span class="button__icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#vuesax/bold/edit-2"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-section__stats">
-                <div class="stat-item">
-                    <div class="stat__label">تاریخ ثبت‌نام:</div>
-                    <div class="stat__value">1404/10/12</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat__label">تعداد دوره‌ها:</div>
-                    <div class="stat__value">131</div>
-                </div>
-            </div>
-            <div class="sidebar-section__body">
-                <nav class="sidebar__navs">
-                    <a class="sidebar__nav-item" href="user_courses.html">
-                        <div class="sidebar__nav-title">دوره‌های من</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="user_favs.html">
-                        <div class="sidebar__nav-title">علاقمندی‌ها</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="shopping-cart.html">
-                        <div class="sidebar__nav-title">سبد خرید </div>
-                        <div class="sidebar__nav-icon">
-                            <span class="notif__badge notif__badge--navlink"> 2 </span>
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="user_payments.html">
-                        <div class="sidebar__nav-title">پرداخت‌های من</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/card"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="user_admin-messages.html">
-                        <div class="sidebar__nav-title">
-                            پیام‌های مدیریت
-                        </div>
-                        <div class="sidebar__nav-icon">
-                            <span class="notif__badge notif__badge--navlink badge-admin-messages"> +9 </span>
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/notification"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item sidebar__nav-item--active" href="user_support-ticket.html">
-                        <div class="sidebar__nav-title">پشتیبانی و تیکت</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/messages-4"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="#">
-                        <div class="sidebar__nav-title">خروج</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/bulk/logout"></use>
-                            </svg>
-                        </div>
-                    </a>
-                </nav>
-            </div>
-        </aside>
-        <!-- * [Sidebar] End -->
     </main>
 
-    <!-- Row length offcanvas Start -->
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="row-length-menu" aria-labelledby="rowLengthMenuLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="rowLengthMenuLabel">تعداد سطرها</h5>
-            <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
-                <span class="button__icon">
-                    <svg class="icon icon--lg" viewBox="0 0 24 24">
-                        <use href="assets/icons/sprites.svg#mdi:remove"></use>
-                    </svg>
-                </span>
-            </button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="tags">
-                <label for="10" class="tag">
-                    <input checked type="radio" value="10" name="row_length" id="10" />
-                    <span>10</span>
-                </label>
-                <label for="25" class="tag">
-                    <input type="radio" value="25" name="row_length" id="25" />
-                    <span>25</span>
-                </label>
-                <label for="50" class="tag">
-                    <input type="radio" value="50" name="row_length" id="50" />
-                    <span>50</span>
-                </label>
-                <label for="100" class="tag">
-                    <input type="radio" value="100" name="row_length" id="100" />
-                    <span>100</span>
-                </label>
+    <!-- * Footer Start -->
+    <footer>
+        <div class="footer__body">
+            <div class="footer__column footer__column--brand">
+                <div class="footer__brand">
+                    <img class="footer__brand-logo" loading="lazy" src="assets/imgs/logoes/logo.png" alt="Logo" />
+                    <div class="footer__brand-texts">
+                        <h5 class="footer__brand-title">آموزشگاه آنلاین کوهنوردی</h5>
+                        <p class="footer__brand-caption">با ما در ارتباط باشید!</p>
+                    </div>
+                </div>
+                <div class="footer__contacts">
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-label">شماره تماس:</span>
+                        <a class="footer__contact-text" href="tel:09135716484">09135716484</a>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-label">ایمیل:</span>
+                        <a class="footer__contact-text" href="mailto:info@koohamooz.ir">info@koohamooz.ir</a>
+                    </div>
+                </div>
+                <div class="footer_socials">
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#simple-icons:aparat"></use>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/bulk/youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/bulk/instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#uim:telegram-alt"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <span class="footer__column-title">کوه‌آموز</span>
+                <div class="footer__column-links">
+                    <a class="footer__column-link" href="about-us.html">درباره کوه‌آموز</a>
+                    <a class="footer__column-link" href="faq.html">سوالات متداول</a>
+                    <a class="footer__column-link" href="user_support-ticket.html">ارتباط با پشتیبانی</a>
+                    <a class="footer__column-link" href="faq.html#contact-us">تماس با ما</a>
+                    <a class="footer__column-link" href="join-us.html">فرصت همکاری</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <span class="footer__column-title">لینک‌های سریع</span>
+                <div class="footer__column-links">
+                    <a class="footer__column-link" href="courses.html">جدیدترین دوره‌ها</a>
+                    <a class="footer__column-link" href="courses.html">محبوب‌ترین دوره‌ها</a>
+                    <a class="footer__column-link" href="courses.html">برترین دوره‌ها</a>
+                    <a class="footer__column-link" href="#">وبلاگ کوه آموز</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <span class="footer__column-title">دانلود اپلیکیشن</span>
+                <a href="#" class="button button--md button--primary-outline">
+                    <span class="button__icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#uil:android"></use>
+                        </svg>
+                    </span>
+                    <span class="button__text">نسخه اندروید</span>
+                </a>
+                <a href="#" class="button button--md button--primary-outline">
+                    <span class="button__icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#bx:globe"></use>
+                        </svg>
+                    </span>
+                    <span class="button__text">نسخه وب</span>
+                </a>
+            </div>
+            <div class="footer__column my-auto">
+                <!-- <a
+              referrerpolicy="origin"
+              target="_blank"
+              href="https://trustseal.enamad.ir/?id=636119&Code=yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
+              ><img
+                referrerpolicy="origin"
+                src="https://trustseal.enamad.ir/logo.aspx?id=636119&Code=yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
+                alt=""
+                style="cursor: pointer"
+                code="yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
+            /></a> -->
+                <div class="border-default raduis-md padding-md align-self-center"
+                    style="height: fit-content; width: fit-content">
+                    <img src="assets/imgs/others/enamad.png" loading="lazy" width="92" alt="" />
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Row length offcanvas End -->
+        <div class="footer__foot">
+            <div class="footer__right">
+                <div class="footer__address">
+                    <span class="footer__address-label">آدرس:</span>
+                    <p class="footer__address-location">
+                        ایران، کاشان، چهارراه شاهد، خیابان جانبازان، فروشگاه کوهباد، دفتر
+                        باشگاه کوهنوردی و صعودهای ورزشی آلپینا
+                    </p>
+                </div>
+            </div>
+            <div class="footer__left">
+                <div class="footer__cc">
+                    <div class="footer__cc-icon">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/bulk/copyright"></use>
+                        </svg>
+                    </div>
+                    <div class="footer__cc-text">
+                        کلیه حقوق این پلتفرم متعلق به کوه‌آموز می‌باشد.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- * Footer End -->
 
     <!-- ! Core Scripts -->
     <script type="module" src="assets/js/main.js"></script>
 
     <!-- ! Page Scripts -->
-    <script src="assets/libs/jquery/jquery-3.7.1.min.js"></script>
-    <script src="assets/libs/datatable/dataTables.js"></script>
-    <script src="assets/libs/datatable/dataTables.bootstrap5.js"></script>
-    <script type="module" src="assets/libs/validate.min.js/just-validate.production.min.js"></script>
-    <script type="module" src="assets/js/pages/user-panel/user_support-ticket.js"></script>
 </body>
 
 </html>

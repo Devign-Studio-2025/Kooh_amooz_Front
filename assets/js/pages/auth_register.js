@@ -1,27 +1,6 @@
-import "../../../libs/jquery/jquery-3.7.1.min.js";
-import "../../../libs/select2/select2.min.js";
-import "../../../libs/validate.min.js/just-validate.production.min.js";
-import "../../../libs/JalaliDatePicker/jalalidatepicker.min.js";
-
-// Initialize Jalali Date Picker
-jalaliDatepicker.startWatch({
-  dateFormat: "YYYY/MM/DD",
-});
-
-// ================== Gender Select Dropdown ================== //
-$("#gender").select2({
-  minimumResultsForSearch: Infinity,
-  placeholder: "انتخاب کنید",
-  width: "style",
-});
-
-$("#gender").on("select2:select", function (e) {
-  // Trigger form validation update when gender is selected
-  window.formStateManager.updateButtonState();
-});
-
 // ================== Select2 Province-City Manager ================== //
-// When API is ready, update endpoints and replace mock data
+// This class manages the province and city dropdowns with Select2
+// Backend developer: When API is ready, update endpoints and replace mock data
 class ProvinceCityManager {
   constructor() {
     this.selectors = {
@@ -90,13 +69,13 @@ class ProvinceCityManager {
     // Initialize province select
     $(this.selectors.province).select2({
       ...commonConfig,
-      placeholder: "انتخاب کنید",
+      placeholder: "استان",
     });
 
     // Initialize city select (initially disabled)
     $(this.selectors.city).select2({
       ...commonConfig,
-      placeholder: "انتخاب کنید",
+      placeholder: "شهر",
       disabled: true,
     });
   }
@@ -161,31 +140,49 @@ class ProvinceCityManager {
 
       // Notify about successful load
       this.notifyCityLoadComplete(provinceId, cities.length);
-
-      // Update form validation state
-      if (window.formStateManager) {
-        window.formStateManager.updateButtonState();
-      }
     } catch (error) {
       console.error("Error loading cities:", error);
       this.handleCityLoadError(provinceId);
     }
   }
 
-  // Load cities (currently using mock data)
+  /**
+   * Load cities (currently using mock data)
+   * Backend: Replace this with actual API call when ready
+   */
   async loadCities(provinceId) {
     // Simulate API delay (remove in production)
     await new Promise((resolve) => setTimeout(resolve, 300));
 
-    // ========== MOCK DATA (REMOVE WHEN API READY) ========== //
+    // Backend developer: REPLACE THIS BLOCK WITH REAL API CALL
+    // ========== START OF MOCK DATA (REMOVE WHEN API READY) ========== //
     if (this.mockData[provinceId]) {
       return this.mockData[provinceId];
     }
 
+    // If province not found in mock data, return empty array
     console.warn(`No cities found for province ID: ${provinceId}`);
     return [];
+    // ========== END OF MOCK DATA ========== //
+
+    /* Backend developer: UNCOMMENT THIS WHEN API IS READY
+                const response = await $.ajax({
+                    url: this.endpoints.cities,
+                    method: 'GET',
+                    data: { province_id: provinceId },
+                    dataType: 'json',
+                    timeout: 10000
+                });
+        
+                if (!response.success) {
+                    throw new Error(response.message || 'Failed to load cities');
+                }
+        
+                return response.data || [];
+                */
   }
 
+  // Update city select options with new data
   updateCityOptions(cities) {
     const $citySelect = $(this.selectors.city);
 
@@ -204,6 +201,7 @@ class ProvinceCityManager {
   // Set loading state for city select
   setCityLoadingState(loading) {
     const $citySelect = $(this.selectors.city);
+
     if (loading) {
       $citySelect
         .empty()
@@ -229,11 +227,7 @@ class ProvinceCityManager {
   // Handle city selection change
   handleCityChange(event) {
     const cityId = $(event.target).val();
-
-    // Update form validation state when city is selected
-    if (window.formStateManager) {
-      window.formStateManager.updateButtonState();
-    }
+    // Optional: Add additional city change handling here
 
     // Emit custom event for other components to listen to
     $(document).trigger("city:changed", { cityId });
@@ -242,6 +236,7 @@ class ProvinceCityManager {
   // Handle errors during city loading
   handleCityLoadError(provinceId) {
     this.resetCitySelect("خطا در بارگذاری شهرها");
+
     console.error("Error loading cities for province:", provinceId);
 
     // Emit error event for monitoring
@@ -254,6 +249,18 @@ class ProvinceCityManager {
       provinceId,
       cityCount,
     });
+  }
+
+  // Public method to manually set province (useful for form editing)
+  async setProvince(provinceId, cityId = null) {
+    $(this.selectors.province).val(provinceId).trigger("change");
+
+    // Wait for cities to load then set city if provided
+    if (cityId) {
+      setTimeout(async () => {
+        $(this.selectors.city).val(cityId).trigger("change");
+      }, 500);
+    }
   }
 
   // Public method to get current selection
@@ -277,23 +284,82 @@ class ProvinceCityManager {
   }
 }
 
+// ================== Password Toggle Manager ================== //
+class PasswordToggleManager {
+  constructor() {
+    this.selectors = {
+      passwordToggle: ".password-toggle", // Eye icon for password field
+      confirmPasswordToggle: ".confirm-password-toggle", // Eye icon for confirm password
+      passwordField: "#password", // Password input field
+      confirmPasswordField: "#confirm-password", // Confirm password input field
+    };
+
+    this.init();
+  }
+
+  // Initialize password toggle functionality
+  init() {
+    this.bindEvents();
+  }
+
+  // Bind click events to password toggle icons
+  bindEvents() {
+    // Password field toggle
+    $(this.selectors.passwordToggle).on("click", (e) => {
+      this.togglePasswordVisibility(
+        this.selectors.passwordField,
+        this.selectors.passwordToggle
+      );
+    });
+
+    // Confirm password field toggle
+    $(this.selectors.confirmPasswordToggle).on("click", (e) => {
+      this.togglePasswordVisibility(
+        this.selectors.confirmPasswordField,
+        this.selectors.confirmPasswordToggle
+      );
+    });
+  }
+
+  /**
+   * Toggle password visibility between text and password types
+   * @param {string} fieldSelector - Selector for the input field
+   * @param {string} toggleSelector - Selector for the toggle icon
+   */
+  togglePasswordVisibility(fieldSelector, toggleSelector) {
+    const $field = $(fieldSelector);
+    const $toggle = $(toggleSelector);
+    const $icon = $toggle.find("use");
+
+    // Toggle input type between password and text
+    if ($field.attr("type") === "password") {
+      $field.attr("type", "text");
+      // Change icon (visible state)
+      $icon.attr("href", "assets/icons/sprites.svg#vuesax/bold/eye");
+    } else {
+      $field.attr("type", "password");
+      // Change icon (hidden state)
+      $icon.attr("href", "assets/icons/sprites.svg#vuesax/bulk/eye-slash");
+    }
+  }
+}
+
 // ================== Form State Manager and button state management ================== //
 // Monitors form fields in real-time and updates submit button accordingly
+
 class FormStateManager {
   constructor() {
     // selectors
-    this.formId = "#user-info__form";
-    this.submitBtnId = "#user-info__submit-btn";
+    this.formId = "#register-form";
+    this.submitBtnId = "#register-submit-btn";
 
     this.requiredFields = [
-      "#first-name",
-      "#last-name",
-      "#email",
-      "#phone",
-      "#date",
-      "#gender",
+      "#full-name",
+      "#phone-number",
       "#province-select",
       "#city-select",
+      "#password",
+      "#confirm-password",
     ];
 
     this.validator = null; // Will hold JustValidate instance
@@ -304,7 +370,7 @@ class FormStateManager {
   init() {
     this.initializeValidation();
     this.bindRealTimeValidation();
-    this.updateButtonState();
+    this.updateButtonState(); // Set initial button state
   }
 
   // Initialize JustValidate
@@ -325,56 +391,24 @@ class FormStateManager {
 
     this.validator = new JustValidate(this.formId, validateOptions);
 
-    // Validation Rules
+    // validation rules
     this.validator
       .addField(
-        "#first-name",
+        "#full-name",
         [
           {
             rule: "required",
-            errorMessage: "نام الزامی است",
+            errorMessage: "نام و نام خانوادگی الزامی است",
           },
         ],
         {
           errorsContainer: document
-            .querySelector("#first-name")
+            .querySelector("#full-name")
             .closest(".input__with-error-wrapper"),
         }
       )
       .addField(
-        "#last-name",
-        [
-          {
-            rule: "required",
-            errorMessage: "نام خانوادگی الزامی است",
-          },
-        ],
-        {
-          errorsContainer: document
-            .querySelector("#last-name")
-            .closest(".input__with-error-wrapper"),
-        }
-      )
-      .addField(
-        "#email",
-        [
-          {
-            rule: "required",
-            errorMessage: "ایمیل الزامی است",
-          },
-          {
-            rule: "email",
-            errorMessage: "ایمیل معتبر وارد کنید",
-          },
-        ],
-        {
-          errorsContainer: document
-            .querySelector("#email")
-            .closest(".input__with-error-wrapper"),
-        }
-      )
-      .addField(
-        "#phone",
+        "#phone-number",
         [
           {
             rule: "required",
@@ -402,35 +436,7 @@ class FormStateManager {
         ],
         {
           errorsContainer: document
-            .querySelector("#phone")
-            .closest(".input__with-error-wrapper"),
-        }
-      )
-      .addField(
-        "#date",
-        [
-          {
-            rule: "required",
-            errorMessage: "تاریخ تولد الزامی است",
-          },
-        ],
-        {
-          errorsContainer: document
-            .querySelector("#date")
-            .closest(".input__with-error-wrapper"),
-        }
-      )
-      .addField(
-        "#gender",
-        [
-          {
-            rule: "required",
-            errorMessage: "انتخاب جنسیت الزامی است",
-          },
-        ],
-        {
-          errorsContainer: document
-            .querySelector("#gender")
+            .querySelector("#phone-number")
             .closest(".input__with-error-wrapper"),
         }
       )
@@ -462,6 +468,53 @@ class FormStateManager {
             .closest(".input__with-error-wrapper"),
         }
       )
+      .addField(
+        "#password",
+        [
+          {
+            rule: "required",
+            errorMessage: "رمز عبور الزامی است",
+          },
+          {
+            rule: "minLength",
+            value: 6,
+            errorMessage: "رمز عبور باید حداقل ۶ کاراکتر باشد",
+          },
+          {
+            rule: "maxLength",
+            value: 20,
+            errorMessage: "رمز عبور نباید بیشتر از ۲۰ کاراکتر باشد",
+          },
+        ],
+        {
+          errorsContainer: document
+            .querySelector("#password")
+            .closest(".input__with-error-wrapper"),
+        }
+      )
+      .addField(
+        "#confirm-password",
+        [
+          {
+            rule: "required",
+            errorMessage: "تکرار رمز عبور الزامی است",
+          },
+          {
+            validator: (value, fields) => {
+              if (fields["#password"] && fields["#password"].elem) {
+                return value === fields["#password"].elem.value;
+              }
+              return false;
+            },
+            errorMessage: "رمز عبور و تکرار آن باید یکسان باشند",
+          },
+        ],
+        {
+          errorsContainer: document
+            .querySelector("#confirm-password")
+            .closest(".input__with-error-wrapper"),
+        }
+      )
       .onSuccess(() => {
         this.handleFormSubmission();
       })
@@ -480,316 +533,98 @@ class FormStateManager {
     });
 
     // Special handling for Select2 dropdowns
-    $(document).on(
-      "change",
-      ".select2-province, .select2-city, #gender",
-      () => {
-        this.updateButtonState();
-      }
-    );
-
-    // Handle date picker changes
-    $(document).on("change", "#date", () => {
+    $(document).on("change", ".select2-province, .select2-city", () => {
       this.updateButtonState();
     });
   }
 
   /**
    * Update submit button state based on form validity
-   * This only enables the button when frontend validation passes
+   * Enables button and adds primary style when form is valid
+   * Disables button and adds disabled style when form is invalid
    */
   updateButtonState() {
     const submitBtn = document.querySelector(this.submitBtnId);
     const isFormValid = this.isFormValid();
 
-    if (submitBtn) {
-      if (isFormValid) {
-        // Form is valid - enable button with primary style
-        submitBtn.disabled = false;
-        submitBtn.classList.remove("button--disabled");
-        submitBtn.classList.add("button--primary");
-      } else {
-        // Form is invalid - disable button with disabled style
-        submitBtn.disabled = true;
-        submitBtn.classList.add("button--disabled");
-        submitBtn.classList.remove("button--primary");
-      }
+    if (isFormValid) {
+      // Form is valid - enable button with primary style
+      submitBtn.disabled = false;
+      submitBtn.classList.remove("button--disabled");
+      submitBtn.classList.add("button--primary");
+    } else {
+      // Form is invalid - disable button with disabled style
+      submitBtn.disabled = true;
+      submitBtn.classList.add("button--disabled");
+      submitBtn.classList.remove("button--primary");
     }
   }
 
-  // Check if all form fields are valid
+  /**
+   * Check if all form fields are valid
+   * @returns {boolean} True if form is valid, false otherwise
+   */
   isFormValid() {
-    // Check if all required fields have values and pass validation
-    return this.requiredFields.every((field) => {
+    // Check if all required fields have values
+    const fieldsValid = this.requiredFields.every((field) => {
       const element = document.querySelector(field);
       if (!element) return false;
 
-      // For dropdowns, check if a value is selected
+      // Handle different field types
       if (element.type === "select-one") {
+        // For dropdowns, check if a value is selected
         return element.value !== "";
       }
 
-      // For text inputs, check if value is not empty and passes validation
-      const hasValue = element.value.trim() !== "";
-      const isValid = !element.classList.contains("is-invalid");
-
-      return hasValue && isValid;
+      // For text inputs, check if value is not empty
+      return element.value.trim() !== "";
     });
+
+    // Additional validation: Check if passwords match
+    const password = document.querySelector("#password").value;
+    const confirmPassword = document.querySelector("#confirm-password").value;
+    const passwordsMatch = password === confirmPassword;
+
+    return fieldsValid && passwordsMatch;
   }
 
-  // Handle form submission when validation passes
+  /**
+   * Handle form submission when validation passes
+   * Updates button state and submits the form
+   */
   handleFormSubmission() {
     const submitBtn = document.querySelector(this.submitBtnId);
 
     // Update button to show loading state
     submitBtn.disabled = true;
-    submitBtn.classList.remove("button--disabled", "button--primary");
-    submitBtn.classList.add("button--loading");
+    submitBtn.classList.remove("button--disabled");
+    submitBtn.classList.add("button--primary");
 
     // Change button text to indicate processing
-    const buttonText = submitBtn.querySelector(".button__text");
-    if (buttonText) {
-      buttonText.textContent = "در حال ثبت...";
-      toastr.success("اطلاعات شما با موفقیت تغییر کرد.", "تغییرات انجام شد");
-    }
+    submitBtn.querySelector(".button__text").textContent = "در حال ثبت...";
 
-    console.log("Form validation passed, submitting form...");
-    // document.querySelector(this.formId).submit();
-
-    // AJAX submission:
-    // this.submitFormViaAjax();
-  }
-}
-
-// ================== Password Change Manager ================== //
-class PasswordChangeManager {
-  constructor() {
-    this.formId = "#user-info__password-change-form";
-    this.submitBtnId = "#password-change-submit-btn";
-    this.validator = null;
-
-    this.init();
-  }
-
-  init() {
-    this.initializeValidation();
-    this.bindRealTimeValidation();
-    this.updateButtonState();
-  }
-
-  // Initialize password change form validation
-  initializeValidation() {
-    const validateOptions = {
-      errorFieldCssClass: "border-error",
-      errorLabelStyle: {
-        color: "var(--Color-Text-icon-on-subtle-error)",
-        font: "var(--Font-Caption-bold-style)",
-        marginTop: "var(--Spacing-sm)",
-        display: "block",
-      },
-      successFieldCssClass: "is-valid",
-      validateOnBlur: true,
-      focusInvalidField: true,
-      lockForm: false,
-    };
-
-    this.validator = new JustValidate(this.formId, validateOptions);
-
-    this.validator
-      .addField(
-        "#current-password",
-        [
-          {
-            rule: "required",
-            errorMessage: "رمز عبور فعلی الزامی است",
-          },
-          {
-            rule: "minLength",
-            value: 6,
-            errorMessage: "رمز عبور باید حداقل ۶ کاراکتر باشد",
-          },
-        ],
-        {
-          errorsContainer: document
-            .querySelector("#current-password")
-            .closest(".input__with-error-wrapper"),
-        }
-      )
-      .addField(
-        "#new-password",
-        [
-          {
-            rule: "required",
-            errorMessage: "رمز عبور جدید الزامی است",
-          },
-          {
-            rule: "minLength",
-            value: 6,
-            errorMessage: "رمز عبور باید حداقل ۶ کاراکتر باشد",
-          },
-          {
-            rule: "customRegexp",
-            value: /[?@#%&*^$!]/,
-            errorMessage: "رمز عبور باید حداقل یک کاراکتر خاص داشته باشد",
-          },
-          {
-            rule: "customRegexp",
-            value: /[a-zA-Z]/,
-            errorMessage: "رمز عبور باید حداقل یک حرف انگلیسی داشته باشد",
-          },
-        ],
-        {
-          errorsContainer: document
-            .querySelector("#new-password")
-            .closest(".input__with-error-wrapper"),
-        }
-      )
-      .onSuccess(() => {
-        this.handlePasswordChangeSubmission();
-      })
-      .onFail(() => {
-        this.updateButtonState();
-      });
-  }
-
-  // Bind real-time validation for password fields
-  bindRealTimeValidation() {
-    $(document).on("input", "#current-password, #new-password", () => {
-      this.updateButtonState();
-    });
-  }
-
-  // Update password change button state
-  updateButtonState() {
-    const submitBtn = document.querySelector(this.submitBtnId);
-    const isFormValid = this.isFormValid();
-
-    if (submitBtn) {
-      if (isFormValid) {
-        submitBtn.disabled = false;
-        submitBtn.classList.remove("button--disabled");
-        submitBtn.classList.add("button--primary");
-      } else {
-        submitBtn.disabled = true;
-        submitBtn.classList.add("button--disabled");
-        submitBtn.classList.remove("button--primary");
-      }
-    }
-  }
-
-  // Check if password form is valid
-  isFormValid() {
-    const currentPassword = document.querySelector("#current-password");
-    const newPassword = document.querySelector("#new-password");
-
-    const isCurrentPasswordValid =
-      currentPassword &&
-      currentPassword.value.trim() !== "" &&
-      !currentPassword.classList.contains("is-invalid");
-
-    const isNewPasswordValid =
-      newPassword &&
-      newPassword.value.trim() !== "" &&
-      !newPassword.classList.contains("is-invalid");
-
-    return isCurrentPasswordValid && isNewPasswordValid;
-  }
-
-  // Handle password change form submission
-  handlePasswordChangeSubmission() {
-    const submitBtn = document.querySelector(this.submitBtnId);
-
-    // Update button to show loading state
-    submitBtn.disabled = true;
-    submitBtn.classList.remove("button--disabled", "button--primary");
-    submitBtn.classList.add("button--loading");
-
-    // Change button text to indicate processing
-    const buttonText = submitBtn.querySelector(".button__text");
-    if (buttonText) {
-      buttonText.textContent = "در حال تغییر...";
-      toastr.success(
-        "رمز عبور جدید شما با موفقیت جایگزین شد.",
-        "رمز عبور تغییر کرد."
-      );
-    }
-
-    console.log("Password change form validated, ready for API submission");
-    // document.querySelector(this.formId).submit();
-  }
-}
-
-// ================== Password Toggle Manager ================== //
-class PasswordToggleManager {
-  constructor() {
-    this.selectors = {
-      currentPasswordToggle: "#current-password-toggle",
-      currentPasswordField: "#current-password",
-      newPasswordToggle: "#new-password-toggle",
-      newPasswordField: "#new-password",
-    };
-
-    this.init();
-  }
-
-  init() {
-    this.bindEvents();
-  }
-
-  // Bind click events to password toggle icons
-  bindEvents() {
-    $(this.selectors.currentPasswordToggle).on("click", (e) => {
-      this.togglePasswordVisibility(
-        this.selectors.currentPasswordField,
-        this.selectors.currentPasswordToggle
-      );
-    });
-
-    $(this.selectors.newPasswordToggle).on("click", (e) => {
-      this.togglePasswordVisibility(
-        this.selectors.newPasswordField,
-        this.selectors.newPasswordToggle
-      );
-    });
-  }
-
-  // Toggle password visibility between text and password types
-  togglePasswordVisibility(fieldSelector, toggleSelector) {
-    const $field = $(fieldSelector);
-    const $toggle = $(toggleSelector);
-    const $icon = $toggle.find("use");
-
-    // Toggle input type between password and text
-    if ($field.attr("type") === "password") {
-      $field.attr("type", "text");
-      // Change icon (visible state)
-      $icon.attr("href", "assets/icons/sprites.svg#vuesax/bold/eye");
-    } else {
-      $field.attr("type", "password");
-      // Change icon (hidden state)
-      $icon.attr("href", "assets/icons/sprites.svg#vuesax/bulk/eye-slash");
-    }
+    // Submit the form
+    document.querySelector(this.formId).submit();
   }
 }
 
 // ================== Initialize All Managers ================== //
+// This section initializes all functionality when document is ready
 // All managers are attached to window for global access if needed
+
 $(document).ready(function () {
   // Initialize Province-City dropdown manager
   window.provinceCityManager = new ProvinceCityManager();
 
-  // Initialize form validation and button state manager
-  window.formStateManager = new FormStateManager();
-
-  // Initialize password change form manager
-  window.passwordChangeManager = new PasswordChangeManager();
-
   // Initialize password visibility toggle manager
   window.passwordToggleManager = new PasswordToggleManager();
+
+  // Initialize form validation and button state manager
+  window.formStateManager = new FormStateManager();
 
   // Log initialization for debugging
   console.log("All form managers initialized successfully");
   console.log(
-    "Available managers: provinceCityManager, formStateManager, passwordChangeManager, passwordToggleManager"
+    "Available managers: provinceCityManager, passwordToggleManager, formStateManager"
   );
 });

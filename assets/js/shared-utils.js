@@ -1,7 +1,7 @@
 /* ****** Char limit Start ****** */
 
-export function initCharLimit(input, max_length, warning_threshold) {
-  const textarea = input;
+export function initCharLimit(selector, max_length, warning_threshold) {
+  const textarea = document.querySelector(selector);
   const counter = document.querySelector(".char-limit__count");
   const maxLength = max_length;
   const warningThreshold = warning_threshold;
