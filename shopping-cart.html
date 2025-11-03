@@ -28,7 +28,7 @@
         </div>
       </a>
       <div class="nav-main__search-input">
-        <form class="input">
+        <form class="input" action='courses.html'>
           <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text"
             name="search" />
           <span class="input__placeholder">
@@ -155,8 +155,8 @@
           </span>
         </a>
 
-        <a class="button button--sm button--primary-outline" id="cart" href="#" data-bs-toggle="tooltip"
-          data-bs-placement="bottom" data-bs-title="سبد خرید">
+        <a class="button button--sm button--primary-outline" id="cart" href="shopping-cart.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سبد خرید">
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
@@ -266,7 +266,7 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="shopping-cart.html">
           <div class="button__text-with-badge">
             <span class="button__text">سبد خرید</span>
             <span class="notif__badge notif__badge--navlink"> 2 </span>
@@ -277,7 +277,7 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="user_payments.html">
           <span class="button__text">پرداخت‌های من</span>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -285,7 +285,7 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="user_admin-messages.html">
           <div class="button__text-with-badge">
             <span class="button__text">پیام‌های مدیریت</span>
             <span class="notif__badge notif__badge--navlink"> +9 </span>
@@ -296,7 +296,7 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="user_support-ticket.html">
           <span class="button__text">پشتیبانی و تیکت</span>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -343,7 +343,7 @@
     </div>
     <div class="offcanvas-footer">
       <!-- ? Logged in Mode -->
-      <a href="#" class="button button--md button--primary flex-grow-1">
+      <a href="user-info.html" class="button button--md button--primary flex-grow-1">
         <span class="button__text">اطلاعات حساب</span>
       </a>
       <a href="#" class="button button--sm button--error-outline">
@@ -576,7 +576,7 @@
               </div>
             </div>
           </div>
-          <div class="price-box__actions">
+          <form class="price-box__actions">
             <div class="price-box__discount">
               <div class="input cart-section__discount-input">
                 <input class="input__field input__field--have-icon" placeholder="کد تخفیف" autocomplete="off"
@@ -594,7 +594,7 @@
             <button class="button button--xs button--primary w-100">
               <span class="button__text">پرداخت</span>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
@@ -604,74 +604,7 @@
   <script type="module" src="assets/js/main.js"></script>
 
   <!-- ! page scripts -->
-  <script>
-    function parsePrice(priceText) {
-      return parseInt(priceText.replace(/[^\d]/g, '')) || 0;
-    }
-
-    function formatPrice(price) {
-      return price.toLocaleString('fa-IR') + ' تومان';
-    }
-
-    function updateCartSummary() {
-      const courseCards = document.querySelectorAll('.cart-section__course-card:not(.removing):not(.removed)');
-      let totalPrice = 0;
-      let totalSavings = 0;
-      let totalPayable = 0;
-
-      courseCards.forEach(card => {
-        const priceBefore = parsePrice(card.querySelector('.course-card__price-before').textContent);
-        const payable = parsePrice(card.querySelector('.course-card__payable').textContent);
-
-        totalPrice += priceBefore;
-        totalPayable += payable;
-        totalSavings += (priceBefore - payable);
-      });
-
-      // Update summary
-      document.querySelector('.cart-section__total-price span').textContent = formatPrice(totalPrice);
-      document.querySelector('.cart-section__savings span').textContent = formatPrice(totalSavings);
-      document.querySelector('.cart-section__payable span').textContent = formatPrice(totalPayable);
-    }
-
-    function updateCartCount() {
-      const countElement = document.querySelector('[data-cart-count]');
-      const countElementNav = document.querySelector('[data-cart-count-nav]');
-      const currentCount = document.querySelectorAll('.cart-section__course-card:not(.removing):not(.removed)').length;
-      countElement.textContent = `(${currentCount})`;
-      countElementNav.textContent = `${currentCount}`;
-    }
-
-    function removeCourseCard(courseId) {
-      const courseCard = document.querySelector(`[data-course-id="${courseId}"]`);
-      if (courseCard && !courseCard.classList.contains('removing')) {
-        courseCard.classList.add('removing');
-        courseCard.style.transition = 'opacity 0.3s ease-in-out, transform 0.25s ease-in-out';
-        courseCard.style.opacity = '0';
-        courseCard.style.transform = 'translateX(20%)';
-        setTimeout(() => {
-          courseCard.classList.add('removed');
-          courseCard.style.display = 'none';
-          updateCartCount();
-          updateCartSummary();
-        }, 300);
-      }
-    }
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', function () {
-      updateCartCount();
-      updateCartSummary();
-      document.querySelectorAll('[data-remove-button]').forEach((button) => {
-        button.addEventListener('click', (e) => {
-          e.preventDefault();
-          const courseId = button.dataset.courseId;
-          removeCourseCard(courseId);
-          toastr.warning("این دوره از سبد خریدتان حذف شد.", "از سبد خرید حذف شد.");
-        });
-      });
-    });
-  </script>
+  <script src="assets/js/pages/user-panel/shopping-cart.js"></script>
 </body>
 
 </html>

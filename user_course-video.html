@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>نام دوره - کوه‌آموز</title>
+    <title>قسمت 2 - کوه‌آموز</title>
     <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
 
     <!-- ! Core Styles -->
@@ -27,7 +27,7 @@
                 </div>
             </a>
             <div class="nav-main__search-input">
-                <form class="input">
+                <form class="input" action="courses.html">
                     <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text"
                         name="search" />
                     <span class="input__placeholder">
@@ -158,8 +158,8 @@
                     </span>
                 </a>
 
-                <a class="button button--sm button--primary-outline" id="cart" href="#" data-bs-toggle="tooltip"
-                    data-bs-placement="bottom" data-bs-title="سبد خرید">
+                <a class="button button--sm button--primary-outline" id="cart" href="shopping-cart.html"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سبد خرید">
                     <span class="button__icon">
                         <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
@@ -270,7 +270,7 @@
                         </svg>
                     </span>
                 </a>
-                <a class="button button--sm button--navlink" href="#">
+                <a class="button button--sm button--navlink" href="shopping-cart.html">
                     <div class="button__text-with-badge">
                         <span class="button__text">سبد خرید</span>
                         <span class="notif__badge notif__badge--navlink"> 2 </span>
@@ -497,9 +497,9 @@
                     <div class="head-section__breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">خانه</a></li>
+                                <li class="breadcrumb-item"><a href="user_courses.html">پنل کاربری</a></li>
                                 <li class="breadcrumb-item">
-                                    <a href="courses.html">سنگنوردی</a>
+                                    <a href="user_courses.html">دوره‌های من</a>
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
                                     دوره حرفه ای سنگنوردی کودکان
@@ -507,7 +507,7 @@
                             </ol>
                         </nav>
                     </div>
-                    <a href="index.html" class="back-button">
+                    <a href="user_courses.html" class="back-button">
                         برگشت
                         <span class="back-button__icon">
                             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -537,8 +537,8 @@
                     <section class="syllabus-accordion-section">
                         <div class="syllabus-accordion accordion-header">
                             <div class="mb-0">
-                                <button class="syllabus-accordion__main-button accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapse100" aria-expanded="false"
+                                <button class="syllabus-accordion__main-button accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapse100" aria-expanded="true"
                                     aria-controls="collapse100">
                                     <div class="syllabus-accordion__main-button-text">
                                         <h5 class="syllabus-accordion__main-button-title">سرفصل‌ها:</h5>
@@ -549,33 +549,46 @@
                                     </svg>
                                 </button>
                             </div>
-                            <div id="collapse100" class="syllabus-accordion__body accordion-collapse collapse">
-                                <div class="accordions syllabus-accordion__accordions">
+                            <div id="collapse100" class="syllabus-accordion__body accordion-collapse collapse show">
+                                <div class="accordions syllabus-accordion__accordions" id="syllabus-parent">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button
-                                                class="syllabus-accordion__accordion-button accordion-button__customized accordion-button collapsed"
+                                                class="syllabus-accordion__accordion-button accordion-button__customized accordion-button "
                                                 type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
-                                                aria-expanded="false" aria-controls="collapse1">
+                                                aria-expanded="true" aria-controls="collapse1">
                                                 فصل 1: لورم ایپسوم متن ساختگی
                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                     <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
                                                 </svg>
                                             </button>
                                         </h2>
-                                        <div id="collapse1" class="accordion-collapse collapse">
+                                        <div id="collapse1" data-bs-parent="#syllabus-parent"
+                                            class="accordion-collapse collapse show">
                                             <div class="accordion-body">
                                                 <div class="episodes">
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
+                                                                    </use>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <!-- Purchased -->
+                                                    <a href="#" class="episode episode--active episode--current">
+                                                        <p class="episode__title">لورم ایپسوم</p>
+                                                        <div class="episode__info">
+                                                            <div class="episode__time">40:31</div>
+                                                            <div class="episode__icon">
+                                                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                                                    <use
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
@@ -595,32 +608,14 @@
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <!-- Purchased -->
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
-                                                                    </use>
-                                                                </svg>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
-                                                        <p class="episode__title">لورم ایپسوم</p>
-                                                        <div class="episode__info">
-                                                            <div class="episode__time">40:31</div>
-                                                            <div class="episode__icon">
-                                                                <svg class="icon icon--md" viewBox="0 0 24 24">
-                                                                    <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
@@ -642,19 +637,18 @@
                                                 </svg>
                                             </button>
                                         </h2>
-                                        <div id="collapse2" class="accordion-collapse collapse">
+                                        <div id="collapse2" data-bs-parent="#syllabus-parent"
+                                            class="accordion-collapse collapse">
                                             <div class="accordion-body">
                                                 <div class="episodes">
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
@@ -675,31 +669,27 @@
                                                         </div>
                                                     </a>
                                                     <!-- Purchased -->
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
@@ -721,19 +711,18 @@
                                                 </svg>
                                             </button>
                                         </h2>
-                                        <div id="collapse3" class="accordion-collapse collapse">
+                                        <div id="collapse3" data-bs-parent="#syllabus-parent"
+                                            class="accordion-collapse collapse">
                                             <div class="accordion-body">
                                                 <div class="episodes">
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
@@ -754,31 +743,27 @@
                                                         </div>
                                                     </a>
                                                     <!-- Purchased -->
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="#" class="episode" data-bs-toggle="tooltip"
-                                                        data-bs-placement="top"
-                                                        data-bs-title="ابتدا دوره را خریداری نمایید">
+                                                    <a href="#" class="episode episode--active">
                                                         <p class="episode__title">لورم ایپسوم</p>
                                                         <div class="episode__info">
                                                             <div class="episode__time">40:31</div>
                                                             <div class="episode__icon">
                                                                 <svg class="icon icon--md" viewBox="0 0 24 24">
                                                                     <use
-                                                                        href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                        href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                                     </use>
                                                                 </svg>
                                                             </div>
@@ -849,6 +834,10 @@
                                 <div class="input__with-error-wrapper w-100">
                                     <textarea class="comment-form__input input__field" rows="3" id="comment-text"
                                         placeholder="نظر شما در مورد دوره..."></textarea>
+                                    <div class="char-limit">
+                                        <span class='char-limit__label'>تعداد کاراکترها:</span>
+                                        <small class='char-limit__count'></small>
+                                    </div>
                                 </div>
                                 <div class="comment-form__submit-button-wrapper">
                                     <button type="submit" class="button button--md button--disabled"
@@ -963,30 +952,44 @@
                         </div>
                     </div>
                     <div class="section-website__body">
-                        <div class="accordions">
+                        <div class="accordions" id="syllabus-parent-above">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button accordion-button__customized
-accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
-                                        aria-expanded="false" aria-controls="collapse1">
+                                        accordion-button__customized" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
                                         فصل 1: لورم ایپسوم متن ساختگی
                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                             <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
                                         </svg>
                                     </button>
                                 </h2>
-                                <div id="collapse1" class="accordion-collapse collapse">
+                                <div id="collapse1" data-bs-parent="#syllabus-parent-above"
+                                    class="accordion-collapse collapse show">
                                     <div class="accordion-body">
                                         <div class="episodes">
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
+                                                            </use>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <!-- Purchased -->
+                                            <a href="#" class="episode episode--active episode--current">
+                                                <p class="episode__title">لورم ایپسوم</p>
+                                                <div class="episode__info">
+                                                    <div class="episode__time">40:31</div>
+                                                    <div class="episode__icon">
+                                                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                                                            <use
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
@@ -1006,30 +1009,14 @@ accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" 
                                                     </div>
                                                 </div>
                                             </a>
-                                            <!-- Purchased -->
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
-                                                            </use>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
-                                                <p class="episode__title">لورم ایپسوم</p>
-                                                <div class="episode__info">
-                                                    <div class="episode__time">40:31</div>
-                                                    <div class="episode__icon">
-                                                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                                                            <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
@@ -1042,26 +1029,26 @@ accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button accordion-button__customized
-accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
-                                        aria-expanded="false" aria-controls="collapse2">
+                                        accordion-button__customized collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
                                         فصل 2: لورم ایپسوم متن ساختگی
                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                             <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
                                         </svg>
                                     </button>
                                 </h2>
-                                <div id="collapse2" class="accordion-collapse collapse">
+                                <div id="collapse2" data-bs-parent="#syllabus-parent-above"
+                                    class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <div class="episodes">
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
@@ -1082,29 +1069,27 @@ accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" 
                                                 </div>
                                             </a>
                                             <!-- Purchased -->
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
@@ -1117,26 +1102,26 @@ accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button accordion-button__customized
-accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
-                                        aria-expanded="false" aria-controls="collapse3">
+                                        accordion-button__customized collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
                                         فصل 3: لورم ایپسوم متن ساختگی
                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                             <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
                                         </svg>
                                     </button>
                                 </h2>
-                                <div id="collapse3" class="accordion-collapse collapse">
+                                <div id="collapse3" data-bs-parent="#syllabus-parent-above"
+                                    class="accordion-collapse collapse">
                                     <div class="accordion-body">
                                         <div class="episodes">
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
@@ -1157,29 +1142,27 @@ accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" 
                                                 </div>
                                             </a>
                                             <!-- Purchased -->
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="#" class="episode" data-bs-toggle="tooltip" data-bs-placement="top"
-                                                data-bs-title="ابتدا دوره را خریداری نمایید">
+                                            <a href="#" class="episode episode--active">
                                                 <p class="episode__title">لورم ایپسوم</p>
                                                 <div class="episode__info">
                                                     <div class="episode__time">40:31</div>
                                                     <div class="episode__icon">
                                                         <svg class="icon icon--md" viewBox="0 0 24 24">
                                                             <use
-                                                                href="assets/icons/sprites.svg#vuesax/bulk/lock-circle">
+                                                                href="assets/icons/sprites.svg#vuesax/bulk/play-circle">
                                                             </use>
                                                         </svg>
                                                     </div>
@@ -1248,9 +1231,9 @@ accordion-button__customized collapsed" type="button" data-bs-toggle="collapse" 
                 <div class="footer__column-links">
                     <a class="footer__column-link" href="about-us.html">درباره کوه‌آموز</a>
                     <a class="footer__column-link" href="faq.html">سوالات متداول</a>
-                    <a class="footer__column-link" href="#">ارتباط با پشتیبانی</a>
+                    <a class="footer__column-link" href="user_support-ticket.html">ارتباط با پشتیبانی</a>
                     <a class="footer__column-link" href="faq.html#contact-us">تماس با ما</a>
-                    <a class="footer__column-link" href="#">فرصت همکاری</a>
+                    <a class="footer__column-link" href="join-us.html">فرصت همکاری</a>
                 </div>
             </div>
             <div class="footer__column">

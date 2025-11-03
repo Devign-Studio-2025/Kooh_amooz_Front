@@ -27,7 +27,7 @@
         </div>
       </a>
       <div class="nav-main__search-input">
-        <form class="input">
+        <form class="input" action='courses.html'>
           <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text"
             name="search" />
           <span class="input__placeholder">
@@ -155,8 +155,8 @@
           </span>
         </a>
 
-        <a class="button button--sm button--primary-outline" id="cart" href="#" data-bs-toggle="tooltip"
-          data-bs-placement="bottom" data-bs-title="سبد خرید">
+        <a class="button button--sm button--primary-outline" id="cart" href="shopping-cart.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سبد خرید">
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
@@ -266,7 +266,7 @@
             </svg>
           </span>
         </a>
-        <a class="button button--sm button--navlink" href="#">
+        <a class="button button--sm button--navlink" href="shopping-cart.html">
           <div class="button__text-with-badge">
             <span class="button__text">سبد خرید</span>
             <span class="notif__badge notif__badge--navlink"> 2 </span>
@@ -343,7 +343,7 @@
     </div>
     <div class="offcanvas-footer">
       <!-- ? Logged in Mode -->
-      <a href="#" class="button button--md button--primary flex-grow-1">
+      <a href="user-info.html" class="button button--md button--primary flex-grow-1">
         <span class="button__text">اطلاعات حساب</span>
       </a>
       <a href="#" class="button button--sm button--error-outline">
@@ -821,13 +821,13 @@
       </div>
       <div class="section-website__body">
         <div class="contact-form">
-          <form class="padding-xl flex-grow-1">
+          <form class="padding-xl flex-grow-1" id="form-contact-us">
             <!-- ! Honey pot input -->
             <input type="hidden" name="hp" />
             <!-- ! Honey pot input -->
 
             <div class="contact-form__row mx-0 mb-3">
-              <div class="input contact-form__input-group">
+              <div class="input contact-form__input-group input__with-error-wrapper">
                 <label for="full-name" class="input__label">
                   <span>نام و نام خانوادگی</span>
                   <span class="contact-form__star">*</span>
@@ -835,7 +835,7 @@
                 <input class="input__field" placeholder="وارد کنید..." autocomplete="off" type="text" name="full_name"
                   id="full-name" />
               </div>
-              <div class="input contact-form__input-group">
+              <div class="input contact-form__input-group input__with-error-wrapper">
                 <label for="phone-number" class="input__label">
                   <span>شماره همراه</span>
                   <span class="contact-form__star">*</span>
@@ -845,12 +845,12 @@
               </div>
             </div>
             <div class="input contact-form__row mx-0 mb-3">
-              <div class="contact-form__input-group">
+              <div class="contact-form__input-group input__with-error-wrapper">
                 <label for="email" class="input__label">ایمیل</label>
                 <input class="input__field" placeholder="your.email@example.com" autocomplete="off" type="email"
                   name="email" id="email" />
               </div>
-              <div class="contact-form__input-group">
+              <div class="contact-form__input-group input__with-error-wrapper">
                 <label for="topic" class="input__label">
                   <span>موضوع</span>
                   <span class="contact-form__star">*</span>
@@ -859,15 +859,19 @@
                   id="topic" />
               </div>
             </div>
-            <div class="input mb-3">
+            <div class="input mb-3 input__with-error-wrapper">
               <label for="message" class="input__label">
                 <span>متن پیام</span>
                 <span class="contact-form__star">*</span>
               </label>
               <textarea class="input__field" name="message" id="message" rows="3"
                 placeholder="توضیحات خود را وارد کنید..."></textarea>
+              <div class="char-limit">
+                <span class='char-limit__label'>تعداد کاراکترها:</span>
+                <small class='char-limit__count'></small>
+              </div>
             </div>
-            <div class="section-website__buttons">
+            <div class="section-website__buttons justify-content-center">
               <button class="button button--lg button--primary fit-content">
                 <span class="button__text">ثبت و ارسال فرم</span>
               </button>
@@ -959,9 +963,9 @@
         <div class="footer__column-links">
           <a class="footer__column-link" href="about-us.html">درباره کوه‌آموز</a>
           <a class="footer__column-link" href="faq.html">سوالات متداول</a>
-          <a class="footer__column-link" href="#">ارتباط با پشتیبانی</a>
+          <a class="footer__column-link" href="user_support-ticket.html">ارتباط با پشتیبانی</a>
           <a class="footer__column-link" href="faq.html#contact-us">تماس با ما</a>
-          <a class="footer__column-link" href="#">فرصت همکاری</a>
+          <a class="footer__column-link" href="join-us.html">فرصت همکاری</a>
         </div>
       </div>
       <div class="footer__column">

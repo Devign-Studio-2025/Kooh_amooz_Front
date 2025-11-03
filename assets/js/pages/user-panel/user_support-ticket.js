@@ -3,8 +3,7 @@ import "../../../libs/bootstrap/bootstrap.bundle.min.js";
 
 import { initCharLimit } from "../../shared-utils.js";
 
-const ticketTextarea = document.querySelector("textarea");
-initCharLimit(ticketTextarea, 1000, 1000);
+initCharLimit('textarea', 1000, 1000);
 
 // Datatable
 const table = new DataTable("#tickets-table", {
