@@ -285,6 +285,7 @@
   --Border-Color-white: var(--Color-Neutral-1);
   --Border-Color-default: var(--Color-Neutral-5);
   --Border-Color-disabled: var(--Color-Text-icon-disabled);
+  --Border-Color-success: var(--Color-Text-icon-on-subtle-success);
   --Border-width: var(--NumScale-x0\5);
 
   --Border-Style-default: 0.0625rem solid var(--Border-Color-default);
@@ -292,6 +293,8 @@
   --Border-Style-error: 0.0625rem solid var(--Border-Color-error);
   --Border-Style-white: 0.0625rem solid var(--Border-Color-white);
   --Border-Style-disabled: 0.0625rem solid var(--Border-Color-disabled);
+  --Border-Style-success: 0.0625rem solid var(--Border-Color-success);
+
   /* * Border */
 
   /* * Transition */

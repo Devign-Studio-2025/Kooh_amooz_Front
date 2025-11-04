@@ -117,6 +117,96 @@
     width: 100%;
 }
 
+/* profile img modal start */
+.upload-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--Spacing-md);
+}
+
+.upload-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--Spacing-sm);
+}
+
+.upload-area {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--Transition-medium);
+    overflow: hidden;
+    position: relative;
+    background: var(--Color-Surface-subtle-neutral);
+    gap: var(--Spacing-md);
+}
+
+.upload-area:hover {
+    background: var(--Color-Surface-subtle-primary);
+    transform: scale(1.02);
+}
+
+.upload-area.active {
+    box-shadow: var(--Shadow-Md-Success-style);
+    border: var(--Border-Style-success);
+    border-width: 0.25rem;
+}
+
+.upload-text {
+    color: var(--Color-Text-icon-placeholder);
+    font: var(--Font-Caption-bold-style);
+    transition: var(--Transition-medium);
+}
+
+.preview-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
+}
+
+.file-input {
+    display: none;
+}
+
+.profile-img-modal__validation-items {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--Spacing-sm);
+}
+
+.upload-container {
+    position: relative;
+}
+
+.input__with-error-wrapper {
+    position: relative;
+}
+
+.upload-area.drag-over {
+    border-color: #2575fc;
+    background: #f0f4ff;
+    transform: scale(1.02);
+}
+
+/* profile img modal end */
+
 
 @media screen and (max-width: 700px) {
     .user-info__password-change {

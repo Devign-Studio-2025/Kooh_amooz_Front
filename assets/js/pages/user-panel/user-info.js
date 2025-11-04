@@ -472,14 +472,12 @@ class FormStateManager {
 
   // This ensures button state updates immediately when fields change
   bindRealTimeValidation() {
-    // Monitor input events on all required fields
     this.requiredFields.forEach((field) => {
       $(document).on("input change", field, () => {
         this.updateButtonState();
       });
     });
 
-    // Special handling for Select2 dropdowns
     $(document).on(
       "change",
       ".select2-province, .select2-city, #gender",
@@ -494,22 +492,19 @@ class FormStateManager {
     });
   }
 
-  /**
-   * Update submit button state based on form validity
-   * This only enables the button when frontend validation passes
-   */
+  
+  // Update submit button state based on form validity
+  
   updateButtonState() {
     const submitBtn = document.querySelector(this.submitBtnId);
     const isFormValid = this.isFormValid();
 
     if (submitBtn) {
       if (isFormValid) {
-        // Form is valid - enable button with primary style
         submitBtn.disabled = false;
         submitBtn.classList.remove("button--disabled");
         submitBtn.classList.add("button--primary");
       } else {
-        // Form is invalid - disable button with disabled style
         submitBtn.disabled = true;
         submitBtn.classList.add("button--disabled");
         submitBtn.classList.remove("button--primary");
@@ -519,17 +514,14 @@ class FormStateManager {
 
   // Check if all form fields are valid
   isFormValid() {
-    // Check if all required fields have values and pass validation
     return this.requiredFields.every((field) => {
       const element = document.querySelector(field);
       if (!element) return false;
 
-      // For dropdowns, check if a value is selected
       if (element.type === "select-one") {
         return element.value !== "";
       }
 
-      // For text inputs, check if value is not empty and passes validation
       const hasValue = element.value.trim() !== "";
       const isValid = !element.classList.contains("is-invalid");
 
@@ -541,12 +533,10 @@ class FormStateManager {
   handleFormSubmission() {
     const submitBtn = document.querySelector(this.submitBtnId);
 
-    // Update button to show loading state
     submitBtn.disabled = true;
     submitBtn.classList.remove("button--disabled", "button--primary");
     submitBtn.classList.add("button--loading");
 
-    // Change button text to indicate processing
     const buttonText = submitBtn.querySelector(".button__text");
     if (buttonText) {
       buttonText.textContent = "در حال ثبت...";
@@ -554,10 +544,7 @@ class FormStateManager {
     }
 
     console.log("Form validation passed, submitting form...");
-    // document.querySelector(this.formId).submit();
 
-    // AJAX submission:
-    // this.submitFormViaAjax();
   }
 }
 
@@ -699,12 +686,10 @@ class PasswordChangeManager {
   handlePasswordChangeSubmission() {
     const submitBtn = document.querySelector(this.submitBtnId);
 
-    // Update button to show loading state
     submitBtn.disabled = true;
     submitBtn.classList.remove("button--disabled", "button--primary");
     submitBtn.classList.add("button--loading");
 
-    // Change button text to indicate processing
     const buttonText = submitBtn.querySelector(".button__text");
     if (buttonText) {
       buttonText.textContent = "در حال تغییر...";
@@ -736,7 +721,6 @@ class PasswordToggleManager {
     this.bindEvents();
   }
 
-  // Bind click events to password toggle icons
   bindEvents() {
     $(this.selectors.currentPasswordToggle).on("click", (e) => {
       this.togglePasswordVisibility(
@@ -759,35 +743,159 @@ class PasswordToggleManager {
     const $toggle = $(toggleSelector);
     const $icon = $toggle.find("use");
 
-    // Toggle input type between password and text
     if ($field.attr("type") === "password") {
       $field.attr("type", "text");
-      // Change icon (visible state)
       $icon.attr("href", "assets/icons/sprites.svg#vuesax/bold/eye");
     } else {
       $field.attr("type", "password");
-      // Change icon (hidden state)
       $icon.attr("href", "assets/icons/sprites.svg#vuesax/bulk/eye-slash");
     }
   }
 }
 
+// ================== profile img modal start ================== //
+// modal
+const showButton = document.querySelector("#upload-profile-img");
+
+showButton.onclick = () => {
+  const profileImgModal = new bootstrap.Modal(
+    document.querySelector("#profile-img-modal")
+  );
+  profileImgModal.show();
+};
+
+// Image upload
+document.addEventListener('DOMContentLoaded', function () {
+  const uploadArea = document.getElementById('uploadArea');
+  const fileInput = document.getElementById('fileInput');
+  const previewImage = document.getElementById('previewImage');
+  const form = document.getElementById('form-profile-image');
+  const userIcon = document.querySelector('.user-icon');
+  const uploadText = document.querySelector('.upload-text');
+
+  // reset upload area
+  function resetUploadArea() {
+    form.reset();
+    previewImage.style.display = 'none';
+    previewImage.src = '';
+    uploadArea.classList.remove('active');
+
+    if (userIcon) userIcon.style.display = 'block';
+    if (uploadText) uploadText.style.display = 'block';
+  }
+
+  uploadArea.addEventListener('click', function () {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener('change', function () {
+    if (this.files && this.files[0]) {
+      const file = this.files[0];
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        previewImage.src = e.target.result;
+        previewImage.style.display = 'block';
+        uploadArea.classList.add('active');
+
+        if (userIcon) userIcon.style.display = 'none';
+        if (uploadText) uploadText.style.display = 'none';
+      }
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Drag and drop
+  uploadArea.addEventListener('dragover', function (e) {
+    e.preventDefault();
+    uploadArea.classList.add('active');
+  });
+
+  uploadArea.addEventListener('dragleave', function () {
+    if (!fileInput.files.length) {
+      uploadArea.classList.remove('active');
+    }
+  });
+
+  uploadArea.addEventListener('drop', function (e) {
+    e.preventDefault();
+    if (e.dataTransfer.files.length) {
+      fileInput.files = e.dataTransfer.files;
+      fileInput.dispatchEvent(new Event('change'));
+    }
+  });
+
+  // Reset when modal is hidden
+  const modalElement = document.getElementById('profile-img-modal');
+  modalElement.addEventListener('hidden.bs.modal', function () {
+    resetUploadArea();
+  });
+});
+
+const profileImageValidator = new JustValidate("#form-profile-image", {
+  errorFieldCssClass: "border-error",
+  errorLabelStyle: {
+    color: "var(--Color-Text-icon-on-subtle-error)",
+    font: "var(--Font-Caption-bold-style)",
+    marginTop: "var(--Spacing-sm)",
+    display: "block",
+  },
+  submitFormAutomatically: false,
+});
+
+profileImageValidator
+  .addField(
+    "#fileInput",
+    [
+      {
+        rule: "required",
+        errorMessage: "انتخاب تصویر الزامی است.",
+      },
+      {
+        rule: "minFilesCount",
+        value: 1,
+        errorMessage: "لطفاً یک تصویر انتخاب کنید.",
+      },
+      {
+        rule: "maxFilesCount",
+        value: 1,
+        errorMessage: "فقط یک تصویر مجاز است.",
+      },
+      {
+        rule: "files",
+        value: {
+          files: {
+            types: ['image/jpeg', 'image/png'],
+            maxSize: 50 * 1024 * 1024, // 50MB
+            minSize: 1024, // 1KB minimum
+          },
+        },
+        errorMessage: "فایل باید کمتر از 50MB و از نوع JPEG یا PNG باشد.",
+      }
+    ],
+    {
+      errorsContainer: document.querySelector("#fileInput").closest(".upload-container"),
+    }
+  )
+  .onSuccess((event) => {
+    toastr.success("تصویر پروفایل با موفقیت به‌روزرسانی شد.", "آپلود انجام شد");
+    toastr.warning("تصویر پروفایل بدون تغییر باقی ماند", "خطا در آپلود");
+
+    event.preventDefault();
+
+    // close the modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('profile-img-modal'));
+    modal.hide();
+  });
+
+// ================== profile img modal end ================== //
+
 // ================== Initialize All Managers ================== //
-// All managers are attached to window for global access if needed
 $(document).ready(function () {
-  // Initialize Province-City dropdown manager
   window.provinceCityManager = new ProvinceCityManager();
-
-  // Initialize form validation and button state manager
   window.formStateManager = new FormStateManager();
-
-  // Initialize password change form manager
   window.passwordChangeManager = new PasswordChangeManager();
-
-  // Initialize password visibility toggle manager
   window.passwordToggleManager = new PasswordToggleManager();
-
-  // Log initialization for debugging
   console.log("All form managers initialized successfully");
   console.log(
     "Available managers: provinceCityManager, formStateManager, passwordChangeManager, passwordToggleManager"

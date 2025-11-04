@@ -501,7 +501,7 @@
                 <h1 class="content-section__head-title">
                     اطلاعات هویتی
                 </h1>
-                <button class="button button--sm button--primary-outline nonable-below-1000">
+                <button class="button button--sm button--primary-outline" id="upload-profile-img">
                     <span class="button__icon">
                         <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#System /  Camera"></use>
@@ -821,6 +821,51 @@
         </aside>
         <!-- * [Sidebar] End -->
     </main>
+
+    <!-- profile image modal Start -->
+    <div class="modal fade" id="profile-img-modal" tabindex="-1" role="dialog" aria-labelledby="profileImgModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="profileImgModal">
+                        تصویر پروفایل
+                    </h5>
+                    <button type="button" class="button button--xs button-close" data-bs-dismiss="modal"
+                        aria-label="Close">
+                        <span class="button__icon">
+                            <svg class="icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#mdi:remove"></use>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="upload-form" id="form-profile-image">
+                        <div class="upload-container">
+                            <div class="upload-area" id="uploadArea">
+                                <svg class="icon icon--lg" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/bulk/user"></use>
+                                </svg>
+                                <span class="upload-text">کلیک کنید</span>
+                                <img class="preview-image" id="previewImage" alt="Preview">
+                            </div>
+                            <input type="file" id="fileInput" class="file-input" accept="image/jpeg, image/png"
+                                name="profileImage">
+                        </div>
+                        <button type="submit" class="button button--primary button--xs px-4 w-100">
+                            تغییر تصویر پروفایل
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer profile-img-modal__validation-items">
+                    <div class="profile-img-modal__validation-item">1. فایل باید کمتر از 50MB باشد.</div>
+                    <div class="profile-img-modal__validation-item">2. فرمت های مورد قبول JPEG و PNG است.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- profile image modal End -->
 
     <!-- ! Core Scripts -->
     <script type="module" src="assets/js/main.js"></script>
