@@ -10,7 +10,6 @@
   transition: var(--Transition-base);
   height: 100%;
   width: 17.5rem;
-  min-width: 16rem;
 }
 
 .course-card:hover {
@@ -232,7 +231,6 @@
   .course-card {
     height: 100%;
     width: 11rem;
-    min-width: unset;
     padding: var(--Spacing-sm);
   }
 

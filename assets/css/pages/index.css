@@ -190,7 +190,8 @@
 
 /* ****** Testimonials ****** */
 
-/* ****** responsive ****** */
+/* ****** Responsive ****** */
+
 @media screen and (max-width: 1000px) {
   .section-website__buttons {
     justify-content: center;
@@ -221,6 +222,16 @@
     padding: unset;
     border: unset;
   }
+
+  .entity-tile {
+    width: unset;
+    min-width: unset;
+    max-width: calc(50% - var(--Spacing-lg));
+  }
+
+  .entity-tile__title {
+    font: var(--Font-Caption-bold-style);
+  }
 }
 
-/* ****** responsive ****** */
+/* ****** Responsive ****** */

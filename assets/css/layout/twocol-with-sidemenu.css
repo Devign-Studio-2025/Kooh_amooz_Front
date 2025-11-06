@@ -46,7 +46,31 @@ main.main-website {
 .course-card {
   height: auto;
   width: 100%;
+  min-width: 16.5rem;
   max-width: calc(100% / 3 - var(--Spacing-md));
+}
+
+@media screen and (max-width: 1000px) {
+  .course-card {
+    min-width: unset;
+    max-width: 13rem;
+  }
+
+  .skeleton-card {
+    min-width: unset !important;
+    width: 100%;
+    max-width: 13rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .course-card {
+    width: 100%;
+    max-width: calc(50% - var(--Spacing-sm));
+  }
+  .skeleton-card {
+    width: calc(100% / 2 - var(--Spacing-sm));
+  }
 }
 
 .sidebar-section__head {

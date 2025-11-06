@@ -15,169 +15,173 @@
 </head>
 
 <body>
-  <!-- * Navbar Start -->
-  <nav class="nav-main">
-    <div class="nav-main__right">
-      <a href="/" class="nav-main__logo-wrapper nonable-below-1000">
-        <div class="nav-main__logo">
-          <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
+    <!-- * Navbar Start -->
+    <nav class="nav-main">
+        <div class="nav-main__right">
+            <a href="/" class="nav-main__logo-wrapper nonable-below-1000">
+                <div class="nav-main__logo">
+                    <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
+                </div>
+                <div class="nav-main__logo-text">
+                    <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
+                </div>
+            </a>
+            <div class="nav-main__search-input">
+                <form class="input" action='courses.html'>
+                    <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text"
+                        name="search" />
+                    <span class="input__placeholder">
+                        جستجو در
+                        <strong class="fw-normal" style="color: var(--Color-Text-icon-action)">کوه‌آموز</strong>...
+                    </span>
+                    <span class="input__icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+                        </svg>
+                    </span>
+                </form>
+            </div>
+            <ul class="nav-main__link-items nonable-below-1000">
+                <li class="nav-main__link-item nav-main__link-item--has-menu">
+                    <a type="button" class="nav-main__link">دسته‌بندی‌ها
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/linear/arrow-down"></use>
+                        </svg>
+                    </a>
+                    <div class="nav-main__submenu">
+                        <div class="d-flex gap-md-y justify-content-between">
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">کوهپیمایی</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img loading="lazy" class="skeleton"
+                                        src="assets/imgs/categories/cat-mountaineering.png" alt="کوهپیمایی" />
+                                </div>
+                            </a>
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">طبیعت گردی</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-nature.png"
+                                        alt="طبیعت گردی" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex gap-md-y justify-content-between">
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">کوهنوردی</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountain.png"
+                                        alt="کوهنوردی" />
+                                </div>
+                            </a>
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">نجات کوهستان</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rescue.png"
+                                        alt="نجات کوهستان" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex gap-md-y justify-content-between">
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">سنگنوردی و دیواره‌نوردی</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img loading="lazy" class="skeleton"
+                                        src="assets/imgs/categories/cat-rock-climbing.png" alt="سنگنوردی" />
+                                </div>
+                            </a>
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">علوم تکمیلی کوهستان</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-skyrunner.png"
+                                        alt="علوم تکمیلی کوهستان" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex gap-md-y justify-content-between">
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">یخ و برف</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img src="assets/imgs/categories/cat-icefall.png" alt="یخ و برف" />
+                                </div>
+                            </a>
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">دره‌نوردی</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img src="assets/imgs/categories/cat-canyoning.png" alt="دره‌نوردی" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="d-flex gap-md-y justify-content-between">
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">صعودهای ورزشی</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img src="assets/imgs/categories/cat-gym.png" alt="صعودهای ورزشی" />
+                                </div>
+                            </a>
+                            <a href="courses.html" class="nav-main__submenu-item">
+                                <span class="nav-main__submenu-item-text">آموزشگاه جهانی</span>
+                                <div class="nav-main__submenu-item-image">
+                                    <img src="assets/imgs/categories/cat-learning.jpg" alt="آموزشگاه جهانی" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-main__link-item">
+                    <a href="about-us.html" class="nav-main__link">درباره ما</a>
+                </li>
+                <li class="nav-main__link-item">
+                    <a href="faq.html" class="nav-main__link">سوالات متداول</a>
+                </li>
+            </ul>
         </div>
-        <div class="nav-main__logo-text">
-          <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
-        </div>
-      </a>
-      <div class="nav-main__search-input">
-        <form class="input" action='courses.html'>
-          <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text"
-            name="search" />
-          <span class="input__placeholder">
-            جستجو در
-            <strong class="fw-normal" style="color: var(--Color-Text-icon-action)">کوه‌آموز</strong>...
-          </span>
-          <span class="input__icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
-            </svg>
-          </span>
-        </form>
-      </div>
-      <ul class="nav-main__link-items nonable-below-1000">
-        <li class="nav-main__link-item nav-main__link-item--has-menu">
-          <a type="button" class="nav-main__link">دسته‌بندی‌ها
-            <svg class="icon icon--sm" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/linear/arrow-down"></use>
-            </svg>
-          </a>
-          <div class="nav-main__submenu">
-            <div class="d-flex gap-md-y justify-content-between">
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">کوهپیمایی</span>
-                <div class="nav-main__submenu-item-image">
-                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountaineering.png"
-                    alt="کوهپیمایی" />
-                </div>
-              </a>
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">طبیعت گردی</span>
-                <div class="nav-main__submenu-item-image">
-                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-nature.png" alt="طبیعت گردی" />
-                </div>
-              </a>
-            </div>
-            <div class="d-flex gap-md-y justify-content-between">
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">کوهنوردی</span>
-                <div class="nav-main__submenu-item-image">
-                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountain.png" alt="کوهنوردی" />
-                </div>
-              </a>
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">نجات کوهستان</span>
-                <div class="nav-main__submenu-item-image">
-                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rescue.png" alt="نجات کوهستان" />
-                </div>
-              </a>
-            </div>
-            <div class="d-flex gap-md-y justify-content-between">
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">سنگنوردی و دیواره‌نوردی</span>
-                <div class="nav-main__submenu-item-image">
-                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rock-climbing.png"
-                    alt="سنگنوردی" />
-                </div>
-              </a>
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">علوم تکمیلی کوهستان</span>
-                <div class="nav-main__submenu-item-image">
-                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-skyrunner.png"
-                    alt="علوم تکمیلی کوهستان" />
-                </div>
-              </a>
-            </div>
-            <div class="d-flex gap-md-y justify-content-between">
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">یخ و برف</span>
-                <div class="nav-main__submenu-item-image">
-                  <img src="assets/imgs/categories/cat-icefall.png" alt="یخ و برف" />
-                </div>
-              </a>
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">دره‌نوردی</span>
-                <div class="nav-main__submenu-item-image">
-                  <img src="assets/imgs/categories/cat-canyoning.png" alt="دره‌نوردی" />
-                </div>
-              </a>
-            </div>
-            <div class="d-flex gap-md-y justify-content-between">
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">صعودهای ورزشی</span>
-                <div class="nav-main__submenu-item-image">
-                  <img src="assets/imgs/categories/cat-gym.png" alt="صعودهای ورزشی" />
-                </div>
-              </a>
-              <a href="courses.html" class="nav-main__submenu-item">
-                <span class="nav-main__submenu-item-text">آموزشگاه جهانی</span>
-                <div class="nav-main__submenu-item-image">
-                  <img src="assets/imgs/categories/cat-learning.jpg" alt="آموزشگاه جهانی" />
-                </div>
-              </a>
-            </div>
-          </div>
-        </li>
-        <li class="nav-main__link-item">
-          <a href="about-us.html" class="nav-main__link">درباره ما</a>
-        </li>
-        <li class="nav-main__link-item">
-          <a href="faq.html" class="nav-main__link">سوالات متداول</a>
-        </li>
-      </ul>
-    </div>
 
-    <div class="nav-main__left">
-      <div class="nav-main__left-buttons">
-        <!-- ? Logged in Mode -->
-        <a class="button button--sm button--primary-outline nonable-below-1000" href="user_admin-messages.html"
-          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت"
-          data-messages-notif-count='11'>
-          <span class="button__icon">
-            <svg class="icon icon--sm" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
-            </svg>
-          </span>
-          <span class="notif__badge badge-admin-messages"> +9 </span>
-        </a>
+        <div class="nav-main__left">
+            <div class="nav-main__left-buttons">
+                <!-- ? Logged in Mode -->
+                <a class="button button--sm button--primary-outline nonable-below-1000" href="user_admin-messages.html"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت"
+                    data-messages-notif-count='11'>
+                    <span class="button__icon">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
+                        </svg>
+                    </span>
+                    <span class="notif__badge badge-admin-messages"> +9 </span>
+                </a>
 
-        <a class="button button--sm button--primary-outline nonable-below-1000" id="cart" href="shopping-cart.html"
-          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سبد خرید">
-          <span class="button__icon">
-            <svg class="icon icon--sm" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-            </svg>
-          </span>
-          <span class="notif__badge"> 3 </span>
-        </a>
+                <a class="button button--sm button--primary-outline nonable-below-1000" id="cart"
+                    href="shopping-cart.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    data-bs-title="سبد خرید">
+                    <span class="button__icon">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+                        </svg>
+                    </span>
+                    <span class="notif__badge"> 3 </span>
+                </a>
 
-        <a class="button button--sm button--primary nonable-below-1000" href="user_courses.html"
-          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="دوره‌های من">
-          <span class="button__icon">
-            <svg class="icon icon--sm" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
-            </svg>
-          </span>
-        </a>
+                <a class="button button--sm button--primary nonable-below-1000" href="user_courses.html"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="دوره‌های من">
+                    <span class="button__icon">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                        </svg>
+                    </span>
+                </a>
 
-        <a class="button button--sm button--primary" href="user_courses.html"
-          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
-          <span class="button__icon">
-            <svg class="icon icon--sm" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/bold/user"></use>
-            </svg>
-          </span>
-        </a>
-        <!-- ? Logged in Mode -->
+                <a class="button button--sm button--primary" href="user_courses.html" data-bs-toggle="tooltip"
+                    data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
+                    <span class="button__icon">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/bold/user"></use>
+                        </svg>
+                    </span>
+                </a>
+                <!-- ? Logged in Mode -->
 
-        <!-- ? Guest Mode -->
-        <!-- <a class="button button--sm button--primary h-100" href="#">
+                <!-- ? Guest Mode -->
+                <!-- <a class="button button--sm button--primary h-100" href="#">
             <span class="button__text nonable-below-1000">ورود | ثبت نام</span>
             <span class="button__icon nonable-above-1000">
               <svg class="icon icon--sm" viewBox="0 0 24 24">
@@ -213,26 +217,26 @@
               </svg>
             </span>
           </a> -->
-        <!-- ? Guest Mode -->
-      </div>
+                <!-- ? Guest Mode -->
+            </div>
 
-      <a class="button button--sm button--primary-outline nonable-above-1000" type="button" data-bs-toggle="offcanvas"
-        data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
-        <span class="button__icon">
-          <svg class="icon icon--sm" viewBox="0 0 24 24">
-            <use href="assets/icons/sprites.svg#Menu / Hamburger_MD"></use>
-          </svg>
-        </span>
-      </a>
+            <a class="button button--sm button--primary-outline nonable-above-1000" type="button"
+                data-bs-toggle="offcanvas" data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
+                <span class="button__icon">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                        <use href="assets/icons/sprites.svg#Menu / Hamburger_MD"></use>
+                    </svg>
+                </span>
+            </a>
 
-      <div class="nav-main__logo-center">
-        <a href="/">
-          <img height="44" src="assets/imgs/logoes/logo-mobile.png" alt="" />
-        </a>
-      </div>
-    </div>
-  </nav>
-  <!-- * Navbar End -->
+            <div class="nav-main__logo-center">
+                <a href="/">
+                    <img height="44" src="assets/imgs/logoes/logo-mobile.png" alt="" />
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- * Navbar End -->
 
     <!-- Main sidemenu Start -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-main" aria-labelledby="sidemenu-main-title">
@@ -1240,6 +1244,7 @@
                     <a class="footer__column-link" href="courses.html">جدیدترین دوره‌ها</a>
                     <a class="footer__column-link" href="courses.html">محبوب‌ترین دوره‌ها</a>
                     <a class="footer__column-link" href="courses.html">برترین دوره‌ها</a>
+                    <a class="footer__column-link" href="mentors-list.html">اساتید کوه‌آموز</a>
                     <a class="footer__column-link" href="#">وبلاگ کوه آموز</a>
                 </div>
             </div>
