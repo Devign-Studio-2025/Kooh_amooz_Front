@@ -9,6 +9,7 @@
 
 .comment__head {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -36,8 +37,8 @@
 }
 
 .comment__user-image {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   overflow: hidden;
   border-radius: 50%;
   background-image: url(../../../imgs/others/user-profile.jpg);

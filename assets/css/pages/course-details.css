@@ -298,7 +298,15 @@
 
 .comment {
   width: 100%;
-  max-width: calc(100% / 2 - var(--Spacing-sm));
+  max-width: calc(100% / 4 - var(--Spacing-md));
+  height: fit-content;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .comment {
+    max-width: calc(100% / 2 - var(--Spacing-sm));
+  }
 }
 
 .comments-info {
