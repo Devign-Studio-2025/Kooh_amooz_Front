@@ -163,53 +163,74 @@
   --Typography-FontWeight-bold: bold;
 
   /* * H1 */
-  --Font-H1-light-style: var(--Typography-FontWeight-light) var(--Typography-FontSize-h1) var(--Typography-font-family);
+  --Font-H1-light-style: var(--Typography-FontWeight-light)
+    var(--Typography-FontSize-h1) var(--Typography-font-family);
 
-  --Font-H1-regular-style: var(--Typography-FontWeight-regular) var(--Typography-FontSize-h1) var(--Typography-font-family);
+  --Font-H1-regular-style: var(--Typography-FontWeight-regular)
+    var(--Typography-FontSize-h1) var(--Typography-font-family);
 
-  --Font-H1-bold-style: var(--Typography-FontWeight-bold) var(--Typography-FontSize-h1) var(--Typography-font-family);
+  --Font-H1-bold-style: var(--Typography-FontWeight-bold)
+    var(--Typography-FontSize-h1) var(--Typography-font-family);
 
   /* * H1 */
 
   /* * H2 */
-  --Font-H2-light-style: var(--Typography-FontWeight-light) var(--Typography-FontSize-h2) var(--Typography-font-family);
+  --Font-H2-light-style: var(--Typography-FontWeight-light)
+    var(--Typography-FontSize-h2) var(--Typography-font-family);
 
-  --Font-H2-regular-style: var(--Typography-FontWeight-regular) var(--Typography-FontSize-h2) var(--Typography-font-family);
+  --Font-H2-regular-style: var(--Typography-FontWeight-regular)
+    var(--Typography-FontSize-h2) var(--Typography-font-family);
 
-  --Font-H2-bold-style: var(--Typography-FontWeight-bold) var(--Typography-FontSize-h2) var(--Typography-font-family);
+  --Font-H2-bold-style: var(--Typography-FontWeight-bold)
+    var(--Typography-FontSize-h2) var(--Typography-font-family);
 
   /* * H2 */
 
   /* * H3 */
-  --Font-H3-light-style: var(--Typography-FontWeight-light) var(--Typography-FontSize-h3) var(--Typography-font-family);
+  --Font-H3-light-style: var(--Typography-FontWeight-light)
+    var(--Typography-FontSize-h3) var(--Typography-font-family);
 
-  --Font-H3-regular-style: var(--Typography-FontWeight-regular) var(--Typography-FontSize-h3) var(--Typography-font-family);
+  --Font-H3-regular-style: var(--Typography-FontWeight-regular)
+    var(--Typography-FontSize-h3) var(--Typography-font-family);
 
-  --Font-H3-bold-style: var(--Typography-FontWeight-bold) var(--Typography-FontSize-h3) var(--Typography-font-family);
+  --Font-H3-bold-style: var(--Typography-FontWeight-bold)
+    var(--Typography-FontSize-h3) var(--Typography-font-family);
   /* * H3 */
 
   /* * Title */
-  --Font-Title-light-style: var(--Typography-FontWeight-light) var(--Typography-FontSize-title) var(--Typography-font-family);
+  --Font-Title-light-style: var(--Typography-FontWeight-light)
+    var(--Typography-FontSize-title) var(--Typography-font-family);
 
-  --Font-Title-regular-style: var(--Typography-FontWeight-regular) var(--Typography-FontSize-title) var(--Typography-font-family);
+  --Font-Title-regular-style: var(--Typography-FontWeight-regular)
+    var(--Typography-FontSize-title) var(--Typography-font-family);
 
-  --Font-Title-bold-style: var(--Typography-FontWeight-bold) var(--Typography-FontSize-title) var(--Typography-font-family);
+  --Font-Title-bold-style: var(--Typography-FontWeight-bold)
+    var(--Typography-FontSize-title) var(--Typography-font-family);
   /* * Title */
 
   /* * Body */
-  --Font-Body-light-style: var(--Typography-FontWeight-light) var(--Typography-FontSize-body) / var(--Typography-LineHeight) var(--Typography-font-family);
+  --Font-Body-light-style: var(--Typography-FontWeight-light)
+    var(--Typography-FontSize-body) / var(--Typography-LineHeight)
+    var(--Typography-font-family);
 
-  --Font-Body-regular-style: var(--Typography-FontWeight-regular) var(--Typography-FontSize-body) / var(--Typography-LineHeight) var(--Typography-font-family);
+  --Font-Body-regular-style: var(--Typography-FontWeight-regular)
+    var(--Typography-FontSize-body) / var(--Typography-LineHeight)
+    var(--Typography-font-family);
 
-  --Font-Body-bold-style: var(--Typography-FontWeight-bold) var(--Typography-FontSize-body) / var(--Typography-LineHeight) var(--Typography-font-family);
+  --Font-Body-bold-style: var(--Typography-FontWeight-bold)
+    var(--Typography-FontSize-body) / var(--Typography-LineHeight)
+    var(--Typography-font-family);
   /* * Body */
 
   /* * Caption */
-  --Font-Caption-light-style: var(--Typography-FontWeight-light) var(--Typography-FontSize-caption) var(--Typography-font-family);
+  --Font-Caption-light-style: var(--Typography-FontWeight-light)
+    var(--Typography-FontSize-caption) var(--Typography-font-family);
 
-  --Font-Caption-regular-style: var(--Typography-FontWeight-regular) var(--Typography-FontSize-caption) var(--Typography-font-family);
+  --Font-Caption-regular-style: var(--Typography-FontWeight-regular)
+    var(--Typography-FontSize-caption) var(--Typography-font-family);
 
-  --Font-Caption-bold-style: var(--Typography-FontWeight-bold) var(--Typography-FontSize-caption) var(--Typography-font-family);
+  --Font-Caption-bold-style: var(--Typography-FontWeight-bold)
+    var(--Typography-FontSize-caption) var(--Typography-font-family);
   /* * Caption */
 
   /* * ==== Typography ==== */
@@ -242,39 +263,54 @@
   --Shadow-Lg-blur: var(--NumScale-x12);
 
   /* * Sm */
-  --Shadow-Sm-Primary-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y) var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-primary);
+  --Shadow-Sm-Primary-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y)
+    var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-primary);
 
-  --Shadow-Sm-Success-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y) var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-success);
+  --Shadow-Sm-Success-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y)
+    var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-success);
 
-  --Shadow-Sm-Warning-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y) var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-warning);
+  --Shadow-Sm-Warning-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y)
+    var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-warning);
 
-  --Shadow-Sm-Error-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y) var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-error);
+  --Shadow-Sm-Error-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y)
+    var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-error);
 
-  --Shadow-Sm-Neutral-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y) var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-neutral);
+  --Shadow-Sm-Neutral-style: var(--Shadow-Sm-x) var(--Shadow-Sm-y)
+    var(--Shadow-Sm-blur) 0rem var(--Shadow-Color-neutral);
   /* * Sm */
 
   /* * Md */
-  --Shadow-Md-Primary-style: var(--Shadow-Md-x) var(--Shadow-Md-y) var(--Shadow-Md-blur) 0rem var(--Shadow-Color-primary);
+  --Shadow-Md-Primary-style: var(--Shadow-Md-x) var(--Shadow-Md-y)
+    var(--Shadow-Md-blur) 0rem var(--Shadow-Color-primary);
 
-  --Shadow-Md-Success-style: var(--Shadow-Md-x) var(--Shadow-Md-y) var(--Shadow-Md-blur) 0rem var(--Shadow-Color-success);
+  --Shadow-Md-Success-style: var(--Shadow-Md-x) var(--Shadow-Md-y)
+    var(--Shadow-Md-blur) 0rem var(--Shadow-Color-success);
 
-  --Shadow-Md-Warning-style: var(--Shadow-Md-x) var(--Shadow-Md-y) var(--Shadow-Md-blur) 0rem var(--Shadow-Color-warning);
+  --Shadow-Md-Warning-style: var(--Shadow-Md-x) var(--Shadow-Md-y)
+    var(--Shadow-Md-blur) 0rem var(--Shadow-Color-warning);
 
-  --Shadow-Md-Error-style: var(--Shadow-Md-x) var(--Shadow-Md-y) var(--Shadow-Md-blur) 0rem var(--Shadow-Color-error);
+  --Shadow-Md-Error-style: var(--Shadow-Md-x) var(--Shadow-Md-y)
+    var(--Shadow-Md-blur) 0rem var(--Shadow-Color-error);
 
-  --Shadow-Md-Neutral-style: var(--Shadow-Md-x) var(--Shadow-Md-y) var(--Shadow-Md-blur) 0rem var(--Shadow-Color-neutral);
+  --Shadow-Md-Neutral-style: var(--Shadow-Md-x) var(--Shadow-Md-y)
+    var(--Shadow-Md-blur) 0rem var(--Shadow-Color-neutral);
   /* * Md */
 
   /* * Lg */
-  --Shadow-Lg-Primary-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y) var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-primary);
+  --Shadow-Lg-Primary-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y)
+    var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-primary);
 
-  --Shadow-Lg-Success-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y) var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-success);
+  --Shadow-Lg-Success-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y)
+    var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-success);
 
-  --Shadow-Lg-Warning-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y) var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-warning);
+  --Shadow-Lg-Warning-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y)
+    var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-warning);
 
-  --Shadow-Lg-Error-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y) var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-error);
+  --Shadow-Lg-Error-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y)
+    var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-error);
 
-  --Shadow-Lg-Neutral-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y) var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-neutral);
+  --Shadow-Lg-Neutral-style: var(--Shadow-Lg-x) var(--Shadow-Lg-y)
+    var(--Shadow-Lg-blur) 0rem var(--Shadow-Color-neutral);
   /* * Lg */
 
   /* * ==== Shadow ==== */
@@ -310,7 +346,7 @@
   :root {
     --Typography-LineHeight: var(--NumScale-x6);
 
-    --Typography-FontSize-caption: var(--NumScale-x3);
+    --Typography-FontSize-caption: 0.625rem;
     --Typography-FontSize-body: var(--NumScale-x3);
     --Typography-FontSize-title: var(--NumScale-x4);
     --Typography-FontSize-h1: var(--NumScale-x7);
@@ -325,6 +361,8 @@
     --IconSize-xs: var(--NumScale-x3);
     --IconSize-sm: var(--NumScale-x3\5);
     --IconSize-md: var(--NumScale-x4);
-    --IconSize-lg: var(--NumScale-x7);
+    --IconSize-lg: var(--NumScale-x6);
+
+    --Spacing-main: 4rem;
   }
 }

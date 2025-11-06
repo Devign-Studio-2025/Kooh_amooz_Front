@@ -83,7 +83,8 @@
   gap: var(--Spacing-sm);
 }
 
-/* ------price-box component customization start------ */
+/* * ------price-box component customization start------ */
+
 .overview-section__mentor-info {
   display: flex;
   align-items: center;
@@ -127,6 +128,7 @@
 .price-box__actions .button--primary-outline {
   height: 100%;
   aspect-ratio: 1 / 1;
+  flex-basis: 4rem;
 }
 
 .overview-section__actions {
@@ -153,7 +155,7 @@
   }
 }
 
-/* --------price-box component customization end------ */
+/* * --------price-box component customization end------ */
 
 /* ****** Overview ****** */
 
