@@ -29,9 +29,9 @@
     height: fit-content;
 }
 
-/* ================== cart-section__course-cards start ================== */
+/* *================== cart-section__course-items start ================== */
 
-.cart-section__course-cards {
+.cart-section__course-items {
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -41,7 +41,7 @@
     height: fit-content;
 }
 
-.cart-section__course-card {
+.cart-section__course-item {
     width: 100%;
     height: fit-content;
     border-radius: var(--Radius-lg);
@@ -51,92 +51,101 @@
     justify-content: space-between;
     padding: var(--Spacing-md);
     opacity: 1;
+    gap: var(--Spacing-md);
 }
 
-.course-card__right-div {
+.course-item__right-div {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: var(--Spacing-md);
 }
 
-.course-card__img {
+.course-item__img {
     width: 7.5rem;
     height: 7.5rem;
     border-radius: var(--Radius-md);
 }
 
-.course-card__info {
+.course-item__first-row {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: var(--Spacing-md);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.course-card__info span {
+.course-item__title {
     font: var(--Font-Title-bold-style);
     color: var(--Color-Text-icon-title);
+    line-height: normal;
 }
 
-.course-card__info p {
+.course-item__second-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.course-item__mentor {
     font: var(--Font-Body-light-style);
     color: var(--Color-Text-icon-title);
 }
 
-.course-card__left-div,
-.course-card__price {
+.course-item__left-div,
+.course-item__price {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     justify-content: center;
 }
 
-.course-card__left-div {
-    gap: var(--Spacing-lg);
+.course-item__left-div {
+    gap: var(--Spacing-md);
+    width: 100%;
 }
 
-.course-card__price {
+.course-item__price {
     gap: var(--Spacing-sm);
 }
 
-.course-card__close-button {
+.course-item__close-button {
     color: var(--Color-Text-icon-on-subtle-error);
     background-color: var(--Color-Surface-subtle-error);
     cursor: pointer;
 }
 
-.course-card__close-button input {
+.course-item__close-button input {
     display: none;
 }
 
-.course-card__close-button:hover {
+.course-item__close-button:hover {
     background-color: var(--Color-Surface-error);
     color: var(--Color-Text-icon-on-state);
     border-color: var(--Border-Color-primary);
 }
 
-.course-card__payable {
+.course-item__payable {
     font: var(--Font-Title-bold-style);
     color: var(--Color-Text-icon-title);
 }
 
-.course-card__discount {
+.course-item__discount {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--Spacing-sm);
 }
 
-.course-card__price-before {
+.course-item__price-before {
     text-decoration: line-through;
     color: var(--Color-Text-icon-disabled);
     font: var(--Font-Caption-regular-style);
 }
 
-/* ================== cart-section__course-cards end ================== */
+/* *================== cart-section__course-items end ================== */
 
-/* ================== price-box customization start ================== */
+/* *================== price-box customization start ================== */
 .cart-section__total-price span,
 .cart-section__total-price p,
 .cart-section__savings p,
@@ -180,4 +189,36 @@
     }
 }
 
-/* ================== price-box customization end ================== */
+/* *================== price-box customization end ================== */
+
+/* *================== responsive start ================== */
+@media screen and (max-width: 500px) {
+    .course-item__second-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--Spacing-sm);
+    }
+
+    .course-item__left-div {
+        gap: var(--Spacing-sm);
+    }
+
+    .course-item__title, .course-item__payable {
+        font: var(--Font-Body-bold-style);
+    }
+    .course-item__discount-badge {
+        padding: 0.25rem var(--Spacing-sm) !important;
+    }
+    .course-item__img {
+        width: 6rem;
+        height: 6rem;
+    }
+    .cart-section__course-item {
+        padding: var(--Spacing-sm);
+    }
+    .course-item__second-row {
+        gap: 0.25rem;
+    }
+}
+
+/* *================== responsive end ================== */

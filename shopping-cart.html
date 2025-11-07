@@ -155,7 +155,7 @@
               <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
             </svg>
           </span>
-          <span class="notif__badge"> 3 </span>
+          <span class="notif__badge" data-cart-count> 2 </span>
         </a>
 
         <a class="button button--sm button--primary nonable-below-1000" href="user_courses.html"
@@ -167,8 +167,8 @@
           </span>
         </a>
 
-        <a class="button button--sm button--primary" href="user_courses.html"
-          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
+        <a class="button button--sm button--primary" href="user_courses.html" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
           <span class="button__icon">
             <svg class="icon icon--sm" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#vuesax/bold/user"></use>
@@ -272,7 +272,7 @@
         <a class="button button--sm button--navlink" href="shopping-cart.html">
           <div class="button__text-with-badge">
             <span class="button__text">سبد خرید</span>
-            <span class="notif__badge notif__badge--navlink"> 2 </span>
+            <span class="notif__badge notif__badge--navlink" data-cart-count> 2 </span>
           </div>
           <span class="button__icon">
             <svg class="icon icon--md" viewBox="0 0 24 24">
@@ -491,7 +491,7 @@
   <main class="main-website">
     <section class="cart-section">
       <div class="cart-section__head">
-        <h2 class="cart-section__head-title"> سبد خرید <span class="result-count me-2" data-cart-count>(2)</span> </h2>
+        <h2 class="cart-section__head-title"> سبد خرید (<span class="result-count" data-cart-count>2</span>) </h2>
         <a href="index.html" class="back-button">
           برگشت
           <span class="back-button__icon">
@@ -502,62 +502,98 @@
         </a>
       </div>
       <div class="cart-section__body">
-        <div class="cart-section__course-cards">
-          <div class="cart-section__course-card" data-course-id="1">
-            <div class="course-card__right-div">
-              <img class="course-card__img skeleton" src="assets/imgs/courses/course-1.jpg" alt="course-image">
-              <div class="course-card__info">
-                <span>دوره کوه نوردی (پیشرفته)</span>
-                <p>مدرس: حامد جباری</p>
-              </div>
+        <div class="cart-section__course-items">
+          <div class="cart-section__course-item" data-course-id="1">
+            <div class="course-item__right-div">
+              <img class="course-item__img skeleton" src="assets/imgs/courses/course-1.jpg"
+                alt="دوره کوه نوردی (پیشرفته)">
             </div>
-            <div class="course-card__left-div">
-              <label class="course-card__close-button button button--xs" for="cart-course-1" data-remove-button
-                data-course-id="1">
-                <input type="checkbox" id="cart-course-1" />
-                <span class="button__icon">
-                  <svg class="icon icon--sm" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#mdi:remove"></use>
-                  </svg>
-                </span>
-              </label>
-              <div class="course-card__price">
-                <div class="course-card__discount">
-                  <div class="course-card__price-before">900,000 تومان</div>
-                  <div class="course-card__discount-badge label label--sm label--success">
-                    <span class="label__text">10% تخفیف</span>
+            <div class="course-item__left-div">
+              <div class="course-item__first-row">
+                <span class="course-item__title">دوره کوه نوردی (پیشرفته)</span>
+                <label class="course-item__close-button button button--xs" for="cart-course-1" data-remove-button
+                  data-course-id="1">
+                  <input type="checkbox" id="cart-course-1" />
+                  <span class="button__icon">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#mdi:remove"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="course-item__second-row">
+                <p class="course-item__mentor">مدرس: حامد جباری</p>
+                <div class="course-item__discount">
+                  <div class="course-item__price-before">900,000 تومان</div>
+                  <div class="course-item__discount-badge label label--sm label--success">
+                    <span class="label__text">10% <span class="nonable-below-1000">تخفیف</span></span>
                   </div>
                 </div>
-                <span class="course-card__payable">810,000 تومان</span>
+              </div>
+              <div class="course-item__price">
+                <span class="course-item__payable">810,000 تومان</span>
               </div>
             </div>
           </div>
-          <div class="cart-section__course-card" data-course-id="2">
-            <div class="course-card__right-div">
-              <img class="course-card__img skeleton" src="assets/imgs/courses/course-3.jpg" alt="course-image">
-              <div class="course-card__info">
-                <span>دوره کوه نوردی (پیشرفته)</span>
-                <p>مدرس: حامد جباری</p>
-              </div>
+          <div class="cart-section__course-item" data-course-id="2">
+            <div class="course-item__right-div">
+              <img class="course-item__img skeleton" src="assets/imgs/courses/course-3.jpg" alt="دوره طبیعت گردی">
             </div>
-            <div class="course-card__left-div">
-              <label class="course-card__close-button button button--xs" for="cart-course-1" data-remove-button
-                data-course-id="2">
-                <input type="checkbox" id="cart-course-2" />
-                <span class="button__icon">
-                  <svg class="icon icon--sm" viewBox="0 0 24 24">
-                    <use href="assets/icons/sprites.svg#mdi:remove"></use>
-                  </svg>
-                </span>
-              </label>
-              <div class="course-card__price">
-                <div class="course-card__discount">
-                  <div class="course-card__price-before">900,000 تومان</div>
-                  <div class="course-card__discount-badge label label--sm label--success">
-                    <span class="label__text">10% تخفیف</span>
+            <div class="course-item__left-div">
+              <div class="course-item__first-row">
+                <span class="course-item__title">دوره طبیعت گردی</span>
+                <label class="course-item__close-button button button--xs" for="cart-course-2" data-remove-button
+                  data-course-id="2">
+                  <input type="checkbox" id="cart-course-2" />
+                  <span class="button__icon">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#mdi:remove"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="course-item__second-row">
+                <p class="course-item__mentor">مدرس: حامد جباری</p>
+                <div class="course-item__discount">
+                  <div class="course-item__price-before">900,000 تومان</div>
+                  <div class="course-item__discount-badge label label--sm label--success">
+                    <span class="label__text">10% <span class="nonable-below-1000">تخفیف</span></span>
                   </div>
                 </div>
-                <span class="course-card__payable">810,000 تومان</span>
+              </div>
+              <div class="course-item__price">
+                <span class="course-item__payable">810,000 تومان</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-section__course-item" data-course-id="3">
+            <div class="course-item__right-div">
+              <img class="course-item__img skeleton" src="assets/imgs/courses/course-6.jpg" alt="دوره دره نوردی تخصصی">
+            </div>
+            <div class="course-item__left-div">
+              <div class="course-item__first-row">
+                <span class="course-item__title">دوره دره نوردی تخصصی</span>
+                <label class="course-item__close-button button button--xs" for="cart-course-3" data-remove-button
+                  data-course-id="3">
+                  <input type="checkbox" id="cart-course-3" />
+                  <span class="button__icon">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#mdi:remove"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="course-item__second-row">
+                <p class="course-item__mentor">مدرس: حامد جباری</p>
+                <div class="course-item__discount">
+                  <div class="course-item__price-before">900,000 تومان</div>
+                  <div class="course-item__discount-badge label label--sm label--success">
+                    <span class="label__text">10% <span class="nonable-below-1000">تخفیف</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item__price">
+                <span class="course-item__payable">810,000 تومان</span>
               </div>
             </div>
           </div>
