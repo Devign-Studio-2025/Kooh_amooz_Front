@@ -10,7 +10,6 @@
   transition: var(--Transition-base);
   height: 100%;
   width: 17.5rem;
-  min-width: 16rem;
 }
 
 .course-card:hover {
@@ -227,3 +226,37 @@
   height: 100%;
 }
 /* ****** Foot ****** */
+
+@media screen and (max-width: 1000px) {
+  .course-card {
+    height: 100%;
+    width: 11rem;
+    padding: var(--Spacing-sm);
+  }
+
+  .course-card__body {
+    padding-bottom: unset;
+    border: unset;
+    gap: var(--Spacing-md);
+  }
+
+  .course-card__body * {
+    font: var(--Font-Caption-bold-style) !important;
+  }
+
+  .course-card__foot-price-after-value {
+    font: var(--Font-Body-bold-style);
+  }
+
+  .course-card .label {
+    padding: 0.25rem;
+  }
+
+  .course-card__head {
+    height: 6rem;
+  }
+
+  .course-card__head-button {
+    padding: var(--Spacing-sm) !important;
+  }
+}

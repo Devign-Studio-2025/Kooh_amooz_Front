@@ -4,20 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>پنل کاربر - علاقمندی‌ها</title>
+    <title>کوه‌آموز - پلتفرم آموزش کوهنوردی ایران</title>
     <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
 
     <!-- ! Core Styles -->
-    <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
     <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- ! Page Styles -->
-    <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
-    <link rel="stylesheet" href="assets/css/pages/user-panel/user.css" />
-    <link rel="stylesheet" href="assets/css/pages/user-panel/user-info.css" />
-
-    <!-- Jalali Date Picker -->
-    <link type="text/css" rel="stylesheet" href="assets/libs/JalaliDatePicker/jalalidatepicker.min.css" />
+    <link rel="stylesheet" href="assets/css/pages/mentors-list.css" />
 </head>
 
 <body>
@@ -355,7 +349,7 @@
         </div>
         <div class="offcanvas-footer">
             <!-- ? Logged in Mode -->
-            <a href="#" class="button button--md button--primary flex-grow-1">
+            <a href="user-info.html" class="button button--md button--primary flex-grow-1">
                 <span class="button__text">اطلاعات حساب</span>
             </a>
             <a href="#" class="button button--sm button--error-outline">
@@ -498,384 +492,446 @@
     <!-- Categories sidemenu End -->
 
     <main class="main-website">
-        <!-- * [Courses list] Start -->
-        <section class="content-section">
-            <div class="content-section__head">
-                <h1 class="content-section__head-title">
-                    اطلاعات هویتی
-                </h1>
-                <button class="button button--sm button--primary-outline" id="upload-profile-img">
-                    <span class="button__icon">
-                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                            <use href="assets/icons/sprites.svg#System /  Camera"></use>
-                        </svg>
-                    </span>
-                    <span class="button__text">تصویر پروفایل</span>
-                </button>
-            </div>
-            <div class="content-section__body user-info">
-                <form class="user-info__form" id="user-info__form" action="#">
-                    <div class="user-info__form-row">
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="first-name" class="input__label">
-                                <span>نام</span>
-                            </label>
-                            <div class="user-info__input input">
-                                <input class="input__field" placeholder="" autocomplete="off" type="text"
-                                    name="first-name" id="first-name" />
-                                <span class="input__placeholder">
-                                    علیرضا
-                                </span>
-                            </div>
-                        </div>
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="last-name" class="input__label">
-                                <span>نام خانوادگی</span>
-                            </label>
-                            <div class="user-info__input input">
-                                <input class="input__field" placeholder="" autocomplete="off" type="text"
-                                    name="last-name" id="last-name" />
-                                <span class="input__placeholder">
-                                    رمضان زاده
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user-info__form-row">
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="email" class="input__label">
-                                <span>ایمیل</span>
-                            </label>
-                            <div class="user-info__input input">
-                                <input class="input__field" placeholder="" autocomplete="off" type="text" name="email"
-                                    id="email" />
-                                <span class="input__placeholder">
-                                    alireza@gmail.com
-                                </span>
-                            </div>
-                        </div>
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="phone" class="input__label">
-                                <span>شماره همراه</span>
-                            </label>
-                            <div class="user-info__input input">
-                                <input class="input__field" placeholder="" autocomplete="off" type="text" name="tel"
-                                    id="phone" />
-                                <span class="input__placeholder">
-                                    09123456789
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user-info__form-row">
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="date" class="input__label">
-                                <span>تاریخ تولد</span>
-                            </label>
-                            <div class="user-info__input input">
-                                <input class="input__field input__field--have-icon" placeholder="" autocomplete="off"
-                                    type="text" name="date" id="date" data-jdp readonly />
-                                <span class="input__placeholder">
-                                    انتخاب تاریخ
-                                </span>
-                                <span class="input__icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#vuesax/linear/calendar-edit"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="gender" class="input__label">
-                                <span>جنسیت</span>
-                            </label>
-                            <div class="input">
-                                <select class="form-select" id="gender">
-                                    <option></option>
-                                    <option value="1">مرد</option>
-                                    <option value="2">زن</option>
-                                </select>
-                                <span class="input__icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="user-info__form-row">
-                        <!-- Province Select2 -->
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="gender" class="input__label">
-                                <span>استان</span>
-                            </label>
-                            <div class="input">
-                                <select class="form-select select2-province" id="province-select" name="province">
-                                    <option></option>
-                                    <option value="1">تهران</option>
-                                    <option value="2">اصفهان</option>
-                                    <option value="3">فارس</option>
-                                </select>
-                                <span class="input__icon select2__input-icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                        <!-- City Select2 -->
-                        <div class="user-info__input-wrapper input__with-error-wrapper">
-                            <label for="gender" class="input__label">
-                                <span>شهر</span>
-                            </label>
-                            <div class="input">
-                                <select class="form-select select2-city" id="city-select" name="city">
-                                    <option></option>
-                                    <option value="1">تهران</option>
-                                    <option value="2">کرج</option>
-                                    <option value="3">شهریار</option>
-                                </select>
-                                <span class="input__icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#Arrow / Chevron_Down"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center justify-content-center w-100">
-                        <button class="button button--md button--disabled" id="user-info__submit-btn">
-                            <span class="button__text">ثبت تغییرات</span>
-                        </button>
-                    </div>
-                </form>
-                <div class="user-info__section-title">
-                    <h2 class="user-info__section-title">
-                        اطلاعات هویتی
-                    </h2>
+        <!-- * [Categories] Start -->
+        <section class="section-website">
+            <div class="section-website__head section-website__head--lines">
+                <hr />
+                <div class="section-website__head-texts">
+                    <h1 class="section-website__head-title">اساتید کوه‌آموز</h1>
+                    <h4 class="section-website__head-caption">انتخابی مطمئن برای یادگیری کوه‌نوردی</h4>
                 </div>
-                <div class="user-info__password-change">
-                    <form class="user-info__password-change-form" id="user-info__password-change-form" action="#">
-                        <div class="user-info__form-row">
-                            <div class="user-info__input-wrapper input__with-error-wrapper">
-                                <label for="current-password" class="input__label">
-                                    <span>رمز عبور فعلی</span>
-                                </label>
-                                <div class="user-info__input input">
-                                    <input class="input__field input__field--have-icon" placeholder=""
-                                        autocomplete="off" type="password" name="current-password" id="current-password"
-                                        type="password" />
-                                    <span class="input__placeholder">
-                                        رمز فعلی
-                                    </span>
-                                    <span class="input__icon input__icon--clickable" id="current-password-toggle">
-                                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                                            <use href="assets/icons/sprites.svg#vuesax/bulk/eye-slash"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="user-info__input-wrapper input__with-error-wrapper">
-                                <label for="new-password" class="input__label">
-                                    <span>رمز عبور جدید</span>
-                                </label>
-                                <div class="user-info__input input">
-                                    <input class="input__field input__field--have-icon" placeholder=""
-                                        autocomplete="off" type="password" name="new-password" id="new-password"
-                                        type="password" />
-                                    <span class="input__placeholder">
-                                        رمز جدید
-                                    </span>
-                                    <span class="input__icon input__icon--clickable" id="new-password-toggle">
-                                        <svg class="icon icon--md" viewBox="0 0 24 24">
-                                            <use href="assets/icons/sprites.svg#vuesax/bulk/eye-slash"></use>
-                                        </svg>
-                                    </span>
-                                </div>
-                            </div>
+                <hr />
+            </div>
+            <div class="section-website__body">
+                <div class="entity-tiles">
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
                         </div>
-                        <div class="d-flex align-items-center justify-content-start w-100">
-                            <button class="button button--md button--disabled" id="password-change-submit-btn">
-                                <span class="button__text">تغییر رمز عبور</span>
-                            </button>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
                         </div>
-                    </form>
-                    <div class="user-info__password-change-validation">
-                        <span class="user-info__password-change-validation-title">رمز عبور شما باید:</span>
-                        <div class="user-info__password-change-validation-captions">
-                            <span class="user-info__password-change-validation-caption">
-                                <div class="circle-title"></div> حداقل 6 کارکتر باشد.
-                            </span>
-                            <span class="user-info__password-change-validation-caption">
-                                <div class="circle-title"></div> حداقل یک کارکتر خاص شامل
-                                (؟@#%&*^$!) باشد.
-                            </span>
-                            <span class="user-info__password-change-validation-caption">
-                                <div class="circle-title"></div> حداقل یک حرف بزرگ یا کوچک داشته
-                                باشد.
-                            </span>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
                         </div>
-                    </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
+                    <a href="mentors.html" class="entity-tile">
+                        <div class="entity-tile__image">
+                            <img loading="lazy" class="skeleton" src="assets/imgs/mentors/mentor-1.jpg"
+                                alt="علی جباری" />
+                        </div>
+                        <div class="entity-tile__title-wrapper">
+                            <div class="entity-tile__title">علی جباری</div>
+                            <svg class="entity-tile__icon icon icon--lg" viewBox="0 0 24 24">
+                                <use href="assets/icons/sprites.svg#vuesax/bulk/verify"></use>
+                            </svg>
+                        </div>
+                        <div class="entity-tile__infos">
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+                                </svg>
+                                <span class="font-bold">10 دوره آموزشی</span>
+                            </p>
+                            <p class="entity-tile__info">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#vuesax/linear/calendar"></use>
+                                </svg>
+                                <span class="font-bold">سابقه :</span> 5 سال
+                            </p>
+                        </div>
+                        <button class="button button--primary button--xs px-4">
+                            رزومه و دوره ها
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
-        <!-- * [Courses list] End -->
-
-        <!-- * [Sidebar] Start -->
-        <aside class="sidebar-section nonable-below-1000">
-            <div class="sidebar-section__head">
-                <div class="sidebar-section__profile">
-                    <div class="sidebar-section__user-image">
-                        <img class="skeleton" src="assets/imgs/mentors/mentor-1.jpg" alt="">
-                    </div>
-                    <div class="sidebar-section__user-info">
-                        <div class="sidebar-section__head-title">
-                            علیرضا رمضان زاده
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <div class="sidebar-section__head-role">
-                                کاربر سایت
-                            </div>
-                            <a href="user-info.html" class="button button--primary button--xs">
-                                <span class="button__icon">
-                                    <svg class="icon icon--md" viewBox="0 0 24 24">
-                                        <use href="assets/icons/sprites.svg#vuesax/bold/edit-2"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar-section__stats">
-                <div class="stat-item">
-                    <div class="stat__label">تاریخ ثبت‌نام:</div>
-                    <div class="stat__value">1404/10/12</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat__label">تعداد دوره‌ها:</div>
-                    <div class="stat__value">131</div>
-                </div>
-            </div>
-            <div class="sidebar-section__body">
-                <nav class="sidebar__navs">
-                    <a class="sidebar__nav-item" href="user_courses.html">
-                        <div class="sidebar__nav-title">دوره‌های من</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="user_favs.html">
-                        <div class="sidebar__nav-title">علاقمندی‌ها</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="shopping-cart.html">
-                        <div class="sidebar__nav-title">سبد خرید </div>
-                        <div class="sidebar__nav-icon">
-                            <span class="notif__badge notif__badge--navlink"> 2 </span>
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="user_payments.html">
-                        <div class="sidebar__nav-title">پرداخت‌های من</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/card"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="user_admin-messages.html">
-                        <div class="sidebar__nav-title">
-                            پیام‌های مدیریت
-                        </div>
-                        <div class="sidebar__nav-icon">
-                            <span class="notif__badge notif__badge--navlink badge-admin-messages"> +9 </span>
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/notification"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="user_support-ticket.html">
-                        <div class="sidebar__nav-title">پشتیبانی و تیکت</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/linear/messages-4"></use>
-                            </svg>
-                        </div>
-                    </a>
-                    <a class="sidebar__nav-item" href="#">
-                        <div class="sidebar__nav-title">خروج</div>
-                        <div class="sidebar__nav-icon">
-                            <svg class="icon icon--md" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#vuesax/bulk/logout"></use>
-                            </svg>
-                        </div>
-                    </a>
-                </nav>
-            </div>
-        </aside>
-        <!-- * [Sidebar] End -->
+        <!-- * [Categories] End -->
     </main>
 
-    <!-- profile image modal Start -->
-    <div class="modal fade" id="profile-img-modal" tabindex="-1" role="dialog" aria-labelledby="profileImgModal"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="profileImgModal">
-                        تصویر پروفایل
-                    </h5>
-                    <button type="button" class="button button--xs button-close" data-bs-dismiss="modal"
-                        aria-label="Close">
-                        <span class="button__icon">
-                            <svg class="icon icon--lg" viewBox="0 0 24 24">
-                                <use href="assets/icons/sprites.svg#mdi:remove"></use>
-                            </svg>
-                        </span>
-                    </button>
+    <!-- * Footer Start -->
+    <footer>
+        <div class="footer__body">
+            <div class="footer__column footer__column--brand">
+                <div class="footer__brand">
+                    <img class="footer__brand-logo" loading="lazy" src="assets/imgs/logoes/logo.png" alt="Logo" />
+                    <div class="footer__brand-texts">
+                        <h5 class="footer__brand-title">آموزشگاه آنلاین کوهنوردی</h5>
+                        <p class="footer__brand-caption">با ما در ارتباط باشید!</p>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    <form class="upload-form" id="form-profile-image">
-                        <div class="upload-container">
-                            <div class="upload-area" id="uploadArea">
-                                <svg class="icon icon--lg" viewBox="0 0 24 24">
-                                    <use href="assets/icons/sprites.svg#vuesax/bulk/user"></use>
-                                </svg>
-                                <span class="upload-text">کلیک کنید</span>
-                                <img class="preview-image" id="previewImage" alt="Preview">
-                            </div>
-                            <input type="file" id="fileInput" class="file-input" accept="image/jpeg, image/png"
-                                name="profileImage">
-                        </div>
-                        <button type="submit" class="button button--primary button--xs px-4 w-100">
-                            تغییر تصویر پروفایل
-                        </button>
-                    </form>
+                <div class="footer__contacts">
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-label">شماره تماس:</span>
+                        <a class="footer__contact-text" href="tel:09135716484">09135716484</a>
+                    </div>
+                    <div class="footer__contact-item">
+                        <span class="footer__contact-label">ایمیل:</span>
+                        <a class="footer__contact-text" href="mailto:info@koohamooz.ir">info@koohamooz.ir</a>
+                    </div>
                 </div>
-                <div class="modal-footer profile-img-modal__validation-items">
-                    <div class="profile-img-modal__validation-item">1. فایل باید کمتر از 50MB باشد.</div>
-                    <div class="profile-img-modal__validation-item">2. فرمت های مورد قبول JPEG و PNG است.</div>
+                <div class="footer_socials">
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#simple-icons:aparat"></use>
+                        </svg>
+                    </a>
+
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/bulk/youtube"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/bulk/instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#uim:telegram-alt"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <span class="footer__column-title">کوه‌آموز</span>
+                <div class="footer__column-links">
+                    <a class="footer__column-link" href="about-us.html">درباره کوه‌آموز</a>
+                    <a class="footer__column-link" href="faq.html">سوالات متداول</a>
+                    <a class="footer__column-link" href="user_support-ticket.html">ارتباط با پشتیبانی</a>
+                    <a class="footer__column-link" href="faq.html#contact-us">تماس با ما</a>
+                    <a class="footer__column-link" href="join-us.html">فرصت همکاری</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <span class="footer__column-title">لینک‌های سریع</span>
+                <div class="footer__column-links">
+                    <a class="footer__column-link" href="courses.html">جدیدترین دوره‌ها</a>
+                    <a class="footer__column-link" href="courses.html">محبوب‌ترین دوره‌ها</a>
+                    <a class="footer__column-link" href="courses.html">برترین دوره‌ها</a>
+                    <a class="footer__column-link" href="mentors-list.html">اساتید کوه‌آموز</a>
+                    <a class="footer__column-link" href="#">وبلاگ کوه آموز</a>
+                </div>
+            </div>
+            <div class="footer__column">
+                <span class="footer__column-title">دانلود اپلیکیشن</span>
+                <a href="#" class="button button--md button--primary-outline">
+                    <span class="button__icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#uil:android"></use>
+                        </svg>
+                    </span>
+                    <span class="button__text">نسخه اندروید</span>
+                </a>
+                <a href="#" class="button button--md button--primary-outline">
+                    <span class="button__icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#bx:globe"></use>
+                        </svg>
+                    </span>
+                    <span class="button__text">نسخه وب</span>
+                </a>
+            </div>
+            <div class="footer__column my-auto">
+                <!-- <a
+              referrerpolicy="origin"
+              target="_blank"
+              href="https://trustseal.enamad.ir/?id=636119&Code=yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
+              ><img
+                referrerpolicy="origin"
+                src="https://trustseal.enamad.ir/logo.aspx?id=636119&Code=yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
+                alt=""
+                style="cursor: pointer"
+                code="yWAQel7Oi3umckKDl1ODjojEFDteUgHr"
+            /></a> -->
+                <div class="border-default raduis-md padding-md align-self-center"
+                    style="height: fit-content; width: fit-content">
+                    <img src="assets/imgs/others/enamad.png" loading="lazy" width="92" alt="" />
                 </div>
             </div>
         </div>
-    </div>
-    <!-- profile image modal End -->
+        <div class="footer__foot">
+            <div class="footer__right">
+                <div class="footer__address">
+                    <span class="footer__address-label">آدرس:</span>
+                    <p class="footer__address-location">
+                        ایران، کاشان، چهارراه شاهد، خیابان جانبازان، فروشگاه کوهباد، دفتر
+                        باشگاه کوهنوردی و صعودهای ورزشی آلپینا
+                    </p>
+                </div>
+            </div>
+            <div class="footer__left">
+                <div class="footer__cc">
+                    <div class="footer__cc-icon">
+                        <svg class="icon icon--sm" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#vuesax/bulk/copyright"></use>
+                        </svg>
+                    </div>
+                    <div class="footer__cc-text">
+                        کلیه حقوق این پلتفرم متعلق به کوه‌آموز می‌باشد.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- * Footer End -->
 
     <!-- ! Core Scripts -->
     <script type="module" src="assets/js/main.js"></script>
 
     <!-- ! Page Scripts -->
-    <script type="module" src="assets/js/pages/user-panel/user-info.js"></script>
-
 </body>
 
 </html>

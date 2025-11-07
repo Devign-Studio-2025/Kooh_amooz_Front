@@ -141,25 +141,17 @@
           data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت"
           data-messages-notif-count='11'>
           <span class="button__icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
             </svg>
           </span>
           <span class="notif__badge badge-admin-messages"> +9 </span>
         </a>
-        <a class="button button--sm button--primary-outline nonable-below-1000" href="user_courses.html"
-          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="دوره‌های من">
-          <span class="button__icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
-              <use href="assets/icons/sprites.svg#vuesax/twotone/book"></use>
-            </svg>
-          </span>
-        </a>
 
-        <a class="button button--sm button--primary-outline" id="cart" href="shopping-cart.html"
+        <a class="button button--sm button--primary-outline nonable-below-1000" id="cart" href="shopping-cart.html"
           data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سبد خرید">
           <span class="button__icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
             </svg>
           </span>
@@ -167,9 +159,18 @@
         </a>
 
         <a class="button button--sm button--primary nonable-below-1000" href="user_courses.html"
-          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="دوره‌های من">
           <span class="button__icon">
-            <svg class="icon icon--md" viewBox="0 0 24 24">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+            </svg>
+          </span>
+        </a>
+
+        <a class="button button--sm button--primary" href="user_courses.html" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
+          <span class="button__icon">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
               <use href="assets/icons/sprites.svg#vuesax/bold/user"></use>
             </svg>
           </span>
@@ -180,7 +181,7 @@
         <!-- <a class="button button--sm button--primary h-100" href="#">
             <span class="button__text nonable-below-1000">ورود | ثبت نام</span>
             <span class="button__icon nonable-above-1000">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
+              <svg class="icon icon--sm" viewBox="0 0 24 24">
                 <use href="assets/icons/sprites.svg#vuesax/linear/login"></use>
               </svg>
             </span>
@@ -193,7 +194,7 @@
             data-bs-title="سبد خرید"
           >
             <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
+              <svg class="icon icon--sm" viewBox="0 0 24 24">
                 <use
                   href="assets/icons/sprites.svg#fluent:cart-20-regular"
                 ></use>
@@ -208,7 +209,7 @@
             data-bs-title="دوره‌های من"
           >
             <span class="button__icon">
-              <svg class="icon icon--md" viewBox="0 0 24 24">
+              <svg class="icon icon--sm" viewBox="0 0 24 24">
                 <use href="assets/icons/sprites.svg#vuesax/twotone/book"></use>
               </svg>
             </span>
@@ -219,7 +220,7 @@
       <a class="button button--sm button--primary-outline nonable-above-1000" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
         <span class="button__icon">
-          <svg class="icon icon--md" viewBox="0 0 24 24">
+          <svg class="icon icon--sm" viewBox="0 0 24 24">
             <use href="assets/icons/sprites.svg#Menu / Hamburger_MD"></use>
           </svg>
         </span>
@@ -227,11 +228,12 @@
 
       <div class="nav-main__logo-center">
         <a href="/">
-          <img height="54" src="assets/imgs/logoes/just-logo.png" alt="" />
+          <img height="44" src="assets/imgs/logoes/logo-mobile.png" alt="" />
         </a>
       </div>
     </div>
   </nav>
+  <!-- * Navbar End -->
 
   <!-- Main sidemenu Start -->
   <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-main" aria-labelledby="sidemenu-main-title">
@@ -520,7 +522,7 @@
           </div>
         </div>
 
-        <div class="swiper-custom-pagination"></div>
+        <div class="swiper-pagination"></div>
 
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
@@ -535,8 +537,10 @@
               <use href="assets/icons/sprites.svg#vuesax/bulk/profile-2user"></use>
             </svg>
           </span>
-          <span class="compliments-box__item-text-bold">+4,400,000</span>
-          <span class="compliments-box__item-text-normal">دانشجو</span>
+          <div class="compliments-box__item-texts">
+            <span class="compliments-box__item-text-bold">+4,400,000</span>
+            <span class="compliments-box__item-text-normal">دانشجو</span>
+          </div>
         </div>
         <div class="compliments-box__item">
           <span class="compliments-box__item-icon">
@@ -544,8 +548,10 @@
               <use href="assets/icons/sprites.svg#vuesax/bulk/book"></use>
             </svg>
           </span>
-          <span class="compliments-box__item-text-bold">+15,000</span>
-          <span class="compliments-box__item-text-normal">عنوان آموزشی</span>
+          <div class="compliments-box__item-texts">
+            <span class="compliments-box__item-text-bold">+15,000</span>
+            <span class="compliments-box__item-text-normal">عنوان آموزشی</span>
+          </div>
         </div>
         <div class="compliments-box__item">
           <span class="compliments-box__item-icon">
@@ -553,8 +559,10 @@
               <use href="assets/icons/sprites.svg#vuesax/bulk/user-tick"></use>
             </svg>
           </span>
-          <span class="compliments-box__item-text-bold">+2,900</span>
-          <span class="compliments-box__item-text-normal">مدرس</span>
+          <div class="compliments-box__item-texts">
+            <span class="compliments-box__item-text-bold">+2,900</span>
+            <span class="compliments-box__item-text-normal">مدرس</span>
+          </div>
         </div>
         <div class="compliments-box__item">
           <span class="compliments-box__item-icon">
@@ -562,8 +570,10 @@
               <use href="assets/icons/sprites.svg#vuesax/bulk/layer"></use>
             </svg>
           </span>
-          <span class="compliments-box__item-text-bold">290</span>
-          <span class="compliments-box__item-text-normal">دسته‌بندی</span>
+          <div class="compliments-box__item-texts">
+            <span class="compliments-box__item-text-bold">290</span>
+            <span class="compliments-box__item-text-normal">دسته‌بندی</span>
+          </div>
         </div>
       </div>
     </div>
@@ -579,6 +589,36 @@
       <div class="section-website__body">
         <div class="skeleton-before">
           <div class="skeleton-cards">
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
             <div class="skeleton-card">
               <div class="skeleton skeleton-card__image"></div>
               <div class="skeleton-card__texts">
@@ -674,7 +714,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -682,7 +722,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -790,7 +830,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -798,7 +838,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -846,7 +886,7 @@
                         </div>
                         <div class="course-card__foot-info-discount">
                           <div class="label label--sm label--success">
-                            <span class="label__text">10% تخفیف</span>
+                            <span class="label__text">10% <span class='nonable-below-1000'>تخفیف</span></span>
                           </div>
                         </div>
                       </div> -->
@@ -904,7 +944,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -912,7 +952,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -959,7 +999,7 @@
                     </div>
                     <div class="course-card__foot-info-discount">
                       <div class="label label--sm label--success">
-                        <span class="label__text">10% تخفیف</span>
+                        <span class="label__text">10% <span class='nonable-below-1000'>تخفیف</span></span>
                       </div>
                     </div>
                     <!-- Not Purchased -->
@@ -1016,7 +1056,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1024,7 +1064,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -1071,7 +1111,7 @@
                     </div>
                     <div class="course-card__foot-info-discount">
                       <div class="label label--sm label--success">
-                        <span class="label__text">10% تخفیف</span>
+                        <span class="label__text">10% <span class='nonable-below-1000'>تخفیف</span></span>
                       </div>
                     </div>
                     <!-- Not Purchased -->
@@ -1128,7 +1168,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1136,7 +1176,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -1183,7 +1223,7 @@
                     </div>
                     <div class="course-card__foot-info-discount">
                       <div class="label label--sm label--success">
-                        <span class="label__text">10% تخفیف</span>
+                        <span class="label__text">10% <span class='nonable-below-1000'>تخفیف</span></span>
                       </div>
                     </div>
                     <!-- Not Purchased -->
@@ -1240,7 +1280,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1248,7 +1288,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -1295,7 +1335,7 @@
                     </div>
                     <div class="course-card__foot-info-discount">
                       <div class="label label--sm label--success">
-                        <span class="label__text">10% تخفیف</span>
+                        <span class="label__text">10% <span class='nonable-below-1000'>تخفیف</span></span>
                       </div>
                     </div>
                     <!-- Not Purchased -->
@@ -1334,69 +1374,69 @@
         <hr />
       </div>
       <div class="section-website__body">
-        <div class="category-cards">
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+        <div class="entity-tiles">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountaineering.png"
                 alt="کوه‌پیمایی" />
             </div>
-            <div class="category-card__title">کوهپیمایی</div>
+            <div class="entity-tile__title">کوهپیمایی</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountain.png" alt="کوهنوردی" />
             </div>
-            <div class="category-card__title">کوهنوردی</div>
+            <div class="entity-tile__title">کوهنوردی</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rock-climbing.png"
                 alt="سنگنوردی و دیواره‌نوردی" />
             </div>
-            <div class="category-card__title">سنگنوردی و دیواره‌نوردی</div>
+            <div class="entity-tile__title">سنگنوردی و دیواره‌نوردی</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-icefall.png" alt="یخ و برف" />
             </div>
-            <div class="category-card__title">یخ و برف</div>
+            <div class="entity-tile__title">یخ و برف</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-gym.png" alt="یخ و برف" />
             </div>
-            <div class="category-card__title">صعودهای ورزشی</div>
+            <div class="entity-tile__title">صعودهای ورزشی</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-nature.png" alt="طبیعت گردی" />
             </div>
-            <div class="category-card__title">طبیعت گردی</div>
+            <div class="entity-tile__title">طبیعت گردی</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rescue.png" alt="نجات کوهستان" />
             </div>
-            <div class="category-card__title">نجات کوهستان</div>
+            <div class="entity-tile__title">نجات کوهستان</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-skyrunner.png"
                 alt="علوم تکمیلی کوهستان" />
             </div>
-            <div class="category-card__title">علوم تکمیلی کوهستان</div>
+            <div class="entity-tile__title">علوم تکمیلی کوهستان</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-canyoning.png" alt="دره‌نوردی" />
             </div>
-            <div class="category-card__title">دره‌نوردی</div>
+            <div class="entity-tile__title">دره‌نوردی</div>
           </a>
-          <a href="courses.html" class="category-card">
-            <div class="category-card__image">
+          <a href="courses.html" class="entity-tile">
+            <div class="entity-tile__image">
               <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-learning.jpg" alt="آموزشگاه جهانی" />
             </div>
-            <div class="category-card__title">آموزشگاه جهانی</div>
+            <div class="entity-tile__title">آموزشگاه جهانی</div>
           </a>
         </div>
       </div>
@@ -1411,6 +1451,36 @@
       <div class="section-website__body">
         <div class="skeleton-before">
           <div class="skeleton-cards">
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
             <div class="skeleton-card">
               <div class="skeleton skeleton-card__image"></div>
               <div class="skeleton-card__texts">
@@ -1506,7 +1576,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1514,7 +1584,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -1622,7 +1692,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1630,7 +1700,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -1736,7 +1806,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1744,7 +1814,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -1848,7 +1918,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1856,7 +1926,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -1960,7 +2030,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -1968,7 +2038,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -2072,7 +2142,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -2080,7 +2150,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -2241,6 +2311,36 @@
               </div>
               <div class="skeleton skeleton-card__text"></div>
             </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
+            <div class="skeleton-card">
+              <div class="skeleton skeleton-card__image"></div>
+              <div class="skeleton-card__texts">
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text"></div>
+                <div class="skeleton skeleton-card__text skeleton-card__text--half"></div>
+              </div>
+              <div class="skeleton skeleton-card__text"></div>
+            </div>
           </div>
         </div>
         <div class="skeleton-after">
@@ -2296,7 +2396,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -2304,7 +2404,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -2412,7 +2512,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -2420,7 +2520,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -2526,7 +2626,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -2534,7 +2634,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -2638,7 +2738,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -2646,7 +2746,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -2750,7 +2850,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -2758,7 +2858,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -2862,7 +2962,7 @@
                       دوره حرفه ای سنگنوردی کودکان
                     </h3>
                     <div class="course-card__body-infos">
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/timer-start"></use>
@@ -2870,7 +2970,7 @@
                         <p class="course-card__body-info-text">زمان دوره:</p>
                         <p class="course-card__body-info-value">30 ساعت</p>
                       </div>
-                      <div class="course-card__body-info">
+                      <div class="course-card__body-info nonable-below-1000">
                         <span class="course-card__body-info-icon">
                           <svg class="icon icon--md" viewBox="0 0 24 24">
                             <use href="assets/icons/sprites.svg#vuesax/linear/heart"></use>
@@ -3075,6 +3175,7 @@
           <a class="footer__column-link" href="courses.html">جدیدترین دوره‌ها</a>
           <a class="footer__column-link" href="courses.html">محبوب‌ترین دوره‌ها</a>
           <a class="footer__column-link" href="courses.html">برترین دوره‌ها</a>
+          <a class="footer__column-link" href="mentors-list.html">اساتید کوه‌آموز</a>
           <a class="footer__column-link" href="#">وبلاگ کوه آموز</a>
         </div>
       </div>

@@ -15,7 +15,7 @@ table {
 .table-custom {
   border: var(--Border-Style-default);
   border-radius: var(--Radius-lg);
-  min-width: 43.75rem;
+  min-width: 30.75rem;
 }
 
 .table-custom th {
@@ -35,7 +35,7 @@ table {
 }
 
 .table-custom :where(th, td) {
-  padding: var(--Spacing-md);
+  padding: var(--Spacing-sm);
   text-align: center !important;
 }
 
@@ -78,6 +78,14 @@ div.dt-container div.dt-paging ul.pagination {
   width: 3rem;
   aspect-ratio: 1 / 1;
   border-radius: var(--Radius-md);
+}
+
+@media screen and (max-width: 1000px) {
+  .active > .page-link,
+  .page-link {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .disabled > .page-link,

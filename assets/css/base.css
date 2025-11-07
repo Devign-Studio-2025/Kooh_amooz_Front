@@ -7,6 +7,30 @@
 
 * {
   font-family: IRANSansX;
+  --sb-track-color: var(--Color-Surface-subtle-primary);
+  --sb-thumb-color: var(--Color-Text-icon-action);
+  --sb-size: 0.25rem;
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: var(--Radius-sm);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: var(--Radius-sm);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 body {

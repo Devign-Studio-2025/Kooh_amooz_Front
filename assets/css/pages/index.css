@@ -13,17 +13,17 @@
   bottom: calc(0rem + var(--swiper-navigation-size));
 }
 
-.header-main .swiper-custom-pagination {
-  --swiper-custom-pagination-color: var(--Color-Text-icon-on-primary);
+.header-main .swiper-pagination {
+  --swiper-pagination-color: var(--Color-Text-icon-on-primary);
 }
 
-.swiper-custom-pagination-bullet {
+.swiper-pagination-bullet {
   transition: width var(--Transition-medium);
 }
 
-.header-main .swiper-custom-pagination-bullet-active {
-  --swiper-custom-pagination-bullet-width: var(--IconSize-lg);
-  --swiper-custom-pagination-bullet-border-radius: var(--Radius-sm);
+.header-main .swiper-pagination-bullet-active {
+  --swiper-pagination-bullet-width: var(--IconSize-lg);
+  --swiper-pagination-bullet-border-radius: var(--Radius-sm);
 }
 
 .header-main :where(.swiper-button-prev, .swiper-button-next)::before {
@@ -66,11 +66,20 @@
 
 .compliments-box__item-text-bold {
   font: var(--Font-Title-bold-style);
+  line-height: normal !important;
+}
+
+.compliments-box__item-texts {
   direction: ltr;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: var(--Spacing-sm);
 }
 
 .compliments-box__item-text-normal {
   font: var(--Font-Body-bold-style);
+  line-height: normal !important;
 }
 
 .compliments-box__item-icon {
@@ -119,69 +128,29 @@
   }
 
   .compliments-box {
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--Spacing-sm);
   }
 
   .compliments-box__item {
-    width: 100%;
+    width: calc(50% - var(--NumScale-x1));
+  }
+
+  .compliments-box__item-texts {
+    align-items: end;
+    flex-direction: column;
+  }
+
+  .compliments-box__item-text-bold {
+    font: var(--Font-Body-bold-style);
+  }
+
+  .compliments-box__item-text-normal {
+    font-size: 0.625rem;
   }
 }
 
 /* ****** Header-main ****** */
-
-/* ****** Category-card ****** */
-
-.category-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--Spacing-xl);
-}
-
-.category-card {
-  min-width: 9.375rem;
-  width: calc(100% / 5 - var(--Spacing-xl));
-  max-width: calc(100% / 5 - var(--Spacing-xl));
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: var(--Spacing-md);
-  border: var(--Border-Style-default);
-  padding: var(--Spacing-md);
-  margin-top: calc(4rem - var(--Spacing-md));
-  border-radius: var(--Radius-md);
-  color: var(--Color-Text-icon-title);
-}
-
-.category-card__image {
-  margin-top: -4rem;
-  transition: inherit;
-  overflow: hidden;
-  border-radius: var(--Radius-md);
-  transition: var(--Transition-base);
-}
-
-.category-card__image img {
-  width: 100%;
-}
-
-.category-card__title {
-  font: var(--Font-Body-bold-style);
-  /* text-wrap: nowrap; */
-  text-align: center;
-}
-
-.category-card:hover .category-card__image {
-  translate: 0 -0.5rem;
-  box-shadow: var(--Shadow-Md-Neutral-style);
-}
-
-.category-card:hover {
-  color: var(--Color-Text-icon-action);
-  border-color: var(--Border-Color-primary);
-}
-
-/* ****** Category-card ****** */
 
 /* ****** Testimonials ****** */
 .testimonials {
@@ -196,7 +165,7 @@
   align-items: center;
   justify-content: space-between;
   width: calc(100% / 3 - var(--Spacing-2xl));
-  min-width: 15.625rem;
+  min-width: 9rem;
   max-width: 70vw;
   flex-grow: 1;
   margin-inline: auto;
@@ -207,8 +176,7 @@
 }
 
 .testimonial-item__image {
-  width: clamp(4rem, 10vw, 5rem);
-  min-width: 4rem;
+  width: clamp(2rem, 6vw, 4rem);
 }
 
 .testimonial-item__text {
@@ -222,7 +190,8 @@
 
 /* ****** Testimonials ****** */
 
-/* ****** responsive ****** */
+/* ****** Responsive ****** */
+
 @media screen and (max-width: 1000px) {
   .section-website__buttons {
     justify-content: center;
@@ -231,5 +200,38 @@
   .section-website__texts {
     align-items: center;
   }
+
+  .section-website__content {
+    max-width: none;
+    width: unset;
+  }
+  .section-website__buttons .button {
+    width: 100%;
+  }
 }
-/* ****** responsive ****** */
+
+@media screen and (max-width: 500px) {
+  .testimonials {
+    gap: var(--Spacing-md);
+    row-gap: var(--Spacing-xl);
+  }
+
+  .testimonial-item__text {
+    border-width: 0.0625rem;
+    font-size: 10px;
+    padding: unset;
+    border: unset;
+  }
+
+  .entity-tile {
+    width: unset;
+    min-width: unset;
+    max-width: calc(50% - var(--Spacing-lg));
+  }
+
+  .entity-tile__title {
+    font: var(--Font-Caption-bold-style);
+  }
+}
+
+/* ****** Responsive ****** */

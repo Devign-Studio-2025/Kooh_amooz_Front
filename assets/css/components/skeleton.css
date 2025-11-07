@@ -9,7 +9,7 @@
   background-size: 300% 100%;
 }
 
-.skeleton-before--hide{
+.skeleton-before--hide {
   display: none;
 }
 
@@ -17,7 +17,7 @@
   display: none !important;
 }
 
-.skeleton-after--show{
+.skeleton-after--show {
   display: block !important;
 }
 
@@ -30,7 +30,7 @@
 
 .skeleton-card {
   width: calc(100% / 4);
-  min-width: 15.625rem;
+  min-width: 17.5rem;
   display: flex;
   flex-direction: column;
   gap: var(--Spacing-lg);
@@ -62,8 +62,17 @@
 
 .skeleton-card__image {
   width: 100%;
-  height: 9.375rem;
+  height: 7.5rem;
   border-radius: var(--Radius-md);
+}
+
+@media screen and (max-width: 1000px) {
+  .skeleton-card__image {
+    height: 5rem;
+  }
+  .skeleton-card {
+    min-width: 11rem !important;
+  }
 }
 
 @keyframes skeleton {

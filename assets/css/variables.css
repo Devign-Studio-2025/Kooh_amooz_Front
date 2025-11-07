@@ -286,6 +286,7 @@
   --Border-Color-default: var(--Color-Neutral-5);
   --Border-Color-disabled: var(--Color-Text-icon-disabled);
   --Border-Color-success: var(--Color-Text-icon-on-subtle-success);
+  --Border-Color-warning: var(--Color-Text-icon-on-subtle-warning);
   --Border-width: var(--NumScale-x0\5);
 
   --Border-Style-default: 0.0625rem solid var(--Border-Color-default);
@@ -294,6 +295,7 @@
   --Border-Style-white: 0.0625rem solid var(--Border-Color-white);
   --Border-Style-disabled: 0.0625rem solid var(--Border-Color-disabled);
   --Border-Style-success: 0.0625rem solid var(--Border-Color-success);
+  --Border-Style-warning: 0.0625rem solid var(--Border-Color-warning);
 
   /* * Border */
 
@@ -310,7 +312,7 @@
   :root {
     --Typography-LineHeight: var(--NumScale-x6);
 
-    --Typography-FontSize-caption: var(--NumScale-x3);
+    --Typography-FontSize-caption: 0.625rem;
     --Typography-FontSize-body: var(--NumScale-x3);
     --Typography-FontSize-title: var(--NumScale-x4);
     --Typography-FontSize-h1: var(--NumScale-x7);
@@ -325,6 +327,8 @@
     --IconSize-xs: var(--NumScale-x3);
     --IconSize-sm: var(--NumScale-x3\5);
     --IconSize-md: var(--NumScale-x4);
-    --IconSize-lg: var(--NumScale-x7);
+    --IconSize-lg: var(--NumScale-x6);
+
+    --Spacing-main: 4rem;
   }
 }
