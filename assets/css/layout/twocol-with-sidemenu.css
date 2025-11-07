@@ -93,31 +93,10 @@ main.main-website {
   border-radius: var(--Radius-lg);
   padding: var(--Spacing-md);
   gap: var(--Spacing-lg);
-
-  --sb-track-color: var(--Color-Surface-subtle-primary);
-  --sb-thumb-color: var(--Color-Text-icon-action);
-  --sb-size: 0.25rem;
-}
-
-.sidebar-section::-webkit-scrollbar {
-  width: var(--sb-size);
 }
 
 .sidebar-section::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-  border-radius: var(--Radius-sm);
   margin-block: 0.625rem;
-}
-
-.sidebar-section::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: var(--Radius-sm);
-}
-
-@supports not selector(::-webkit-scrollbar) {
-  .sidebar-section {
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-  }
 }
 
 .sidebar-section__head-remove-filter {
