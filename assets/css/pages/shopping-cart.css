@@ -1,0 +1,224 @@
+.cart-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--Spacing-lg);
+}
+
+.cart-section__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: fit-content;
+}
+
+.cart-section__head-title {
+    color: var(--Color-Text-icon-title);
+    font: var(--Font-Title-bold-style);
+    display: flex;
+    align-items: center;
+}
+
+.cart-section__body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--Spacing-lg);
+    width: 100%;
+    height: fit-content;
+}
+
+/* *================== cart-section__course-items start ================== */
+
+.cart-section__course-items {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--Spacing-md);
+    width: 100%;
+    height: fit-content;
+}
+
+.cart-section__course-item {
+    width: 100%;
+    height: fit-content;
+    border-radius: var(--Radius-lg);
+    border: var(--Border-Style-default);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--Spacing-md);
+    opacity: 1;
+    gap: var(--Spacing-md);
+}
+
+.course-item__right-div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--Spacing-md);
+}
+
+.course-item__img {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: var(--Radius-md);
+}
+
+.course-item__first-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.course-item__title {
+    font: var(--Font-Title-bold-style);
+    color: var(--Color-Text-icon-title);
+    line-height: normal;
+}
+
+.course-item__second-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.course-item__mentor {
+    font: var(--Font-Body-light-style);
+    color: var(--Color-Text-icon-title);
+}
+
+.course-item__left-div,
+.course-item__price {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-item__left-div {
+    gap: var(--Spacing-md);
+    width: 100%;
+}
+
+.course-item__price {
+    gap: var(--Spacing-sm);
+}
+
+.course-item__close-button {
+    color: var(--Color-Text-icon-on-subtle-error);
+    background-color: var(--Color-Surface-subtle-error);
+    cursor: pointer;
+}
+
+.course-item__close-button input {
+    display: none;
+}
+
+.course-item__close-button:hover {
+    background-color: var(--Color-Surface-error);
+    color: var(--Color-Text-icon-on-state);
+    border-color: var(--Border-Color-primary);
+}
+
+.course-item__payable {
+    font: var(--Font-Title-bold-style);
+    color: var(--Color-Text-icon-title);
+}
+
+.course-item__discount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--Spacing-sm);
+}
+
+.course-item__price-before {
+    text-decoration: line-through;
+    color: var(--Color-Text-icon-disabled);
+    font: var(--Font-Caption-regular-style);
+}
+
+/* *================== cart-section__course-items end ================== */
+
+/* *================== price-box customization start ================== */
+.cart-section__total-price span,
+.cart-section__total-price p,
+.cart-section__savings p,
+.cart-section__payable span,
+.cart-section__payable p {
+    color: var(--Color-Text-icon-title);
+}
+
+.cart-section__total-price span {
+    font: var(--Font-Title-regular-style);
+}
+
+.cart-section__total-price p {
+    font: var(--Font-Body-regular-style);
+}
+
+.cart-section__savings span {
+    color: var(--Color-Text-icon-on-subtle-success);
+    font: var(--Font-Title-bold-style);
+}
+
+.cart-section__payable span {
+    font: var(--Font-Title-bold-style);
+
+}
+
+.cart-section__savings p,
+.cart-section__payable p {
+    font: var(--Font-Body-bold-style);
+}
+
+@media screen and (max-width: 1000px) {
+    .cart-section__body {
+        flex-direction: column;
+        gap: var(--Spacing-3xl);
+        align-items: center;
+    }
+
+    .price-box {
+        max-width: unset;
+    }
+}
+
+/* *================== price-box customization end ================== */
+
+/* *================== responsive start ================== */
+@media screen and (max-width: 500px) {
+    .course-item__second-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--Spacing-sm);
+    }
+
+    .course-item__left-div {
+        gap: var(--Spacing-sm);
+    }
+
+    .course-item__title, .course-item__payable {
+        font: var(--Font-Body-bold-style);
+    }
+    .course-item__discount-badge {
+        padding: 0.25rem var(--Spacing-sm) !important;
+    }
+    .course-item__img {
+        width: 6rem;
+        height: 6rem;
+    }
+    .cart-section__course-item {
+        padding: var(--Spacing-sm);
+    }
+    .course-item__second-row {
+        gap: 0.25rem;
+    }
+}
+
+/* *================== responsive end ================== */

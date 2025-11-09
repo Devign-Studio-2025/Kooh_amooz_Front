@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>پنل کاربر - نام تیکت</title>
+    <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
+
+    <!-- ! Core Styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- ! Page Styles -->
+    <link rel="stylesheet" href="assets/css/layout/twocol-with-sidemenu.css" />
+    <link rel="stylesheet" href="assets/css/pages/user-panel/user.css" />
+    <link rel="stylesheet" href="assets/css/pages/user-panel/user_chat-messages.css">
+</head>
+
+<body>
+    <main class="main-website">
+        <!-- * [Chat] Start -->
+        <section class="content-section">
+            <div class="content-section__head">
+                <h1 class="content-section__head-title ms-auto">
+                    صفحه گفتگو
+                </h1>
+                <a href="user_support-ticket.html" class="back-button">
+                    برگشت
+                    <span class="back-button__icon">
+                        <svg class="icon icon--md" viewBox="0 0 24 24">
+                            <use href="assets/icons/sprites.svg#humbleicons:arrow-left"></use>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+            <div class="content-section__body">
+                <div class="chat-section">
+                    <div class="chat-section__header">
+                        <div class="chat-section__title-bar">
+                            <div class="chat-section__label">موضوع:</div>
+                            <div class="chat-section__text">خرید دوره</div>
+                        </div>
+                        <button class="button button--error button--xs" id="close-ticket">
+                            <div class="button__text">
+                                بستن تیکت
+                            </div>
+                        </button>
+                    </div>
+                    <div class="chat-section__body">
+                        <div class="message-wrapper message-wrapper--user">
+                            <div class="message">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</div>
+                            <div class="date">1400/12/02 22:30</div>
+                        </div>
+                        <div class="message-wrapper message-wrapper--admin">
+                            <div class="message">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</div>
+                            <div class="date">1400/12/02 22:30</div>
+                        </div>
+                    </div>
+                    <form class="chat-section__footer">
+                        <div class="input">
+                            <textarea class="input__field" rows="1" placeholder="پیامی بنویسید..." autocomplete="off"
+                                type="text" name="input_message" id="input-message"></textarea>
+                        </div>
+                        <button class="button button--primary button--sm" id="send-message" disabled>
+                            <div class="button__icon">
+                                <svg class="icon icon--md" viewBox="0 0 24 24">
+                                    <use href="assets/icons/sprites.svg#fluent:send-32-filled"></use>
+                                </svg>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- * [Chat] End -->
+    </main>
+
+    <!-- ! Core Scripts -->
+    <script type="module" src="assets/js/main.js"></script>
+
+    <!-- ! Page Scripts -->
+    <script type="module" src="assets/js/pages/user-panel/user_chat-messages.js"></script>
+</body>
+
+</html>

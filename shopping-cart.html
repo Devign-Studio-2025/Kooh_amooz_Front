@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سبد خرید - کوه‌آموز</title>
+  <link rel="icon" type="image/x-icon" href="assets/imgs/logoes/just-logo.png" />
+
+  <!-- ! Core Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- ! Page Styles -->
+  <link rel="stylesheet" href="assets/css/pages/user-panel/user.css" />
+  <link rel="stylesheet" href="assets/css/pages/shopping-cart.css" />
+</head>
+
+<body>
+  <!-- * Navbar Start -->
+  <nav class="nav-main">
+    <div class="nav-main__right">
+      <a href="/" class="nav-main__logo-wrapper nonable-below-1000">
+        <div class="nav-main__logo">
+          <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
+        </div>
+        <div class="nav-main__logo-text">
+          <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
+        </div>
+      </a>
+      <div class="nav-main__search-input">
+        <form class="input" action='courses.html'>
+          <input class="input__field input__field--have-icon" placeholder="" autocomplete="off" type="text"
+            name="search" />
+          <span class="input__placeholder">
+            جستجو در
+            <strong class="fw-normal" style="color: var(--Color-Text-icon-action)">کوه‌آموز</strong>...
+          </span>
+          <span class="input__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/linear/search-normal-2"></use>
+            </svg>
+          </span>
+        </form>
+      </div>
+      <ul class="nav-main__link-items nonable-below-1000">
+        <li class="nav-main__link-item nav-main__link-item--has-menu">
+          <a type="button" class="nav-main__link">دسته‌بندی‌ها
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/linear/arrow-down"></use>
+            </svg>
+          </a>
+          <div class="nav-main__submenu">
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">کوهپیمایی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountaineering.png"
+                    alt="کوهپیمایی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">طبیعت گردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-nature.png" alt="طبیعت گردی" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">کوهنوردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-mountain.png" alt="کوهنوردی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">نجات کوهستان</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rescue.png" alt="نجات کوهستان" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">سنگنوردی و دیواره‌نوردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-rock-climbing.png"
+                    alt="سنگنوردی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">علوم تکمیلی کوهستان</span>
+                <div class="nav-main__submenu-item-image">
+                  <img loading="lazy" class="skeleton" src="assets/imgs/categories/cat-skyrunner.png"
+                    alt="علوم تکمیلی کوهستان" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">یخ و برف</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-icefall.png" alt="یخ و برف" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">دره‌نوردی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-canyoning.png" alt="دره‌نوردی" />
+                </div>
+              </a>
+            </div>
+            <div class="d-flex gap-md-y justify-content-between">
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">صعودهای ورزشی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-gym.png" alt="صعودهای ورزشی" />
+                </div>
+              </a>
+              <a href="courses.html" class="nav-main__submenu-item">
+                <span class="nav-main__submenu-item-text">آموزشگاه جهانی</span>
+                <div class="nav-main__submenu-item-image">
+                  <img src="assets/imgs/categories/cat-learning.jpg" alt="آموزشگاه جهانی" />
+                </div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-main__link-item">
+          <a href="about-us.html" class="nav-main__link">درباره ما</a>
+        </li>
+        <li class="nav-main__link-item">
+          <a href="faq.html" class="nav-main__link">سوالات متداول</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="nav-main__left">
+      <div class="nav-main__left-buttons">
+        <!-- ? Logged in Mode -->
+        <a class="button button--sm button--primary-outline nonable-below-1000" href="user_admin-messages.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="پیام‌های مدیریت"
+          data-messages-notif-count='11'>
+          <span class="button__icon">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/twotone/notification-bing"></use>
+            </svg>
+          </span>
+          <span class="notif__badge badge-admin-messages"> +9 </span>
+        </a>
+
+        <a class="button button--sm button--primary-outline nonable-below-1000" id="cart" href="shopping-cart.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="سبد خرید">
+          <span class="button__icon">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#fluent:cart-20-regular"></use>
+            </svg>
+          </span>
+          <span class="notif__badge" data-cart-count> 2 </span>
+        </a>
+
+        <a class="button button--sm button--primary nonable-below-1000" href="user_courses.html"
+          data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="دوره‌های من">
+          <span class="button__icon">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/linear/book-2"></use>
+            </svg>
+          </span>
+        </a>
+
+        <a class="button button--sm button--primary" href="user_courses.html" data-bs-toggle="tooltip"
+          data-bs-placement="bottom" data-bs-title="پروفایل کاربری">
+          <span class="button__icon">
+            <svg class="icon icon--sm" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#vuesax/bold/user"></use>
+            </svg>
+          </span>
+        </a>
+        <!-- ? Logged in Mode -->
+
+        <!-- ? Guest Mode -->
+        <!-- <a class="button button--sm button--primary h-100" href="#">
+            <span class="button__text nonable-below-1000">ورود | ثبت نام</span>
+            <span class="button__icon nonable-above-1000">
+              <svg class="icon icon--sm" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/linear/login"></use>
+              </svg>
+            </span>
+          </a>
+          <a
+            class="button button--sm button--primary-outline nonable-below-1000"
+            href="#"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="سبد خرید"
+          >
+            <span class="button__icon">
+              <svg class="icon icon--sm" viewBox="0 0 24 24">
+                <use
+                  href="assets/icons/sprites.svg#fluent:cart-20-regular"
+                ></use>
+              </svg>
+            </span>
+          </a>
+          <a
+            class="button button--sm button--primary-outline nonable-below-1000"
+            href="#"
+            data-bs-toggle="tooltip"
+            data-bs-placement="bottom"
+            data-bs-title="دوره‌های من"
+          >
+            <span class="button__icon">
+              <svg class="icon icon--sm" viewBox="0 0 24 24">
+                <use href="assets/icons/sprites.svg#vuesax/twotone/book"></use>
+              </svg>
+            </span>
+          </a> -->
+        <!-- ? Guest Mode -->
+      </div>
+
+      <a class="button button--sm button--primary-outline nonable-above-1000" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
+        <span class="button__icon">
+          <svg class="icon icon--sm" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#Menu / Hamburger_MD"></use>
+          </svg>
+        </span>
+      </a>
+
+      <div class="nav-main__logo-center">
+        <a href="/">
+          <img height="44" src="assets/imgs/logoes/logo-mobile.png" alt="" />
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- * Navbar End -->
+
+  <!-- Main sidemenu Start -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-main" aria-labelledby="sidemenu-main-title">
+    <div class="offcanvas-header">
+      <a href="/" class="d-flex gap-md ms-auto" style="height: 3rem">
+        <img src="assets/imgs/logoes/just-logo.png" alt="Logo" />
+        <img src="assets/imgs/logoes/logo-text.png" alt="آموزشگاه آنلاین کوهنوردی ایران" />
+      </a>
+      <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="button__icon">
+          <svg class="icon icon--lg" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#mdi:remove"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column gap-sm">
+        <!-- Logged in Mode -->
+        <a class="button button--sm button--navlink" href="user_courses.html">
+          <span class="button__text">دوره‌های من</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="user_favs.html">
+          <span class="button__text">علاقمندی‌ها</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="shopping-cart.html">
+          <div class="button__text-with-badge">
+            <span class="button__text">سبد خرید</span>
+            <span class="notif__badge notif__badge--navlink" data-cart-count> 2 </span>
+          </div>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="user_payments.html">
+          <span class="button__text">پرداخت‌های من</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="user_admin-messages.html">
+          <div class="button__text-with-badge">
+            <span class="button__text">پیام‌های مدیریت</span>
+            <span class="notif__badge notif__badge--navlink"> +9 </span>
+          </div>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="user_support-ticket.html">
+          <span class="button__text">پشتیبانی و تیکت</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <hr>
+        <!-- Logged in Mode -->
+        <a class="button button--sm button--navlink" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#sidemenu-categories" aria-controls="sidemenu-categories">
+          <span class="button__text">دسته‌بندی‌ها</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="faq.html">
+          <span class="button__text">سوالات متدوال</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="faq.html#contact-us">
+          <span class="button__text">تماس با ما</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="about-us.html">
+          <span class="button__text">درباره ما</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="offcanvas-footer">
+      <!-- ? Logged in Mode -->
+      <a href="user-info.html" class="button button--md button--primary flex-grow-1">
+        <span class="button__text">اطلاعات حساب</span>
+      </a>
+      <a href="#" class="button button--sm button--error-outline">
+        <span class="button__text">خروج</span>
+        <span class="button__icon">
+          <svg class="icon icon--md" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#vuesax/bulk/logout"></use>
+          </svg>
+        </span>
+      </a>
+      <!-- ? Logged in Mode -->
+
+      <!-- ? Guest Mode -->
+      <!-- <a href="#" class="button button--primary w-100">
+          <span class="button__text">ورود | ثبت نام</span>
+        </a> -->
+      <!-- ? Guest Mode -->
+    </div>
+  </div>
+  <!-- Main sidemenu End -->
+
+  <!-- Categories sidemenu Start -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="sidemenu-categories"
+    aria-labelledby="sidemenu-categories-title">
+    <div class="offcanvas-header">
+      <span class="offcanvas-title w-100" id="sidemenu-categories-title">
+        دسته‌بندی‌ها
+      </span>
+      <button type="button" class="button button--sm w-100 justify-content-start" data-bs-toggle="offcanvas"
+        data-bs-target="#sidemenu-main" aria-controls="sidemenu-main">
+        <span class="button__icon">
+          <svg class="icon icon--md" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#Arrow / Chevron_Right"></use>
+          </svg>
+        </span>
+        <span class="button__text">بازگشت به منو</span>
+      </button>
+      <button type="button" class="button button--xs button-close" data-bs-dismiss="offcanvas" aria-label="Close">
+        <span class="button__icon">
+          <svg class="icon icon--lg" viewBox="0 0 24 24">
+            <use href="assets/icons/sprites.svg#mdi:remove"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="d-flex flex-column gap-sm">
+        <a class="button button--sm button--navlink" href="courses.html" data-bs-toggle="offcanvas"
+          data-bs-target="#sidemenu-categories" aria-controls="sidemenu-categories">
+          <span class="button__text">کوهپیمایی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">طبیعت گردی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">کوهنوردی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">نجات کوهستان</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">سنگنوردی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">علوم تکمیلی کوهستان</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">یخ و برف</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">یخ و برف</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">دره نوردی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">صعودهای ورزشی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+        <a class="button button--sm button--navlink" href="courses.html">
+          <span class="button__text">آموزشگاه جهانی</span>
+          <span class="button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#Arrow / Chevron_Left"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Categories sidemenu End -->
+
+  <main class="main-website">
+    <section class="cart-section">
+      <div class="cart-section__head">
+        <h2 class="cart-section__head-title"> سبد خرید (<span class="result-count" data-cart-count>2</span>) </h2>
+        <a href="index.html" class="back-button">
+          برگشت
+          <span class="back-button__icon">
+            <svg class="icon icon--md" viewBox="0 0 24 24">
+              <use href="assets/icons/sprites.svg#humbleicons:arrow-left"></use>
+            </svg>
+          </span>
+        </a>
+      </div>
+      <div class="cart-section__body">
+        <div class="cart-section__course-items">
+          <div class="cart-section__course-item" data-course-id="1">
+            <div class="course-item__right-div">
+              <img class="course-item__img skeleton" src="assets/imgs/courses/course-1.jpg"
+                alt="دوره کوه نوردی (پیشرفته)">
+            </div>
+            <div class="course-item__left-div">
+              <div class="course-item__first-row">
+                <span class="course-item__title">دوره کوه نوردی (پیشرفته)</span>
+                <label class="course-item__close-button button button--xs" for="cart-course-1" data-remove-button
+                  data-course-id="1">
+                  <input type="checkbox" id="cart-course-1" />
+                  <span class="button__icon">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#mdi:remove"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="course-item__second-row">
+                <p class="course-item__mentor">مدرس: حامد جباری</p>
+                <div class="course-item__discount">
+                  <div class="course-item__price-before">900,000 تومان</div>
+                  <div class="course-item__discount-badge label label--sm label--success">
+                    <span class="label__text">10% <span class="nonable-below-1000">تخفیف</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item__price">
+                <span class="course-item__payable">810,000 تومان</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-section__course-item" data-course-id="2">
+            <div class="course-item__right-div">
+              <img class="course-item__img skeleton" src="assets/imgs/courses/course-3.jpg" alt="دوره طبیعت گردی">
+            </div>
+            <div class="course-item__left-div">
+              <div class="course-item__first-row">
+                <span class="course-item__title">دوره طبیعت گردی</span>
+                <label class="course-item__close-button button button--xs" for="cart-course-2" data-remove-button
+                  data-course-id="2">
+                  <input type="checkbox" id="cart-course-2" />
+                  <span class="button__icon">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#mdi:remove"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="course-item__second-row">
+                <p class="course-item__mentor">مدرس: حامد جباری</p>
+                <div class="course-item__discount">
+                  <div class="course-item__price-before">900,000 تومان</div>
+                  <div class="course-item__discount-badge label label--sm label--success">
+                    <span class="label__text">10% <span class="nonable-below-1000">تخفیف</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item__price">
+                <span class="course-item__payable">810,000 تومان</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-section__course-item" data-course-id="3">
+            <div class="course-item__right-div">
+              <img class="course-item__img skeleton" src="assets/imgs/courses/course-6.jpg" alt="دوره دره نوردی تخصصی">
+            </div>
+            <div class="course-item__left-div">
+              <div class="course-item__first-row">
+                <span class="course-item__title">دوره دره نوردی تخصصی</span>
+                <label class="course-item__close-button button button--xs" for="cart-course-3" data-remove-button
+                  data-course-id="3">
+                  <input type="checkbox" id="cart-course-3" />
+                  <span class="button__icon">
+                    <svg class="icon icon--sm" viewBox="0 0 24 24">
+                      <use href="assets/icons/sprites.svg#mdi:remove"></use>
+                    </svg>
+                  </span>
+                </label>
+              </div>
+              <div class="course-item__second-row">
+                <p class="course-item__mentor">مدرس: حامد جباری</p>
+                <div class="course-item__discount">
+                  <div class="course-item__price-before">900,000 تومان</div>
+                  <div class="course-item__discount-badge label label--sm label--success">
+                    <span class="label__text">10% <span class="nonable-below-1000">تخفیف</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="course-item__price">
+                <span class="course-item__payable">810,000 تومان</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-section__payment-container price-box">
+          <div class="price-box__info">
+            <div class="price-box__info-row cart-section__total-price">
+              <p>قیمت کل</p>
+              <span>900,000 تومان</span>
+            </div>
+            <div class="price-box__info-row cart-section__savings">
+              <p>سود شما</p>
+              <span>100,000 تومان</span>
+            </div>
+            <div class="price-box__info-bg-white cart-section__payable">
+              <div class="info-bg-white-row">
+                <p>قابل پرداخت</p>
+                <span>800,000 تومان</span>
+              </div>
+            </div>
+          </div>
+          <form class="price-box__actions">
+            <div class="price-box__discount">
+              <div class="input cart-section__discount-input">
+                <input class="input__field input__field--have-icon" placeholder="کد تخفیف" autocomplete="off"
+                  type="text" name="discount-code" />
+                <span class="input__icon">
+                  <svg class="icon icon--md" viewBox="0 0 24 24">
+                    <use href="assets/icons/sprites.svg#vuesax/linear/discount-shape"></use>
+                  </svg>
+                </span>
+              </div>
+              <button class="button button--primary-outline price-box__action-button">
+                اعمال
+              </button>
+            </div>
+            <button class="button button--xs button--primary w-100">
+              <span class="button__text">پرداخت</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ! Core Scripts -->
+  <script type="module" src="assets/js/main.js"></script>
+
+  <!-- ! page scripts -->
+  <script src="assets/js/pages/user-panel/shopping-cart.js"></script>
+</body>
+
+</html>

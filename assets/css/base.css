@@ -3,12 +3,97 @@
    Normalize basic elements
    ================================ */
 
-@import url();
+@import url(../fonts/fontiran.css);
 
 * {
-  font-family: primary-font;
+  font-family: IRANSansX;
+  --sb-track-color: var(--Color-Surface-subtle-primary);
+  --sb-thumb-color: var(--Color-Text-icon-action);
+  --sb-size: 0.25rem;
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: var(--Radius-sm);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: var(--Radius-sm);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 body {
-  padding-inline: var(--spacing-md);
+  background-color: var(--Color-Surface-page);
+  max-width: 1800px;
+  margin: auto;
+  color: var(--Color-Text-icon-body);
+  font: var(--Font-Body-regular-style);
+}
+
+a {
+  text-decoration: none;
+  color: var(--Color-Text-icon-action);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--Color-Text-icon-title);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+hr {
+  opacity: 1;
+  margin: 0;
+}
+
+.breadcrumb {
+  margin: 0;
+}
+
+.breadcrumb-item {
+  --bs-breadcrumb-item-active-color: var(--Color-Text-icon-action);
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+}
+
+.breadcrumb-item:not(:last-of-type)::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  color: var(--bs-breadcrumb-divider-color);
+  content: var(--bs-breadcrumb-divider, "/");
+}
+
+.breadcrumb-item:last-of-type::before {
+  all: unset;
+}
+
+.breadcrumb-item a {
+  color: var(--Color-Text-icon-title);
+}
+
+.breadcrumb-item.active {
+  font-weight: var(--Typography-FontWeight-bold);
 }

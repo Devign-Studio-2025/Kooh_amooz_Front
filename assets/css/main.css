@@ -1,5 +1,30 @@
+@import url(../libs/bootstrap/bootstrap.min.css);
+@import url(../libs/toastr/toastr.min.css);
+
 @import "variables.css";
-@import "base.css";
-@import "layout.css";
-@import "components.css";
 @import "utilities.css";
+@import "base.css";
+@import "shared-utils.css";
+
+@import "layout/navbar.css";
+@import "layout/footer.css";
+@import "layout/main-sections.css";
+
+@import "components/offcanvas.css";
+@import "components/modal.css";
+@import "components/navigation-tab.css";
+@import "components/swiper.css";
+@import "components/accordion.css";
+@import "components/tag.css";
+@import "components/toast.css";
+@import "components/label.css";
+@import "components/skeleton.css";
+@import "components/pagniation.css";
+@import "components/icon.css";
+@import "components/button.css";
+@import "components/input.css";
+@import "components/cards/comment.css";
+@import "components/select2.css";
+@import "components/cards/course.css";
+@import "components/cards/entity-tile.css";
+@import "components/price-box.css";
