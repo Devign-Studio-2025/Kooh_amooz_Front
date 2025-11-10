@@ -93,7 +93,8 @@
 .offcanvas-bottom .button-close {
   border-bottom-right-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
-  top: calc(0% - 2.75rem);
+  top: unset;
+  bottom: 100%;
   left: 1rem;
 }
 
